@@ -1,0 +1,217 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  font: inherit;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+h1 {
+  font-size: 2.8rem;
+  font-weight: 500;
+}
+h3 {
+  font-size: 2.3rem;
+  font-weight: 400;
+}
+p,
+a {
+  font-size: 1.2rem;
+}
+body {
+  margin: 0;
+  line-height: 1.5;
+}
+
+html {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif !important;
+  //font-family: Segoe UI, SegoeUI !important;
+}
+
+.app-root {
+  display: flex;
+}
+
+.footerCopyright {
+  text-align: center;
+  padding: 0px;
+}
+
+//0.875rem
+//font size start
+.MuiInputBase-root {
+  font-size: 0.875rem !important;
+}
+
+.MuiFormLabel-root {
+  font-size: 0.875rem !important;
+}
+
+.MuiTypography-body1 {
+  font-size: 0.875rem !important;
+}
+
+.MuiFormControlLabel-root {
+  margin-bottom: 0 !important;
+}
+
+.MuiMenuItem-root {
+  font-size: 0.875rem !important;
+}
+
+label + .MuiInput-formControl {
+  margin-top: 13px !important;
+}
+
+//outlined textbox
+.MuiOutlinedInput-notchedOutline {
+  border-color: #dedcdb !important;
+  border-top-color: rgb(222, 220, 219);
+  border-right-color: rgb(222, 220, 219);
+  border-bottom-color: rgb(222, 220, 219);
+  border-left-color: rgb(222, 220, 219);
+}
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #3f51bf !important;
+  border-top-color: rgb(63, 81, 181);
+  border-right-color: rgb(63, 81, 181);
+  border-bottom-color: rgb(63, 81, 181);
+  border-left-color: rgb(63, 81, 181);
+}
+
+html {
+  overflow-y: scroll;
+}
+
+//bootstrap
+// .use-bootstrap {
+//   @import "bootstrap/scss/functions";
+//   @import "bootstrap/scss/variables";
+//   @import "bootstrap/scss/mixins";
+//   @import "bootstrap/scss/utilities";
+
+//   // Helpers
+//   @import "bootstrap/scss/helpers";
+
+//   // Utilities
+//   @import "bootstrap/scss/utilities/api";
+
+//   .bg-light {
+//     background-color: white !important;
+//   }
+// }
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 0.25rem);
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+  opacity: 1;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 200ms ease-in-out, transform 200ms ease-in-out;
+  color: #212529;
+}
+
+// .dropdown > .link:focus + .dropdown-menu {
+//   opacity: 1;
+//   transform: translateY(0);
+//   pointer-events: auto;
+//   cursor: pointer;
+// }
+.container {
+  width: 95%;
+  margin: auto;
+}
+
+.brand {
+  border: 3px solid #41455b;
+  border-radius: 1rem;
+  padding: 0rem 2rem;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
+}
+
+.brand:hover {
+  background-color: #cff4ee;
+}
+
+.brand-image img {
+  width: 300px;
+}
+
+.heading {
+  text-align: center;
+}
+
+.brand-text {
+  justify-content: center;
+  align-items: center;
+}
+
+.service-card {
+  border: 3px solid #41455b;
+  border-radius: 1rem;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.service-card:hover {
+  background-color: #cff4ee;
+  color: #000000;
+}
+
+.card-img {
+  width: 10rem;
+  height: 10rem;
+  background-color: #ced7e7;
+  border-radius: 100px;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.card-img img {
+  width: 80px;
+  padding-top: 40px;
+  text-align: center;
+}
+.card-text {
+  color: #474747;
+}
+.card-button {
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  height: 100%;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  background-color: #ced7e7;
+  transition: all 0.3s ease;
+}
+.card-button:hover {
+  font-size: 1.4rem;
+  border: 3px solid #41455b;
+  border-radius: 1rem;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
+}
+.footer {
+  border: 3px solid #41455b;
+  width: 100%;
+  background-color: rgb(49, 49, 49);
+  padding: 0.5rem;
+  color: white;
+  text-align: center;
+}

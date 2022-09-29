@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "outDir": "dist",
+    "target": "ESNext",
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["src", "index.d.ts"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
