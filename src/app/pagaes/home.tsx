@@ -4,6 +4,9 @@ import microlab from "../../assets/img/microlab.png";
 import service from "../../assets/img/service.svg";
 import reagent from "../../assets/img/reagent.svg";
 import equipment from "../../assets/img/equipment.svg";
+import undraw_building from "../../assets/img/undraw_building.svg";
+import undraw_security from "../../assets/img/undraw_security.svg";
+import undraw_server from "../../assets/img/undraw_server.svg";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -16,7 +19,13 @@ const Item = styled(Paper)(({ theme }) => ({
 export default function HomePage() {
   return (
     <>
-      <Grid container>
+      <Grid
+        container
+        spacing={2}
+        direction="row"
+        justifyContent="center"
+        alignItems="center"
+      >
         <Grid item={true} xs={12}>
           <h1 className="heading">About US</h1>
           <p className="about-text">
@@ -94,52 +103,74 @@ export default function HomePage() {
             </Grid>
           </Grid>
         </Grid>
-
-        <Grid xs={12}>
+        <Grid item xs={12}>
+          <h1 className="heading">Why Rajanigandha?</h1>
+        </Grid>
+        <Grid item xs={12} lg={4}>
+          <img className="small-svg" src={undraw_building} alt="" />
+        </Grid>
+        <Grid item xs={12} lg={4} justifyContent="center" alignItems="center">
+          <img className="small-svg" src={undraw_security} alt="" />
+        </Grid>
+        <Grid item xs={12} lg={4} justifyContent="center" alignItems="center">
+          <img className="small-svg" src={undraw_server} alt="" />
+        </Grid>
+        <Grid item xs={12}>
           <h1 className="heading">Our Services</h1>
         </Grid>
-        <Grid item xs={12} lg={4} className="service-card">
-          <div className="card-img">
-            <img src={equipment} alt="equipment-logo-svg" />
-          </div>
-          <div className="card-text">
-            <h3>
-              <u>Equipments</u>
-            </h3>
-            <p>
-              We sell varities of medical equipments related to blood testing
-            </p>
-            <button className="card-button">Browse</button>
-          </div>
+        <Grid item={true} xs={12} lg={4}>
+          <Grid container>
+            <Grid item xs={12} className="service-card">
+              <div className="card-img">
+                <img src={equipment} alt="equipment-logo-svg" />
+              </div>
+              <div className="card-text">
+                <h3>
+                  <u>Equipments</u>
+                </h3>
+                <p>
+                  We sell varities of medical equipments related to blood
+                  testing
+                </p>
+                <button className="card-button">Browse</button>
+              </div>
+            </Grid>
+          </Grid>
         </Grid>
-        <Grid item xs={12} lg={4} className="service-card">
-          <div className="card-img">
-            <img src={reagent} alt="reagent-logo-svg" />
-          </div>
-          <div className="card-text">
-            <h3>
-              <u>Reagent</u>
-            </h3>
-            <p>
-              All sorts of blood testing reagents are avaliable in our house.
-            </p>
-            <button className="card-button">Browse</button>
-          </div>
+        <Grid item={true} xs={12} lg={4}>
+          <Grid container>
+            <Grid item xs={12} className="service-card">
+              <div className="card-img">
+                <img src={reagent} alt="reagent-logo-svg" />
+              </div>
+              <div className="card-text">
+                <h3>
+                  <u>Reagent</u>
+                </h3>
+                <p>
+                  All sorts of blood testing reagents are avaliable in our
+                  house.
+                </p>
+                <button className="card-button">Browse</button>
+              </div>
+            </Grid>
+          </Grid>
         </Grid>
-        <Grid item xs={12} lg={4} className="service-card">
-          <div className="card-img">
-            <img src={service} alt="service-logo-svg" />
-          </div>
-          <div className="card-text">
-            <h3>
-              <u>Services</u>
-            </h3>
-            <p>
-              Regular maintenance and servies of our equipments are ensured by
-              us
-            </p>
-            <button className="card-button">Call of Details</button>
-          </div>
+        <Grid item={true} xs={12} lg={4}>
+          <Grid container>
+            <Grid item xs={12} className="service-card">
+              <div className="card-img">
+                <img src={service} alt="service-logo-svg" />
+              </div>
+              <div className="card-text">
+                <h3>
+                  <u>Services</u>
+                </h3>
+                <p>Regular maintenance of our equipments are ensured by us</p>
+                <button className="card-button">Call of Details</button>
+              </div>
+            </Grid>
+          </Grid>
         </Grid>
       </Grid>
     </>

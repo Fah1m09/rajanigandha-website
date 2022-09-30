@@ -16,72 +16,25 @@ import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
-import MenuList from "@mui/material/MenuList";
-import NestedMenuItem from "material-ui-nested-menu-item";
+import RajaniLogo from "../../../assets/img/rajanigondha.png";
 
 const Header = (props) => {
   const [menuItem, setMenuItem] = useState([
     {
       Id: 1,
       Name: "Equipments",
-      showSubmenu: false,
-      subPartition: [
-        {
-          Id: 1,
-          SubName: "Full Auto BioChemistry",
-        },
-        {
-          Id: 2,
-          SubName: "Auto Hematology",
-        },
-        {
-          Id: 3,
-          SubName: "Semi Autp Biochemistry",
-        },
-        {
-          Id: 4,
-          SubName: "Electrolite",
-        },
-        {
-          Id: 5,
-          SubName: "Other",
-        },
-      ],
     },
     {
       Id: 2,
       Name: "Reagents",
-      showSubmenu: false,
-      subPartition: [
-        {
-          Id: 1,
-          SubName: "Clinical Chemistry",
-        },
-        {
-          Id: 2,
-          SubName: "Immuno Chemistry",
-        },
-        {
-          Id: 3,
-          SubName: "Blood Grouping",
-        },
-        {
-          Id: 4,
-          SubName: "Serology",
-        },
-      ],
     },
     {
       Id: 3,
       Name: "About US",
-      showSubmenu: false,
-      subPartition: [],
     },
     {
       Id: 4,
       Name: "Contact US",
-      showSubmenu: false,
-      subPartition: [],
     },
   ]);
 
@@ -93,31 +46,21 @@ const Header = (props) => {
     setOpen(!open);
   };
 
-  const handleNavMenu = (Id) => {
-    let tempArray = [...menuItem];
-    tempArray[Id - 1].showSubmenu = !tempArray[Id - 1].showSubmenu;
-    setMenuItem(tempArray);
-  };
-
   return (
     <AppBar position="static">
       <Toolbar>
+        <img className="header-logo" src={RajaniLogo} alt="Rajanigandha Logo" />
         <Typography
+          className="header-text"
           variant="h6"
-          noWrap
           component="a"
           href="/"
           sx={{
-            mr: 2,
             display: { xs: "none", md: "flex" },
-            fontFamily: "monospace",
-            fontWeight: 600,
-            letterSpacing: ".3rem",
-            color: "inherit",
-            textDecoration: "none",
+            flexGrow: 1,
           }}
         >
-          Rajanigandha International
+          Rajanigandha <br /> International
         </Typography>
 
         <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -138,18 +81,18 @@ const Header = (props) => {
             </MenuItem>
           ))}
         </Box>
+
         <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+
         <Typography
           variant="h5"
           noWrap
           component="a"
-          href=""
+          href="#"
           sx={{
             mr: 2,
             display: { xs: "flex", md: "none" },
             flexGrow: 1,
-            fontFamily: "monospace",
-            fontWeight: 700,
             letterSpacing: ".3rem",
             color: "inherit",
             textDecoration: "none",
@@ -157,14 +100,11 @@ const Header = (props) => {
         >
           Rajanigandha International
         </Typography>
+
         <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
           {menuItem.map((page) => (
             <div className="dropdown" key={page.Id}>
-              <Button
-                className="link"
-                onMouseOver={() => handleNavMenu(page.Id)}
-                sx={{ my: 2, color: "white" }}
-              >
+              <Button className="link" sx={{ my: 2, color: "white" }}>
                 {page.Name}
               </Button>
             </div>
@@ -183,11 +123,6 @@ const Header = (props) => {
               <Brightness4Icon />
             )}
           </IconButton>
-          <Tooltip title="Open settings">
-            <IconButton sx={{ p: 0 }}>
-              <Avatar alt="User" src="/static/images/avatar/2.jpg" />
-            </IconButton>
-          </Tooltip>
         </Box>
       </Toolbar>
     </AppBar>
