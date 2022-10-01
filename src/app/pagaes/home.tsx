@@ -1,4 +1,4 @@
-import { Grid, Paper, styled } from "@mui/material";
+import { Box, Grid, Paper, styled } from "@mui/material";
 import spinlogo from "../../assets/img/spinlogo.png";
 import microlab from "../../assets/img/microlab.png";
 import service from "../../assets/img/service.svg";
@@ -93,13 +93,15 @@ export default function HomePage() {
               </p>
             </Grid>
             <Grid item xs={12} lg={4}>
-              <a
-                className="brand-image"
-                href="https://www.microlab.co.in/"
-                target="_blank"
-              >
-                <img src={microlab} alt="microlab" />
-              </a>
+              <Box display="flex" justifyContent="flex-end">
+                <a
+                  className="brand-image"
+                  href="https://www.microlab.co.in/"
+                  target="_blank"
+                >
+                  <img src={microlab} alt="microlab" />
+                </a>
+              </Box>
             </Grid>
           </Grid>
         </Grid>

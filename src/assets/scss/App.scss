@@ -19,7 +19,7 @@ h3 {
 }
 p,
 a {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 body {
   margin: 0;
@@ -112,6 +112,17 @@ html {
 .header-text {
   text-decoration: none;
   padding-left: 10px;
+}
+
+.link {
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.link:hover {
+  font-size: 1.2rem;
+  animation: fadein 5s;
+  animation-delay: 1s;
 }
 
 .container {

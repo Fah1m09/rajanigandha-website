@@ -1,5 +1,5 @@
 import * as React from "react";
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { blue } from "@mui/material/colors";
 import { menus } from "../utils/constants/menuRoutes.constants";
 import "./../assets/scss/App.scss";
@@ -12,6 +12,10 @@ import HomePage from "./pagaes/home";
 import { createTheme, Paper, ThemeProvider } from "@mui/material";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import Equipment from "./pagaes/equipment";
+import Reagent from "./pagaes/reagent";
+import Contact from "./pagaes/contact";
+import AboutUs from "./pagaes/aboutus";
 
 const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
 
@@ -47,19 +51,23 @@ const App = () => {
       <ColorModeContext.Provider value={colorMode}>
         <ThemeProvider theme={theme}>
           <Paper>
-            <Header theme={theme} colorMode={colorMode} mode={mode} />
-            <BrowserRouter basename="/">
+            <Router basename="/">
+              <Header theme={theme} colorMode={colorMode} mode={mode} />
               <div className="container">
                 <Routes>
                   {/* map routes from menu constants */}
                   {/* <Route path="/" element={<Navigate to={menus[0].path} />} /> */}
                   <Route path="/" element={<HomePage />} />
+                  <Route path="/equipments" element={<Equipment />} />
+                  <Route path="/reagent" element={<Reagent />} />
+                  <Route path="/contact" element={<Contact />} />
+                  <Route path="/aboutus" element={<AboutUs />} />
                   <Route path="*" element={<MissingRoute />} />
                 </Routes>
               </div>
               <Loader />
-            </BrowserRouter>
-            <Footer />
+              <Footer />
+            </Router>
           </Paper>
         </ThemeProvider>
       </ColorModeContext.Provider>

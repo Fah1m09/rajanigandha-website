@@ -7,34 +7,36 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
-import ExpandLessIcon from "@mui/icons-material/ExpandLess";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
 import RajaniLogo from "../../../assets/img/rajanigondha.png";
+import { Link } from "react-router-dom";
 
 const Header = (props) => {
   const [menuItem, setMenuItem] = useState([
     {
       Id: 1,
       Name: "Equipments",
+      Nav: "/equipments",
     },
     {
       Id: 2,
       Name: "Reagents",
+      Nav: "/reagent",
     },
     {
       Id: 3,
       Name: "About US",
+      Nav: "/aboutus",
     },
     {
       Id: 4,
       Name: "Contact US",
+      Nav: "/contact",
     },
   ]);
 
@@ -104,9 +106,9 @@ const Header = (props) => {
         <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
           {menuItem.map((page) => (
             <div className="dropdown" key={page.Id}>
-              <Button className="link" sx={{ my: 2, color: "white" }}>
+              <Link className="link" to={`${page.Nav}`}>
                 {page.Name}
-              </Button>
+              </Link>
             </div>
           ))}
         </Box>
