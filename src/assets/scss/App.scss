@@ -35,75 +35,9 @@ html {
   display: flex;
 }
 
-.footerCopyright {
-  text-align: center;
-  padding: 0px;
-}
-
-//0.875rem
-//font size start
-.MuiInputBase-root {
-  font-size: 0.875rem !important;
-}
-
-.MuiFormLabel-root {
-  font-size: 0.875rem !important;
-}
-
-.MuiTypography-body1 {
-  font-size: 0.875rem !important;
-}
-
-.MuiFormControlLabel-root {
-  margin-bottom: 0 !important;
-}
-
-.MuiMenuItem-root {
-  font-size: 0.875rem !important;
-}
-
-label + .MuiInput-formControl {
-  margin-top: 13px !important;
-}
-
-//outlined textbox
-.MuiOutlinedInput-notchedOutline {
-  border-color: #dedcdb !important;
-  border-top-color: rgb(222, 220, 219);
-  border-right-color: rgb(222, 220, 219);
-  border-bottom-color: rgb(222, 220, 219);
-  border-left-color: rgb(222, 220, 219);
-}
-
-.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
-  border-color: #3f51bf !important;
-  border-top-color: rgb(63, 81, 181);
-  border-right-color: rgb(63, 81, 181);
-  border-bottom-color: rgb(63, 81, 181);
-  border-left-color: rgb(63, 81, 181);
-}
-
 html {
   overflow-y: scroll;
 }
-
-//bootstrap
-// .use-bootstrap {
-//   @import "bootstrap/scss/functions";
-//   @import "bootstrap/scss/variables";
-//   @import "bootstrap/scss/mixins";
-//   @import "bootstrap/scss/utilities";
-
-//   // Helpers
-//   @import "bootstrap/scss/helpers";
-
-//   // Utilities
-//   @import "bootstrap/scss/utilities/api";
-
-//   .bg-light {
-//     background-color: white !important;
-//   }
-// }
 
 .header-logo {
   width: 50px;
@@ -128,6 +62,113 @@ html {
 .container {
   width: 95%;
   margin: auto;
+  padding: 1rem 0rem;
+}
+
+.header {
+  position: relative;
+  text-align: center;
+  background: -o-linear-gradient(
+    30deg,
+    rgba(84, 58, 183, 1) 0%,
+    rgba(0, 172, 193, 1) 100%
+  );
+  background: linear-gradient(
+    60deg,
+    rgba(84, 58, 183, 1) 0%,
+    rgba(0, 172, 193, 1) 100%
+  );
+  color: inherit;
+}
+
+.inner-header {
+  height: 65vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  position: relative;
+  height: 20vh;
+  text-align: center;
+  background-color: #fff;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.waves {
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  margin-bottom: -7px;
+  min-height: 100px;
+  max-height: 100px;
+}
+
+.parallax > use {
+  -webkit-animation: moveForever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+  animation: moveForever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+
+.parallax > use:nth-child(1) {
+  -webkit-animation-delay: -2s;
+  animation-delay: -2s;
+  -webkit-animation-duration: 7s;
+  animation-duration: 7s;
+}
+
+.parallax > use:nth-child(2) {
+  -webkit-animation-delay: -3s;
+  animation-delay: -3s;
+  -webkit-animation-duration: 10s;
+  animation-duration: 10s;
+}
+
+.parallax > use:nth-child(3) {
+  -webkit-animation-delay: -4s;
+  animation-delay: -4s;
+  -webkit-animation-duration: 13s;
+  animation-duration: 13s;
+}
+
+.parallax > use:nth-child(4) {
+  -webkit-animation-delay: -5s;
+  animation-delay: -5s;
+  -webkit-animation-duration: 20s;
+  animation-duration: 20s;
+}
+
+@-webkit-keyframes moveForever {
+  0% {
+    -webkit-transform: translate3d(-90px, 0, 0);
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(85px, 0, 0);
+    transform: translate3d(85px, 0, 0);
+  }
+}
+
+@keyframes moveForever {
+  0% {
+    -webkit-transform: translate3d(-90px, 0, 0);
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(85px, 0, 0);
+    transform: translate3d(85px, 0, 0);
+  }
 }
 
 .small-svg {
@@ -208,11 +249,23 @@ html {
   border-radius: 1rem;
   box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
 }
-.footer {
-  border: 3px solid #41455b;
-  width: 100%;
+
+.equipment-image img {
+  width: 150px;
+}
+
+.footer-wrapper {
   background-color: rgb(49, 49, 49);
-  padding: 0.5rem;
+}
+
+.footer-social {
+  background-color: #05d5ff;
+  text-align: end;
+  padding: 0.3rem 2rem;
+}
+
+.footer-copyright {
+  padding: 0.2rem;
   color: white;
   text-align: center;
 }

@@ -1,17 +1,30 @@
-import { Box, Grid } from '@mui/material'
-import React from 'react'
-import { Container } from 'react-bootstrap'
+import { Grid } from "@mui/material";
 
 export default function Footer() {
   return (
-    <footer>
-      <Box bgcolor="palette.primary">
-          <Grid container spacing={2}>
-            <Grid item xs={12}>
-              <p className="footerCopyright">Copyright @ 2022 Rajanigandha International</p>
-            </Grid>
+    <Grid container className="footer-wrapper">
+      <Grid item xs={12} className="footer-social">
+        <p>Social Links</p>
+      </Grid>
+      <Grid item xs={12}>
+        <Grid container spacing={2}>
+          <Grid item xs={12} lg={4}>
+            <p>Rajanigandha International</p>
           </Grid>
-      </Box>
-    </footer>
-  )
+          <Grid item xs={12} lg={4}>
+            <p>Useful Links</p>
+          </Grid>
+          <Grid item xs={12} lg={4}>
+            <p>Contact</p>
+          </Grid>
+        </Grid>
+      </Grid>
+
+      <Grid item xs={12}>
+        <p className="footer-copyright">
+          © {new Date().getFullYear()} Rajanigandha International
+        </p>
+      </Grid>
+    </Grid>
+  );
 }

@@ -53,7 +53,7 @@ const App = () => {
           <Paper>
             <Router basename="/">
               <Header theme={theme} colorMode={colorMode} mode={mode} />
-              <div className="container">
+              <div>
                 <Routes>
                   {/* map routes from menu constants */}
                   {/* <Route path="/" element={<Navigate to={menus[0].path} />} /> */}
