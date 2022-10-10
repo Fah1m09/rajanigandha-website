@@ -4,82 +4,114 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions } from "@mui/material";
-import uprx50 from "../../assets/img/Equipments/rx50.png";
+import arx199i from "../../assets/img/Equipments/rx50.png";
 import upspinx5 from "../../assets/img/Equipments/spinx5.png";
 import upsping5comp from "../../assets/img/Equipments/spin5compact.png";
-import React from "react";
+import urispin120 from "../../assets/img/Equipments/urispin120.png";
+import spin800 from "../../assets/img/Equipments/spin800.png";
+import spin200e from "../../assets/img/Equipments/spin200e.png";
+import spincell3 from "../../assets/img/Equipments/spincell3.png";
+import micropipet from "../../assets/img/Equipments/micropipet.png";
+import spincell5plus from "../../assets/img/Equipments/spincell5plus.png";
+import arxclotsc from "../../assets/img/Equipments/arxclotsc.png";
+import rx50v from "../../assets/img/rx50.png";
+import microlyte from "../../assets/img/Equipments/microlyte.png";
 
 export default function Equipment() {
   const Equipments = [
     {
       Id: 1,
-      Image: uprx50,
-      Name: "Test1",
-      Category: "A",
+      Image: spin800,
+      Name: "Spin 800",
+      Category: "Full Auto BioChemistry",
       Price: 0,
       Description: "This is test 1",
     },
     {
       Id: 2,
-      Image: upspinx5,
-      Name: "Test2",
-      Category: "B",
+      Image: spin200e,
+      Name: "Spin 200E",
+      Category: "Full Auto BioChemistry",
       Price: 0,
       Description: "This is test 2",
     },
     {
       Id: 3,
-      Image: upsping5comp,
-      Name: "Test3",
-      Category: "A",
+      Image: upspinx5,
+      Name: "Spin 640",
+      Category: "Full Auto BioChemistry",
       Price: 0,
       Description: "This is test 3",
     },
     {
       Id: 4,
       Image: upsping5comp,
-      Name: "1 Test",
-      Category: "A",
+      Name: "Spincell 5 compact",
+      Category: "Auto Hematology Analyzer",
       Price: 0,
       Description: "Loream Ipsum",
     },
     {
       Id: 5,
-      Image: upsping5comp,
-      Name: "2 Test",
-      Category: "B",
+      Image: spincell5plus,
+      Name: "Spincell 5 plus",
+      Category: "Auto Hematology Analyzer",
       Price: 0,
       Description: "This is test",
     },
     {
       Id: 6,
-      Image: upspinx5,
-      Name: "3 Test",
-      Category: "A",
+      Image: spincell3,
+      Name: "Spincell 3",
+      Category: "Auto Hematology Analyzer",
       Price: 0,
       Description: "This is test",
     },
     {
       Id: 7,
-      Image: uprx50,
-      Name: "Test13",
-      Category: "B",
+      Image: rx50v,
+      Name: "RX-50V",
+      Category: "Semi Auto BioChemistry",
       Price: 0,
       Description: "Loream Ipsum",
     },
     {
       Id: 8,
-      Image: upspinx5,
-      Name: "Test12",
-      Category: "A",
+      Image: arx199i,
+      Name: "ARX-199i",
+      Category: "Semi Auto BioChemistry",
       Price: 0,
       Description: "This is test",
     },
     {
       Id: 9,
-      Image: uprx50,
-      Name: "Test11",
-      Category: "B",
+      Image: microlyte,
+      Name: "Microlyte",
+      Category: "Electrolite",
+      Price: 0,
+      Description: "Loream Ipsum",
+    },
+    {
+      Id: 10,
+      Image: arxclotsc,
+      Name: "ARX-CLOT-SC",
+      Category: "Electrolite",
+      Price: 0,
+      Description: "Loream Ipsum",
+    },
+    {
+      Id: 11,
+      Image: urispin120,
+      Name: "Urispin 120",
+      Category: "Others",
+      Price: 0,
+      Description: "Loream Ipsum",
+    },
+    {
+      Id: 12,
+      Image: micropipet,
+      Name: "Micropipette",
+      Category: "Others",
       Price: 0,
       Description: "Loream Ipsum",
     },
@@ -92,9 +124,9 @@ export default function Equipment() {
           <Card 
            raised
            sx={{
-             maxWidth: 400,
-             margin: "0 1rem",
-             padding: "0.1rem",
+             maxWidth: 420,
+             margin: "0 0.5rem",
+             padding: "0 0.1rem",
            }}>
             <CardActionArea>
               <CardMedia
