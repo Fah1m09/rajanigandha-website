@@ -4,9 +4,9 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions } from "@mui/material";
-import uprx50 from "../../assets/img/uprx50.png";
-import upspinx5 from "../../assets/img/upspinx5.png";
-import upsping5comp from "../../assets/img/upsping5comp.png";
+import uprx50 from "../../assets/img/Equipments/rx50.png";
+import upspinx5 from "../../assets/img/Equipments/spinx5.png";
+import upsping5comp from "../../assets/img/Equipments/spin5compact.png";
 import React from "react";
 
 export default function Equipment() {
@@ -85,14 +85,21 @@ export default function Equipment() {
     },
   ];
   return (
-    <Grid container spacing={2}>
+    <div className="equipment-container">
+   <Grid container spacing={2} >
       {Equipments.map((x) => (
         <Grid item xs={12} lg={4}>
-          <Card>
+          <Card 
+           raised
+           sx={{
+             maxWidth: 400,
+             margin: "0 1rem",
+             padding: "0.1rem",
+           }}>
             <CardActionArea>
               <CardMedia
                 component="img"
-                height="140"
+                height="400"
                 image={x.Image}
                 alt="green iguana"
               />
@@ -114,5 +121,7 @@ export default function Equipment() {
         </Grid>
       ))}
     </Grid>
+    </div>  
+ 
   );
 }
