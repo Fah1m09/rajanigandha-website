@@ -11,11 +11,15 @@
 }
 h1 {
   font-size: 2.8rem;
-  font-weight: 500;
+  font-weight: 700;
 }
 h3 {
   font-size: 2.3rem;
-  font-weight: 400;
+  font-weight: 600;
+}
+h5 {
+  font-size: 1.3rem;
+  font-weight: 600;
 }
 p,
 a {
@@ -65,11 +69,18 @@ html {
   padding: 1rem 0rem;
 }
 
-.equipment-container{
+.equipment-container {
   width: 70%;
   margin: auto;
   padding: 1rem 0rem;
 }
+
+.container-area {
+  width: 60% !important;
+  margin: auto !important;
+  padding: 1rem;
+}
+
 .header {
   position: relative;
   text-align: center;
@@ -259,18 +270,49 @@ html {
   width: 150px;
 }
 
+.contact-heading-container {
+  padding: 1.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contact-box-large {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5) !important;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.contact-box-small {
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5) !important;
+}
+
+.rounded-icon-border {
+  background-color: darkgray;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50%;
+  padding: 10px;
+}
+
 .footer-wrapper {
+  clear: both;
   background-color: rgb(49, 49, 49);
+  color: white;
+}
+
+.footer-links {
+  padding: 0.4rem 1rem;
 }
 
 .footer-social {
-  background-color: #05d5ff;
+  background-color: #1976d2;
   text-align: end;
   padding: 0.3rem 2rem;
 }
 
 .footer-copyright {
   padding: 0.2rem;
-  color: white;
   text-align: center;
 }

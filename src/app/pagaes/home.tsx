@@ -78,17 +78,23 @@ export default function HomePage() {
       <div className="container">
         <Grid container spacing={2}>
           <Grid item={true} xs={12}>
-            <h1 className="heading">About US</h1>
-            <p className="about-text">
-              Welcome to the official site of Rajanigandha International,
-              Country's one of the oldest Medical Equipment & Diagnostic Reagent
-              Importer Supplier. Our Journey have been started since 1989. Till
-              then we are trying our best to provide best diagnotic equipment
-              along with rapid service. In this successful journey of nearly 3
-              decades,we have achieved trust of innumerable people. We will not
-              be derailed from our goal.
-            </p>
-            <h1 className="heading">Our Brands</h1>
+            <div>
+              <h1 className="heading">About US</h1>
+              <p className="about-text">
+                Welcome to the official site of Rajanigandha International,
+                Country's one of the oldest Medical Equipment & Diagnostic
+                Reagent Importer Supplier. Our Journey have been started since
+                1989. Till then we are trying our best to provide best diagnotic
+                equipment along with rapid service. In this successful journey
+                of nearly 3 decades,we have achieved trust of innumerable
+                people. We will not be derailed from our goal.
+              </p>
+            </div>
+          </Grid>
+          <Grid item={true} xs={12}>
+            <div>
+              <h1 className="heading">Our Brands</h1>
+            </div>
           </Grid>
           <Grid item={true} xs={12}>
             <Grid container className="brand">

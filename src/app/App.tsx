@@ -1,7 +1,5 @@
 import * as React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { blue } from "@mui/material/colors";
-import { menus } from "../utils/constants/menuRoutes.constants";
 import "./../assets/scss/App.scss";
 import MissingRoute from "./components/MissingRoute";
 import Loader from "./features/Loader/Loader";
@@ -15,7 +13,6 @@ import Footer from "./components/Footer/Footer";
 import Equipment from "./pagaes/equipment";
 import Reagent from "./pagaes/reagent";
 import Contact from "./pagaes/contact";
-import AboutUs from "./pagaes/aboutus";
 
 const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
 
@@ -53,18 +50,15 @@ const App = () => {
           <Paper>
             <Router basename="/">
               <Header theme={theme} colorMode={colorMode} mode={mode} />
-              <div>
-                <Routes>
-                  {/* map routes from menu constants */}
-                  {/* <Route path="/" element={<Navigate to={menus[0].path} />} /> */}
-                  <Route path="/" element={<HomePage />} />
-                  <Route path="/equipments" element={<Equipment />} />
-                  <Route path="/reagent" element={<Reagent />} />
-                  <Route path="/contact" element={<Contact />} />
-                  <Route path="/aboutus" element={<AboutUs />} />
-                  <Route path="*" element={<MissingRoute />} />
-                </Routes>
-              </div>
+              <Routes>
+                {/* map routes from menu constants */}
+                {/* <Route path="/" element={<Navigate to={menus[0].path} />} /> */}
+                <Route path="/" element={<HomePage />} />
+                <Route path="/equipments" element={<Equipment />} />
+                <Route path="/reagent" element={<Reagent />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="*" element={<MissingRoute />} />
+              </Routes>
               <Loader />
               <Footer />
             </Router>

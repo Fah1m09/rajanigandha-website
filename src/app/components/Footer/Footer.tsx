@@ -7,9 +7,15 @@ export default function Footer() {
         <p>Social Links</p>
       </Grid>
       <Grid item xs={12}>
-        <Grid container spacing={2}>
+        <Grid container className="footer-links">
           <Grid item xs={12} lg={4}>
-            <p>Rajanigandha International</p>
+            <p>
+              Rajanigandha International
+              <br />
+              Eastern Commercial Complex 73 kakrail,
+              <br />
+              5th floor, Room no- 5\14, Dhaka-1000, Bangladesh
+            </p>
           </Grid>
           <Grid item xs={12} lg={4}>
             <p>Useful Links</p>
