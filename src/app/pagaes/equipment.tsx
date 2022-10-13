@@ -1,4 +1,11 @@
-import { Grid } from "@mui/material";
+import {
+  FormControl,
+  Grid,
+  InputLabel,
+  MenuItem,
+  Select,
+  SelectChangeEvent,
+} from "@mui/material";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -16,6 +23,7 @@ import spincell5plus from "../../assets/img/Equipments/spincell5plus.png";
 import arxclotsc from "../../assets/img/Equipments/arxclotsc.png";
 import rx50v from "../../assets/img/rx50.png";
 import microlyte from "../../assets/img/Equipments/microlyte.png";
+import { useEffect, useMemo, useState } from "react";
 
 export default function Equipment() {
   const Equipments = [
@@ -116,44 +124,87 @@ export default function Equipment() {
       Description: "Loream Ipsum",
     },
   ];
+  const [equipmentList, setEquipmentList] = useState([]);
+  const [filter, setFilter] = useState("");
+
+  useEffect(() => {
+    setEquipmentList(Equipments);
+  }, []);
+
+  function getFilteredList() {
+    // Avoid filter when selectedCategory is null
+    if (filter === "") {
+      return equipmentList;
+    }
+    return equipmentList.filter((item) => item.Category === filter);
+  }
+
+  // Avoid duplicate function calls with useMemo
+  var filteredList = useMemo(getFilteredList, [filter, equipmentList]);
+
+  const handleChange = (event: SelectChangeEvent) => {
+    setFilter(event.target.value);
+  };
+
   return (
     <div className="equipment-container">
-   <Grid container spacing={2} >
-      {Equipments.map((x) => (
-        <Grid item xs={12} lg={4}>
-          <Card 
-           raised
-           sx={{
-             maxWidth: 420,
-             margin: "0 0.5rem",
-             padding: "0 0.1rem",
-           }}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="400"
-                image={x.Image}
-                alt="green iguana"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  {x.Name}
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  {x.Category}
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions>
-              <Button size="small" color="primary">
-                {x.Price}
-              </Button>
-            </CardActions>
-          </Card>
+      <Grid container spacing={2}>
+        <Grid item xs={9}></Grid>
+        <Grid item xs={3}>
+          <FormControl fullWidth>
+            <InputLabel id="demo-simple-select-label">
+              Select Category
+            </InputLabel>
+            <Select
+              labelId="demo-simple-select-label"
+              id="demo-simple-select"
+              value={filter}
+              label="Filter"
+              onChange={handleChange}
+            >
+              <MenuItem value={"Full Auto BioChemistry"}>
+                Full Auto BioChemistry
+              </MenuItem>
+              <MenuItem value={"Electrolite"}>Electrolite</MenuItem>
+              <MenuItem value={"Others"}>Others</MenuItem>
+            </Select>
+          </FormControl>
         </Grid>
-      ))}
-    </Grid>
-    </div>  
- 
+        {filteredList.map((x) => (
+          <Grid item xs={12} lg={4}>
+            <Card
+              raised
+              sx={{
+                maxWidth: 420,
+                margin: "0 0.5rem",
+                padding: "0 0.1rem",
+              }}
+            >
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  height="400"
+                  image={x.Image}
+                  alt="green iguana"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="div">
+                    {x.Name}
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    {x.Category}
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button size="small" color="primary">
+                  {x.Price}
+                </Button>
+              </CardActions>
+            </Card>
+          </Grid>
+        ))}
+      </Grid>
+    </div>
   );
 }

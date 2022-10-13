@@ -288,6 +288,12 @@ html {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5) !important;
 }
 
+.contact-box-large:hover,
+.contact-box-small:hover {
+  scale: 1.1;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8) !important;
+}
+
 .rounded-icon-border {
   background-color: darkgray;
   width: 40px !important;
