@@ -26,6 +26,14 @@ import microlyte from "../../assets/img/Equipments/microlyte.png";
 import { useEffect, useMemo, useState } from "react";
 
 export default function Equipment() {
+  const Categories = [
+    { Name: "Full Auto BioChemistry", Value: "Full Auto BioChemistry" },
+    { Name: "Auto Hematology Analyzer", Value: "Auto Hematology Analyzer" },
+    { Name: "Semi Auto BioChemistry", Value: "Semi Auto BioChemistry" },
+    { Name: "Electrolite", Value: "Electrolite" },
+    { Name: "Others", Value: "Others" },
+  ];
+
   const Equipments = [
     {
       Id: 1,
@@ -162,11 +170,10 @@ export default function Equipment() {
               label="Filter"
               onChange={handleChange}
             >
-              <MenuItem value={"Full Auto BioChemistry"}>
-                Full Auto BioChemistry
-              </MenuItem>
-              <MenuItem value={"Electrolite"}>Electrolite</MenuItem>
-              <MenuItem value={"Others"}>Others</MenuItem>
+              <MenuItem value={""}>All</MenuItem>
+              {Categories.map((cat) => (
+                <MenuItem value={cat.Value}>{cat.Name}</MenuItem>
+              ))}
             </Select>
           </FormControl>
         </Grid>
