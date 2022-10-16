@@ -13,6 +13,7 @@ import Footer from "./components/Footer/Footer";
 import Equipment from "./pagaes/equipment";
 import Reagent from "./pagaes/reagent";
 import Contact from "./pagaes/contact";
+import EquipmentDetails from "./pagaes/equipmentDetails";
 
 const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
 
@@ -55,6 +56,10 @@ const App = () => {
                 {/* <Route path="/" element={<Navigate to={menus[0].path} />} /> */}
                 <Route path="/" element={<HomePage />} />
                 <Route path="/equipments" element={<Equipment />} />
+                <Route
+                  path="/equipments/:equipmentId"
+                  element={<EquipmentDetails />}
+                />
                 <Route path="/reagent" element={<Reagent />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="*" element={<MissingRoute />} />

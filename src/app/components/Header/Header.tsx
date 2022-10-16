@@ -10,7 +10,7 @@ import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
-import RajaniLogo from "../../../assets/img/rajanigondha.png";
+import RajaniLogo from "../../../../public/img/rajanigondha.png";
 import { Link } from "react-router-dom";
 
 const Header = (props) => {
