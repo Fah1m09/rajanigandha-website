@@ -92,19 +92,24 @@ export default function Equipment() {
                     alt="green iguana"
                   />
                   <CardContent>
-                    <Link to={`/equipments/${equipment.Id}`}>
+                    <Link
+                      className="equipment-title"
+                      to={`/equipments/${equipment.Id}`}
+                    >
                       {equipment.Name}
                     </Link>
-                    <Typography variant="body2" color="text.secondary">
+                    <br />
+                    <span className="equipment-category">
                       {equipment.Category}
-                    </Typography>
+                    </span>
+                    <span className="equipment-brand">{equipment.Brand}</span>
+                    <p className="equipment-price">
+                      {equipment.Price != 0
+                        ? equipment.Price
+                        : "Call for price"}
+                    </p>
                   </CardContent>
                 </CardActionArea>
-                <CardActions>
-                  <Button size="small" color="primary">
-                    {equipment.Price}
-                  </Button>
-                </CardActions>
               </Card>
             </Grid>
           ))}

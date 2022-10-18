@@ -302,6 +302,30 @@ html {
   padding: 10px;
 }
 
+.equipment-title {
+  text-decoration: none;
+}
+.equipment-category {
+  font-size: 0.8rem;
+  background-color: darkgray;
+  border-radius: 15px;
+  padding: 5px;
+  color: white;
+}
+.equipment-brand {
+  font-size: 0.8rem;
+  background-color: rgb(23, 186, 186);
+  border-radius: 15px;
+  padding: 5px;
+  color: white;
+  margin-left: 12px;
+}
+.equipment-price {
+  font-weight: bolder;
+  color: orange;
+  padding-top: 16px;
+  text-align: right !important;
+}
 .footer-wrapper {
   clear: both;
   background-color: rgb(49, 49, 49);

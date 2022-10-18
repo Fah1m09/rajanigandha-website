@@ -14,6 +14,8 @@ import Equipment from "./pagaes/equipment";
 import Reagent from "./pagaes/reagent";
 import Contact from "./pagaes/contact";
 import EquipmentDetails from "./pagaes/equipmentDetails";
+import News from "./pagaes/news";
+import NewsDetails from "./pagaes/newsDetails";
 
 const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
 
@@ -60,6 +62,8 @@ const App = () => {
                   path="/equipments/:equipmentId"
                   element={<EquipmentDetails />}
                 />
+                <Route path="/news" element={<News />} />
+                <Route path="/news/:newsId" element={<NewsDetails />} />
                 <Route path="/reagent" element={<Reagent />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="*" element={<MissingRoute />} />

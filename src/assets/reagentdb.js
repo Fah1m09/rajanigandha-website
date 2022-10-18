@@ -1,4 +1,4 @@
-var db =
+var reagentdb =
   [
     {
       "Id": 1,
@@ -110,4 +110,4 @@ var db =
     }
   ];
 
-export default db;
+export default reagentdb;
