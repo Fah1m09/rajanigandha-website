@@ -326,6 +326,15 @@ html {
   padding-top: 16px;
   text-align: right !important;
 }
+
+.news-wrapper {
+  background-color: #ced7e7;
+  margin-bottom: 2rem;
+}
+
+.news-image {
+  margin-left: auto;
+}
 .footer-wrapper {
   clear: both;
   background-color: rgb(49, 49, 49);
@@ -343,6 +352,7 @@ html {
 }
 
 .footer-copyright {
+  border-top: 1px solid white;
   padding: 0.2rem;
   text-align: center;
 }

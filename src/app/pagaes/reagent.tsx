@@ -20,7 +20,8 @@ import {
   Select,
   SelectChangeEvent,
 } from "@mui/material";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
+import ReagentData from "../../assets/reagentdb";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -37,83 +38,6 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
     backgroundColor: theme.palette.action.hover,
   },
 }));
-
-function createData(
-  Id: number,
-  Name: string,
-  Category: string,
-  PacSize: string,
-  Price: number
-): iReagent {
-  return {
-    Id,
-    Name,
-    Category,
-    PacSize,
-    Price,
-  };
-}
-
-const rows = [
-  createData(1, "ALBUMIN", "Clinical Chemistry", "2x250 ml", 0),
-  createData(2, "ALBUMIN", "Clinical Chemistry", "2x50 ml", 0),
-  createData(3, "TOTAL BILIRUBIN DMSO", "Clinical Chemistry", "2x150 ml", 0),
-  createData(
-    4,
-    "TOTAL & DIRECT BILIRUBIN DMSO",
-    "Clinical Chemistry",
-    "2x150 ml",
-    0
-  ),
-  createData(
-    5,
-    "ALBCREATININE KINECTIC JAFFE UMIN",
-    "Clinical Chemistry",
-    "2x150 ml",
-    0
-  ),
-  createData(
-    6,
-    "CREATININE KINECTIC JAFFE",
-    "Clinical Chemistry",
-    "2x250 ml",
-    0
-  ),
-  createData(7, "GLUCOSE PAP", "Clinical Chemistry", "4x250 ml", 0),
-  createData(
-    8,
-    "GLUCOSE PAP LIQUID MONO",
-    "Clinical Chemistry",
-    "1x1000 ml",
-    0
-  ),
-  createData(
-    9,
-    "HAEMOGLOBIN (Reagent concentrated 50x)",
-    "Clinical Chemistry",
-    "4x5 ml",
-    0
-  ),
-  createData(
-    10,
-    "HAEMOGLOBIN with standard",
-    "Clinical Chemistry",
-    "4x50 ml",
-    0
-  ),
-  createData(11, "TOTAL PROTEIN", "Clinical Chemistry", "2x50 ml", 0),
-  createData(12, "TOTAL PROTEIN", "Clinical Chemistry", "2x250 ml", 0),
-  createData(
-    13,
-    "TOTAL PROTEIN(URINE&CSF)",
-    "Clinical Chemistry",
-    "2x50 ml",
-    0
-  ),
-  createData(14, "ASO Turbilatex", "Immuno Chemistry", "2x50 ml", 0),
-  createData(15, "RA Turbilatex", "Immuno Chemistry", "2x50 ml", 0),
-  createData(16, "PT", "Blood Grouping", "2x50 ml", 0),
-];
 
 function descendingComparator<T>(a: T, b: T, orderBy: keyof T) {
   if (b[orderBy] < a[orderBy]) {
@@ -241,7 +165,7 @@ export default function Reagent() {
   const [orderBy, setOrderBy] = React.useState<keyof iReagent>("Id");
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(20);
-  const [reagentList, setReagentList] = useState([]);
+  const reagentList = ReagentData;
   const [filter, setFilter] = useState("");
 
   const Categories = [
@@ -251,10 +175,6 @@ export default function Reagent() {
     { Name: "Immuno Chemistry", Value: "Immuno Chemistry" },
     { Name: "Blood Grouping", Value: "Blood Grouping" },
   ];
-
-  useEffect(() => {
-    setReagentList(rows);
-  }, []);
 
   const handleRequestSort = (
     event: React.MouseEvent<unknown>,
@@ -275,9 +195,6 @@ export default function Reagent() {
     setRowsPerPage(parseInt(event.target.value, 10));
     setPage(0);
   };
-
-  const emptyRows =
-    page > 0 ? Math.max(0, (1 + page) * rowsPerPage - rows.length) : 0;
 
   function getFilteredList() {
     // Avoid filter when selectedCategory is null
@@ -357,15 +274,6 @@ export default function Reagent() {
                         </StyledTableRow>
                       );
                     })}
-                  {emptyRows > 0 && (
-                    <TableRow
-                      style={{
-                        height: 33 * emptyRows,
-                      }}
-                    >
-                      <TableCell colSpan={6} />
-                    </TableRow>
-                  )}
                 </TableBody>
               </Table>
             </TableContainer>

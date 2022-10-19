@@ -27,9 +27,9 @@ export default function Footer() {
       </Grid>
 
       <Grid item xs={12}>
-        <p className="footer-copyright">
-          © {new Date().getFullYear()} Rajanigandha International
-        </p>
+        <div className="footer-copyright">
+          <p>© {new Date().getFullYear()} Rajanigandha International</p>
+        </div>
       </Grid>
     </Grid>
   );

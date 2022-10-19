@@ -10,7 +10,6 @@ import { Link } from "react-router-dom";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions } from "@mui/material";
 import { useEffect, useMemo, useState } from "react";
 import EquipmetsData from "../../assets/db";
@@ -103,11 +102,16 @@ export default function Equipment() {
                       {equipment.Category}
                     </span>
                     <span className="equipment-brand">{equipment.Brand}</span>
-                    <p className="equipment-price">
-                      {equipment.Price != 0
-                        ? equipment.Price
-                        : "Call for price"}
-                    </p>
+                    <Link
+                      className="equipment-title"
+                      to={`/equipments/${equipment.Id}`}
+                    >
+                      <p className="equipment-price">
+                        {equipment.Price != 0
+                          ? equipment.Price
+                          : "Call for price"}
+                      </p>
+                    </Link>
                   </CardContent>
                 </CardActionArea>
               </Card>
