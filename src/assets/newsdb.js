@@ -26,7 +26,7 @@ var newsdb =
       "Title": "Spin 800",
       "Image": "http://localhost:5173/img/Equipments/spin800.png",
       "Time": "5/7/21",
-      "Description": "This is test 1"
+      "Description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident voluptatibus architecto nemo culpa iusto temporibus doloremque earum libero ea quibusdam placeat, ipsum impedit quos magni similique, cum quis, esse nihil harum. Earum eligendi facere fugit voluptatem sapiente voluptatibus quia. Incidunt sapiente eligendi ullam. Maxime facere vitae incidunt odio? Dignissimos corrupti distinctio eveniet fugiat sint corporis possimus. Dignissimos ea molestiae saepe nostrum cumque dolor praesentium laboriosam totam. Doloribus maxime eaque mollitia sint consequatur dicta eligendi quia cumque dolorem quasi? Illum in quidem ipsam eaque modi porro exercitationem animi, libero, qui ex soluta numquam non repellendus omnis, officia inventore corporis necessitatibus! Deserunt unde, aliquam maxime possimus ipsum, sequi ab excepturi esse atque dolores, magni explicabo nostrum aut hic facilis dolorum sit optio quis dignissimos voluptatem autem. Ex neque, doloremque eius aperiam magni harum natus earum sequi blanditiis vero nesciunt, totam accusantium laudantium laboriosam odit dignissimos officia. Aliquid eos necessitatibus provident laudantium fugit aspernatur iste minima, qui saepe quae, blanditiis molestias sapiente alias. Suscipit iste corrupti consequuntur est in nemo doloremque nihil deleniti, ipsam obcaecati quidem ipsum, tempore voluptas ad voluptate! Quos et esse natus odit doloribus? Cum suscipit deserunt sunt,  cupiditate incidunt nemo ratione facilis doloribus eius repellendus dolores a nostrum. Optio!"
     },
   ];
 

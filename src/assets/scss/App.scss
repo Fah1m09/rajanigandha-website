@@ -329,12 +329,24 @@ html {
 
 .news-wrapper {
   background-color: #ced7e7;
-  margin-bottom: 2rem;
+  border-radius: 8px;
+  margin-top: 1rem !important;
+
+  height: 250px;
+  overflow: hidden;
 }
 
-.news-image {
-  margin-left: auto;
+.news-body {
+  align-items: left;
 }
+.news-date {
+  color: darkgrey;
+}
+.news-title {
+  color: #41455b;
+  text-decoration: none;
+}
+
 .footer-wrapper {
   clear: both;
   background-color: rgb(49, 49, 49);

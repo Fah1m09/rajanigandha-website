@@ -1,31 +1,11 @@
 import { Box, Grid, Paper, styled } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
-import spinlogo from "../../../public/img/spinlogo.png";
-import microlab from "../../../public/img/microlab.png";
-import service from "../../../public/img/service.svg";
-import reagent from "../../../public/img/reagent.svg";
-import equipment from "../../../public/img/equipment.svg";
-import undraw_building from "../../../public/img/undraw_building.svg";
-import undraw_security from "../../../public/img/undraw_security.svg";
-import undraw_server from "../../../public/img/undraw_server.svg";
-import uprx50 from "../../../public/img/uprx50.png";
-import upspinx5 from "../../../public/img/upspinx5.png";
-import upsping5comp from "../../../public/img/upsping5comp.png";
 import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import { useState } from "react";
 
 export default function HomePage() {
-  const img = [uprx50, upspinx5, upsping5comp];
   const [current, setCurrent] = useState(0);
-
-  const handleBack = () => {
-    current === 0 ? setCurrent(img.length - 1) : setCurrent(current - 1);
-  };
-
-  const handleForward = () => {
-    current === img.length - 1 ? setCurrent(0) : setCurrent(current + 1);
-  };
 
   return (
     <>
@@ -104,7 +84,7 @@ export default function HomePage() {
                   href="http://www.spinreact.com/"
                   target="_blank"
                 >
-                  <img src={spinlogo} alt="spinreact" />
+                  <img src="img/spinlogo.png" alt="spinreact" />
                 </a>
               </Grid>
               <Grid item xs={12} lg={8}>
@@ -156,7 +136,7 @@ export default function HomePage() {
                     href="https://www.microlab.co.in/"
                     target="_blank"
                   >
-                    <img src={microlab} alt="microlab" />
+                    <img src="img/microlab.png" alt="microlab" />
                   </a>
                 </Box>
               </Grid>
@@ -166,13 +146,13 @@ export default function HomePage() {
             <h1 className="heading">Why Rajanigandha?</h1>
           </Grid>
           <Grid item xs={12} lg={4}>
-            <img className="small-svg" src={undraw_building} alt="" />
+            <img className="small-svg" src="img/undraw_building.svg" alt="" />
           </Grid>
           <Grid item xs={12} lg={4} justifyContent="center" alignItems="center">
-            <img className="small-svg" src={undraw_security} alt="" />
+            <img className="small-svg" src="img/undraw_security.svg" alt="" />
           </Grid>
           <Grid item xs={12} lg={4} justifyContent="center" alignItems="center">
-            <img className="small-svg" src={undraw_server} alt="" />
+            <img className="small-svg" src="img/undraw_server.svg" alt="" />
           </Grid>
           <Grid item xs={12}>
             <h1 className="heading">Our Services</h1>
@@ -181,7 +161,7 @@ export default function HomePage() {
             <Grid container>
               <Grid item xs={12} className="service-card">
                 <div className="card-img">
-                  <img src={equipment} alt="equipment-logo-svg" />
+                  <img src="img/equipment.svg" alt="equipment-logo-svg" />
                 </div>
                 <div className="card-text">
                   <h3>
@@ -200,7 +180,7 @@ export default function HomePage() {
             <Grid container>
               <Grid item xs={12} className="service-card">
                 <div className="card-img">
-                  <img src={reagent} alt="reagent-logo-svg" />
+                  <img src="img/reagent.svg" alt="reagent-logo-svg" />
                 </div>
                 <div className="card-text">
                   <h3>
@@ -219,7 +199,7 @@ export default function HomePage() {
             <Grid container>
               <Grid item xs={12} className="service-card">
                 <div className="card-img">
-                  <img src={service} alt="service-logo-svg" />
+                  <img src="img/service.svg" alt="service-logo-svg" />
                 </div>
                 <div className="card-text">
                   <h3>

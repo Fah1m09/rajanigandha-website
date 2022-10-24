@@ -10,39 +10,29 @@ export default function NewsDetails() {
   const { newsId } = useParams();
   const Newses = NewsData;
   return (
-    <>
+    <div className="equipment-container">
       {Newses &&
         Newses.filter((x) => x.Id == newsId).map((news) => (
           <Grid container spacing={2} key={news.Id}>
             <Grid item xs={12} lg={8}>
-              <Card
-                raised
-                sx={{
-                  maxWidth: 420,
-                  margin: "0 0.5rem",
-                  padding: "0 0.1rem",
-                }}
-              >
-                <CardActionArea>
-                  <CardMedia
-                    component="img"
-                    height="400"
-                    image={news.Image}
-                    alt="green iguana"
-                  />
-                </CardActionArea>
-              </Card>
+              <img
+                src={news.Image}
+                alt="newsImage"
+                width="400px"
+                height="400px"
+              />
             </Grid>
             <Grid item xs={12}>
-              <h3>{news.Title}</h3>
-              <span>Date: </span>
-              <span>{news.Time}</span>
+              <div className="news-date">
+                <span>Date: </span>
+                <span>{news.Time}</span>
+              </div>
+              <h3 className="news-title">{news.Title}</h3>
               <br />
-              <h5>Details</h5>
-              {news.Description}
+              <p>{news.Description}</p>
             </Grid>
           </Grid>
         ))}
-    </>
+    </div>
   );
 }

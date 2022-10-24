@@ -1,4 +1,4 @@
-import { Grid, Paper } from "@mui/material";
+import { Chip, Grid, Paper, Stack } from "@mui/material";
 import { useSnackbar } from "notistack";
 import React, { useEffect } from "react";
 import Card from "@mui/material/Card";
@@ -12,7 +12,7 @@ export default function EquipmentDetails() {
   const { equipmentId } = useParams();
   const Equipments = EquipmetsData;
   return (
-    <>
+    <div className="equipment-container">
       {Equipments &&
         Equipments.filter((x) => x.Id == equipmentId).map((equipment) => (
           <Grid container spacing={2} key={equipment.Id}>
@@ -20,7 +20,7 @@ export default function EquipmentDetails() {
               <Card
                 raised
                 sx={{
-                  maxWidth: 420,
+                  maxWidth: 450,
                   margin: "0 0.5rem",
                   padding: "0 0.1rem",
                 }}
@@ -37,16 +37,18 @@ export default function EquipmentDetails() {
             </Grid>
             <Grid item xs={12} lg={8}>
               <h3>{equipment.Name}</h3>
-              <span>Category: </span>
-              <span>{equipment.Category}</span>
-              <br />
-              <span>Brand: </span>
-              <span>{equipment.Brand}</span>
+              <Stack spacing={1} alignItems="start">
+                <Stack spacing={1} textAlign="left">
+                  <Chip label={"Category:" + equipment.Category} />
+                  <Chip label={"Brand:" + equipment.Brand} variant="outlined" />
+                </Stack>
+              </Stack>
+
               <h5>Details</h5>
               {equipment.Description}
             </Grid>
           </Grid>
         ))}
-    </>
+    </div>
   );
 }

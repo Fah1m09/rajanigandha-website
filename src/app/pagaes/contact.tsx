@@ -84,7 +84,7 @@ export default function Contact() {
             <Grid item xs={12}>
               <div>
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14607.59915521094!2d90.3654215!3d23.750952700000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1665601428019!5m2!1sen!2sbd"
+                  src="https://www.google.com/maps/d/u/0/embed?mid=1k3k6XWGeh56dGbTpKaH4BxWA82TUQA5B&ehbc=2E312F"
                   width="100%"
                   height="450"
                 ></iframe>
