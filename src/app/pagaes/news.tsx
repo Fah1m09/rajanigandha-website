@@ -1,4 +1,12 @@
-import { Grid, Paper } from "@mui/material";
+import {
+  Card,
+  CardContent,
+  Typography,
+  CardMedia,
+  Box,
+  Grid,
+  Paper,
+} from "@mui/material";
 import { Link } from "react-router-dom";
 import NewsData from "../../assets/newsdb";
 
@@ -9,24 +17,36 @@ export default function News() {
     <div className="equipment-container">
       {Newses &&
         Newses.map((news) => (
-          <Grid container spacing={2} key={news.Id}>
-            <Paper>
-              <div className="news-image">
-                <img
-                  src={news.Image}
-                  alt="newsImage"
-                  width="250px"
-                  height="100%"
+          <Grid container spacing={2}>
+            <Grid item xs={12}>
+              <Card sx={{ display: "flex" }}>
+                <CardMedia
+                  component="img"
+                  sx={{ width: 250 }}
+                  image={news.Image}
+                  alt="Live from space album cover"
                 />
-              </div>
-              <div className="news-body">
-                <Link className="news-title" to={`/news/${news.Id}`}>
-                  <h5>{news.Title}</h5>
-                </Link>
-                <span className="news-date">{news.Time}</span>
-                <p className="news-price">{news.Description}</p>
-              </div>
-            </Paper>
+                <Box sx={{ display: "flex", flexDirection: "column" }}>
+                  <CardContent sx={{ flex: "1 0 auto" }}>
+                    <Typography component="div" variant="h5">
+                      {news.Title}
+                    </Typography>
+                    <Typography
+                      variant="subtitle1"
+                      color="text.secondary"
+                      component="div"
+                    >
+                      {news.Time}
+                    </Typography>
+                  </CardContent>
+                  <Box
+                    sx={{ display: "flex", alignItems: "center", pl: 1, pb: 1 }}
+                  >
+                    <Typography>{news.Description}</Typography>
+                  </Box>
+                </Box>
+              </Card>
+            </Grid>
           </Grid>
         ))}
     </div>

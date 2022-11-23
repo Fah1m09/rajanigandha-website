@@ -10,28 +10,32 @@ import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
-import RajaniLogo from "../../../../public/img/rajanigondha.png";
 import { Link } from "react-router-dom";
 
 const Header = (props) => {
   const [menuItem, setMenuItem] = useState([
     {
       Id: 1,
+      Name: "Home",
+      Nav: "/",
+    },
+    {
+      Id: 2,
       Name: "Equipments",
       Nav: "/equipments",
     },
     {
-      Id: 2,
+      Id: 3,
       Name: "Reagents",
       Nav: "/reagent",
     },
     {
-      Id: 3,
+      Id: 4,
       Name: "Contact US",
       Nav: "/contact",
     },
     {
-      Id: 4,
+      Id: 5,
       Name: "News",
       Nav: "/news",
     },
@@ -48,7 +52,11 @@ const Header = (props) => {
   return (
     <AppBar position="static">
       <Toolbar>
-        <img className="header-logo" src={RajaniLogo} alt="Rajanigandha Logo" />
+        <img
+          className="header-logo"
+          src="http://localhost:5173/img/rajanigondha.png"
+          alt="Rajanigandha Logo"
+        />
         <Typography
           className="header-text"
           variant="h6"

@@ -7,6 +7,7 @@ import CardMedia from "@mui/material/CardMedia";
 import { Button, CardActionArea, CardActions } from "@mui/material";
 import { useParams } from "react-router-dom";
 import EquipmetsData from "../../assets/db";
+import { iEquipment } from "../../types/Equipment";
 
 export default function EquipmentDetails() {
   const { equipmentId } = useParams();
@@ -30,7 +31,7 @@ export default function EquipmentDetails() {
                     component="img"
                     height="400"
                     image={equipment.Image}
-                    alt="green iguana"
+                    alt="equipment-image"
                   />
                 </CardActionArea>
               </Card>
@@ -44,8 +45,10 @@ export default function EquipmentDetails() {
                 </Stack>
               </Stack>
 
-              <h5>Details</h5>
-              {equipment.Description}
+              <h5 style={{ marginTop: "50px", marginBottom: "20px" }}>
+                Details
+              </h5>
+              <ul>{String(equipment.Description).split("\n")}</ul>
             </Grid>
           </Grid>
         ))}

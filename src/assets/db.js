@@ -7,7 +7,7 @@ var db =
       "Name": "Spin 800",
       "Category": "Full Auto BioChemistry",
       "Price": 0,
-      "Description": "This is test 1"
+      "Description": "Clinical chemestry analyzer, fully automated, 420 tests/hour up to 640 tests/hour with ISE Refrigerated reagent compartment, 90 samples onboard capacity, Internal bar code reader"
     },
     {
       "Id": 2,

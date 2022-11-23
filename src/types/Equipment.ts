@@ -1,8 +1,9 @@
-export type Equipment = {
+export type iEquipment = {
   Id: number;
+  Image: string;
+  Brand: string;
   Name: string;
   Category: string;
-  Image: string;
   Price: number;
   Description: string;
 };

@@ -84,35 +84,31 @@ export default function Equipment() {
                 }}
               >
                 <CardActionArea>
-                  <CardMedia
-                    component="img"
-                    height="400"
-                    image={equipment.Image}
-                    alt="green iguana"
-                  />
-                  <CardContent>
-                    <Link
-                      className="equipment-title"
-                      to={`/equipments/${equipment.Id}`}
-                    >
+                  <Link
+                    className="equipment-title"
+                    to={`/equipments/${equipment.Id}`}
+                  >
+                    <CardMedia
+                      component="img"
+                      height="400"
+                      image={equipment.Image}
+                      alt="green iguana"
+                    />
+                    <CardContent>
                       {equipment.Name}
-                    </Link>
-                    <br />
-                    <span className="equipment-category">
-                      {equipment.Category}
-                    </span>
-                    <span className="equipment-brand">{equipment.Brand}</span>
-                    <Link
-                      className="equipment-title"
-                      to={`/equipments/${equipment.Id}`}
-                    >
+                      <br />
+                      <span className="equipment-category">
+                        {equipment.Category}
+                      </span>
+                      <span className="equipment-brand">{equipment.Brand}</span>
+
                       <p className="equipment-price">
                         {equipment.Price != 0
                           ? equipment.Price
                           : "Call for price"}
                       </p>
-                    </Link>
-                  </CardContent>
+                    </CardContent>
+                  </Link>
                 </CardActionArea>
               </Card>
             </Grid>
