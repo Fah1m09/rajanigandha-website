@@ -7,7 +7,9 @@
     "start": "yarn run dev",
     "dev": "vite --host",
     "build": "tsc && vite build",
-    "prod": "vite preview --host"
+    "prod": "vite preview --host",
+    "lint": "eslint \"src/**/*.{ts,tsx}\"",
+    "lint:fix": "eslint \"src/**/*.{ts,tsx}\" --fix"
   },
   "dependencies": {
     "@babel/core": "7.18.5",
@@ -30,7 +32,11 @@
     "@tailwindcss/postcss": "^4.3.0",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
+    "@typescript-eslint/eslint-plugin": "^8.72.0",
+    "@typescript-eslint/parser": "^8.72.0",
     "@vitejs/plugin-react": "^2.0.1",
+    "eslint": "^8.57.1",
+    "eslint-plugin-react-hooks": "^7.1.1",
     "postcss": "^8.5.6",
     "sass": "^1.54.4",
     "tailwindcss": "^4.3.0",

@@ -1,22 +1,21 @@
 const reasons = [
   {
-    eyebrow: "Carefully sourced",
-    number: "International Grade",
-    title: "Great quality reagents & instruments",
-    description:
-      "We import high-quality diagnostic reagents from trusted manufacturers in Spain, Italy, Japan, China & India.",
+    "eyebrow": "Carefully sourced",
+    "number": "5+",
+    "title": "Global manufacturing countries",
+    "description": "We import high-quality diagnostic reagents from trusted manufacturers across Spain, Italy, Japan, China, and India."
   },
   {
     eyebrow: "Always here to help",
-    number: "24 / 7 / 365",
-    title: "technical support",
+    number: "24 / 7",
+    title: "Technical Support",
     description:
       "Our technical support is available around the clock, every day of the year.",
   },
-    {
+  {
     eyebrow: "Trusted across Bangladesh",
     number: "1300+",
-    title: "Hospitals & Diagnostic Centers trust our products",
+    title: "Hospitals & Diagnostic Centers",
     description:
       "Supporting hospitals and diagnostic centers with dependable products",
   },
@@ -34,8 +33,8 @@ export default function WhyRajanigandha() {
           <article className="about-card why-card" key={index}>
             <p className="home-section-eyebrow">{reason.eyebrow}</p>
             <p className="why-trust-value">
-            {reason.number}
-          </p>
+              {reason.number}
+            </p>
             <h3>{reason.title}</h3>
             <p className="why-description">{reason.description}</p>
           </article>
