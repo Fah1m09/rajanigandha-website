@@ -1,14 +1,12 @@
-import { Grid } from "@mui/material";
-
 export default function Footer() {
   return (
-    <Grid container className="footer-wrapper">
-      <Grid item xs={12} className="footer-social">
+    <footer className="footer-wrapper">
+      <div className="footer-social">
         <p>Social Links</p>
-      </Grid>
-      <Grid item xs={12}>
-        <Grid container className="footer-links">
-          <Grid item xs={12} lg={4}>
+      </div>
+      <div>
+        <div className="footer-links grid grid-cols-1 gap-6 md:grid-cols-3">
+          <div>
             <p>
               Rajanigandha International
               <br />
@@ -16,21 +14,21 @@ export default function Footer() {
               <br />
               5th floor, Room no- 5\14, Dhaka-1000, Bangladesh
             </p>
-          </Grid>
-          <Grid item xs={12} lg={4}>
+          </div>
+          <div>
             <p>Useful Links</p>
-          </Grid>
-          <Grid item xs={12} lg={4}>
+          </div>
+          <div>
             <p>Contact</p>
-          </Grid>
-        </Grid>
-      </Grid>
+          </div>
+        </div>
+      </div>
 
-      <Grid item xs={12}>
+      <div>
         <div className="footer-copyright">
           <p>© {new Date().getFullYear()} Rajanigandha International</p>
         </div>
-      </Grid>
-    </Grid>
+      </div>
+    </footer>
   );
 }

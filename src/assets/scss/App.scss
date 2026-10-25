@@ -1,21 +1,12 @@
-*,
-*:after,
-*:before {
-  box-sizing: border-box;
-  font: inherit;
-  color: inherit;
-  margin: 0;
-  padding: 0;
-  border: none;
-  outline: none;
-}
 h1 {
-  font-size: 2.8rem;
+  font-size: clamp(1.9rem, 4vw, 2.8rem);
   font-weight: 700;
+  line-height: 1.15;
 }
 h3 {
-  font-size: 2.3rem;
+  font-size: clamp(1.55rem, 3.2vw, 2.3rem);
   font-weight: 600;
+  line-height: 1.2;
 }
 h5 {
   font-size: 1.3rem;
@@ -28,6 +19,8 @@ a {
 body {
   margin: 0;
   line-height: 1.5;
+  min-width: 320px;
+  overflow-x: hidden;
 }
 
 html {
@@ -54,31 +47,24 @@ html {
 
 .link {
   text-decoration: none;
-  margin-right: 10px;
-}
-
-.link:hover {
-  font-size: 1.2rem;
-  animation: fadein 5s;
-  animation-delay: 1s;
 }
 
 .container {
-  width: 95%;
-  margin: auto;
-  padding: 1rem 0rem;
+  width: min(calc(100% - 2rem), 76rem);
+  margin-inline: auto;
+  padding-block: clamp(2rem, 4vw, 4rem);
 }
 
 .equipment-container {
-  width: 70%;
-  margin: auto;
-  padding: 1rem 0rem;
+  width: min(calc(100% - 2rem), 74rem);
+  margin-inline: auto;
+  padding-block: clamp(1.5rem, 3vw, 3rem);
 }
 
 .container-area {
-  width: 60% !important;
-  margin: auto !important;
-  padding: 1rem;
+  width: min(calc(100% - 2rem), 58rem);
+  margin-inline: auto;
+  padding-block: clamp(1.5rem, 3vw, 3rem);
 }
 
 .header {
@@ -98,10 +84,15 @@ html {
 }
 
 .inner-header {
-  height: 65vh;
+  min-height: clamp(20rem, 55vh, 36rem);
   width: 100%;
-  margin: 0;
-  padding: 0;
+  padding: 2rem 1rem;
+}
+
+.inner-header h1 {
+  max-width: 18ch;
+  margin-inline: auto;
+  font-size: clamp(2rem, 6vw, 3.75rem);
 }
 
 .content {
@@ -189,13 +180,13 @@ html {
 
 .small-svg {
   align-items: center;
-  width: 250px;
+  width: min(100%, 15.625rem);
 }
 
 .brand {
   border: 3px solid #41455b;
   border-radius: 1rem;
-  padding: 0rem 2rem;
+  padding: clamp(1rem, 3vw, 2rem);
   box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -204,7 +195,9 @@ html {
 }
 
 .brand-image img {
-  width: 300px;
+  display: block;
+  width: min(100%, 18.75rem);
+  margin-inline: auto;
 }
 
 .heading {
@@ -221,7 +214,8 @@ html {
   border-radius: 1rem;
   box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
   text-align: center;
-  padding: 1rem 0rem;
+  height: 100%;
+  padding: clamp(1.25rem, 3vw, 2rem) 1rem;
 }
 
 .service-card:hover {
@@ -230,6 +224,7 @@ html {
 }
 
 .card-img {
+  display: flex;
   width: 10rem;
   height: 10rem;
   background-color: #ced7e7;
@@ -241,18 +236,16 @@ html {
 }
 .card-img img {
   width: 80px;
-  padding-top: 40px;
   text-align: center;
 }
 .card-text {
   color: #474747;
 }
 .card-button {
-  font-size: 1.3rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
   font-weight: 500;
   text-decoration: none;
-  padding: 1rem 2rem;
-  height: 100%;
+  padding: 0.85rem 1.5rem;
   border: none;
   outline: none;
   border-radius: 0.5rem;
@@ -260,7 +253,6 @@ html {
   transition: all 0.3s ease;
 }
 .card-button:hover {
-  font-size: 1.4rem;
   border: 3px solid #41455b;
   border-radius: 1rem;
   box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
@@ -271,26 +263,29 @@ html {
 }
 
 .contact-heading-container {
-  padding: 1.5rem;
+  padding: clamp(1rem, 3vw, 1.5rem);
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 0;
 }
 
 .contact-box-large {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5) !important;
-  padding: 1.5rem;
+  min-width: 0;
+  padding: clamp(1rem, 3vw, 1.5rem);
+  overflow-wrap: anywhere;
   text-align: center;
 }
 
 .contact-box-small {
-  padding: 1rem;
+  min-width: 0;
+  padding: clamp(0.85rem, 2.5vw, 1.25rem);
   text-align: center;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5) !important;
+  overflow-wrap: anywhere;
 }
 
 .contact-box-large:hover,
 .contact-box-small:hover {
-  scale: 1.1;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8) !important;
 }
 
@@ -306,19 +301,22 @@ html {
   text-decoration: none;
 }
 .equipment-category {
+  display: inline-block;
   font-size: 0.8rem;
   background-color: darkgray;
   border-radius: 15px;
   padding: 5px;
+  margin: 0.25rem 0.4rem 0.25rem 0;
   color: white;
 }
 .equipment-brand {
+  display: inline-block;
   font-size: 0.8rem;
   background-color: rgb(23, 186, 186);
   border-radius: 15px;
   padding: 5px;
   color: white;
-  margin-left: 12px;
+  margin: 0.25rem 0;
 }
 .equipment-price {
   font-weight: bolder;
@@ -332,7 +330,8 @@ html {
   border-radius: 8px;
   margin-top: 1rem !important;
 
-  height: 250px;
+  min-height: 15rem;
+  height: auto;
   overflow: hidden;
 }
 
@@ -354,17 +353,76 @@ html {
 }
 
 .footer-links {
-  padding: 0.4rem 1rem;
+  padding: clamp(1.25rem, 3vw, 2rem) clamp(1rem, 4vw, 3rem);
 }
 
 .footer-social {
   background-color: #1976d2;
   text-align: end;
-  padding: 0.3rem 2rem;
+  padding: 0.5rem clamp(1rem, 4vw, 3rem);
 }
 
 .footer-copyright {
   border-top: 1px solid white;
-  padding: 0.2rem;
+  padding: 0.75rem 1rem;
   text-align: center;
+}
+
+@media (max-width: 640px) {
+  .container,
+  .equipment-container,
+  .container-area {
+    width: min(calc(100% - 1.5rem), 100%);
+  }
+
+  .brand {
+    border-width: 2px;
+  }
+
+  .contact-box-large,
+  .contact-box-small {
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.35) !important;
+  }
+
+  .footer-social {
+    text-align: center;
+  }
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+.dark .brand {
+  border-color: #475569;
+  background-color: #1e293b;
+  color: #fff;
+}
+
+.dark .brand:hover,
+.dark .service-card:hover {
+  background-color: #334155;
+  color: #fff;
+}
+
+.dark .service-card {
+  border-color: #475569;
+}
+
+.dark .card-text,
+.dark .news-title {
+  color: #fff;
+}
+
+.dark .card-button {
+  background-color: #334155;
+  color: #fff;
+}
+
+.dark .card-button:hover {
+  background-color: #475569;
+}
+
+.dark .news-date {
+  color: #cbd5e1;
 }

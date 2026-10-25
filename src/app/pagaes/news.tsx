@@ -1,54 +1,12 @@
-import {
-  Card,
-  CardContent,
-  Typography,
-  CardMedia,
-  Box,
-  Grid,
-  Paper,
-} from "@mui/material";
-import { Link } from "react-router-dom";
 import NewsData from "../../assets/newsdb";
 
 export default function News() {
-  const Newses = NewsData;
-
   return (
-    <div className="equipment-container">
-      {Newses &&
-        Newses.map((news) => (
-          <Grid container spacing={2}>
-            <Grid item xs={12}>
-              <Card sx={{ display: "flex" }}>
-                <CardMedia
-                  component="img"
-                  sx={{ width: 250 }}
-                  image={news.Image}
-                  alt="Live from space album cover"
-                />
-                <Box sx={{ display: "flex", flexDirection: "column" }}>
-                  <CardContent sx={{ flex: "1 0 auto" }}>
-                    <Typography component="div" variant="h5">
-                      {news.Title}
-                    </Typography>
-                    <Typography
-                      variant="subtitle1"
-                      color="text.secondary"
-                      component="div"
-                    >
-                      {news.Time}
-                    </Typography>
-                  </CardContent>
-                  <Box
-                    sx={{ display: "flex", alignItems: "center", pl: 1, pb: 1 }}
-                  >
-                    <Typography>{news.Description}</Typography>
-                  </Box>
-                </Box>
-              </Card>
-            </Grid>
-          </Grid>
-        ))}
-    </div>
+    <main className="equipment-container space-y-5">
+      {NewsData.map((news) => <article className="flex flex-col overflow-hidden rounded-lg bg-white text-slate-900 shadow-md dark:bg-slate-800 dark:text-white sm:flex-row" key={news.Id}>
+        <img className="w-full object-cover sm:w-64" src={news.Image} alt={news.Title} />
+        <div className="flex flex-col p-5"><h2 className="text-xl font-semibold">{news.Title}</h2><time className="mt-1 text-sm text-slate-500 dark:text-slate-300">{news.Time}</time><p className="mt-4">{news.Description}</p></div>
+      </article>)}
+    </main>
   );
 }

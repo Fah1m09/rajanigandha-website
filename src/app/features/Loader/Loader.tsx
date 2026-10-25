@@ -1,4 +1,3 @@
-import { Backdrop, CircularProgress } from "@mui/material";
 import React from "react";
 import { useAppSelector } from "../../../hooks/useReduxHooks";
 
@@ -9,9 +8,9 @@ function Loader() {
     return undefined;
   }
   return (
-    <Backdrop sx={{ color: "#fff", zIndex: 1050 }} open={true}>
-      <CircularProgress color="inherit" />
-    </Backdrop>
+    <div className="fixed inset-0 z-[1050] flex items-center justify-center bg-black/50 text-white" role="status" aria-label="Loading">
+      <div className="h-12 w-12 animate-spin rounded-full border-4 border-white/30 border-t-white" />
+    </div>
   );
 }
 

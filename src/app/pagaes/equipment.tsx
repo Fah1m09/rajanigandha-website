@@ -1,119 +1,25 @@
-import {
-  FormControl,
-  Grid,
-  InputLabel,
-  MenuItem,
-  Select,
-  SelectChangeEvent,
-} from "@mui/material";
+import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import { Button, CardActionArea, CardActions } from "@mui/material";
-import { useEffect, useMemo, useState } from "react";
 import EquipmetsData from "../../assets/db";
 
+const categories = ["Full Auto BioChemistry", "Auto Hematology Analyzer", "Semi Auto BioChemistry", "Electrolite", "Others"];
+
 export default function Equipment() {
-  const Categories = [
-    { Name: "Full Auto BioChemistry", Value: "Full Auto BioChemistry" },
-    { Name: "Auto Hematology Analyzer", Value: "Auto Hematology Analyzer" },
-    { Name: "Semi Auto BioChemistry", Value: "Semi Auto BioChemistry" },
-    { Name: "Electrolite", Value: "Electrolite" },
-    { Name: "Others", Value: "Others" },
-  ];
-
-  const Equipments = EquipmetsData;
-  const [equipmentList, setEquipmentList] = useState([]);
   const [filter, setFilter] = useState("");
-
-  useEffect(() => {
-    if (Equipments) {
-      setEquipmentList(Equipments);
-    }
-  }, []);
-
-  function getFilteredList() {
-    // Avoid filter when selectedCategory is null
-    if (filter === "") {
-      return equipmentList;
-    }
-    return equipmentList.filter((item) => item.Category === filter);
-  }
-
-  var filteredList = useMemo(getFilteredList, [filter, equipmentList]);
-
-  const handleChange = (event: SelectChangeEvent) => {
-    setFilter(event.target.value);
-  };
-
+  const equipment = useMemo(() => filter ? EquipmetsData.filter((item) => item.Category === filter) : EquipmetsData, [filter]);
   return (
-    <div className="equipment-container">
-      <Grid container spacing={2}>
-        <Grid item xs={9}></Grid>
-        <Grid item xs={3}>
-          <FormControl fullWidth>
-            <InputLabel id="demo-simple-select-label">
-              Select Category
-            </InputLabel>
-            <Select
-              labelId="demo-simple-select-label"
-              id="demo-simple-select"
-              value={filter}
-              label="Filter"
-              onChange={handleChange}
-            >
-              <MenuItem value={""}>All</MenuItem>
-              {Categories.map((cat) => (
-                <MenuItem value={cat.Value} key={cat.Value}>
-                  {cat.Name}
-                </MenuItem>
-              ))}
-            </Select>
-          </FormControl>
-        </Grid>
-        {Equipments &&
-          filteredList.map((equipment) => (
-            <Grid item xs={12} lg={4} key={equipment.Id}>
-              <Card
-                raised
-                sx={{
-                  maxWidth: 420,
-                  margin: "0 0.5rem",
-                  padding: "0 0.1rem",
-                }}
-              >
-                <CardActionArea>
-                  <Link
-                    className="equipment-title"
-                    to={`/equipments/${equipment.Id}`}
-                  >
-                    <CardMedia
-                      component="img"
-                      height="400"
-                      image={equipment.Image}
-                      alt="green iguana"
-                    />
-                    <CardContent>
-                      {equipment.Name}
-                      <br />
-                      <span className="equipment-category">
-                        {equipment.Category}
-                      </span>
-                      <span className="equipment-brand">{equipment.Brand}</span>
-
-                      <p className="equipment-price">
-                        {equipment.Price != 0
-                          ? equipment.Price
-                          : "Call for price"}
-                      </p>
-                    </CardContent>
-                  </Link>
-                </CardActionArea>
-              </Card>
-            </Grid>
-          ))}
-      </Grid>
-    </div>
+    <main className="equipment-container">
+      <div className="mb-6 flex justify-end">
+        <label className="w-full sm:w-72"><span className="mb-1 block text-sm font-medium">Select Category</span><select className="w-full rounded border border-slate-300 bg-white px-3 py-2 text-slate-900 dark:border-slate-600 dark:bg-slate-800 dark:text-white" value={filter} onChange={(event) => setFilter(event.target.value)}><option value="">All</option>{categories.map((category) => <option key={category} value={category}>{category}</option>)}</select></label>
+      </div>
+      <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+        {equipment.map((item) => <article className="overflow-hidden rounded-lg bg-white text-slate-900 shadow-md transition-colors hover:shadow-xl dark:bg-slate-800 dark:text-white" key={item.Id}>
+          <Link className="equipment-title block" to={`/equipments/${item.Id}`}>
+            <img className="h-64 w-full object-contain p-3" src={item.Image} alt={item.Name} />
+            <div className="p-4">{item.Name}<br /><span className="equipment-category">{item.Category}</span><span className="equipment-brand">{item.Brand}</span><p className="equipment-price">{item.Price != 0 ? item.Price : "Call for price"}</p></div>
+          </Link>
+        </article>)}
+      </div>
+    </main>
   );
 }

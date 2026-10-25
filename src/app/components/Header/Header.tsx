@@ -1,138 +1,64 @@
-import React, { useState } from "react";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
-import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
-import Brightness4Icon from "@mui/icons-material/Brightness4";
-import Brightness7Icon from "@mui/icons-material/Brightness7";
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 
-const Header = (props) => {
-  const [menuItem, setMenuItem] = useState([
-    {
-      Id: 1,
-      Name: "Home",
-      Nav: "/",
-    },
-    {
-      Id: 2,
-      Name: "Equipments",
-      Nav: "/equipments",
-    },
-    {
-      Id: 3,
-      Name: "Reagents",
-      Nav: "/reagent",
-    },
-    {
-      Id: 4,
-      Name: "Contact US",
-      Nav: "/contact",
-    },
-    {
-      Id: 5,
-      Name: "News",
-      Nav: "/news",
-    },
-  ]);
+type HeaderProps = {
+  colorMode: { toggleColorMode: () => void };
+  mode: "light" | "dark";
+};
 
-  const { theme, colorMode } = props;
+const menuItems = [
+  { id: 1, name: "Home", path: "/" },
+  { id: 2, name: "Equipments", path: "/equipments" },
+  { id: 3, name: "Reagents", path: "/reagent" },
+  { id: 4, name: "Contact US", path: "/contact" },
+  { id: 5, name: "News", path: "/news" },
+];
 
+export default function Header({ colorMode, mode }: HeaderProps) {
   const [open, setOpen] = useState(false);
-
-  const handleMobileMenu = () => {
-    setOpen(!open);
-  };
+  const activeLink = mode === "dark"
+    ? "bg-slate-800 text-white"
+    : "bg-white text-[#1976d2]";
 
   return (
-    <AppBar position="static">
-      <Toolbar>
-        <img
-          className="header-logo"
-          src="http://localhost:5173/img/rajanigondha.png"
-          alt="Rajanigandha Logo"
-        />
-        <Typography
-          className="header-text"
-          variant="h6"
-          component="a"
-          href="/"
-          sx={{
-            display: { xs: "none", md: "flex" },
-            flexGrow: 1,
-          }}
-        >
-          Rajanigandha <br /> International
-        </Typography>
-
-        <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-          <IconButton
-            size="large"
-            aria-label="account of current user"
-            aria-controls="menu-appbar"
-            aria-haspopup="true"
-            color="inherit"
-            onClick={handleMobileMenu}
-          >
-            <MenuIcon />
-          </IconButton>
-
-          {menuItem.map((page) => (
-            <MenuItem key={page.Id}>
-              <Typography textAlign="center">{page.Name}</Typography>
-            </MenuItem>
-          ))}
-        </Box>
-
-        <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
-
-        <Typography
-          variant="h5"
-          noWrap
-          component="a"
-          href="#"
-          sx={{
-            mr: 2,
-            display: { xs: "flex", md: "none" },
-            flexGrow: 1,
-            letterSpacing: ".3rem",
-            color: "inherit",
-            textDecoration: "none",
-          }}
-        >
+    <header className={`text-white dark:text-blue-50 shadow-md transition-colors ${mode === "dark" ? "bg-slate-950" : "bg-[#1976d2]"}`}>
+      <div className="mx-auto flex min-h-16 max-w-7xl flex-wrap items-center gap-4 px-4 py-2 md:flex-nowrap">
+        <img className="header-logo" src="/img/rajanigondha.png" alt="Rajanigandha Logo" />
+        <Link className="header-text hidden flex-1 text-white md:flex" to="/">
           Rajanigandha International
-        </Typography>
+        </Link>
 
-        <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-          {menuItem.map((page) => (
-            <div className="dropdown" key={page.Id}>
-              <Link className="link" to={`${page.Nav}`}>
-                {page.Name}
-              </Link>
+        <button
+          className="ml-auto rounded p-2 hover:bg-white/15 md:hidden"
+          aria-label="Toggle navigation"
+          aria-expanded={open}
+          onClick={() => setOpen((isOpen) => !isOpen)}
+        >
+          <svg aria-hidden="true" viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+
+        <nav className={`${open ? "flex" : "hidden"} w-full flex-col gap-2 md:ml-auto md:flex md:w-auto md:flex-row md:items-center`}>
+          {menuItems.map((item) => (
+            <div key={item.id} onClick={() => setOpen(false)}>
+              <NavLink
+                className={({ isActive }) => `link rounded-md px-3 py-2 font-medium transition-colors ${isActive ? activeLink : "text-white/90 hover:bg-white/15 hover:text-white"}`}
+                to={item.path}
+              >
+                {item.name}
+              </NavLink>
             </div>
           ))}
-        </Box>
-
-        <Box sx={{ flexGrow: 0 }}>
-          <IconButton
-            sx={{ ml: 1 }}
+          <button
+            className="rounded-md px-3 py-2 text-left text-sm font-medium text-white/90 transition-colors hover:bg-white/15 hover:text-white"
             onClick={colorMode.toggleColorMode}
-            color="inherit"
+            aria-label={`Switch to ${mode === "dark" ? "light" : "dark"} mode`}
           >
-            {theme.palette.mode === "dark" ? (
-              <Brightness7Icon />
-            ) : (
-              <Brightness4Icon />
-            )}
-          </IconButton>
-        </Box>
-      </Toolbar>
-    </AppBar>
+            {mode === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+          </button>
+        </nav>
+      </div>
+    </header>
   );
-};
-export default Header;
+}

@@ -12,6 +12,10 @@
   height: calc(100vh - 88.11px - 24px);
 }
 
+.dark #notfound {
+  background: #0f172a;
+}
+
 #notfound .notfound,
 #notfound-withoutlogin .notfound {
   position: absolute;
@@ -59,6 +63,11 @@
   font-weight: 700;
   text-transform: uppercase;
   margin-top: 0;
+}
+
+.dark .notfound h2,
+.dark .notfound p {
+  color: #fff;
 }
 
 .notfound p {

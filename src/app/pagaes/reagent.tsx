@@ -1,294 +1,37 @@
-import * as React from "react";
-import Box from "@mui/material/Box";
-import Table from "@mui/material/Table";
-import TableBody from "@mui/material/TableBody";
-import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
-import TablePagination from "@mui/material/TablePagination";
-import TableRow from "@mui/material/TableRow";
-import TableSortLabel from "@mui/material/TableSortLabel";
-import Paper from "@mui/material/Paper";
-import { visuallyHidden } from "@mui/utils";
-import { iReagent } from "../../types/Reagent";
-import { styled } from "@mui/material/styles";
-import TableCell, { tableCellClasses } from "@mui/material/TableCell";
-import {
-  FormControl,
-  Grid,
-  InputLabel,
-  MenuItem,
-  Select,
-  SelectChangeEvent,
-} from "@mui/material";
 import { useMemo, useState } from "react";
+import { iReagent } from "../../types/Reagent";
 import ReagentData from "../../assets/reagentdb";
 
-const StyledTableCell = styled(TableCell)(({ theme }) => ({
-  [`&.${tableCellClasses.head}`]: {
-    backgroundColor: theme.palette.common.black,
-    color: theme.palette.common.white,
-  },
-  [`&.${tableCellClasses.body}`]: {
-    fontSize: 14,
-  },
-}));
-
-const StyledTableRow = styled(TableRow)(({ theme }) => ({
-  "&:nth-of-type(odd)": {
-    backgroundColor: theme.palette.action.hover,
-  },
-}));
-
-function descendingComparator<T>(a: T, b: T, orderBy: keyof T) {
-  if (b[orderBy] < a[orderBy]) {
-    return -1;
-  }
-  if (b[orderBy] > a[orderBy]) {
-    return 1;
-  }
-  return 0;
-}
-
-type Order = "asc" | "desc";
-
-function getComparator<Key extends keyof any>(
-  order: Order,
-  orderBy: Key
-): (
-  a: { [key in Key]: number | string },
-  b: { [key in Key]: number | string }
-) => number {
-  return order === "desc"
-    ? (a, b) => descendingComparator(a, b, orderBy)
-    : (a, b) => -descendingComparator(a, b, orderBy);
-}
-
-// This method is created for cross-browser compatibility, if you don't
-// need to support IE11, you can use Array.prototype.sort() directly
-function stableSort<T>(
-  array: readonly T[],
-  comparator: (a: T, b: T) => number
-) {
-  const stabilizedThis = array.map((el, index) => [el, index] as [T, number]);
-  stabilizedThis.sort((a, b) => {
-    const order = comparator(a[0], b[0]);
-    if (order !== 0) {
-      return order;
-    }
-    return a[1] - b[1];
-  });
-  return stabilizedThis.map((el) => el[0]);
-}
-
-interface HeadCell {
-  disablePadding: boolean;
-  id: keyof iReagent;
-  label: string;
-  numeric: boolean;
-}
-
-const headCells: readonly HeadCell[] = [
-  {
-    id: "Name",
-    numeric: false,
-    disablePadding: false,
-    label: "Name",
-  },
-  {
-    id: "Category",
-    numeric: true,
-    disablePadding: false,
-    label: "Category",
-  },
-  {
-    id: "PacSize",
-    numeric: true,
-    disablePadding: false,
-    label: "PacSize",
-  },
-  {
-    id: "Price",
-    numeric: true,
-    disablePadding: false,
-    label: "Price",
-  },
+type SortKey = keyof iReagent;
+const columns: { key: SortKey; label: string }[] = [
+  { key: "Name", label: "Name" }, { key: "Category", label: "Category" },
+  { key: "PacSize", label: "Pack Size" }, { key: "Price", label: "Price" },
 ];
 
-interface EnhancedTableProps {
-  onRequestSort: (
-    event: React.MouseEvent<unknown>,
-    property: keyof iReagent
-  ) => void;
-  order: Order;
-  orderBy: string;
-  rowCount: number;
-}
-
-function EnhancedTableHead(props: EnhancedTableProps) {
-  const { order, orderBy, onRequestSort } = props;
-  const createSortHandler =
-    (property: keyof iReagent) => (event: React.MouseEvent<unknown>) => {
-      onRequestSort(event, property);
-    };
-
-  return (
-    <TableHead>
-      <TableRow>
-        {headCells.map((headCell) => (
-          <StyledTableCell
-            key={headCell.id}
-            align={headCell.numeric ? "right" : "left"}
-            padding={headCell.disablePadding ? "none" : "normal"}
-            sortDirection={orderBy === headCell.id ? order : false}
-          >
-            <TableSortLabel
-              active={orderBy === headCell.id}
-              direction={orderBy === headCell.id ? order : "asc"}
-              onClick={createSortHandler(headCell.id)}
-            >
-              {headCell.label}
-              {orderBy === headCell.id ? (
-                <Box component="span" sx={visuallyHidden}>
-                  {order === "desc" ? "sorted descending" : "sorted ascending"}
-                </Box>
-              ) : null}
-            </TableSortLabel>
-          </StyledTableCell>
-        ))}
-      </TableRow>
-    </TableHead>
-  );
-}
-
 export default function Reagent() {
-  const [order, setOrder] = React.useState<Order>("asc");
-  const [orderBy, setOrderBy] = React.useState<keyof iReagent>("Id");
-  const [page, setPage] = React.useState(0);
-  const [rowsPerPage, setRowsPerPage] = React.useState(20);
-  const reagentList = ReagentData;
+  const [sortBy, setSortBy] = useState<SortKey>("Id");
+  const [ascending, setAscending] = useState(true);
+  const [page, setPage] = useState(0);
+  const [pageSize, setPageSize] = useState(20);
   const [filter, setFilter] = useState("");
-
-  const Categories = [
-    { Name: "All", Value: "" },
-    { Name: "Clinical Chemistry", Value: "Clinical Chemistry" },
-    { Name: "Serology", Value: "Serology" },
-    { Name: "Immuno Chemistry", Value: "Immuno Chemistry" },
-    { Name: "Blood Grouping", Value: "Blood Grouping" },
-  ];
-
-  const handleRequestSort = (
-    event: React.MouseEvent<unknown>,
-    property: keyof iReagent
-  ) => {
-    const isAsc = orderBy === property && order === "asc";
-    setOrder(isAsc ? "desc" : "asc");
-    setOrderBy(property);
-  };
-
-  const handleChangePage = (event: unknown, newPage: number) => {
-    setPage(newPage);
-  };
-
-  const handleChangeRowsPerPage = (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    setRowsPerPage(parseInt(event.target.value, 10));
-    setPage(0);
-  };
-
-  function getFilteredList() {
-    // Avoid filter when selectedCategory is null
-    if (filter === "") {
-      return reagentList;
-    }
-    return reagentList.filter((item) => item.Category === filter);
-  }
-
-  // Avoid duplicate function calls with useMemo
-  var filteredList = useMemo(getFilteredList, [filter, reagentList]);
-
-  const handleChange = (event: SelectChangeEvent) => {
-    setFilter(event.target.value);
-  };
-
+  const categories = ["Clinical Chemistry", "Serology", "Immuno Chemistry", "Blood Grouping"];
+  const filtered = useMemo(() => filter ? ReagentData.filter((item) => item.Category === filter) : ReagentData, [filter]);
+  const rows = useMemo(() => [...filtered].sort((a, b) => {
+    const left = a[sortBy]; const right = b[sortBy];
+    const result = typeof left === "number" && typeof right === "number" ? left - right : String(left).localeCompare(String(right));
+    return ascending ? result : -result;
+  }), [filtered, sortBy, ascending]);
+  const pageCount = Math.max(1, Math.ceil(rows.length / pageSize));
   return (
-    <Box sx={{ width: "100%" }}>
-      <Grid container spacing={2} sx={{ width: "80%", m: "1rem auto" }}>
-        <Grid item xs={9}></Grid>
-        <Grid item xs={3}>
-          <FormControl fullWidth>
-            <InputLabel id="demo-simple-select-label">
-              Select Category
-            </InputLabel>
-            <Select
-              labelId="demo-simple-select-label"
-              id="demo-simple-select"
-              value={filter}
-              label="Filter"
-              onChange={handleChange}
-            >
-              {Categories.map((cat) => (
-                <MenuItem value={cat.Value}>{cat.Name}</MenuItem>
-              ))}
-            </Select>
-          </FormControl>
-        </Grid>
-        <Grid item xs={12}>
-          <Paper>
-            <TableContainer>
-              <Table
-                sx={{ minWidth: 750 }}
-                aria-labelledby="tableTitle"
-                size="small"
-              >
-                <EnhancedTableHead
-                  order={order}
-                  orderBy={orderBy}
-                  onRequestSort={handleRequestSort}
-                  rowCount={filteredList.length}
-                />
-                <TableBody>
-                  {stableSort(filteredList, getComparator(order, orderBy))
-                    .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                    .map((row, index) => {
-                      const labelId = `enhanced-table-checkbox-${index}`;
-
-                      return (
-                        <StyledTableRow hover tabIndex={-1} key={row.Id}>
-                          <StyledTableCell
-                            component="th"
-                            id={labelId}
-                            scope="row"
-                          >
-                            {row.Name}
-                          </StyledTableCell>
-                          <StyledTableCell align="right">
-                            {row.Category}
-                          </StyledTableCell>
-                          <StyledTableCell align="right">
-                            {row.PacSize}
-                          </StyledTableCell>
-                          <StyledTableCell align="right">
-                            {row.Price}
-                          </StyledTableCell>
-                        </StyledTableRow>
-                      );
-                    })}
-                </TableBody>
-              </Table>
-            </TableContainer>
-            <TablePagination
-              rowsPerPageOptions={[10, 20, 30]}
-              component="div"
-              count={filteredList.length}
-              rowsPerPage={rowsPerPage}
-              page={page}
-              onPageChange={handleChangePage}
-              onRowsPerPageChange={handleChangeRowsPerPage}
-            />
-          </Paper>
-        </Grid>
-      </Grid>
-    </Box>
+    <main className="equipment-container">
+      <div className="mb-4 flex justify-end"><label className="w-full sm:w-72"><span className="mb-1 block text-sm font-medium">Select Category</span><select className="w-full rounded border border-slate-300 bg-white px-3 py-2 text-slate-900 dark:border-slate-600 dark:bg-slate-800 dark:text-white" value={filter} onChange={(event) => { setFilter(event.target.value); setPage(0); }}><option value="">All</option>{categories.map((category) => <option key={category} value={category}>{category}</option>)}</select></label></div>
+      <div className="overflow-x-auto rounded-lg shadow">
+        <table className="w-full min-w-[46rem] border-collapse text-left text-sm" aria-label="Reagents">
+          <thead className="bg-black text-white"><tr>{columns.map(({ key, label }) => <th className="px-4 py-3" key={key} scope="col"><button className="font-semibold hover:underline" onClick={() => { setAscending(sortBy === key ? !ascending : true); setSortBy(key); }}>{label}{sortBy === key ? (ascending ? " ↑" : " ↓") : ""}</button></th>)}</tr></thead>
+          <tbody>{rows.slice(page * pageSize, (page + 1) * pageSize).map((row, index) => <tr className={index % 2 === 0 ? "bg-slate-100 dark:bg-slate-800" : "bg-white dark:bg-slate-900"} key={row.Id}><th className="px-4 py-3 font-medium" scope="row">{row.Name}</th><td className="px-4 py-3">{row.Category}</td><td className="px-4 py-3">{row.PacSize}</td><td className="px-4 py-3">{row.Price}</td></tr>)}</tbody>
+        </table>
+      </div>
+      <div className="mt-3 flex flex-wrap items-center justify-end gap-3 text-sm"><label>Rows per page <select className="ml-1 rounded border border-slate-300 bg-white px-2 py-1 text-slate-900 dark:border-slate-600 dark:bg-slate-800 dark:text-white" value={pageSize} onChange={(event) => { setPageSize(Number(event.target.value)); setPage(0); }}>{[10, 20, 30].map((size) => <option key={size} value={size}>{size}</option>)}</select></label><span>{rows.length === 0 ? 0 : page * pageSize + 1}–{Math.min((page + 1) * pageSize, rows.length)} of {rows.length}</span><button className="rounded px-2 py-1 disabled:opacity-40" disabled={page === 0} onClick={() => setPage(page - 1)}>Previous</button><button className="rounded px-2 py-1 disabled:opacity-40" disabled={page + 1 >= pageCount} onClick={() => setPage(page + 1)}>Next</button></div>
+    </main>
   );
 }
