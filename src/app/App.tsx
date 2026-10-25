@@ -21,7 +21,7 @@ const App = () => {
   }), []);
 
   return (
-    <div className={mode === "dark" ? "dark min-h-screen bg-slate-950 text-white" : "min-h-screen bg-white text-slate-900"}>
+    <div className={mode === "dark" ? "app-theme dark min-h-screen bg-[#0A0A0A] text-white" : "app-theme min-h-screen bg-white text-slate-900"}>
       <Router basename="/">
         <Header colorMode={colorMode} mode={mode} />
         <Routes>

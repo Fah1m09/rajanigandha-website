@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Moon, Sun } from "lucide-react";
 import { Link, NavLink } from "react-router-dom";
 
 type HeaderProps = {
@@ -21,7 +22,7 @@ export default function Header({ colorMode, mode }: HeaderProps) {
     : "bg-white text-[#1976d2]";
 
   return (
-    <header className={`text-white dark:text-blue-50 shadow-md transition-colors ${mode === "dark" ? "bg-slate-950" : "bg-[#1976d2]"}`}>
+    <header className={`text-white dark:text-blue-50 shadow-md transition-colors duration-500 ${mode === "dark" ? "bg-slate-950" : "bg-[#1976d2]"}`}>
       <div className="mx-auto flex min-h-16 max-w-7xl flex-wrap items-center gap-4 px-4 py-2 md:flex-nowrap">
         <img className="header-logo" src="/img/rajanigondha.png" alt="Rajanigandha Logo" />
         <Link className="header-text hidden flex-1 text-white md:flex" to="/">
@@ -51,11 +52,15 @@ export default function Header({ colorMode, mode }: HeaderProps) {
             </div>
           ))}
           <button
-            className="rounded-md px-3 py-2 text-left text-sm font-medium text-white/90 transition-colors hover:bg-white/15 hover:text-white"
+            className="theme-toggle rounded-md text-white/90 transition-colors hover:bg-white/15 hover:text-white"
             onClick={colorMode.toggleColorMode}
             aria-label={`Switch to ${mode === "dark" ? "light" : "dark"} mode`}
+            aria-pressed={mode === "dark"}
+            data-mode={mode}
+            title={`Switch to ${mode === "dark" ? "light" : "dark"} mode`}
           >
-            {mode === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+            <Sun className="theme-toggle-icon theme-toggle-sun" aria-hidden="true" />
+            <Moon className="theme-toggle-icon theme-toggle-moon" aria-hidden="true" />
           </button>
         </nav>
       </div>
