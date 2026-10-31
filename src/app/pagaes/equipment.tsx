@@ -1,116 +1,84 @@
-import { useMemo, useRef, useState, type KeyboardEvent } from "react";
-import { ArrowUpRight } from "lucide-react";
-import { Link } from "react-router-dom";
-import { equipmentList as equipmentData, formatPrice } from "../../data/catalog";
-const categories = [
-  "All equipment",
-  ...Array.from(new Set(equipmentData.map((item) => item.category))),
+import { useMemo, useState } from "react";
+import { useSearchParams } from "react-router-dom";
+import { equipmentList } from "../../data/catalog";
+import { Reveal } from "../components/home/motion";
+import { FilterPills, PageCta, ProductCard, SearchBox } from "../components/ui";
+import "../../assets/scss/home.scss";
+import "../../assets/scss/pages.scss";
+
+const ALL = "All";
+const categoryOptions = [
+  { value: ALL, label: "All equipment", count: equipmentList.length },
+  ...Array.from(new Set(equipmentList.map((item) => item.category))).map((category) => ({
+    value: category,
+    label: category,
+    count: equipmentList.filter((item) => item.category === category).length,
+  })),
 ];
 
 export default function Equipment() {
-  const [filter, setFilter] = useState(categories[0]);
-  const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
-  const equipment = useMemo(
-    () => filter === categories[0]
-      ? equipmentData
-      : equipmentData.filter((item) => item.category === filter),
-    [filter],
-  );
+  const [params, setParams] = useSearchParams();
+  const requested = params.get("category") ?? ALL;
+  const category = categoryOptions.some((option) => option.value === requested) ? requested : ALL;
+  const [query, setQuery] = useState("");
 
-  const handleTabKeyDown = (event: KeyboardEvent<HTMLButtonElement>, index: number) => {
-    let nextIndex = index;
-    if (event.key === "ArrowRight") nextIndex = (index + 1) % categories.length;
-    else if (event.key === "ArrowLeft") nextIndex = (index - 1 + categories.length) % categories.length;
-    else if (event.key === "Home") nextIndex = 0;
-    else if (event.key === "End") nextIndex = categories.length - 1;
-    else return;
+  const results = useMemo(() => {
+    const needle = query.trim().toLowerCase();
+    return equipmentList.filter((item) =>
+      (category === ALL || item.category === category)
+      && (!needle || `${item.name} ${item.brand} ${item.category}`.toLowerCase().includes(needle)));
+  }, [category, query]);
 
-    event.preventDefault();
-    setFilter(categories[nextIndex]);
-    tabRefs.current[nextIndex]?.focus();
-  };
+  const setCategory = (value: string) => setParams(value === ALL ? {} : { category: value }, { replace: true });
 
   return (
-    <main className="equipment-page">
-      <header className="equipment-hero">
-        <p className="equipment-eyebrow">Reliable tools for better diagnostics</p>
-        <h1>Medical equipment</h1>
-        <p>
-          Explore dependable diagnostic instruments selected to support
-          laboratories and healthcare teams across Bangladesh.
-        </p>
-      </header>
+    <main className="hm pg">
+      <section className="pg-hero" aria-labelledby="pg-title">
+        <div className="hm-wrap">
+          <p className="hm-eyebrow pg-rise">Product catalogue</p>
+          <h1 className="pg-title pg-rise" id="pg-title">Diagnostic <em>equipment</em></h1>
+          <div className="pg-hero-row pg-rise">
+            <p className="pg-lead">
+              Analyzers and instruments from Spinreact and Microlab, supplied and serviced by our own
+              engineers across Bangladesh.
+            </p>
+            <SearchBox value={query} onChange={setQuery} label="Search equipment" />
+          </div>
+          <div className="pg-rise">
+            <FilterPills options={categoryOptions} value={category} onChange={setCategory} label="Filter by category" />
+          </div>
+        </div>
+      </section>
 
-      <section aria-label="Browse equipment by category">
-        <div className="equipment-tabs" role="tablist" aria-label="Equipment categories">
-          {categories.map((category, index) => {
-            const selected = filter === category;
-            const count = category === categories[0]
-              ? equipmentData.length
-              : equipmentData.filter((item) => item.category === category).length;
-
-            return (
-              <button
-                aria-selected={selected}
-                className={`equipment-tab${selected ? " is-selected" : ""}`}
-                id={`equipment-tab-${index}`}
-                key={category}
-                onClick={() => setFilter(category)}
-                onKeyDown={(event) => handleTabKeyDown(event, index)}
-                ref={(element) => { tabRefs.current[index] = element; }}
-                role="tab"
-                tabIndex={selected ? 0 : -1}
-                type="button"
-              >
-                {category}
-                <span>{count}</span>
+      <section className="pg-results" aria-label="Equipment">
+        <div className="hm-wrap">
+          <p className="pg-count" aria-live="polite">
+            {results.length} {results.length === 1 ? "product" : "products"}
+            {category !== ALL && <> in <strong>{category}</strong></>}
+          </p>
+          {results.length > 0 ? (
+            <ul className="pg-grid">
+              {results.map((item, index) => (
+                <Reveal as="li" className="hm-product" delay={(index % 3) * 80} key={item.slug}>
+                  <ProductCard item={item} showPrice />
+                </Reveal>
+              ))}
+            </ul>
+          ) : (
+            <div className="pg-empty">
+              <p>No equipment matches your search.</p>
+              <button className="hm-btn hm-btn-ghost" type="button" onClick={() => { setQuery(""); setCategory(ALL); }}>
+                Show all equipment
               </button>
-            );
-          })}
+            </div>
+          )}
         </div>
       </section>
 
-      <section
-        aria-labelledby={`equipment-tab-${categories.indexOf(filter)}`}
-        className="equipment-results"
-        role="tabpanel"
-        tabIndex={0}
-      >
-        <div className="equipment-results-heading">
-          <div>
-            <p className="equipment-eyebrow">Product catalogue</p>
-            <h2>{filter === categories[0] ? "Explore our range" : filter}</h2>
-          </div>
-          <p>{equipment.length} {equipment.length === 1 ? "product" : "products"}</p>
-        </div>
-
-        {equipment.length > 0 ? (
-          <div className="equipment-grid">
-            {equipment.map((item) => (
-              <article className="equipment-card" key={item.slug}>
-                <Link className="equipment-card-link" to={`/equipments/${item.slug}`}>
-                  <div className="equipment-card-image">
-                    <img src={item.image} alt={item.name} loading="lazy" />
-                    <span className="equipment-card-brand">{item.brand}</span>
-                    <span className="equipment-card-arrow" aria-hidden="true">
-                      <ArrowUpRight />
-                    </span>
-                  </div>
-                  <div className="equipment-card-content">
-                    <p className="equipment-card-category">{item.category}</p>
-                    <h3>{item.name}</h3>
-                    <p className="equipment-card-price">
-                      {formatPrice(item.tradePrice) ?? "Contact us for pricing"}
-                    </p>
-                  </div>
-                </Link>
-              </article>
-            ))}
-          </div>
-        ) : (
-          <p className="equipment-empty">No equipment found in this category.</p>
-        )}
-      </section>
+      <PageCta
+        title="Can’t find the analyzer you need?"
+        text="We can source other models from our partners. Tell us your test menu and daily volume and we’ll recommend the right fit."
+      />
     </main>
   );
 }

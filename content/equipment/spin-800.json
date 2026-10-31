@@ -6,7 +6,7 @@
   "summary": "Clinical chemestry analyzer, fully automated, 420 tests/hour up to 640 tests/hour with ISE Refrigerated reagent compartment, 90 samples onboard capacity, Internal bar code reader",
   "specs": [],
   "features": [],
-  "featured": false,
+  "featured": true,
   "published": true,
   "order": 1
 }

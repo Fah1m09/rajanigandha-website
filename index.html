@@ -27,9 +27,22 @@
         background: #555;
       }
     </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:wght@700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <title>Rajanigandha International</title>
   </head>
   <body>
+    <!-- Lets Netlify detect the React contact form at deploy time. Field names must match contact.tsx. -->
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <input type="text" name="organization" />
+      <input type="text" name="subject" />
+      <textarea name="message"></textarea>
+      <input name="bot-field" />
+    </form>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
