@@ -230,6 +230,7 @@
 .hm-marquee { overflow: hidden; padding: 1.1rem 0; }
 .hm-marquee-track { display: flex; width: max-content; animation: hm-marquee 40s linear infinite; }
 .hm-marquee.is-reverse .hm-marquee-track { animation-direction: reverse; }
+.hm-marquee:hover .hm-marquee-track { animation-play-state: paused; }
 .hm-marquee-row {
   display: flex;
   li {
@@ -269,7 +270,7 @@
   &:nth-child(2) { background: var(--accent); color: var(--on-accent); .hm-stat-note { color: inherit; opacity: 0.75; } }
 }
 .hm-stat-label { font-weight: 700; }
-.hm-stat-value { margin-top: auto; font-family: var(--font-head); font-size: clamp(3rem, 5.5vw, 4.75rem); font-weight: 700; line-height: 1; }
+.hm-stat-value { margin-top: auto; font-family: var(--font-head); font-variant-numeric: tabular-nums; font-size: clamp(3rem, 5.5vw, 4.75rem); font-weight: 700; line-height: 1; }
 .hm-stat-note { margin-top: 0.75rem; color: var(--muted); font-size: 0.95rem; }
 
 // ——— Featured slider ———
@@ -470,7 +471,7 @@
   }
   &:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
 }
-.hm-tile-count { font-family: var(--font-head); font-size: clamp(3.5rem, 6vw, 5rem); font-weight: 700; line-height: 1; }
+.hm-tile-count { font-family: var(--font-head); font-variant-numeric: tabular-nums; font-size: clamp(3.5rem, 6vw, 5rem); font-weight: 700; line-height: 1; }
 .hm-tile-name { margin-top: auto; font-size: 1.25rem; font-weight: 700; }
 
 // ——— Closing CTA ———
@@ -539,11 +540,11 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hm *, .hm *::before, .hm *::after {
+  // Marquees keep moving (slower) even when the OS asks for reduced motion; everything else stops.
+  .hm *:not(.hm-marquee-track), .hm *::before, .hm *::after {
     animation: none !important;
     transition: none !important;
   }
   .hm-reveal { opacity: 1; transform: none; }
-  .hm-marquee-track { flex-wrap: wrap; width: auto; }
-  .hm-marquee-row[aria-hidden] { display: none; }
+  .hm-marquee-track { animation-duration: 70s; }
 }

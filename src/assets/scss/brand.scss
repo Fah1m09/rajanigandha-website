@@ -13,8 +13,8 @@
   --night-ink: #f3f3f3;
   --night-muted: #9a9a9a;
   --radius: 1.75rem;
-  --font-head: "Averia Sans Libre", "Hanken Grotesk", system-ui, sans-serif;
-  --font-body: "Hanken Grotesk", system-ui, sans-serif;
+  --font-head: "Sora", "DM Sans", system-ui, sans-serif;
+  --font-body: "DM Sans", system-ui, sans-serif;
 }
 
 .app-theme.dark {
@@ -136,6 +136,7 @@
 .sh-burger { display: none; }
 
 @media (max-width: 960px) {
+  .sh-bar {display: grid; grid-template-columns: 1fr auto; gap: 0.5rem; }
   .sh-burger { display: grid; }
 
   .sh-nav {
@@ -263,7 +264,7 @@
 .sf-wordmark {
   margin: clamp(2.5rem, 6vw, 4.5rem) 0 0;
   font-family: var(--font-head);
-  font-size: clamp(3rem, 15.5vw, 16rem) !important;
+  font-size: clamp(3rem, 13vw, 16rem) !important;
   font-weight: 700;
   line-height: 0.8;
   letter-spacing: -0.045em;
