@@ -1,0 +1,15 @@
+{
+  "name": "CREATININE KINETIC JAFFE",
+  "category": "Clinical Chemistry",
+  "brand": "Spinreact",
+  "packSizes": [
+    {
+      "size": "2x150 ml"
+    },
+    {
+      "size": "2x250 ml"
+    }
+  ],
+  "published": true,
+  "order": 4
+}

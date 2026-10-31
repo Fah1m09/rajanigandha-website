@@ -1,0 +1,15 @@
+{
+  "name": "Typhi O",
+  "category": "Serology",
+  "brand": "Spinreact",
+  "packSizes": [
+    {
+      "size": "100 test(5 ml)"
+    },
+    {
+      "size": "50 ml"
+    }
+  ],
+  "published": true,
+  "order": 48
+}

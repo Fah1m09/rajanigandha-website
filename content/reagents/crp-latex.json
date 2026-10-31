@@ -1,0 +1,12 @@
+{
+  "name": "CRP LATEX",
+  "category": "Serology",
+  "brand": "Spinreact",
+  "packSizes": [
+    {
+      "size": "100 test"
+    }
+  ],
+  "published": true,
+  "order": 41
+}

@@ -1,0 +1,15 @@
+{
+  "name": "TRIGLYCERIDES GPO-PAP",
+  "category": "Clinical Chemistry",
+  "brand": "Spinreact",
+  "packSizes": [
+    {
+      "size": "10x50 ml"
+    },
+    {
+      "size": "2x100 ml"
+    }
+  ],
+  "published": true,
+  "order": 25
+}

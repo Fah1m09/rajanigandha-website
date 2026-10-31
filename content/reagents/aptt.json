@@ -1,0 +1,12 @@
+{
+  "name": "APTT",
+  "category": "Blood Grouping",
+  "brand": "Spinreact",
+  "packSizes": [
+    {
+      "size": "5x4 ml"
+    }
+  ],
+  "published": true,
+  "order": 32
+}

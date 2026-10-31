@@ -1,0 +1,12 @@
+{
+  "name": "HAEMOGLOBIN (Reagent concentrated 50x)",
+  "category": "Clinical Chemistry",
+  "brand": "Spinreact",
+  "packSizes": [
+    {
+      "size": "4x5 ml"
+    }
+  ],
+  "published": true,
+  "order": 7
+}

@@ -1,0 +1,12 @@
+{
+  "name": "RF TURBILATEX (with Calibrator)",
+  "category": "Immuno Chemistry",
+  "brand": "Spinreact",
+  "packSizes": [
+    {
+      "size": "1x40 ml / 1x2ml"
+    }
+  ],
+  "published": true,
+  "order": 30
+}

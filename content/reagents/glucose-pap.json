@@ -1,0 +1,12 @@
+{
+  "name": "GLUCOSE PAP",
+  "category": "Clinical Chemistry",
+  "brand": "Spinreact",
+  "packSizes": [
+    {
+      "size": "4x250 ml"
+    }
+  ],
+  "published": true,
+  "order": 5
+}

@@ -1,0 +1,12 @@
+{
+  "name": "GLUCOSE PAP LIQUID MONO",
+  "category": "Clinical Chemistry",
+  "brand": "Spinreact",
+  "packSizes": [
+    {
+      "size": "1x1000 ml"
+    }
+  ],
+  "published": true,
+  "order": 6
+}

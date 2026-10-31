@@ -1,0 +1,12 @@
+{
+  "name": "RPR CARBON",
+  "category": "Serology",
+  "brand": "Spinreact",
+  "packSizes": [
+    {
+      "size": "150 test"
+    }
+  ],
+  "published": true,
+  "order": 44
+}

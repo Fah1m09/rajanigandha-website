@@ -1,0 +1,15 @@
+{
+  "name": "CHOLESTEROL CHOD-PAP",
+  "category": "Clinical Chemistry",
+  "brand": "Spinreact",
+  "packSizes": [
+    {
+      "size": "4x5 ml"
+    },
+    {
+      "size": "4x50 ml"
+    }
+  ],
+  "published": true,
+  "order": 21
+}

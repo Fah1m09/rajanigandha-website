@@ -1,0 +1,12 @@
+{
+  "name": "UREA UV.GLDH",
+  "category": "Clinical Chemistry",
+  "brand": "Spinreact",
+  "packSizes": [
+    {
+      "size": "10x50 ml"
+    }
+  ],
+  "published": true,
+  "order": 11
+}

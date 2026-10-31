@@ -1,0 +1,12 @@
+{
+  "name": "Spin 800",
+  "brand": "Spinreact",
+  "category": "Full Auto BioChemistry",
+  "image": "/img/Equipments/spin800.png",
+  "summary": "Clinical chemestry analyzer, fully automated, 420 tests/hour up to 640 tests/hour with ISE Refrigerated reagent compartment, 90 samples onboard capacity, Internal bar code reader",
+  "specs": [],
+  "features": [],
+  "featured": false,
+  "published": true,
+  "order": 1
+}

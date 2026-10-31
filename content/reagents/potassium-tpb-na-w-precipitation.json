@@ -1,0 +1,12 @@
+{
+  "name": "POTASSIUM TPB-Na w/ precipitation",
+  "category": "Clinical Chemistry",
+  "brand": "Spinreact",
+  "packSizes": [
+    {
+      "size": "4x250 ml"
+    }
+  ],
+  "published": true,
+  "order": 19
+}

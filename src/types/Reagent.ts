@@ -1,7 +1,16 @@
+export type iPackSize = {
+  size: string;
+  code?: string;
+  tradePrice?: number | null;
+};
+
 export type iReagent = {
-  Id: number;
-  Name: string;
-  Category: string;
-  PacSize: string;
-  Price: number;
+  slug: string;
+  name: string;
+  category: string;
+  brand?: string;
+  method?: string;
+  packSizes: iPackSize[];
+  published?: boolean;
+  order?: number;
 };

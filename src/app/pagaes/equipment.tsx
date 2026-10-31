@@ -1,13 +1,10 @@
 import { useMemo, useRef, useState, type KeyboardEvent } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import EquipmetsData from "../../assets/db";
-import type { iEquipment } from "../../types/Equipment";
-
-const equipmentData = EquipmetsData as iEquipment[];
+import { equipmentList as equipmentData, formatPrice } from "../../data/catalog";
 const categories = [
   "All equipment",
-  ...Array.from(new Set(equipmentData.map((item) => item.Category))),
+  ...Array.from(new Set(equipmentData.map((item) => item.category))),
 ];
 
 export default function Equipment() {
@@ -16,7 +13,7 @@ export default function Equipment() {
   const equipment = useMemo(
     () => filter === categories[0]
       ? equipmentData
-      : equipmentData.filter((item) => item.Category === filter),
+      : equipmentData.filter((item) => item.category === filter),
     [filter],
   );
 
@@ -50,7 +47,7 @@ export default function Equipment() {
             const selected = filter === category;
             const count = category === categories[0]
               ? equipmentData.length
-              : equipmentData.filter((item) => item.Category === category).length;
+              : equipmentData.filter((item) => item.category === category).length;
 
             return (
               <button
@@ -90,20 +87,20 @@ export default function Equipment() {
         {equipment.length > 0 ? (
           <div className="equipment-grid">
             {equipment.map((item) => (
-              <article className="equipment-card" key={item.Id}>
-                <Link className="equipment-card-link" to={`/equipments/${item.Id}`}>
+              <article className="equipment-card" key={item.slug}>
+                <Link className="equipment-card-link" to={`/equipments/${item.slug}`}>
                   <div className="equipment-card-image">
-                    <img src={item.Image} alt={item.Name} loading="lazy" />
-                    <span className="equipment-card-brand">{item.Brand}</span>
+                    <img src={item.image} alt={item.name} loading="lazy" />
+                    <span className="equipment-card-brand">{item.brand}</span>
                     <span className="equipment-card-arrow" aria-hidden="true">
                       <ArrowUpRight />
                     </span>
                   </div>
                   <div className="equipment-card-content">
-                    <p className="equipment-card-category">{item.Category}</p>
-                    <h3>{item.Name}</h3>
+                    <p className="equipment-card-category">{item.category}</p>
+                    <h3>{item.name}</h3>
                     <p className="equipment-card-price">
-                      {item.Price !== 0 ? item.Price : "Contact us for pricing"}
+                      {formatPrice(item.tradePrice) ?? "Contact us for pricing"}
                     </p>
                   </div>
                 </Link>

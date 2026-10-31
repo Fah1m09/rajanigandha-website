@@ -1,0 +1,12 @@
+{
+  "name": "TIBC",
+  "category": "Clinical Chemistry",
+  "brand": "Spinreact",
+  "packSizes": [
+    {
+      "size": "2x150 ml"
+    }
+  ],
+  "published": true,
+  "order": 15
+}

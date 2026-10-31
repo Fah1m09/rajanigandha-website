@@ -1,0 +1,93 @@
+# Admin panel for the product catalogue. Open it at https://<your-site>/admin
+# Every save is a commit to the branch below; Netlify rebuilds and publishes in about a minute.
+backend:
+  name: github
+  repo: Fah1m09/rajanigandha-website
+  branch: master # the branch Netlify deploys from
+  base_url: https://api.netlify.com # Netlify handles the GitHub login
+
+media_folder: public/img/products
+public_folder: /img/products
+
+collections:
+  - name: equipment
+    label: Equipment
+    label_singular: Equipment
+    folder: content/equipment
+    extension: json
+    format: json
+    create: true
+    delete: true
+    identifier_field: name
+    slug: "{{slug}}"
+    summary: "{{name}} · {{brand}} · {{category}}"
+    sortable_fields: [order, name, brand, category]
+    view_groups:
+      - { label: Category, field: category }
+    fields:
+      - { name: name, label: Name, widget: string }
+      - name: brand
+        label: Brand
+        widget: select
+        options: [Spinreact, Microlab]
+      - name: category
+        label: Category
+        widget: select
+        options:
+          - Full Auto BioChemistry
+          - Semi Auto BioChemistry
+          - Auto Hematology Analyzer
+          - Electrolyte
+          - Coagulation
+          - Others
+      - { name: image, label: Main image, widget: image }
+      - { name: gallery, label: More images, widget: list, required: false, field: { name: image, label: Image, widget: image } }
+      - { name: summary, label: Short description, widget: text, required: false }
+      - name: specs
+        label: Specifications
+        widget: list
+        required: false
+        summary: "{{label}}: {{value}}"
+        fields:
+          - { name: label, label: "Spec (e.g. Throughput)", widget: string }
+          - { name: value, label: "Value (e.g. 420 tests/hour)", widget: string }
+      - { name: features, label: Key features, widget: list, required: false, field: { name: feature, label: Feature, widget: string } }
+      - { name: brochure, label: Brochure (PDF), widget: file, required: false }
+      - { name: tradePrice, label: Trade price (BDT) — leave empty to show "Contact us", widget: number, value_type: float, required: false }
+      - { name: featured, label: Show on home page, widget: boolean, default: false }
+      - { name: published, label: Published, widget: boolean, default: true }
+      - { name: order, label: Display order, widget: number, value_type: int, default: 100 }
+
+  - name: reagents
+    label: Reagents
+    label_singular: Reagent
+    folder: content/reagents
+    extension: json
+    format: json
+    create: true
+    delete: true
+    identifier_field: name
+    slug: "{{slug}}"
+    summary: "{{name}} · {{category}}"
+    sortable_fields: [order, name, category]
+    view_groups:
+      - { label: Category, field: category }
+    fields:
+      - { name: name, label: Name, widget: string }
+      - name: category
+        label: Category
+        widget: select
+        options: [Clinical Chemistry, Serology, Immuno Chemistry, Blood Grouping]
+      - { name: brand, label: Brand, widget: select, options: [Spinreact, Microlab], default: Spinreact }
+      - { name: method, label: Method, widget: string, required: false }
+      - name: packSizes
+        label: Pack sizes
+        widget: list
+        min: 1
+        summary: "{{size}}"
+        fields:
+          - { name: size, label: "Pack size (e.g. 2x50 ml)", widget: string }
+          - { name: code, label: Product code, widget: string, required: false }
+          - { name: tradePrice, label: Trade price (BDT) — leave empty to show "On request", widget: number, value_type: float, required: false }
+      - { name: published, label: Published, widget: boolean, default: true }
+      - { name: order, label: Display order, widget: number, value_type: int, default: 100 }

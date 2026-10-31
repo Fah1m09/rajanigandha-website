@@ -1,0 +1,12 @@
+{
+  "name": "RF LATEX REAGENT ONLY",
+  "category": "Serology",
+  "brand": "Spinreact",
+  "packSizes": [
+    {
+      "size": "1x5 ml"
+    }
+  ],
+  "published": true,
+  "order": 40
+}

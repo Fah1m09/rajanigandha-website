@@ -1,0 +1,15 @@
+{
+  "name": "TOTAL PROTEIN",
+  "category": "Clinical Chemistry",
+  "brand": "Spinreact",
+  "packSizes": [
+    {
+      "size": "2x50 ml"
+    },
+    {
+      "size": "2x250 ml"
+    }
+  ],
+  "published": true,
+  "order": 9
+}

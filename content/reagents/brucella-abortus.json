@@ -1,0 +1,12 @@
+{
+  "name": "Brucella Abortus",
+  "category": "Serology",
+  "brand": "Spinreact",
+  "packSizes": [
+    {
+      "size": "100 test(5 ml)"
+    }
+  ],
+  "published": true,
+  "order": 49
+}
