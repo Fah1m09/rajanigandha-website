@@ -2,7 +2,7 @@ var db =
   [
     {
       "Id": 1,
-      "Image": "http://localhost:5173/img/Equipments/spin800.png",
+      "Image": "/img/Equipments/spin800.png",
       "Brand": "Spinreact",
       "Name": "Spin 800",
       "Category": "Full Auto BioChemistry",
@@ -11,7 +11,7 @@ var db =
     },
     {
       "Id": 2,
-      "Image": "http://localhost:5173/img/Equipments/spin200e.png",
+      "Image": "/img/Equipments/spin200e.png",
       "Name": "Spin 200E",
       "Brand": "Spinreact",
       "Category": "Full Auto BioChemistry",
@@ -20,7 +20,7 @@ var db =
     },
     {
       "Id": 3,
-      "Image": "http://localhost:5173/img/Equipments/spinx5.png",
+      "Image": "/img/Equipments/spinx5.png",
       "Name": "Spin 640",
       "Brand": "Spinreact",
       "Category": "Full Auto BioChemistry",
@@ -29,7 +29,7 @@ var db =
     },
     {
       "Id": 4,
-      "Image": "http://localhost:5173/img/Equipments/spin5compact.png",
+      "Image": "/img/Equipments/spin5compact.png",
       "Name": "Spincell 5 compact",
       "Brand": "Spinreact",
       "Category": "Auto Hematology Analyzer",
@@ -38,7 +38,7 @@ var db =
     },
     {
       "Id": 5,
-      "Image": "http://localhost:5173/img/Equipments/spincell5plus.png",
+      "Image": "/img/Equipments/spincell5plus.png",
       "Name": "Spincell 5 plus",
       "Brand": "Spinreact",
       "Category": "Auto Hematology Analyzer",
@@ -47,7 +47,7 @@ var db =
     },
     {
       "Id": 6,
-      "Image": "http://localhost:5173/img/Equipments/spincell3.png",
+      "Image": "/img/Equipments/spincell3.png",
       "Name": "Spincell 3",
       "Brand": "Spinreact",
       "Category": "Auto Hematology Analyzer",
@@ -56,7 +56,7 @@ var db =
     },
     {
       "Id": 7,
-      "Image": "http://localhost:5173/img/rx50.png",
+      "Image": "/img/Equipments/rx50.png",
       "Name": "RX-50V",
       "Brand": "Microlab",
       "Category": "Semi Auto BioChemistry",
@@ -65,7 +65,7 @@ var db =
     },
     {
       "Id": 8,
-      "Image": "http://localhost:5173/img/Equipments/rx50.png",
+      "Image": "/img/Equipments/rx50.png",
       "Name": "ARX-199i",
       "Brand": "Microlab",
       "Category": "Semi Auto BioChemistry",
@@ -74,25 +74,25 @@ var db =
     },
     {
       "Id": 9,
-      "Image": "http://localhost:5173/img/Equipments/microlyte.png",
+      "Image": "/img/Equipments/microlyte.png",
       "Name": "Microlyte",
       "Brand": "Microlab",
-      "Category": "Electrolite",
+      "Category": "Electrolyte",
       "Price": 0,
       "Description": "Loream Ipsum"
     },
     {
       "Id": 10,
-      "Image": "http://localhost:5173/img/Equipments/arxclotsc.png",
+      "Image": "/img/Equipments/arxclotsc.png",
       "Name": "ARX-CLOT-SC",
       "Brand": "Microlab",
-      "Category": "Electrolite",
+      "Category": "Electrolyte",
       "Price": 0,
       "Description": "Loream Ipsum"
     },
     {
       "Id": 11,
-      "Image": "http://localhost:5173/img/Equipments/urispin120.png",
+      "Image": "/img/Equipments/urispin120.png",
       "Name": "Urispin 120",
       "Brand": "Spinreact",
       "Category": "Others",
@@ -101,7 +101,7 @@ var db =
     },
     {
       "Id": 12,
-      "Image": "http://localhost:5173/img/Equipments/micropipet.png",
+      "Image": "/img/Equipments/micropipet.png",
       "Name": "Micropipette",
       "Brand": "Spinreact",
       "Category": "Others",

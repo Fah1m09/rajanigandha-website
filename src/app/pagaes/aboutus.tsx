@@ -56,6 +56,10 @@ function AnimatedStatistic({ value, suffix = "", label, description }: AnimatedS
 }
 
 export default function AboutUs() {
+  function getFullYear(): number {
+    return new Date().getFullYear();
+  }
+  const totalYears = getFullYear() - 1987;
   return (
     <section className="about-section" aria-labelledby="about-heading">
       <div className="about-grid">
@@ -64,18 +68,18 @@ export default function AboutUs() {
           <h2 id="about-heading">Supporting better diagnostics, every step of the way.</h2>
           <p>
             We supply medical equipment and diagnostic reagents to healthcare
-            providers across Bangladesh. For 16 years, we have focused on
+            providers across Bangladesh. For {totalYears} years, we have focused on
             dependable products and responsive support that help hospitals and
             diagnostic centers serve their communities.
           </p>
         </article>
         <AnimatedStatistic
-          value={37}
+          value={totalYears}
           label="Years of experience"
           description="Building trusted partnerships in healthcare."
         />
         <AnimatedStatistic
-          value={400}
+          value={1300}
           suffix="+"
           label="Healthcare providers"
           description="Hospitals and diagnostic centers use our products."
