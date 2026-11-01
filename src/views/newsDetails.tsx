@@ -1,9 +1,7 @@
-import { useParams } from "react-router-dom";
-import NewsData from "../../assets/newsdb";
+import NewsData from "../assets/newsdb";
 
-export default function NewsDetails() {
-  const { newsId } = useParams();
-  const news = NewsData.find((item) => item.Id == newsId);
+export default function NewsDetails({ newsId }: { newsId: string }) {
+  const news = NewsData.find((item) => String(item.Id) === newsId);
   if (!news) return <main className="equipment-container">News item not found.</main>;
   return (
     <main className="equipment-container space-y-5">

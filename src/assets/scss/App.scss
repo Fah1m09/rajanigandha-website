@@ -29,6 +29,12 @@ body {
   overflow-x: clip; // clip (not hidden) keeps position: sticky working
 }
 
+// Thin scrollbars (moved from the old index.html)
+::-webkit-scrollbar { width: 7px; height: 7px; }
+::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 4px; }
+::-webkit-scrollbar-thumb { border-radius: 5px; background: #ccc; }
+::-webkit-scrollbar-thumb:hover { background: #555; }
+
 .app-theme {
   transition: background-color 500ms ease, color 500ms ease;
 }

@@ -1,0 +1,7 @@
+[build]
+  command = "npm run build"
+  # next.config.ts uses `output: "export"`, so the finished site is in /out
+  publish = "out"
+
+[build.environment]
+  NODE_VERSION = "22"

@@ -1,10 +1,10 @@
-import React from "react";
-import { useLocation } from "react-router-dom";
+"use client";
 
-//Read query params from url
+import { useSearchParams } from "next/navigation";
+
+// Read query params from url. Components using this must sit inside <Suspense>.
 function useQuery() {
-  const { search } = useLocation();
-  return React.useMemo(() => new URLSearchParams(search), [search]);
+  return useSearchParams();
 }
 
 export default useQuery;

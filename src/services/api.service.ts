@@ -1,4 +1,4 @@
-import { showLoader } from "../app/features/Loader/loaderSlice";
+import { showLoader } from "../features/Loader/loaderSlice";
 
 const createReqOptions = (method, data) => {
   const requestOptions = {

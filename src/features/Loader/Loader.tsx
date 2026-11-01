@@ -1,5 +1,7 @@
+"use client";
+
 import React from "react";
-import { useAppSelector } from "../../../hooks/useReduxHooks";
+import { useAppSelector } from "../../hooks/useReduxHooks";
 
 function Loader() {
   const loading = useAppSelector((state) => state.loader.loading);

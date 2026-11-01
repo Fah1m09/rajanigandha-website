@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><meta charset="UTF-8" /><meta name="robots" content="noindex" /></head>
+  <body>
+    <!-- Lets Netlify detect the contact form at deploy time; src/views/contact.tsx posts here.
+         Field names must match contact.tsx. -->
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <input type="text" name="organization" />
+      <input type="text" name="subject" />
+      <textarea name="message"></textarea>
+      <input name="bot-field" />
+    </form>
+  </body>
+</html>

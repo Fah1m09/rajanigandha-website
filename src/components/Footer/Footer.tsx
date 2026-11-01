@@ -1,6 +1,8 @@
+"use client";
+
 import { ArrowUp, ArrowUpRight, Mail, MapPin, Phone } from "lucide-react";
-import { Link } from "react-router-dom";
-import { company } from "../../../data/company";
+import Link from "next/link";
+import { company } from "../../data/company";
 
 const links = [
   { name: "Home", path: "/" },
@@ -23,7 +25,7 @@ export default function Footer() {
             <p className="sf-lead">
               Diagnostic equipment, reagents and technical service for laboratories across Bangladesh.
             </p>
-            <Link className="sf-cta" to="/contact">
+            <Link className="sf-cta" href="/contact">
               Request a quote <ArrowUpRight aria-hidden="true" />
             </Link>
           </div>
@@ -32,7 +34,7 @@ export default function Footer() {
             <p className="sf-title">Explore</p>
             <ul className="sf-list">
               {links.map((link) => (
-                <li key={link.path}><Link className="sf-link" to={link.path}>{link.name}</Link></li>
+                <li key={link.path}><Link className="sf-link" href={link.path}>{link.name}</Link></li>
               ))}
             </ul>
           </nav>

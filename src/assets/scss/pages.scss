@@ -185,6 +185,7 @@
   border-radius: var(--radius);
   background: var(--surface);
   .hm-sticker { left: 1.5rem; top: 1.5rem; z-index: 2; pointer-events: none; }
+  .pg-gallery-placeholder { position: absolute; inset: 0; width: 30%; height: 30%; margin: auto; opacity: 0.25; }
 }
 
 // Sliding track: each slide is full width, the track moves by 100% per image

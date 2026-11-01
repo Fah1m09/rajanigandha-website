@@ -1,34 +1,19 @@
-import { useMemo, useState } from "react";
-import { Link, useSearchParams } from "react-router-dom";
+"use client";
+
+import { Suspense, useMemo, useState } from "react";
+import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { ArrowDown, ArrowLeft, ArrowRight, ArrowUp, ArrowUpDown, ArrowUpRight } from "lucide-react";
-import { formatPrice, reagentList } from "../../data/catalog";
+import type { iReagent } from "../types/Reagent";
+import { formatPrice } from "../data/format";
 import { FilterPills, PageCta, SearchBox } from "../components/ui";
-import "../../assets/scss/home.scss";
-import "../../assets/scss/pages.scss";
+import { useSetCategoryParam } from "../hooks/useCategoryParam";
 
 // One table row per pack size, so each size can carry its own trade price.
 type Row = { key: string; name: string; category: string; size: string; price: number };
 type SortKey = "name" | "category" | "size" | "price";
 
-const allRows: Row[] = reagentList.flatMap((reagent) =>
-  reagent.packSizes.map((pack, index) => ({
-    key: `${reagent.slug}-${index}`,
-    name: reagent.name,
-    category: reagent.category,
-    size: pack.size,
-    price: pack.tradePrice ?? 0,
-  })),
-);
-
 const ALL = "All";
-const categoryOptions = [
-  { value: ALL, label: "All reagents", count: reagentList.length },
-  ...Array.from(new Set(reagentList.map((item) => item.category))).map((category) => ({
-    value: category,
-    label: category,
-    count: reagentList.filter((item) => item.category === category).length,
-  })),
-];
 
 const columns: { key: SortKey; label: string }[] = [
   { key: "name", label: "Reagent" },
@@ -40,10 +25,41 @@ const columns: { key: SortKey; label: string }[] = [
 const quoteLink = (row: Row) =>
   `/contact?subject=${encodeURIComponent(`Quote request: ${row.name} (${row.size})`)}`;
 
-export default function Reagent() {
-  const [params, setParams] = useSearchParams();
-  const requested = params.get("category") ?? ALL;
+type Props = { reagentList: iReagent[] };
+
+// The pre-rendered HTML shows every reagent; the ?category= filter is applied in the browser.
+export default function Reagent(props: Props) {
+  return (
+    <Suspense fallback={<Catalog {...props} requested={null} />}>
+      <CatalogFromUrl {...props} />
+    </Suspense>
+  );
+}
+
+function CatalogFromUrl(props: Props) {
+  return <Catalog {...props} requested={useSearchParams().get("category")} />;
+}
+
+function Catalog({ reagentList, requested }: Props & { requested: string | null }) {
+  const allRows: Row[] = useMemo(() => reagentList.flatMap((reagent) =>
+    reagent.packSizes.map((pack, index) => ({
+      key: `${reagent.slug}-${index}`,
+      name: reagent.name,
+      category: reagent.category,
+      size: pack.size,
+      price: pack.tradePrice ?? 0,
+    })),
+  ), [reagentList]);
+  const categoryOptions = useMemo(() => [
+    { value: ALL, label: "All reagents", count: reagentList.length },
+    ...Array.from(new Set(reagentList.map((item) => item.category))).map((category) => ({
+      value: category,
+      label: category,
+      count: reagentList.filter((item) => item.category === category).length,
+    })),
+  ], [reagentList]);
   const category = categoryOptions.some((option) => option.value === requested) ? requested : ALL;
+  const setCategoryParam = useSetCategoryParam();
   const [query, setQuery] = useState("");
   const [sortBy, setSortBy] = useState<SortKey | null>(null);
   const [ascending, setAscending] = useState(true);
@@ -63,14 +79,14 @@ export default function Reagent() {
         : String(left).localeCompare(String(right));
       return ascending ? result : -result;
     });
-  }, [category, query, sortBy, ascending]);
+  }, [allRows, category, query, sortBy, ascending]);
 
   const pageCount = Math.max(1, Math.ceil(rows.length / pageSize));
   const current = Math.min(page, pageCount - 1);
   const visible = rows.slice(current * pageSize, (current + 1) * pageSize);
 
   const setCategory = (value: string) => {
-    setParams(value === ALL ? {} : { category: value }, { replace: true });
+    setCategoryParam(value === ALL ? null : value);
     setPage(0);
   };
   const sort = (key: SortKey) => {
@@ -137,7 +153,7 @@ export default function Reagent() {
                         {formatPrice(row.price) ?? <span className="pg-muted">On request</span>}
                       </td>
                       <td className="pg-table-action">
-                        <Link to={quoteLink(row)} aria-label={`Request a quote for ${row.name}, ${row.size}`}>
+                        <Link href={quoteLink(row)} aria-label={`Request a quote for ${row.name}, ${row.size}`}>
                           Quote <ArrowUpRight aria-hidden="true" />
                         </Link>
                       </td>

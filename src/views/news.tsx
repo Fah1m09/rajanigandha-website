@@ -1,4 +1,4 @@
-import NewsData from "../../assets/newsdb";
+import NewsData from "../assets/newsdb";
 
 export default function News() {
   return (

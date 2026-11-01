@@ -1,5 +1,7 @@
+"use client";
+
 import { useCallback, useEffect, useRef, useState, type MouseEvent as ReactMouseEvent, type PointerEvent as ReactPointerEvent } from "react";
-import { ChevronLeft, ChevronRight, Maximize2, X, ZoomIn, ZoomOut } from "lucide-react";
+import { ChevronLeft, ChevronRight, Maximize2, Microscope, X, ZoomIn, ZoomOut } from "lucide-react";
 
 type Props = { images: string[]; alt: string; badge?: string };
 
@@ -115,6 +117,18 @@ export default function ProductGallery({ images, alt, badge }: Props) {
     const rect = event.currentTarget.getBoundingClientRect();
     setZoom({ x: ((event.clientX - rect.left) / rect.width) * 100, y: ((event.clientY - rect.top) / rect.height) * 100 });
   };
+
+  // Product without photos yet: a plain frame with a placeholder icon, no full-screen viewer.
+  if (count === 0) {
+    return (
+      <div className="pg-gallery pg-rise">
+        <div className="pg-gallery-main">
+          <Microscope className="pg-gallery-placeholder" aria-label={`${alt} (no image yet)`} />
+          {badge && <span className="hm-sticker">{badge}</span>}
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="pg-gallery pg-rise">

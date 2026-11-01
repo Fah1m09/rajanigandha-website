@@ -1,17 +1,21 @@
+"use client";
+
 import { useId } from "react";
-import { Link } from "react-router-dom";
-import { ArrowUpRight, Phone, Search, X } from "lucide-react";
-import type { iEquipment } from "../../types/Equipment";
-import { formatPrice } from "../../data/catalog";
-import { company } from "../../data/company";
+import Link from "next/link";
+import { ArrowUpRight, Microscope, Phone, Search, X } from "lucide-react";
+import type { iEquipment } from "../types/Equipment";
+import { formatPrice } from "../data/format";
+import { company } from "../data/company";
 import { Reveal } from "./home/motion";
 
 /** Equipment card used on the home slider, the catalogue grid and "related products". */
 export function ProductCard({ item, showPrice = false }: { item: iEquipment; showPrice?: boolean }) {
   return (
-    <Link to={`/equipments/${item.slug}`}>
+    <Link href={`/equipments/${item.slug}`}>
       <div className="hm-product-image">
-        <img src={item.image} alt={item.name} loading="lazy" />
+        {item.image
+          ? <img src={item.image} alt={item.name} loading="lazy" />
+          : <Microscope className="hm-product-placeholder" aria-label={`${item.name} (no image yet)`} />}
         <span className="hm-sticker">{item.brand}</span>
       </div>
       <div className="hm-product-body">
@@ -83,7 +87,7 @@ export function PageCta({ title, text }: { title: string; text: string }) {
             <p>{text}</p>
           </div>
           <div className="pg-cta-actions">
-            <Link className="hm-btn hm-btn-primary" to="/contact">
+            <Link className="hm-btn hm-btn-primary" href="/contact">
               Request a quote <ArrowUpRight aria-hidden="true" />
             </Link>
             <a className="pg-cta-phone" href={`tel:${company.phone}`}>

@@ -1,35 +1,50 @@
-import { useMemo, useState } from "react";
-import { useSearchParams } from "react-router-dom";
-import { equipmentList } from "../../data/catalog";
+"use client";
+
+import { Suspense, useMemo, useState } from "react";
+import { useSearchParams } from "next/navigation";
+import type { iEquipment } from "../types/Equipment";
 import { Reveal } from "../components/home/motion";
 import { FilterPills, PageCta, ProductCard, SearchBox } from "../components/ui";
-import "../../assets/scss/home.scss";
-import "../../assets/scss/pages.scss";
+import { useSetCategoryParam } from "../hooks/useCategoryParam";
 
 const ALL = "All";
-const categoryOptions = [
-  { value: ALL, label: "All equipment", count: equipmentList.length },
-  ...Array.from(new Set(equipmentList.map((item) => item.category))).map((category) => ({
-    value: category,
-    label: category,
-    count: equipmentList.filter((item) => item.category === category).length,
-  })),
-];
 
-export default function Equipment() {
-  const [params, setParams] = useSearchParams();
-  const requested = params.get("category") ?? ALL;
+type Props = { equipmentList: iEquipment[] };
+
+// The pre-rendered HTML shows every product; the ?category= filter is applied in the browser.
+export default function Equipment(props: Props) {
+  return (
+    <Suspense fallback={<Catalog {...props} requested={null} />}>
+      <CatalogFromUrl {...props} />
+    </Suspense>
+  );
+}
+
+function CatalogFromUrl(props: Props) {
+  return <Catalog {...props} requested={useSearchParams().get("category")} />;
+}
+
+function Catalog({ equipmentList, requested }: Props & { requested: string | null }) {
+  const categoryOptions = useMemo(() => [
+    { value: ALL, label: "All equipment", count: equipmentList.length },
+    ...Array.from(new Set(equipmentList.map((item) => item.category))).map((category) => ({
+      value: category,
+      label: category,
+      count: equipmentList.filter((item) => item.category === category).length,
+    })),
+  ], [equipmentList]);
   const category = categoryOptions.some((option) => option.value === requested) ? requested : ALL;
   const [query, setQuery] = useState("");
+  const setCategoryParam = useSetCategoryParam();
 
   const results = useMemo(() => {
     const needle = query.trim().toLowerCase();
     return equipmentList.filter((item) =>
       (category === ALL || item.category === category)
       && (!needle || `${item.name} ${item.brand} ${item.category}`.toLowerCase().includes(needle)));
-  }, [category, query]);
+  }, [equipmentList, category, query]);
 
-  const setCategory = (value: string) => setParams(value === ALL ? {} : { category: value }, { replace: true });
+  const setCategory = (value: string) => setCategoryParam(value === ALL ? null : value);
 
   return (
     <main className="hm pg">

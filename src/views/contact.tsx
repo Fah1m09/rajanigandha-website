@@ -1,26 +1,39 @@
-import { useState, type FormEvent } from "react";
-import { useSearchParams } from "react-router-dom";
+"use client";
+
+import { Suspense, useState, type FormEvent } from "react";
+import { useSearchParams } from "next/navigation";
 import { ArrowUpRight, CheckCircle2, Mail, MapPin, Phone, Send } from "lucide-react";
-import { company } from "../../data/company";
+import { company } from "../data/company";
 import { Reveal } from "../components/home/motion";
-import { trackLead } from "../../services/analytics";
-import "../../assets/scss/home.scss";
-import "../../assets/scss/pages.scss";
+import { trackLead } from "../services/analytics";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
+// The pre-rendered HTML has an empty subject; links like /contact?subject=… fill it in the browser.
 export default function Contact() {
-  const [params] = useSearchParams();
+  return (
+    <Suspense fallback={<ContactPage subject="" />}>
+      <ContactFromUrl />
+    </Suspense>
+  );
+}
+
+function ContactFromUrl() {
+  return <ContactPage subject={useSearchParams().get("subject") ?? ""} />;
+}
+
+function ContactPage({ subject }: { subject: string }) {
   const [status, setStatus] = useState<Status>("idle");
 
-  // Netlify Forms: the matching hidden form in index.html lets Netlify detect this form at deploy time.
+  // Netlify Forms: the matching hidden form in public/__forms.html lets Netlify detect this form
+  // at deploy time, and submissions are posted to that static file.
   const submit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const form = event.currentTarget;
     setStatus("sending");
     try {
       const body = new URLSearchParams(new FormData(form) as unknown as Record<string, string>).toString();
-      const response = await fetch("/", {
+      const response = await fetch("/__forms.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body,
@@ -116,7 +129,7 @@ export default function Contact() {
                   </div>
                   <label>
                     <span>Subject</span>
-                    <input name="subject" placeholder="Product, quote or support request" type="text" defaultValue={params.get("subject") ?? ""} />
+                    <input name="subject" placeholder="Product, quote or support request" type="text" defaultValue={subject} />
                   </label>
                   <label>
                     <span>Message *</span>

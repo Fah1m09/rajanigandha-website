@@ -1,6 +1,6 @@
 // Client + server-side tracking for Google (GA4 / Google Ads) and Meta (Pixel / Conversions API).
 //
-// Browser side: gtag.js and the Meta Pixel load only when their IDs are set (VITE_* env vars).
+// Browser side: gtag.js and the Meta Pixel load only when their IDs are set (NEXT_PUBLIC_* env vars).
 // Server side: every event is also posted to /.netlify/functions/track, which forwards it to
 // Meta's Conversions API (deduplicated with the Pixel via a shared event_id) and, only when
 // gtag.js was blocked in the browser, to GA4's Measurement Protocol so GA4 never counts twice.
@@ -20,14 +20,15 @@ declare global {
   }
 }
 
-const env = import.meta.env;
-const GA_ID = env.VITE_GA_MEASUREMENT_ID as string | undefined;
-const ADS_ID = env.VITE_GOOGLE_ADS_ID as string | undefined;
-const ADS_LEAD_LABEL = env.VITE_GOOGLE_ADS_LEAD_LABEL as string | undefined;
-const PIXEL_ID = env.VITE_META_PIXEL_ID as string | undefined;
-const SERVER_ENDPOINT = (env.VITE_TRACKING_ENDPOINT as string | undefined) ?? "/.netlify/functions/track";
+// Next only inlines NEXT_PUBLIC_* values when each one is written out in full like this.
+const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || undefined;
+const ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || undefined;
+const ADS_LEAD_LABEL = process.env.NEXT_PUBLIC_GOOGLE_ADS_LEAD_LABEL || undefined;
+const PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || undefined;
+const SERVER_ENDPOINT = process.env.NEXT_PUBLIC_TRACKING_ENDPOINT || "/.netlify/functions/track";
 // Server-side tracking runs only in production builds unless explicitly turned on.
-const SERVER_ENABLED = (env.VITE_SERVER_TRACKING ?? (env.PROD ? "true" : "false")) === "true";
+const SERVER_ENABLED =
+  (process.env.NEXT_PUBLIC_SERVER_TRACKING || (process.env.NODE_ENV === "production" ? "true" : "false")) === "true";
 
 let started = false;
 let gtagReady = false;
@@ -158,7 +159,9 @@ function sendToServer(name: string, eventId: string, params: Params, user?: User
  * `user` (email/phone) is only sent to our own server, where it is hashed before reaching Meta.
  */
 export function track(name: string, params: Params = {}, user?: UserData) {
-  if (!started) return;
+  if (typeof window === "undefined") return;
+  // Child effects (e.g. view_item on a product page) can run before the layout's tracker on first load.
+  initAnalytics();
   const eventId = newEventId();
 
   window.gtag?.("event", name, { ...params, ...(GA_ID ? { send_to: GA_ID } : {}) });

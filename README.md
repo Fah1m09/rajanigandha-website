@@ -1,51 +1,28 @@
-# React Top Stories
+# Rajanigandha International website
 
-A template for React using vite
+Built with **Next.js** (App Router), React, TypeScript, Tailwind CSS and SASS.
+The site is exported as static HTML (`output: "export"`) and hosted on Netlify.
 
-- **[React](https://facebook.github.io/react/)** (18.x)
-- **[Vite](https://vitejs.dev/)** (5.x)
-- **[Typescript](https://www.typescriptlang.org/)** (4.x)
-- [SASS](http://sass-lang.com/) support
-- **i18**
-- **Material UI**
-- **react-hook-form**
-- **notistack**
-- Production build script
+## Commands
 
-## Installation
+| Command         | Description                                   |
+| --------------- | --------------------------------------------- |
+| `npm install`   | Install dependencies                          |
+| `npm run dev`   | Start the dev server on http://localhost:3000 |
+| `npm run build` | Build the static site into `/out`             |
+| `npm run prod`  | Serve the built `/out` folder locally         |
+| `npm run lint`  | Lint the source                               |
 
-1. Clone/download repo
-2. `yarn install` (or `npm install` for npm)
+## Where things live
 
-## Usage
+- `src/app/` – routes (`page.tsx` per URL) and the root layout
+- `src/views/` – the page content for each route
+- `src/components/` – header, footer, product cards, gallery, animations
+- `src/data/catalog.ts` – reads products from `/content` at build time
+- `content/` – product JSON, edited through the admin panel at `/admin`
+- `netlify/functions/track.mts` – server-side analytics endpoint
 
-**Development**
+## Environment variables
 
-`yarn start`
-
-- Build app continuously (HMR enabled)
-
-**Production**
-
-`yarn build`
-`yarn prod`
-
-- Build app once (HMR disabled) to `/dist/`
-
----
-
-**All commands**
-
-| Command      | Description                               |
-| ------------ | ----------------------------------------- |
-| `yarn start` | Build app continuously (HMR enabled)      |
-| `yarn prod`  | Build app once (HMR disabled) to `/dist/` |
-| `yarn build` | Build app to `/dist/`                     |
-
-**Note**: replace `yarn` with `npm` in `package.json` if you use npm.
-
-## See also
-
-- [Create React App](https://github.com/facebook/create-react-app)
-- [Vite](https://vitejs.dev/)
-- [Parsel](https://parceljs.org/)
+See `.env.example`. Browser-side values use the `NEXT_PUBLIC_` prefix;
+put local values in `.env.local`.

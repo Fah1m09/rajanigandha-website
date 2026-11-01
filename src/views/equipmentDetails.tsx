@@ -1,37 +1,14 @@
-import { useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import Link from "next/link";
 import { ArrowLeft, ArrowUpRight, BadgeCheck, Check, Download, Headphones, ShieldCheck, Wrench } from "lucide-react";
-import type { iEquipment } from "../../types/Equipment";
-import { equipmentList, formatPrice } from "../../data/catalog";
+import type { iEquipment } from "../types/Equipment";
+import { equipmentList, formatPrice } from "../data/catalog";
 import { Reveal } from "../components/home/motion";
 import { PageCta, ProductCard } from "../components/ui";
 import ProductGallery from "../components/ProductGallery";
-import { track } from "../../services/analytics";
-import "../../assets/scss/home.scss";
-import "../../assets/scss/pages.scss";
+import TrackView from "../components/TrackView";
 
-export default function EquipmentDetails() {
-  const { equipmentId } = useParams();
-  // Old links used numeric ids (/equipments/1); those map to the original display order.
-  const equipment = equipmentList.find((item) => item.slug === equipmentId)
-    ?? equipmentList.find((item) => String(item.order) === equipmentId);
-
-  if (!equipment) {
-    return (
-      <main className="hm pg">
-        <div className="hm-wrap pg-detail pg-empty">
-          <h1 className="pg-title pg-title-sm">Product not found</h1>
-          <p>This product may have been renamed or removed.</p>
-          <Link className="hm-btn hm-btn-primary" to="/equipments">Browse all equipment</Link>
-        </div>
-      </main>
-    );
-  }
-  // key resets the image gallery when moving between products
-  return <Detail equipment={equipment} key={equipment.slug} />;
-}
-
-function Detail({ equipment }: { equipment: iEquipment }) {
+// Server component: the route (src/app/equipments/[equipmentId]/page.tsx) finds the product.
+export default function EquipmentDetails({ equipment }: { equipment: iEquipment }) {
   const images = [equipment.image, ...(equipment.gallery ?? [])].filter(Boolean);
   const price = formatPrice(equipment.tradePrice);
   const specs = equipment.specs ?? [];
@@ -42,15 +19,13 @@ function Detail({ equipment }: { equipment: iEquipment }) {
   const grouped = specGroups.length > 1;
   const quoteLink = `/contact?subject=${encodeURIComponent(`Quote request: ${equipment.name}`)}`;
 
-  useEffect(() => {
-    track("view_item", {
-      content_ids: [equipment.slug],
-      content_name: equipment.name,
-      content_category: equipment.category,
-      content_type: "product",
-      items: [{ item_id: equipment.slug, item_name: equipment.name, item_brand: equipment.brand, item_category: equipment.category }],
-    });
-  }, [equipment]);
+  const viewItem = {
+    content_ids: [equipment.slug],
+    content_name: equipment.name,
+    content_category: equipment.category,
+    content_type: "product",
+    items: [{ item_id: equipment.slug, item_name: equipment.name, item_brand: equipment.brand, item_category: equipment.category }],
+  };
 
   const sameCategory = equipmentList.filter((item) => item.category === equipment.category && item.slug !== equipment.slug);
   const sameBrand = equipmentList.filter((item) => item.brand === equipment.brand && item.category !== equipment.category);
@@ -58,11 +33,13 @@ function Detail({ equipment }: { equipment: iEquipment }) {
 
   return (
     <main className="hm pg">
+      <TrackView name="view_item" params={viewItem} />
       <div className="hm-wrap pg-detail">
-        <Link className="pg-back" to="/equipments"><ArrowLeft aria-hidden="true" /> All equipment</Link>
+        <Link className="pg-back" href="/equipments"><ArrowLeft aria-hidden="true" /> All equipment</Link>
 
         <div className="pg-detail-grid">
-          <ProductGallery images={images} alt={equipment.name} badge={equipment.brand} />
+          {/* key resets the image gallery when moving between products */}
+          <ProductGallery key={equipment.slug} images={images} alt={equipment.name} badge={equipment.brand} />
 
           <div className="pg-info pg-rise">
             <p className="hm-eyebrow">{equipment.category}</p>
@@ -90,7 +67,7 @@ function Detail({ equipment }: { equipment: iEquipment }) {
                 <p className="pg-price">{price ?? "On request"}</p>
               </div>
               <div className="pg-price-actions">
-                <Link className="hm-btn hm-btn-primary" to={quoteLink}>
+                <Link className="hm-btn hm-btn-primary" href={quoteLink}>
                   Request a quote <ArrowUpRight aria-hidden="true" />
                 </Link>
                 {equipment.brochure && (
@@ -135,7 +112,7 @@ function Detail({ equipment }: { equipment: iEquipment }) {
               <SpecList specs={specs} />
             ) : (
               <p className="pg-muted">
-                Full specifications are available on request. <Link className="hm-link" to={quoteLink}>Ask our team</Link>
+                Full specifications are available on request. <Link className="hm-link" href={quoteLink}>Ask our team</Link>
               </p>
             )}
           </Reveal>

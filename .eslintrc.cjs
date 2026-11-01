@@ -2,6 +2,7 @@ module.exports = {
   root: true,
   env: {
     browser: true,
+    node: true,
     es2022: true,
   },
   parser: "@typescript-eslint/parser",
@@ -18,7 +19,7 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
     "plugin:react-hooks/recommended",
   ],
-  ignorePatterns: ["dist/", "node_modules/"],
+  ignorePatterns: ["dist/", "node_modules/", ".next/", "out/"],
   rules: {
     "@typescript-eslint/no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
     indent: ["error", 2, { SwitchCase: 1 }],

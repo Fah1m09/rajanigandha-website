@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useRef, useState, type CSSProperties, type ElementType, type ReactNode } from "react";
 
 const prefersReducedMotion = () =>

@@ -1,6 +1,9 @@
+"use client";
+
 import { useEffect, useState, type CSSProperties } from "react";
 import { ArrowUpRight, Menu, Moon, Sun, X } from "lucide-react";
-import { Link, NavLink } from "react-router-dom";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 type HeaderProps = {
   colorMode: { toggleColorMode: () => void };
@@ -17,6 +20,8 @@ const menuItems = [
 export default function Header({ colorMode, mode }: HeaderProps) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+  const isActive = (path: string) => (path === "/" ? pathname === "/" : pathname === path || pathname.startsWith(`${path}/`));
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -33,7 +38,7 @@ export default function Header({ colorMode, mode }: HeaderProps) {
       onKeyDown={(event) => { if (event.key === "Escape") close(); }}
     >
       <div className="sh-bar">
-        <Link className="sh-brand" to="/" onClick={close} aria-label="Rajanigandha International — home">
+        <Link className="sh-brand" href="/" onClick={close} aria-label="Rajanigandha International — home">
           <img src="/img/rajanigondha.png" alt="" />
           <span>
             Rajanigandha
@@ -43,16 +48,16 @@ export default function Header({ colorMode, mode }: HeaderProps) {
 
         <nav className="sh-nav" id="site-nav" aria-label="Main">
           {menuItems.map((item, index) => (
-            <NavLink
-              className="sh-link"
-              end={item.path === "/"}
+            <Link
+              aria-current={isActive(item.path) ? "page" : undefined}
+              className={`sh-link${isActive(item.path) ? " active" : ""}`}
+              href={item.path}
               key={item.path}
               onClick={close}
               style={{ "--i": index } as CSSProperties}
-              to={item.path}
             >
               {item.name}
-            </NavLink>
+            </Link>
           ))}
         </nav>
 
@@ -69,7 +74,7 @@ export default function Header({ colorMode, mode }: HeaderProps) {
             <Sun className="theme-toggle-icon theme-toggle-sun" aria-hidden="true" />
             <Moon className="theme-toggle-icon theme-toggle-moon" aria-hidden="true" />
           </button>
-          <Link className="sh-cta" to="/contact" onClick={close}>
+          <Link className="sh-cta" href="/contact" onClick={close}>
             Get a quote <ArrowUpRight aria-hidden="true" />
           </Link>
           <button

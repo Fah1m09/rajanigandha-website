@@ -1,11 +1,9 @@
-import { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
-import { ArrowLeft, ArrowRight, ArrowUpRight, FlaskConical, Mail, Microscope, Phone, Wrench } from "lucide-react";
+import Link from "next/link";
+import { ArrowUpRight, FlaskConical, Mail, Microscope, Phone, Wrench } from "lucide-react";
 import { Counter, Marquee, Reveal } from "../components/home/motion";
-import { ProductCard } from "../components/ui";
-import { company } from "../../data/company";
-import { equipmentList, reagentList } from "../../data/catalog";
-import "../../assets/scss/home.scss";
+import FeaturedSlider from "../components/home/FeaturedSlider";
+import { company } from "../data/company";
+import { equipmentList, reagentList } from "../data/catalog";
 
 const featured = (() => {
   const picked = equipmentList.filter((item) => item.featured);
@@ -58,7 +56,7 @@ export default function HomePage() {
         <Marquee items={[...equipmentCategories, ...reagentCategories.map((c) => c.name)]} />
       </div>
       <Intro />
-      <FeaturedEquipment />
+      <FeaturedSlider featured={featured} total={equipmentList.length} />
       <Services />
       <Process />
       <Brands />
@@ -69,7 +67,8 @@ export default function HomePage() {
 }
 
 function Hero() {
-  const [first, second, third] = featured;
+  // The collage only shows products that have a photo.
+  const [first, second, third] = featured.filter((item) => item.image);
   return (
     <section className="hm-hero" aria-labelledby="hm-hero-title">
       <div className="hm-wrap">
@@ -95,10 +94,10 @@ function Hero() {
               running with our own technical team.
             </p>
             <div className="hm-actions">
-              <Link className="hm-btn hm-btn-primary" to="/equipments">
+              <Link className="hm-btn hm-btn-primary" href="/equipments">
                 Browse equipment <ArrowUpRight aria-hidden="true" />
               </Link>
-              <Link className="hm-btn hm-btn-ghost" to="/contact">Request a quote</Link>
+              <Link className="hm-btn hm-btn-ghost" href="/contact">Request a quote</Link>
             </div>
             <div className="hm-trust">
               <strong><Counter value={company.stats[1].value} suffix={company.stats[1].suffix} /></strong>
@@ -155,80 +154,6 @@ function Intro() {
   );
 }
 
-const AUTOPLAY_MS = 3500;
-
-function FeaturedEquipment() {
-  const track = useRef<HTMLUListElement>(null);
-  const paused = useRef(false);
-  const [tick, setTick] = useState(0); // bumping this restarts the autoplay timer after a manual click
-
-  // Move one card at a time and wrap around at either end.
-  const scroll = (direction: 1 | -1) => {
-    const element = track.current;
-    const card = element?.firstElementChild as HTMLElement | null;
-    if (!element || !card) return;
-    const step = card.offsetWidth + parseFloat(getComputedStyle(element).columnGap || "0");
-    const atEnd = element.scrollLeft + element.clientWidth >= element.scrollWidth - 4;
-    const atStart = element.scrollLeft <= 4;
-    if (direction === 1 && atEnd) element.scrollTo({ left: 0, behavior: "smooth" });
-    else if (direction === -1 && atStart) element.scrollTo({ left: element.scrollWidth, behavior: "smooth" });
-    else element.scrollBy({ left: direction * step, behavior: "smooth" });
-  };
-
-  useEffect(() => {
-    const id = window.setInterval(() => {
-      if (!paused.current && !document.hidden) scroll(1);
-    }, AUTOPLAY_MS);
-    return () => window.clearInterval(id);
-  }, [tick]);
-
-  const manual = (direction: 1 | -1) => {
-    scroll(direction);
-    setTick((t) => t + 1);
-  };
-  const pause = () => { paused.current = true; };
-  const resume = () => { paused.current = false; };
-
-  return (
-    <section className="hm-section" aria-labelledby="hm-featured-title">
-      <div className="hm-wrap">
-        <div className="hm-heading-row">
-          <Reveal>
-            <p className="hm-eyebrow">Product catalogue</p>
-            <h2 className="hm-h2" id="hm-featured-title">Featured equipment</h2>
-          </Reveal>
-          <div className="hm-slider-nav">
-            <button type="button" onClick={() => manual(-1)} aria-label="Previous products"><ArrowLeft /></button>
-            <button type="button" onClick={() => manual(1)} aria-label="Next products"><ArrowRight /></button>
-          </div>
-        </div>
-      </div>
-      <ul
-        className="hm-slider"
-        ref={track}
-        onMouseEnter={pause}
-        onMouseLeave={resume}
-        onFocus={pause}
-        onBlur={resume}
-        onTouchStart={pause}
-        onTouchEnd={resume}
-      >
-        {featured.map((item, index) => (
-          <Reveal as="li" className="hm-product" delay={index * 70} key={item.slug}>
-            <ProductCard item={item} />
-          </Reveal>
-        ))}
-        <li className="hm-product hm-product-more">
-          <Link to="/equipments">
-            <span>See all {equipmentList.length} products</span>
-            <span className="hm-round-arrow" aria-hidden="true"><ArrowUpRight /></span>
-          </Link>
-        </li>
-      </ul>
-    </section>
-  );
-}
-
 function Services() {
   return (
     <section className="hm-section hm-dark" aria-labelledby="hm-services-title">
@@ -238,7 +163,7 @@ function Services() {
         <ol className="hm-services">
           {services.map(({ icon: Icon, ...service }, index) => (
             <Reveal as="li" delay={index * 90} key={service.title}>
-              <Link className="hm-service" to={service.to}>
+              <Link className="hm-service" href={service.to}>
                 <span className="hm-service-num">0{index + 1}</span>
                 <span className="hm-service-icon" aria-hidden="true"><Icon /></span>
                 <div className="hm-service-main">
@@ -321,7 +246,7 @@ function ReagentRange() {
         <div className="hm-tiles">
           {reagentCategories.map((category, index) => (
             <Reveal delay={index * 80} key={category.name}>
-              <Link className="hm-tile" to={`/reagent?category=${encodeURIComponent(category.name)}`}>
+              <Link className="hm-tile" href={`/reagent?category=${encodeURIComponent(category.name)}`}>
                 <span className="hm-tile-count">{category.products}</span>
                 <span className="hm-tile-name">{category.name}</span>
                 <span className="hm-round-arrow" aria-hidden="true"><ArrowUpRight /></span>
@@ -342,7 +267,7 @@ function Cta() {
           <p className="hm-eyebrow">Get in touch</p>
           <h2 id="hm-cta-title">Let’s equip <em>your lab.</em></h2>
           <div className="hm-cta-row">
-            <Link className="hm-btn hm-btn-primary" to="/contact">
+            <Link className="hm-btn hm-btn-primary" href="/contact">
               Request a quote <ArrowUpRight aria-hidden="true" />
             </Link>
             <a className="hm-cta-contact" href={`tel:${company.phone}`}><Phone aria-hidden="true" /> {company.phone}</a>
