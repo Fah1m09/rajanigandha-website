@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { ArrowLeft, ArrowUpRight, BadgeCheck, Check, Download, Headphones, ShieldCheck, Wrench } from "lucide-react";
 import type { iEquipment } from "../../types/Equipment";
 import { equipmentList, formatPrice } from "../../data/catalog";
 import { Reveal } from "../components/home/motion";
 import { PageCta, ProductCard } from "../components/ui";
+import { track } from "../../services/analytics";
 import "../../assets/scss/home.scss";
 import "../../assets/scss/pages.scss";
 
@@ -40,6 +41,16 @@ function Detail({ equipment }: { equipment: iEquipment }) {
   const specGroups = groupSpecs(specs);
   const grouped = specGroups.length > 1;
   const quoteLink = `/contact?subject=${encodeURIComponent(`Quote request: ${equipment.name}`)}`;
+
+  useEffect(() => {
+    track("view_item", {
+      content_ids: [equipment.slug],
+      content_name: equipment.name,
+      content_category: equipment.category,
+      content_type: "product",
+      items: [{ item_id: equipment.slug, item_name: equipment.name, item_brand: equipment.brand, item_category: equipment.category }],
+    });
+  }, [equipment]);
 
   const sameCategory = equipmentList.filter((item) => item.category === equipment.category && item.slug !== equipment.slug);
   const sameBrand = equipmentList.filter((item) => item.brand === equipment.brand && item.category !== equipment.category);

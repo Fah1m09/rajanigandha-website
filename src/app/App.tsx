@@ -11,6 +11,7 @@ import Equipment from "./pagaes/equipment";
 import Reagent from "./pagaes/reagent";
 import Contact from "./pagaes/contact";
 import EquipmentDetails from "./pagaes/equipmentDetails";
+import RouteTracker from "./components/RouteTracker";
 
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
   return (
     <div className={mode === "dark" ? "app-theme dark min-h-screen bg-[#0A0A0A] text-white" : "app-theme min-h-screen bg-white text-slate-900"}>
       <Router basename="/">
+        <RouteTracker />
         <Header colorMode={colorMode} mode={mode} />
         <Routes>
           <Route path="/" element={<HomePage />} />

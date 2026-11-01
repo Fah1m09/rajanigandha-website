@@ -5,6 +5,9 @@ import { Provider } from "react-redux";
 import App from "./app/App";
 import store from "./app/store";
 import "./i18n";
+import { initAnalytics } from "./services/analytics";
+
+initAnalytics();
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <Provider store={store}>

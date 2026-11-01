@@ -3,6 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import { ArrowUpRight, CheckCircle2, Mail, MapPin, Phone, Send } from "lucide-react";
 import { company } from "../../data/company";
 import { Reveal } from "../components/home/motion";
+import { trackLead } from "../../services/analytics";
 import "../../assets/scss/home.scss";
 import "../../assets/scss/pages.scss";
 
@@ -25,6 +26,13 @@ export default function Contact() {
         body,
       });
       if (!response.ok) throw new Error(String(response.status));
+      const data = new FormData(form);
+      const field = (name: string) => String(data.get(name) ?? "").trim() || undefined;
+      // Email/phone go only to our own server, which hashes them before sending to Meta.
+      trackLead(
+        { form_name: "contact", content_name: field("subject") ?? "General enquiry" },
+        { email: field("email"), phone: field("phone"), name: field("name") },
+      );
       form.reset();
       setStatus("sent");
     } catch {
