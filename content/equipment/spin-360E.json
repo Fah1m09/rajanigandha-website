@@ -1,7 +1,7 @@
 {
   "name": "Spin 360E",
   "brand": "Spinreact",
-  "category": "Full Auto BioChemistry",
+  "category": "Clinical Biochemistry Automated",
   "image": "/img/Equipments/spin-360e.png",
   "summary": "Compact, robust fully automatic clinical chemistry analyzer with a throughput of up to 360 tests per hour. Up to 100 sample and 100 refrigerated reagent positions, 12 wavelengths, a built-in barcode reader and an optional ISE module, backed by a dedicated line of ready-to-use Spinreact reagents.",
   "highlights": [
@@ -58,5 +58,5 @@
   "brochure": "/img/products/spin-360e-brochure.pdf",
   "featured": true,
   "published": true,
-  "order": 3
+  "order": 1
 }

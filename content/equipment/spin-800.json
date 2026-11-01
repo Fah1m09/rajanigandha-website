@@ -1,7 +1,7 @@
 {
-  "name": "Spin 800",
+  "name": "Spin 800M",
   "brand": "Spinreact",
-  "category": "Full Auto BioChemistry",
+  "category": "Clinical Biochemistry Automated",
   "image": "/img/Equipments/spin800.png",
   "summary": "High-throughput, fully automatic clinical chemistry analyzer running 800 photometric tests per hour, up to 1,200 with the optional ISE module. 140 sample positions, a water-cooled 120-position reagent tray, intelligent clot and bubble detection, and a modular design that scales to the Spin 800 M1 and M2 systems.",
   "highlights": [
@@ -63,5 +63,5 @@
   "brochure": "/img/products/spin-800-brochure.pdf",
   "featured": false,
   "published": true,
-  "order": 1
+  "order": 3
 }

@@ -1,0 +1,71 @@
+{
+  "name": "Pulsar 250",
+  "brand": "Edif",
+  "category": "Clinical Biochemistry Automated",
+  "image": "",
+  "summary": "Italian-made fully automatic clinical chemistry analyzer from Edif's PRO series, running up to 250 tests per hour. Refrigerated 36-bottle reagent rotor, 36 + 36 sample positions, barcode readers for samples and reagents as standard, 80 washable cuvettes and an optional ISE module.",
+  "highlights": [
+    { "value": "250", "label": "Tests per hour" },
+    { "value": "36 + 36", "label": "Sample positions" },
+    { "value": "36", "label": "Refrigerated reagent bottles" },
+    { "value": "8", "label": "Filters, 340–700 nm" }
+  ],
+  "specs": [
+    { "group": "Performance", "label": "Throughput", "value": "250 tests/hour in single reagent mode" },
+    { "group": "Performance", "label": "Test types", "value": "End point, bichromatic end point, differential end point, differential end point sample blank, fixed time, kinetic, kinetic bichromatic" },
+    { "group": "Performance", "label": "Test runs", "value": "Random access with urgent (STAT) samples" },
+    { "group": "Performance", "label": "Precision", "value": "Typical 2.0% CV for end point and kinetic" },
+    { "group": "Performance", "label": "Incubation + reading time", "value": "Up to 800 seconds" },
+    { "group": "Performance", "label": "Electrolytes", "value": "Optional ISE module" },
+
+    { "group": "Sample & reagent handling", "label": "Sample tray", "value": "36 + 36 positions: 12 – 13 mm barcoded tubes (5 – 7 mL) or 2 mL cups, free standard/control/urgent positions" },
+    { "group": "Sample & reagent handling", "label": "Reagent tray", "value": "Removable rotor with 36 bottles of 50 or 20 mL (optional 38 or 15 mL), up to 1,440 mL total" },
+    { "group": "Sample & reagent handling", "label": "Refrigeration", "value": "Reagents and samples cooled about 15 °C below room temperature" },
+    { "group": "Sample & reagent handling", "label": "Barcode", "value": "Sample and reagent barcode readers as standard" },
+    { "group": "Sample & reagent handling", "label": "Pipetting volume", "value": "Sample 1 – 255 µL, reagent 1 – 255 µL" },
+    { "group": "Sample & reagent handling", "label": "Pipetting precision", "value": "2% CV at 1 µL, 1.5% CV at 2 µL, 1% CV at 4 µL" },
+    { "group": "Sample & reagent handling", "label": "Sampling arm", "value": "1 needle, capacitive liquid level detection, 3-axis shock sensor" },
+    { "group": "Sample & reagent handling", "label": "Dilution", "value": "In-needle dilution and automatic pre-dilution in a cuvette up to 1:100" },
+
+    { "group": "Reaction system", "label": "Cuvette rotor", "value": "80 washable direct-reading cuvettes, up to 30,000 tests per rotor" },
+    { "group": "Reaction system", "label": "Optical path", "value": "6 mm" },
+    { "group": "Reaction system", "label": "Reaction volume", "value": "100 – 500 µL" },
+    { "group": "Reaction system", "label": "Temperature", "value": "Room temperature to 42 °C ± 0.2 °C" },
+    { "group": "Reaction system", "label": "Wash station", "value": "8-step washing sequence for each cuvette" },
+
+    { "group": "Optics", "label": "Light source", "value": "Halogen lamp, 6 V / 10 W, extended UV emission" },
+    { "group": "Optics", "label": "Filters", "value": "340, 405, 505, 546, 578, 600, 650, 700 nm (10-position filter disk)" },
+    { "group": "Optics", "label": "Bandwidth", "value": "± 2 nm on peak, band pass ± 10 nm" },
+    { "group": "Optics", "label": "Photometric range", "value": "0 – 3 Abs" },
+    { "group": "Optics", "label": "Linearity", "value": "± 0.5% from 0.1 to 1.5 Abs" },
+
+    { "group": "Calibration & QC", "label": "Calibration", "value": "1 to 8 standards per test; linear (factor, linear, regression) and non-linear (cubic spline, polylinear, multi-parameter, logit-log 4P and 5P)" },
+    { "group": "Calibration & QC", "label": "Quality control", "value": "3 levels per test, one-month monitoring, reagent/calibrator/control lot tracking" },
+
+    { "group": "Software & connectivity", "label": "Methods", "value": "Unlimited methods in memory, 100 active" },
+    { "group": "Software & connectivity", "label": "External PC", "value": "Windows 10 or 11 via USB" },
+    { "group": "Software & connectivity", "label": "LIS", "value": "Ethernet LAN, standard ASTM ASCII protocol" },
+
+    { "group": "Power & physical", "label": "Power supply", "value": "100 – 240 V AC, 50/60 Hz; under 200 VA (PC excluded)" },
+    { "group": "Power & physical", "label": "Water consumption", "value": "Under 1 L/hour" },
+    { "group": "Power & physical", "label": "Dimensions", "value": "63 (W) × 77 (D) × 54 (H) cm" },
+    { "group": "Power & physical", "label": "Weight", "value": "47 kg" }
+  ],
+  "features": [
+    "Up to 250 tests per hour",
+    "Sample and reagent barcode readers as standard",
+    "Refrigerated reagent and sample rotor",
+    "Optional ISE module for electrolytes",
+    "Capacitive liquid level detection and 3-axis needle shock sensor",
+    "Automatic pre-dilution up to 1:100",
+    "80 washable cuvettes with 8-step washing",
+    "Linear and non-linear calibration with up to 8 standards",
+    "Three-level QC with lot monitoring",
+    "Bi-directional LIS connection over Ethernet",
+    "Made in Italy"
+  ],
+  "certifications": ["CE IVD"],
+  "featured": false,
+  "published": true,
+  "order": 4
+}

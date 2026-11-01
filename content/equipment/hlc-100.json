@@ -1,0 +1,50 @@
+{
+  "name": "HLC-100",
+  "brand": "Biotime",
+  "category": "HPLC (HbA1c)",
+  "image": "",
+  "summary": "Fully automated HbA1c analyzer using high-performance liquid chromatography (HPLC), the reference method for HbA1c. Delivers a result every 2 minutes from 4 µL of whole blood, also separates HbF and other hemoglobin fractions, and is IFCC certified.",
+  "highlights": [
+    { "value": "2 min", "label": "Per test" },
+    { "value": "4 µL", "label": "Whole blood sample" },
+    { "value": "<2%", "label": "CV" },
+    { "value": "10 + 2", "label": "Sample + STAT channels" }
+  ],
+  "specs": [
+    { "group": "Measurement", "label": "Principle", "value": "High-performance liquid chromatography (HPLC)" },
+    { "group": "Measurement", "label": "Parameters", "value": "HbA1c, HbF and other hemoglobin fractions" },
+    { "group": "Measurement", "label": "Linear range", "value": "3.5 – 20%" },
+    { "group": "Measurement", "label": "Wavelength", "value": "415 nm" },
+    { "group": "Measurement", "label": "Precision", "value": "CV < 2%" },
+    { "group": "Measurement", "label": "Carryover", "value": "≤ 3%" },
+    { "group": "Measurement", "label": "Speed", "value": "2 minutes per test" },
+
+    { "group": "Sample", "label": "Sample type", "value": "Venous whole blood" },
+    { "group": "Sample", "label": "Sample volume", "value": "4 µL" },
+    { "group": "Sample", "label": "Sample positions", "value": "10 sample channels + 2 emergency channels" },
+    { "group": "Sample", "label": "Reagents", "value": "Eluent A, eluent B, diluent C" },
+
+    { "group": "Interface & data", "label": "Display", "value": "7\" colour touch screen, Windows 10" },
+    { "group": "Interface & data", "label": "Memory", "value": "10,000 results" },
+    { "group": "Interface & data", "label": "Printer", "value": "Built-in thermal printer or external device" },
+
+    { "group": "Power & physical", "label": "Power supply", "value": "24 V" },
+    { "group": "Power & physical", "label": "Dimensions", "value": "350 (D) × 415 (W) × 420 (H) mm" },
+    { "group": "Power & physical", "label": "Weight", "value": "24 kg" }
+  ],
+  "features": [
+    "HPLC, the gold-standard method for HbA1c",
+    "Fully automated from sample to result",
+    "Result every 2 minutes",
+    "Small 4 µL whole blood sample",
+    "Detects HbF and other hemoglobin fractions",
+    "2 dedicated emergency (STAT) channels",
+    "7\" colour touch screen",
+    "Stores 10,000 results",
+    "IFCC certified"
+  ],
+  "certifications": ["IFCC"],
+  "featured": false,
+  "published": true,
+  "order": 20
+}

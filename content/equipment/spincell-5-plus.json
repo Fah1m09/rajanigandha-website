@@ -1,7 +1,7 @@
 {
-  "name": "Spincell 5 Plus",
+  "name": "SpinCell 5 Plus",
   "brand": "Spinreact",
-  "category": "Auto Hematology Analyzer",
+  "category": "Hematology",
   "image": "/img/Equipments/spincell-5-plus.png",
   "summary": "5-part differential hematology analyzer using semiconductor-laser flow cytometry for multi-dimensional cell classification. Runs up to 60 samples per hour from a 50-position autoloader, reports 25 parameters plus reticulocytes from four cyanide-free reagents, and stores more than 200,000 results with scattergrams.",
   "highlights": [
@@ -58,5 +58,5 @@
   "brochure": "/img/products/spincell-5-plus-brochure.pdf",
   "featured": true,
   "published": true,
-  "order": 5
+  "order": 7
 }

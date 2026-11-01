@@ -1,0 +1,48 @@
+{
+  "name": "ESR Analyzer Sedimex",
+  "brand": "Parsian Teb Zaman",
+  "category": "ESR Analyzer",
+  "image": "",
+  "summary": "Automatic random-access ESR analyzer using infrared LED detection and the Westergren method, with results corrected to 18 °C. The 30-channel model runs up to 60 tests per hour, with a touch screen, barcode input and LIS connection.",
+  "highlights": [
+    { "value": "30", "label": "Channels" },
+    { "value": "60", "label": "Tests per hour" },
+    { "value": "30 min", "label": "Analysis time" },
+    { "value": "1–140", "label": "mm/hr range" }
+  ],
+  "specs": [
+    { "group": "Measurement", "label": "Method", "value": "Westergren, results corrected to 18 °C" },
+    { "group": "Measurement", "label": "Detection", "value": "Infrared LED optical system" },
+    { "group": "Measurement", "label": "Measuring range", "value": "1 – 140 mm/hr" },
+    { "group": "Measurement", "label": "Precision", "value": "CV 3%" },
+    { "group": "Measurement", "label": "Analysis time", "value": "About 30 minutes" },
+
+    { "group": "Sample & throughput", "label": "Channels", "value": "30 (10-channel model also available)" },
+    { "group": "Sample & throughput", "label": "Throughput", "value": "Up to 60 tests/hour (30-channel)" },
+    { "group": "Sample & throughput", "label": "Operation", "value": "Random access" },
+    { "group": "Sample & throughput", "label": "Tubes", "value": "1.28 mL and 1.6 mL ESR tubes" },
+
+    { "group": "Interface & data", "label": "Display", "value": "Graphic touch LCD" },
+    { "group": "Interface & data", "label": "Sample ID", "value": "Barcode reader or keyboard" },
+    { "group": "Interface & data", "label": "Connectivity", "value": "LIS, PC connection, barcode reader" },
+    { "group": "Interface & data", "label": "Printer", "value": "Thermal or dot-matrix printer" },
+
+    { "group": "Power & physical", "label": "Power supply", "value": "210 – 230 V AC, 50 – 60 Hz" },
+    { "group": "Power & physical", "label": "Operating temperature", "value": "15 – 33 °C" },
+    { "group": "Power & physical", "label": "Weight", "value": "2 kg" }
+  ],
+  "features": [
+    "Westergren-method results corrected to 18 °C",
+    "Infrared LED detection",
+    "Random access on every channel",
+    "Up to 60 tests per hour",
+    "Touch screen with simple software",
+    "Barcode sample identification",
+    "LIS and PC connectivity",
+    "Works with thermal and dot-matrix printers",
+    "Light, compact benchtop unit"
+  ],
+  "featured": false,
+  "published": true,
+  "order": 23
+}

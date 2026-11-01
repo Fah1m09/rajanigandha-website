@@ -1,0 +1,41 @@
+{
+  "name": "FLI-100",
+  "brand": "Hemogen",
+  "category": "Immunology",
+  "image": "",
+  "summary": "Portable fluorescence immunoassay (FIA) analyzer that reads a test in 20 seconds. Works with whole blood, serum, plasma and urine, with a 7\" touch screen, barcode input and storage for 20,000 results — suited to labs, emergency rooms, ICUs and clinics.",
+  "highlights": [
+    { "value": "20 s", "label": "Read time" },
+    { "value": "20,000", "label": "Results stored" },
+    { "value": "7\"", "label": "Touch screen" },
+    { "value": "2.9 kg", "label": "Portable unit" }
+  ],
+  "specs": [
+    { "group": "Measurement", "label": "Principle", "value": "Fluorescence immunochromatography" },
+    { "group": "Measurement", "label": "Time to result", "value": "20 seconds per read" },
+    { "group": "Measurement", "label": "Linearity", "value": "r ≥ 0.99" },
+    { "group": "Measurement", "label": "Sample types", "value": "Whole blood, serum, plasma, urine" },
+
+    { "group": "Test menu", "label": "Panels", "value": "Cardiac (cTnI, NT-proBNP, D-Dimer), hormone, inflammation, thyroid, diabetes and renal injury, tumor, health check, infectious disease markers" },
+
+    { "group": "Interface & data", "label": "Display", "value": "Integrated 7\" touch screen" },
+    { "group": "Interface & data", "label": "Data input", "value": "Touch screen, barcode reader" },
+    { "group": "Interface & data", "label": "Data storage", "value": "20,000 tests" },
+
+    { "group": "Physical", "label": "Dimensions", "value": "200 × 240 × 152 mm" },
+    { "group": "Physical", "label": "Weight", "value": "2.9 kg" }
+  ],
+  "features": [
+    "Easy to use with a 7\" touch screen",
+    "Fast 20-second read time",
+    "Light and portable for point-of-care use",
+    "Automatic self-check system",
+    "Barcode input for test cards",
+    "Stores 20,000 results",
+    "Connectivity for data transfer",
+    "Broad test menu across cardiac, hormone, inflammation, thyroid and infectious disease markers"
+  ],
+  "featured": false,
+  "published": true,
+  "order": 11
+}

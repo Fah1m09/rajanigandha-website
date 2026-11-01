@@ -1,0 +1,45 @@
+{
+  "name": "IoNEX",
+  "brand": "Jokoh",
+  "category": "Electrolyte",
+  "image": "",
+  "summary": "Japanese-made automatic electrolyte analyzer with Jokoh's own ion-selective electrodes, measuring up to 500 tests per hour with a CV of 0.5% or less. Choose from 8 electrode combinations of Na⁺, K⁺, Cl⁻, Ca²⁺ and pH, with a dedicated mode for dialysis fluid.",
+  "highlights": [
+    { "value": "500", "label": "Tests per hour" },
+    { "value": "≈35 s", "label": "Per sample" },
+    { "value": "≤0.5%", "label": "CV" },
+    { "value": "8", "label": "Electrode combinations" }
+  ],
+  "specs": [
+    { "group": "Measurement", "label": "Method", "value": "Ion-selective electrodes, direct method" },
+    { "group": "Measurement", "label": "Parameters", "value": "Selectable from Na⁺, K⁺, Cl⁻, Ca²⁺ and pH" },
+    { "group": "Measurement", "label": "Electrode combinations", "value": "Na⁺/K⁺, Na⁺/K⁺/Cl⁻, Na⁺/K⁺/Ca²⁺, Na⁺/K⁺/pH, Na⁺/K⁺/Cl⁻/Ca²⁺, Na⁺/K⁺/Cl⁻/pH and more (8 in total)" },
+    { "group": "Measurement", "label": "pH measurement", "value": "Requires the temperature control unit" },
+    { "group": "Measurement", "label": "Precision", "value": "CV ≤ 0.5%" },
+
+    { "group": "Sample & throughput", "label": "Throughput", "value": "Up to 500 tests/hour" },
+    { "group": "Sample & throughput", "label": "Analysis time", "value": "About 35 seconds per sample (without temperature control unit)" },
+    { "group": "Sample & throughput", "label": "Sample types", "value": "Whole blood, serum, plasma, diluted urine; hemodialysis solutions A, B and A+B" },
+    { "group": "Sample & throughput", "label": "Sampling", "value": "Direct aspiration from the sampling nozzle" },
+    { "group": "Sample & throughput", "label": "Calibration", "value": "Automatic, once every 24 hours" },
+
+    { "group": "Interface & data", "label": "Display", "value": "Colour LCD" },
+    { "group": "Interface & data", "label": "Barcode", "value": "Optional barcode reader" },
+    { "group": "Interface & data", "label": "Connectivity", "value": "Online communication with laboratory system (sample ID and results)" }
+  ],
+  "features": [
+    "Up to 500 tests per hour",
+    "High accuracy with CV of 0.5% or less",
+    "Jokoh's own in-house developed electrodes",
+    "8 selectable electrode combinations including Ca²⁺ and pH",
+    "Dedicated mode for measuring dialysis fluid",
+    "Automatic calibration once a day",
+    "Easy maintenance",
+    "Colour LCD screen",
+    "Optional barcode reader and LIS connection",
+    "Made in Japan"
+  ],
+  "featured": false,
+  "published": true,
+  "order": 15
+}

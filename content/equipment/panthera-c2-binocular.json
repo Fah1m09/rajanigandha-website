@@ -1,0 +1,49 @@
+{
+  "name": "Panthera C2 (Binocular)",
+  "brand": "Motic",
+  "category": "Microscopy",
+  "image": "",
+  "summary": "Upright biological microscope with Motic's Colour Corrected Infinity Optical System (CCIS) and plan achromatic objectives from 4x to 100x. Binocular Siedentopf head, full Köhler LED illumination and a rackless stage make it a reliable everyday lab microscope.",
+  "highlights": [
+    { "value": "4x–100x", "label": "Plan achromatic objectives" },
+    { "value": "22 mm", "label": "Field of view" },
+    { "value": "3 W", "label": "LED Köhler illumination" },
+    { "value": "5 yr", "label": "Warranty (non-electrical)" }
+  ],
+  "specs": [
+    { "group": "Optics", "label": "Optical system", "value": "Colour Corrected Infinity Optical System (CCIS)" },
+    { "group": "Optics", "label": "Objectives", "value": "Plan UC achromatic, infinity corrected: 4x, 10x, 40x S, 100x S-Oil" },
+    { "group": "Optics", "label": "Eyepieces", "value": "Widefield UC-WF10x/22 mm, diopter adjustment, high eyepoint" },
+    { "group": "Optics", "label": "Nosepiece", "value": "Quintuple reversed, positive click stops" },
+
+    { "group": "Head", "label": "Type", "value": "Siedentopf binocular" },
+    { "group": "Head", "label": "Viewing angle", "value": "25° inclined, 360° rotatable" },
+    { "group": "Head", "label": "Interpupillary distance", "value": "48 – 75 mm" },
+
+    { "group": "Stage & focus", "label": "Stage", "value": "Rackless mechanical stage with dual slide holder, 185 × 145 mm" },
+    { "group": "Stage & focus", "label": "Stage travel", "value": "75 × 50 mm (X/Y)" },
+    { "group": "Stage & focus", "label": "Focus", "value": "Coaxial coarse/fine, 25 mm range, 2 µm minimum increment, adjustable tension" },
+
+    { "group": "Illumination", "label": "Condenser", "value": "Köhler-type Abbe condenser, N.A. 0.90/1.25, with slider slot" },
+    { "group": "Illumination", "label": "Light source", "value": "3 W LED, switchable 3500 K / 5500 K (30 W halogen option)" },
+    { "group": "Illumination", "label": "Light control", "value": "Light intensity memory per objective, sleep mode, nosepiece intensity indicator" },
+    { "group": "Illumination", "label": "Contrast options", "value": "Brightfield; phase contrast, darkfield, polarization and fluorescence as add-ons" },
+
+    { "group": "Power & physical", "label": "Power supply", "value": "110 – 240 V, 50/60 Hz" },
+    { "group": "Power & physical", "label": "Dimensions", "value": "282 × 210 × 394 mm" },
+    { "group": "Power & physical", "label": "Weight", "value": "7.7 kg" }
+  ],
+  "features": [
+    "Colour Corrected Infinity Optical System (CCIS)",
+    "Plan achromatic objectives from 4x to 100x oil",
+    "Comfortable binocular head, 25° inclined and 360° rotatable",
+    "Full Köhler illumination with 3 W LED",
+    "Light memory for each objective",
+    "Rackless stage with dual slide holder",
+    "Upgradeable to phase contrast, darkfield, polarization and fluorescence",
+    "5-year warranty (excluding electrical parts)"
+  ],
+  "featured": false,
+  "published": true,
+  "order": 22
+}

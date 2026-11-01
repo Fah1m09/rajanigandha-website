@@ -1,0 +1,44 @@
+{
+  "name": "ESR Analyzer With CBC (Sediman)",
+  "brand": "Parsian Teb Zaman",
+  "category": "ESR Analyzer",
+  "image": "",
+  "summary": "Random-access ESR analyzer that reads directly from standard 3 mL CBC (EDTA K2/K3) tubes, so no separate ESR sample is needed. Uses the Westergren method with results corrected to 18 °C, available in 24 and 32-channel models with LIS and barcode connectivity.",
+  "highlights": [
+    { "value": "24 / 32", "label": "Channel models" },
+    { "value": "3 mL", "label": "CBC tube, no extra sample" },
+    { "value": "±0.2 mm", "label": "Accuracy" },
+    { "value": "1–140", "label": "mm/hr range" }
+  ],
+  "specs": [
+    { "group": "Measurement", "label": "Method", "value": "Westergren, results corrected to 18 °C" },
+    { "group": "Measurement", "label": "Measuring range", "value": "1 – 140 mm/hr" },
+    { "group": "Measurement", "label": "Accuracy", "value": "± 0.2 mm" },
+
+    { "group": "Sample", "label": "Channels", "value": "24 or 32" },
+    { "group": "Sample", "label": "Operation", "value": "Random access" },
+    { "group": "Sample", "label": "Tubes", "value": "CBC 3 mL (EDTA K2 / K3)" },
+    { "group": "Sample", "label": "Patient ID", "value": "Patient code definition" },
+
+    { "group": "Connectivity", "label": "LIS", "value": "Connection to central LIS computer" },
+    { "group": "Connectivity", "label": "PC", "value": "Requires connection to a computer" },
+    { "group": "Connectivity", "label": "Barcode", "value": "Barcode reader supported" },
+    { "group": "Connectivity", "label": "Printer", "value": "Dot-matrix and thermal printers" },
+
+    { "group": "Power & physical", "label": "Power supply", "value": "220 V ± 10%, 50 – 60 Hz" },
+    { "group": "Power & physical", "label": "Weight", "value": "4.5 kg" }
+  ],
+  "features": [
+    "Reads ESR directly from CBC tubes, no separate ESR draw",
+    "Westergren-method results corrected to 18 °C",
+    "Random access on every channel",
+    "24 and 32-channel models",
+    "High accuracy of ± 0.2 mm",
+    "Simple, easy-to-use software",
+    "LIS and barcode connectivity",
+    "Works with thermal and dot-matrix printers"
+  ],
+  "featured": false,
+  "published": true,
+  "order": 24
+}

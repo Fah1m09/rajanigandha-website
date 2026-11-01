@@ -1,7 +1,7 @@
 {
   "name": "RX-50V",
   "brand": "Microlab",
-  "category": "Semi Auto BioChemistry",
+  "category": "Clinical Biochemistry Semi-Auto",
   "image": "/img/Equipments/rx-50v.png",
   "summary": "Semi-automatic biochemistry analyzer with an 8-filter optical system, Peltier-controlled flow cell and built-in PT/APTT coagulation. Runs end-point, kinetic, fixed-time and multipoint tests with built-in quality control, a thermal printer and memory for 1,000 patient results.",
   "highlights": [
@@ -68,5 +68,5 @@
   "brochure": "/img/products/rx-50v-brochure.pdf",
   "featured": true,
   "published": true,
-  "order": 7
+  "order": 8
 }

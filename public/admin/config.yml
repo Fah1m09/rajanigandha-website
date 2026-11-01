@@ -29,16 +29,21 @@ collections:
       - name: brand
         label: Brand
         widget: select
-        options: [Spinreact, Microlab]
+        options: [Spinreact, Microlab, Edif, Biotime, Hemogen, Jokoh, Motic, Parsian Teb Zaman]
       - name: category
         label: Category
         widget: select
         options:
-          - Full Auto BioChemistry
-          - Semi Auto BioChemistry
-          - Auto Hematology Analyzer
+          - Clinical Biochemistry Automated
+          - Hematology
+          - Clinical Biochemistry Semi-Auto
+          - Immunology
           - Electrolyte
           - Coagulation
+          - Urine Analyzer
+          - HPLC (HbA1c)
+          - Microscopy
+          - ESR Analyzer
           - Others
       - { name: image, label: Main image, widget: image }
       - { name: gallery, label: More images, widget: list, required: false, field: { name: image, label: Image, widget: image } }

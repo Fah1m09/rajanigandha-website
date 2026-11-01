@@ -1,0 +1,54 @@
+{
+  "name": "ARX-CLOT 4 Channel",
+  "brand": "Microlab",
+  "category": "Coagulation",
+  "image": "",
+  "summary": "Semi-automatic 4-channel coagulometer using a turbodensitometric principle with automatic start. Runs PT, APTT, fibrinogen, TT and single factors (FII–FXII) as an open system, with 15 incubation positions, a 7\" touch screen, built-in thermal printer and memory for 1,000 results.",
+  "highlights": [
+    { "value": "4", "label": "Measuring channels" },
+    { "value": "15", "label": "Incubation positions" },
+    { "value": "7\"", "label": "Touch screen" },
+    { "value": "1,000", "label": "Results stored" }
+  ],
+  "specs": [
+    { "group": "Measurement", "label": "Principle", "value": "Turbodensitometric, with automated start function" },
+    { "group": "Measurement", "label": "Assays", "value": "PT, APTT, fibrinogen (g/L, mg/dL), TT, single factors (FII to FXII)" },
+    { "group": "Measurement", "label": "Units", "value": "Seconds, % activity, ratio, INR, g/L, mg/L" },
+    { "group": "Measurement", "label": "Calibration", "value": "Reference curves editable up to 9 measurement points" },
+
+    { "group": "Measuring unit", "label": "Optics", "value": "405 / 630 nm filters, LED light source" },
+    { "group": "Measuring unit", "label": "Temperature", "value": "37.0 °C ± 0.2 °C" },
+    { "group": "Measuring unit", "label": "Channels", "value": "4 measuring channels" },
+    { "group": "Measuring unit", "label": "Reagent positions", "value": "2" },
+    { "group": "Measuring unit", "label": "Incubation positions", "value": "15 cuvette positions" },
+
+    { "group": "Sample handling", "label": "Cuvettes", "value": "Single-use micro cuvettes" },
+    { "group": "Sample handling", "label": "Test volume", "value": "150 – 300 µL total" },
+
+    { "group": "Data & printing", "label": "Display", "value": "7\" touch LCD" },
+    { "group": "Data & printing", "label": "Memory", "value": "1,000 test results and 20 assays" },
+    { "group": "Data & printing", "label": "Printer", "value": "Integrated thermal printer; optional external printer" },
+    { "group": "Data & printing", "label": "Interface", "value": "RS-232C; optional data transfer to SD card or external PC" },
+
+    { "group": "Power & physical", "label": "Power supply", "value": "110 – 220 V AC, 50 – 60 Hz" },
+    { "group": "Power & physical", "label": "Operating environment", "value": "15 – 40 °C, 10 – 85% humidity" },
+    { "group": "Power & physical", "label": "Dimensions", "value": "38 × 22 × 14 cm" },
+    { "group": "Power & physical", "label": "Weight", "value": "5.6 kg" }
+  ],
+  "features": [
+    "Semi-automatic 4-channel coagulometer",
+    "Open system with user-friendly software",
+    "Methods can be created, edited, copied and deleted",
+    "On-board storage for up to 20 assays",
+    "Automated result calculation in seconds, %, INR, g/L, mg/dL and ratio",
+    "Calibration curves editable up to 9 points",
+    "Connectable automatic start pipette",
+    "Automatic cuvette detection",
+    "Printout of graph and results",
+    "Optional data transfer to SD card or external PC"
+  ],
+  "certifications": ["ISO 13485", "ISO 9001", "CE", "TÜV", "STQC", "Make in India"],
+  "featured": false,
+  "published": true,
+  "order": 17
+}

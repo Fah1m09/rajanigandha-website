@@ -1,0 +1,46 @@
+{
+  "name": "CLi-1600",
+  "brand": "Biotime",
+  "category": "Immunology",
+  "image": "",
+  "summary": "Semi-automated chemiluminescence immunoassay (CLIA) analyzer with 16 channels and results in as little as 5 minutes. Quantifies thyroid, cardiac, inflammation, fertility, diabetes, bone metabolism and anemia markers from whole blood, serum, plasma or urine in 3 simple steps.",
+  "highlights": [
+    { "value": "16", "label": "Sample channels" },
+    { "value": "5 min", "label": "Fastest result" },
+    { "value": "3", "label": "Steps to result" },
+    { "value": "15 kg", "label": "Benchtop unit" }
+  ],
+  "specs": [
+    { "group": "Measurement", "label": "Principle", "value": "Chemiluminescence immunoassay (CLIA)" },
+    { "group": "Measurement", "label": "Detector", "value": "Photomultiplier tube (PMT)" },
+    { "group": "Measurement", "label": "Wavelength", "value": "680 nm" },
+    { "group": "Measurement", "label": "Incubation temperature", "value": "25 °C ± 1 °C" },
+    { "group": "Measurement", "label": "Time to result", "value": "From 5 minutes" },
+
+    { "group": "Sample", "label": "Channels", "value": "16" },
+    { "group": "Sample", "label": "Sample types", "value": "Whole blood, serum, plasma, urine" },
+    { "group": "Sample", "label": "Reagent storage", "value": "Room temperature, 2 – 30 °C" },
+
+    { "group": "Test menu", "label": "Cardiac", "value": "cTnI, NT-proBNP and more" },
+    { "group": "Test menu", "label": "Thyroid & hormones", "value": "TSH, β-HCG and fertility hormones" },
+    { "group": "Test menu", "label": "Other panels", "value": "Inflammation, diabetes and renal injury (incl. HbA1c), tumor markers (incl. CEA), bone metabolism (25(OH)-D), anemia, infectious disease (incl. HBsAg)" },
+
+    { "group": "Printing", "label": "Printer", "value": "Built-in thermal printer" },
+
+    { "group": "Physical", "label": "Dimensions", "value": "312 × 382 × 345 mm" },
+    { "group": "Physical", "label": "Weight", "value": "15 kg" }
+  ],
+  "features": [
+    "Chemiluminescence sensitivity in a compact benchtop analyzer",
+    "16 channels for parallel testing",
+    "Results in as little as 5 minutes",
+    "Simple 3-step workflow",
+    "Accepts whole blood, serum, plasma and urine",
+    "Room-temperature reagent storage",
+    "Broad menu: cardiac, thyroid, inflammation, fertility, diabetes, bone metabolism and anemia",
+    "Built-in thermal printer"
+  ],
+  "featured": false,
+  "published": true,
+  "order": 10
+}

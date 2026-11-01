@@ -1,7 +1,7 @@
 {
   "name": "ARX-199i",
   "brand": "Microlab",
-  "category": "Semi Auto BioChemistry",
+  "category": "Clinical Biochemistry Semi-Auto",
   "image": "/img/Equipments/ax-199i.png",
   "summary": "Versatile semi-automatic clinical chemistry analyzer for enzymes, substrates, therapeutic drugs, electrolytes and turbidimetry. Peltier-controlled 18 µL flow cell, automatic filter wheel and built-in thermal printer, plus a dry bath incubator that sets the 199i apart from the standard ARX-199.",
   "highlights": [
@@ -61,5 +61,5 @@
   "brochure": "/img/products/arx-199i-brochure.pdf",
   "featured": false,
   "published": true,
-  "order": 8
+  "order": 9
 }

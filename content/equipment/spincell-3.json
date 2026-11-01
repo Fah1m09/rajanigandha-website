@@ -1,12 +1,59 @@
 {
-  "name": "Spincell 3",
+  "name": "SpinCell 3N",
   "brand": "Spinreact",
-  "category": "Auto Hematology Analyzer",
+  "category": "Hematology",
   "image": "/img/Equipments/spincell3.png",
-  "summary": "",
-  "specs": [],
-  "features": [],
+  "summary": "Compact 3-part differential hematology analyzer running up to 72 samples per hour from just 8.5 µL of whole blood. Reports 22 parameters with 3 histograms using only two reagents, with a 10.4\" colour screen, built-in thermal printer and HL7 LIS/HIS connectivity.",
+  "highlights": [
+    { "value": "72", "label": "Samples per hour" },
+    { "value": "22", "label": "Parameters + 3 histograms" },
+    { "value": "8.5 µL", "label": "Whole blood sample" },
+    { "value": "2", "label": "Reagents: diluent & lyse" }
+  ],
+  "specs": [
+    { "group": "Parameters", "label": "WBC & differential", "value": "WBC, LYM#, MID#, GRAN#, LYM%, MID%, GRAN%" },
+    { "group": "Parameters", "label": "RBC", "value": "RBC, HGB, HCT, MCV, MCH, MCHC, RDW-CV, RDW-SD" },
+    { "group": "Parameters", "label": "Platelets", "value": "PLT, MPV, PDW-SD, PDW-CV, P-LCR, P-LCC, PCT" },
+    { "group": "Parameters", "label": "Graphics", "value": "3 histograms (WBC, RBC, PLT)" },
+
+    { "group": "Principles of operation", "label": "WBC/RBC/PLT", "value": "Electrical impedance" },
+    { "group": "Principles of operation", "label": "HGB", "value": "Photoelectric colorimetry" },
+    { "group": "Principles of operation", "label": "Dilution ratio (whole blood)", "value": "WBC/HGB 1:232, RBC/PLT 1:40,000" },
+    { "group": "Principles of operation", "label": "Dilution ratio (capillary)", "value": "WBC/HGB 1:400, RBC/PLT 1:45,000" },
+
+    { "group": "Sample & throughput", "label": "Throughput", "value": "72 samples/hour" },
+    { "group": "Sample & throughput", "label": "Sample volume", "value": "8.5 µL whole blood mode, 20 µL pre-dilute mode" },
+    { "group": "Sample & throughput", "label": "Reagents", "value": "2: diluent and lyse (lyse stored inside the analyzer)" },
+
+    { "group": "Data & display", "label": "Display", "value": "10.4\" high-resolution colour LCD" },
+    { "group": "Data & display", "label": "Data storage", "value": "Up to 1,000,000 sample results with histograms" },
+    { "group": "Data & display", "label": "Quality control", "value": "L-J, X, X-R, X-B control modes; manual and automatic calibration" },
+    { "group": "Data & display", "label": "Printer", "value": "Built-in thermal printer" },
+
+    { "group": "Connectivity", "label": "LIS / HIS", "value": "HL7 protocol" },
+    { "group": "Connectivity", "label": "Ports", "value": "RS-232, Ethernet, 8 × USB (mouse, keyboard, external printer)" },
+
+    { "group": "Physical", "label": "Dimensions", "value": "380 (L) × 305 (W) × 395 (H) mm" },
+
+    { "group": "Consumables", "label": "Diluent", "value": "1 × 20 L (ref. 1705100)" },
+    { "group": "Consumables", "label": "Lyse", "value": "1 × 500 mL (ref. 1705111)" },
+    { "group": "Consumables", "label": "Probe cleaner", "value": "1 × 100 mL (ref. 1705181)" },
+    { "group": "Consumables", "label": "Controls", "value": "CBC-3D normal (3 × 2 mL, 6 × 2 mL) or 3 levels (3 × 2 mL, 6 × 2 mL)" }
+  ],
+  "features": [
+    "Compact 3-part differential analyzer",
+    "Up to 72 samples per hour",
+    "Micro sample volume: 8.5 µL in whole blood mode",
+    "Only 2 reagents, with lyse stored inside the analyzer",
+    "Automatic internal and external cleaning of the aspiration probe",
+    "Internal diluent preheating for accurate results",
+    "Auto clog removal by aperture cauterizing and flushing",
+    "Large 10.4\" high-resolution colour screen",
+    "Built-in thermal printer",
+    "LIS and HIS connection with HL7 protocol",
+    "Openable side door for easy maintenance"
+  ],
   "featured": false,
   "published": true,
-  "order": 6
+  "order": 5
 }

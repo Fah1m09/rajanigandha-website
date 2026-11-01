@@ -1,12 +1,40 @@
 {
-  "name": "Urispin 120",
+  "name": "Urispin-120",
   "brand": "Spinreact",
-  "category": "Others",
+  "category": "Urine Analyzer",
   "image": "/img/Equipments/urispin120.png",
-  "summary": "",
-  "specs": [],
-  "features": [],
+  "summary": "Compact, easy-to-operate automatic urine strip reader that reads up to 120 strips per hour. Handles 2, 5 and 10-parameter strips with automatic calibration, a built-in thermal printer and memory for the last 2,000 records.",
+  "highlights": [
+    { "value": "120", "label": "Strips per hour" },
+    { "value": "10", "label": "Parameters per strip" },
+    { "value": "2,000", "label": "Records stored" },
+    { "value": "2.6 kg", "label": "Compact benchtop unit" }
+  ],
+  "specs": [
+    { "group": "Performance", "label": "Throughput", "value": "120 strips/hour; 60 strips/hour optional" },
+    { "group": "Performance", "label": "Strips", "value": "2, 5 and 10-parameter urine strips" },
+    { "group": "Performance", "label": "Calibration", "value": "Automatic" },
+    { "group": "Performance", "label": "Dedicated strips", "value": "URIN-10: BLO, PROT, KET, GLU, BIL, NIT, UROBIL, SG, LEUK (ref. 52010)" },
+
+    { "group": "Data & printing", "label": "Memory", "value": "Last 2,000 records" },
+    { "group": "Data & printing", "label": "Printer", "value": "Built-in thermal printer" },
+    { "group": "Data & printing", "label": "Barcode", "value": "Optional barcode reader" },
+
+    { "group": "Physical", "label": "Operating temperature", "value": "0 – 40 °C" },
+    { "group": "Physical", "label": "Dimensions", "value": "27.2 × 26.9 × 14.5 cm" },
+    { "group": "Physical", "label": "Weight", "value": "2.6 kg" }
+  ],
+  "features": [
+    "Easy to operate",
+    "Up to 120 strips per hour",
+    "Reads strips with up to 10 parameters",
+    "Automatic calibration",
+    "Built-in thermal printer",
+    "Optional barcode reader",
+    "Stores the last 2,000 records",
+    "Compact and lightweight"
+  ],
   "featured": true,
   "published": true,
-  "order": 11
+  "order": 19
 }
