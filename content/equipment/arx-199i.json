@@ -2,10 +2,63 @@
   "name": "ARX-199i",
   "brand": "Microlab",
   "category": "Semi Auto BioChemistry",
-  "image": "/img/Equipments/rx50.png",
-  "summary": "",
-  "specs": [],
-  "features": [],
+  "image": "/img/Equipments/ax-199i.png",
+  "summary": "Versatile semi-automatic clinical chemistry analyzer for enzymes, substrates, therapeutic drugs, electrolytes and turbidimetry. Peltier-controlled 18 µL flow cell, automatic filter wheel and built-in thermal printer, plus a dry bath incubator that sets the 199i apart from the standard ARX-199.",
+  "highlights": [
+    { "value": "200", "label": "Programmable tests" },
+    { "value": "1,000", "label": "Results stored" },
+    { "value": "18 µL", "label": "Flow cell" },
+    { "value": "19", "label": "Incubator positions" }
+  ],
+  "specs": [
+    { "group": "Measurement", "label": "Methods", "value": "Absorbance, end point with standard or factor, kinetic, fixed time, differential, multipoint (up to 10 standards)" },
+    { "group": "Measurement", "label": "Applications", "value": "Enzymes, substrates, therapeutic drugs, electrolytes, turbidimetry" },
+
+    { "group": "Optics", "label": "Principle", "value": "Absorption spectrometry" },
+    { "group": "Optics", "label": "Measuring range", "value": "-0.1 – 3.0 A" },
+    { "group": "Optics", "label": "Filters", "value": "340, 405, 505, 546, 578, 630, 670 nm + 1 extra position (automatic filter wheel)" },
+    { "group": "Optics", "label": "Bandwidth", "value": "10 nm (± 2 nm)" },
+    { "group": "Optics", "label": "Reading error", "value": "2% at 2.5 A" },
+    { "group": "Optics", "label": "Light source", "value": "Halogen lamp" },
+    { "group": "Optics", "label": "Detector", "value": "Schottky-type silicon photodiode" },
+    { "group": "Optics", "label": "Readings", "value": "Monochromatic and bichromatic, automatic zero" },
+
+    { "group": "Temperature", "label": "Flow cell thermostat", "value": "Peltier, 25 / 30 / 37 °C, ± 0.2 °C" },
+    { "group": "Temperature", "label": "Dry bath incubator", "value": "15 positions for 13 mm tubes, 4 positions for 10 mm tubes (ARX-199i only)" },
+    { "group": "Temperature", "label": "Incubator temperature", "value": "37 °C (± 0.2 °C)" },
+
+    { "group": "Sample handling", "label": "Flow cell", "value": "18 µL" },
+    { "group": "Sample handling", "label": "Cuvettes", "value": "Removable macro, semi-micro and micro" },
+    { "group": "Sample handling", "label": "Aspiration", "value": "Continuous-flow bi-directional peristaltic pump, programmable 200 µL – 1.0 mL" },
+
+    { "group": "Data & quality control", "label": "Test programs", "value": "Up to 200 tests, 9 units" },
+    { "group": "Data & quality control", "label": "Result memory", "value": "1,000 results with patient ID (128 KB EEPROM)" },
+    { "group": "Data & quality control", "label": "Quality control", "value": "2 levels per test (normal and abnormal), last 30 QC results stored" },
+    { "group": "Data & quality control", "label": "Display", "value": "Graphic LCD, 240 × 64 px, blue LED backlight" },
+    { "group": "Data & quality control", "label": "Keypad", "value": "Tactile soft-touch" },
+
+    { "group": "Printing & connectivity", "label": "Built-in printer", "value": "Thermal graphic, 50 mm/s, 384 dots/line, 57 mm paper" },
+    { "group": "Printing & connectivity", "label": "PC interface", "value": "RS-232" },
+    { "group": "Printing & connectivity", "label": "External printer", "value": "Parallel port for 80-column dot-matrix printer" },
+
+    { "group": "Power & physical", "label": "Power supply", "value": "110 – 220 V AC, 50 – 60 Hz (universal input 90 – 265 V)" },
+    { "group": "Power & physical", "label": "Power consumption", "value": "80 W max" },
+    { "group": "Power & physical", "label": "Operating environment", "value": "10 – 40 °C, up to 80% relative humidity" },
+    { "group": "Power & physical", "label": "Dimensions", "value": "40 × 32 × 16 cm" }
+  ],
+  "features": [
+    "Simple, menu-driven software",
+    "Edit patient ID, name (12 characters) and factor",
+    "Online kinetic graph with OD display, graph editing and result estimation",
+    "Multipoint calibration with up to 10 standards",
+    "Built-in dry bath incubator with 19 tube positions",
+    "Stores 1,000 test results with patient ID",
+    "Printouts include laboratory and doctor names",
+    "Lamp saver mode",
+    "Universal input voltage, 90 – 265 V"
+  ],
+  "certifications": ["ISO 13485", "ISO 9001", "CE", "TÜV", "STQC", "Make in India"],
+  "brochure": "/img/products/arx-199i-brochure.pdf",
   "featured": false,
   "published": true,
   "order": 8

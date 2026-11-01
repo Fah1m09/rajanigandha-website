@@ -1,11 +1,60 @@
 {
-  "name": "Microlyte",
+  "name": "Microlyte+",
   "brand": "Microlab",
   "category": "Electrolyte",
   "image": "/img/Equipments/microlyte.png",
-  "summary": "",
-  "specs": [],
-  "features": [],
+  "summary": "Ion-selective electrolyte analyzer for Na⁺, K⁺, Ca⁺⁺ and Cl⁻, also available in Na⁺/K⁺/Ca⁺⁺, Na⁺/K⁺/Cl⁻ and Na⁺/K⁺ configurations. Results in 60 seconds from 110 µL of whole blood, serum or plasma, with a 7\" colour touch screen, RFID reagent packs and maintenance-free electrodes.",
+  "highlights": [
+    { "value": "4", "label": "Ions: Na⁺, K⁺, Ca⁺⁺, Cl⁻" },
+    { "value": "60 s", "label": "Per blood sample" },
+    { "value": "110 µL", "label": "Sample volume" },
+    { "value": "25,000+", "label": "Results stored" }
+  ],
+  "specs": [
+    { "group": "Parameters", "label": "Configurations", "value": "Na⁺/K⁺/Ca⁺⁺/Cl⁻, Na⁺/K⁺/Ca⁺⁺, Na⁺/K⁺/Cl⁻ or Na⁺/K⁺" },
+    { "group": "Parameters", "label": "Method", "value": "Ion-selective electrodes (ISE)" },
+    { "group": "Parameters", "label": "Units", "value": "mmol/L or mEq/L" },
+
+    { "group": "Measuring range", "label": "Sodium (Na⁺)", "value": "Serum/blood 20 – 220, urine 20 – 300; resolution 0.1; CV < 1.5%" },
+    { "group": "Measuring range", "label": "Potassium (K⁺)", "value": "Serum/blood 0.2 – 40, urine 2 – 150; resolution 0.01; CV < 1.2%" },
+    { "group": "Measuring range", "label": "Chloride (Cl⁻)", "value": "Serum/blood 20 – 200, urine 20 – 300; resolution 0.1; CV < 1.5%" },
+    { "group": "Measuring range", "label": "Calcium (Ca⁺⁺)", "value": "Serum/blood 0.1 – 6.0; resolution 0.01; CV < 1.5%" },
+    { "group": "Measuring range", "label": "Urine precision", "value": "Within-run CV (20 samples): Na⁺ ≤ 6.4%, K⁺ ≤ 5.0%, Cl⁻ ≤ 5.0%" },
+
+    { "group": "Sample", "label": "Sample types", "value": "Whole blood, serum, plasma, urine, CSF" },
+    { "group": "Sample", "label": "Sample volume", "value": "110 µL whole blood, serum or plasma; 150 µL capillary; 400 µL diluted (1:4) urine" },
+    { "group": "Sample", "label": "Analysis time", "value": "60 s for whole blood, serum, plasma or CSF; 120 s for urine" },
+
+    { "group": "Interface & data", "label": "Display", "value": "7\" colour capacitive touch screen" },
+    { "group": "Interface & data", "label": "Barcode", "value": "Provision for USB barcode scanner" },
+    { "group": "Interface & data", "label": "Data output", "value": "Wi-Fi, USB" },
+    { "group": "Interface & data", "label": "Data storage", "value": "More than 25,000 test results on SD card (8 – 32 GB)" },
+    { "group": "Interface & data", "label": "Printer", "value": "Built-in thermal graphic printer, 57 mm paper, easy loading" },
+
+    { "group": "Quality control", "label": "Controls", "value": "3 levels per test: low, normal and high" },
+    { "group": "Quality control", "label": "QC storage", "value": "Last 30 QC results" },
+    { "group": "Quality control", "label": "Charts", "value": "Levey-Jennings" },
+
+    { "group": "Power & physical", "label": "Power supply", "value": "110 – 220 V AC, 50 – 60 Hz (universal input 95 – 265 V)" },
+    { "group": "Power & physical", "label": "Power consumption", "value": "Under 40 W" },
+    { "group": "Power & physical", "label": "Operating environment", "value": "10 – 35 °C, up to 80% relative humidity" },
+    { "group": "Power & physical", "label": "Dimensions", "value": "12 × 12 × 16 cm" },
+    { "group": "Power & physical", "label": "Weight", "value": "8 kg" }
+  ],
+  "features": [
+    "Easy icon-based operation on a 7\" colour touch screen",
+    "Automatic or programmable calibration every 2, 4 or 6 hours",
+    "Auto standby mode",
+    "Liquid-stable reagents with built-in RFID reagent management",
+    "Maintenance-free ion-selective electrodes",
+    "Easy access to the electrode assembly",
+    "Colour-coded flags for low, normal and high results",
+    "Individual reagent packs to optimise cost per test",
+    "Universal input voltage, 95 – 265 V",
+    "Wi-Fi and USB data output"
+  ],
+  "certifications": ["ISO 13485", "ISO 9001", "CE", "TÜV", "STQC", "Make in India"],
+  "brochure": "/img/products/microlyte-brochure.pdf",
   "featured": true,
   "published": true,
   "order": 9

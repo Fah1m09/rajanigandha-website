@@ -1,0 +1,62 @@
+{
+  "name": "Spin 360E",
+  "brand": "Spinreact",
+  "category": "Full Auto BioChemistry",
+  "image": "/img/Equipments/spin-360e.png",
+  "summary": "Compact, robust fully automatic clinical chemistry analyzer with a throughput of up to 360 tests per hour. Up to 100 sample and 100 refrigerated reagent positions, 12 wavelengths, a built-in barcode reader and an optional ISE module, backed by a dedicated line of ready-to-use Spinreact reagents.",
+  "highlights": [
+    { "value": "360", "label": "Tests per hour" },
+    { "value": "100", "label": "Sample positions" },
+    { "value": "100", "label": "Refrigerated reagent positions" },
+    { "value": "12", "label": "Wavelengths, 340–800 nm" }
+  ],
+  "specs": [
+    { "group": "Performance", "label": "Throughput", "value": "Up to 360 tests/hour" },
+    { "group": "Performance", "label": "Electrolytes", "value": "Optional ISE module" },
+
+    { "group": "Sample system", "label": "Sample positions", "value": "50 to 100" },
+    { "group": "Sample system", "label": "Sample volume", "value": "2 – 35 µL, in 0.1 µL steps" },
+    { "group": "Sample system", "label": "Dilution", "value": "Pre-dilution and post-dilution" },
+    { "group": "Sample system", "label": "Carryover", "value": "< 0.05%" },
+    { "group": "Sample system", "label": "Sample ID", "value": "Built-in barcode reader" },
+
+    { "group": "Reagent system", "label": "Reagent tray", "value": "Up to 100 refrigerated positions" },
+    { "group": "Reagent system", "label": "R1 volume", "value": "100 – 200 µL, in 0.5 µL steps" },
+    { "group": "Reagent system", "label": "R2 volume", "value": "10 – 200 µL, in 0.5 µL steps" },
+
+    { "group": "Reaction system", "label": "Cuvettes", "value": "80 reusable cuvettes" },
+    { "group": "Reaction system", "label": "Reaction volume", "value": "100 – 360 µL" },
+    { "group": "Reaction system", "label": "Reaction temperature", "value": "37 °C ± 0.1 °C, air bath" },
+    { "group": "Reaction system", "label": "Mixing", "value": "Independent mixing arm" },
+
+    { "group": "Optics", "label": "Light source", "value": "Halogen-tungsten lamp" },
+    { "group": "Optics", "label": "Wavelengths", "value": "340, 380, 412, 450, 505, 546, 570, 605, 660, 700, 740, 800 nm" },
+
+    { "group": "Calibration & QC", "label": "Calibration", "value": "Calibrator auto-dilution" },
+    { "group": "Calibration & QC", "label": "Calibration methods", "value": "K factor, linear (two-point and multipoint), Logit-Log 3P/4P/5P, spline, exponential, polynomial, parabola, broken line" },
+    { "group": "Calibration & QC", "label": "Quality control", "value": "Westgard multi-rule, Levey-Jennings, cumulative sum check, twin plot" },
+
+    { "group": "Software & connectivity", "label": "Operating system", "value": "Windows (PC not included)" },
+    { "group": "Software & connectivity", "label": "Connection", "value": "Ethernet" },
+
+    { "group": "Dedicated reagents", "label": "Ready-to-use tests", "value": "ALB, HDL, LDL, CHOL, TGL, GLUC, UREA, J-CREA, T-CREA, U-ACID, T-BILI, D-BILI, T-PROT, U-PROT, AST, ALT, ALP, γ-GT, LDH, AMY, LIPASE, CHE, CK-NAC, CK-MB, Ca, Mg, P, Fe, Cl, APO A1, APO B, Lp(a), AT III, α-1-ATR, α-1-GLY, CER, HAPTO, TRANSF, FERR, C3, C4, IgA, IgG, IgM, IgE, CRP, ASO, RF, β-2-MICRO, µALB" }
+  ],
+  "features": [
+    "Throughput of up to 360 tests per hour",
+    "Compact and robust design",
+    "Large, flexible capacity: up to 100 sample and 100 reagent positions",
+    "Refrigerated reagent tray",
+    "Built-in barcode reader",
+    "Intelligent probe with optional clog detection",
+    "Waterfall probe cleaning",
+    "Independent mixing arm",
+    "Optimized washing station",
+    "Optional ISE module for electrolytes",
+    "Intuitive Windows software",
+    "Dedicated ready-to-use reagents reduce contamination and extend reagent life"
+  ],
+  "brochure": "/img/products/spin-360e-brochure.pdf",
+  "featured": true,
+  "published": true,
+  "order": 3
+}

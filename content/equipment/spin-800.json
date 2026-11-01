@@ -3,10 +3,65 @@
   "brand": "Spinreact",
   "category": "Full Auto BioChemistry",
   "image": "/img/Equipments/spin800.png",
-  "summary": "Clinical chemestry analyzer, fully automated, 420 tests/hour up to 640 tests/hour with ISE Refrigerated reagent compartment, 90 samples onboard capacity, Internal bar code reader",
-  "specs": [],
-  "features": [],
-  "featured": true,
+  "summary": "High-throughput, fully automatic clinical chemistry analyzer running 800 photometric tests per hour, up to 1,200 with the optional ISE module. 140 sample positions, a water-cooled 120-position reagent tray, intelligent clot and bubble detection, and a modular design that scales to the Spin 800 M1 and M2 systems.",
+  "highlights": [
+    { "value": "1,200", "label": "Tests per hour with ISE" },
+    { "value": "140", "label": "Sample positions" },
+    { "value": "120", "label": "Reagent positions, 2–8 °C" },
+    { "value": "12", "label": "Wavelengths, 340–800 nm" }
+  ],
+  "specs": [
+    { "group": "Performance", "label": "Throughput", "value": "800 tests/hour, up to 1,200 tests/hour with ISE" },
+    { "group": "Performance", "label": "ISE module (optional)", "value": "Indirect Na⁺, K⁺, Cl⁻; 22 µL sample; up to 60,000 tests" },
+    { "group": "Performance", "label": "STAT", "value": "One-key STAT" },
+
+    { "group": "Sample handling", "label": "Sample tray", "value": "140 positions, including 25 cooled positions for calibrators and controls" },
+    { "group": "Sample handling", "label": "Sample module", "value": "300 samples in 30 racks" },
+    { "group": "Sample handling", "label": "Sample volume", "value": "1.5 – 35 µL, in 0.1 µL steps" },
+    { "group": "Sample handling", "label": "Sample probe", "value": "Liquid level detection, clot detection (full jam, half jam, bubbles), collision protection" },
+
+    { "group": "Reagent handling", "label": "Reagent tray", "value": "120 positions in coaxial disks, water-circulation cooling at 2 – 8 °C" },
+    { "group": "Reagent handling", "label": "Reagent volume", "value": "15 – 300 µL, in 0.5 µL steps" },
+    { "group": "Reagent handling", "label": "Reagent probe", "value": "Liquid level detection, bubble detection, collision protection" },
+    { "group": "Reagent handling", "label": "Loading", "value": "Continuous loading and unloading during testing" },
+
+    { "group": "Reaction system", "label": "Reaction volume", "value": "100 – 360 µL" },
+    { "group": "Reaction system", "label": "Temperature", "value": "37 °C ± 0.1 °C, direct solid heating" },
+    { "group": "Reaction system", "label": "Mixing", "value": "Independent reagent and sample mixers, three-head mixing bars, two-stage washing" },
+
+    { "group": "Optics", "label": "Light source", "value": "Halogen-tungsten lamp, dot light source with dual diaphragm and dual lens" },
+    { "group": "Optics", "label": "Photometer", "value": "Reversed optics, grating photometry" },
+    { "group": "Optics", "label": "Wavelengths", "value": "340, 380, 412, 450, 505, 546, 570, 605, 660, 700, 740, 800 nm" },
+    { "group": "Optics", "label": "Absorbance range", "value": "0 – 3.4 Abs (10 mm conversion)" },
+
+    { "group": "Calibration & QC", "label": "Calibration modes", "value": "Linear (one-point, two-point, multipoint), Logit-Log 4P, Logit-Log 5P, spline, exponential, polynomial, parabola" },
+    { "group": "Calibration & QC", "label": "Control rules", "value": "Westgard multi-rule, twin plot" },
+
+    { "group": "Software", "label": "Operating system", "value": "Windows XP Professional/Home SP2 or later" },
+    { "group": "Software", "label": "Maintenance", "value": "Built-in maintenance guide, warning log, water quality monitoring" },
+
+    { "group": "Modular system", "label": "Spin 800", "value": "800/1,200 tests/hour, 140 samples, 68 reagents" },
+    { "group": "Modular system", "label": "Spin 800 M1", "value": "800/1,200 tests/hour, 440 samples, 68 reagents" },
+    { "group": "Modular system", "label": "Spin 800 M2", "value": "1,600/2,400 tests/hour, 580 samples, 136 reagents" }
+  ],
+  "features": [
+    "800 tests per hour, up to 1,200 with the optional ISE module",
+    "High sampling precision: 0.1 µL sample and 0.5 µL reagent steps",
+    "Water-circulation reagent cooling keeps the tray at 2 – 8 °C",
+    "Direct solid heating holds the reaction disk at 37 °C ± 0.1 °C",
+    "Intelligent clot detection tells full jams, half jams and bubbles apart",
+    "Reagent bubble and real liquid-level detection before aspiration",
+    "Vertical and horizontal collision protection on all probes",
+    "Independent mixers with three-head bars and two-stage washing",
+    "Continuous reagent loading and unloading during testing",
+    "Covered sample disk that can be partly opened when needed",
+    "Waterproof cover over all electronics with drainage channel",
+    "One-key STAT",
+    "Built-in maintenance guide, warning log and water quality monitoring",
+    "Modular: expands to Spin 800 M1 and M2 systems"
+  ],
+  "brochure": "/img/products/spin-800-brochure.pdf",
+  "featured": false,
   "published": true,
   "order": 1
 }

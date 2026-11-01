@@ -2,11 +2,71 @@
   "name": "RX-50V",
   "brand": "Microlab",
   "category": "Semi Auto BioChemistry",
-  "image": "/img/Equipments/rx50.png",
-  "summary": "",
-  "specs": [],
-  "features": [],
-  "featured": false,
+  "image": "/img/Equipments/rx-50v.png",
+  "summary": "Semi-automatic biochemistry analyzer with an 8-filter optical system, Peltier-controlled flow cell and built-in PT/APTT coagulation. Runs end-point, kinetic, fixed-time and multipoint tests with built-in quality control, a thermal printer and memory for 1,000 patient results.",
+  "highlights": [
+    { "value": "8", "label": "Filters, 340–700 nm" },
+    { "value": "235", "label": "Programmable tests" },
+    { "value": "1,000", "label": "Results stored" },
+    { "value": "±0.1 °C", "label": "Peltier thermostat" }
+  ],
+  "specs": [
+    { "group": "Measurement", "label": "Methods", "value": "Absorbance, end point (standard or factor), kinetic, fixed time, differential, multipoint calibration (up to 10 standards)" },
+    { "group": "Measurement", "label": "Coagulation", "value": "PT and APTT at 405 nm; results in seconds, % or INR/ISI; auto or manual start" },
+    { "group": "Measurement", "label": "Sample types", "value": "Serum, plasma, CSF, urine, whole blood, hemolysate" },
+
+    { "group": "Optics", "label": "Principle", "value": "Absorption spectrometry" },
+    { "group": "Optics", "label": "Measuring range", "value": "0.1 – 3.0 A" },
+    { "group": "Optics", "label": "Filters", "value": "340, 405, 450, 505, 546, 578, 630, 700 nm (interference, automatic filter wheel)" },
+    { "group": "Optics", "label": "Bandwidth", "value": "10 nm (± 2 nm)" },
+    { "group": "Optics", "label": "Light source", "value": "Halogen lamp, 12 V / 20 W or 6 V / 10 W" },
+    { "group": "Optics", "label": "Detector", "value": "Silicon Schottky-type photodiode, 16-bit ADC" },
+    { "group": "Optics", "label": "Readings", "value": "Monochromatic and bichromatic, automatic zero" },
+
+    { "group": "Temperature", "label": "Flow cell thermostat", "value": "Peltier, 25 / 30 / 37 °C or room temperature, ± 0.1 °C" },
+    { "group": "Temperature", "label": "Dry bath incubator", "value": "15 positions for 13 mm tubes, 4 positions for 10 mm tubes" },
+    { "group": "Temperature", "label": "Incubator range", "value": "37 °C default (± 0.2 °C), adjustable 25 – 45 °C" },
+    { "group": "Temperature", "label": "Timers", "value": "3 built-in (T1–T3), presets of 3, 5, 10 and 15 min, editable up to 99 h" },
+
+    { "group": "Sample handling", "label": "Flow cell", "value": "18 µL or 32 µL" },
+    { "group": "Sample handling", "label": "Cuvettes", "value": "Removable macro, semi-micro and micro, plastic or glass" },
+    { "group": "Sample handling", "label": "Aspiration", "value": "Continuous-flow peristaltic pump, programmable 100 µL – 3.0 mL" },
+
+    { "group": "Data & quality control", "label": "Test programs", "value": "Up to 235 tests, 9 units" },
+    { "group": "Data & quality control", "label": "Result memory", "value": "1,000 results with patient ID (128 KB EEPROM)" },
+    { "group": "Data & quality control", "label": "Quality control", "value": "3 levels per test, Levey-Jennings charts, Westgard rules, last 30 QC results stored" },
+    { "group": "Data & quality control", "label": "Display", "value": "Graphic LCD, 240 × 128 px, blue LED backlight" },
+    { "group": "Data & quality control", "label": "Keypad", "value": "Soft-touch keys with 35 direct test keys; optional USB keyboard" },
+
+    { "group": "Printing & connectivity", "label": "Built-in printer", "value": "Thermal graphic, 50 mm/s, 384 dots/line, 57 mm paper" },
+    { "group": "Printing & connectivity", "label": "External printer", "value": "Parallel port for 80-column dot-matrix printer" },
+    { "group": "Printing & connectivity", "label": "PC interface", "value": "RS-232" },
+    { "group": "Printing & connectivity", "label": "USB", "value": "Keyboard and flash-drive data backup" },
+
+    { "group": "Power & physical", "label": "Power supply", "value": "110 – 220 V AC, 50 – 60 Hz" },
+    { "group": "Power & physical", "label": "Power consumption", "value": "Under 110 W" },
+    { "group": "Power & physical", "label": "Operating environment", "value": "10 – 40 °C, up to 80% relative humidity" },
+    { "group": "Power & physical", "label": "Dimensions", "value": "45 × 41 × 17 cm" },
+    { "group": "Power & physical", "label": "Weight", "value": "8 kg" }
+  ],
+  "features": [
+    "Simple, menu-driven software",
+    "Online kinetic graph with OD display, graph editing and result estimation",
+    "Stores reagent blank absorbance and up to 10 kinetic graphs",
+    "Triplicate calibration for end-point, kinetic and fixed-time tests",
+    "Triplicate sampling with mean, SD and CV",
+    "Built-in calculators for lipid profile, A/G ratio, serum iron/TIBC and bilirubin",
+    "PT and APTT coagulation tests",
+    "Air purge between samples to reduce carryover",
+    "Lamp saver mode",
+    "35 direct test keys for fast test selection",
+    "Self-diagnosis utility mode",
+    "Printouts include laboratory and doctor names",
+    "Data backup to USB flash drive"
+  ],
+  "certifications": ["ISO 13485", "ISO 9001", "CE", "TÜV", "STQC", "Make in India"],
+  "brochure": "/img/products/rx-50v-brochure.pdf",
+  "featured": true,
   "published": true,
   "order": 7
 }

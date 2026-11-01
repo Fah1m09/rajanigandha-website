@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { ArrowLeft, ArrowUpRight, Check, Download, Headphones, ShieldCheck, Wrench } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, BadgeCheck, Check, Download, Headphones, ShieldCheck, Wrench } from "lucide-react";
 import type { iEquipment } from "../../types/Equipment";
 import { equipmentList, formatPrice } from "../../data/catalog";
 import { Reveal } from "../components/home/motion";
@@ -35,6 +35,10 @@ function Detail({ equipment }: { equipment: iEquipment }) {
   const price = formatPrice(equipment.tradePrice);
   const specs = equipment.specs ?? [];
   const features = equipment.features ?? [];
+  const highlights = equipment.highlights ?? [];
+  const certifications = equipment.certifications ?? [];
+  const specGroups = groupSpecs(specs);
+  const grouped = specGroups.length > 1;
   const quoteLink = `/contact?subject=${encodeURIComponent(`Quote request: ${equipment.name}`)}`;
 
   const sameCategory = equipmentList.filter((item) => item.category === equipment.category && item.slug !== equipment.slug);
@@ -78,6 +82,17 @@ function Detail({ equipment }: { equipment: iEquipment }) {
             </dl>
             {equipment.summary && <p className="pg-lead">{equipment.summary}</p>}
 
+            {highlights.length > 0 && (
+              <ul className="pg-highlights" aria-label="Highlights">
+                {highlights.map((item) => (
+                  <li key={item.label}>
+                    <span className="pg-highlight-value">{item.value}</span>
+                    <span className="pg-highlight-label">{item.label}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+
             <div className="pg-price-card">
               <div>
                 <p className="pg-price-label">Trade price</p>
@@ -100,32 +115,40 @@ function Detail({ equipment }: { equipment: iEquipment }) {
               <li><Wrench aria-hidden="true" /> Maintenance by our engineers</li>
               <li><Headphones aria-hidden="true" /> 24/7 technical support</li>
             </ul>
+
+            {certifications.length > 0 && (
+              <ul className="pg-certs" aria-label="Certifications">
+                {certifications.map((cert) => <li key={cert}><BadgeCheck aria-hidden="true" /> {cert}</li>)}
+              </ul>
+            )}
           </div>
         </div>
 
-        <section className={`pg-spec-grid${features.length ? "" : " is-single"}`} aria-label="Product details">
-          <Reveal className="pg-panel">
+        <section
+          className={`pg-spec-grid${grouped ? " is-stacked" : features.length ? "" : " is-single"}`}
+          aria-label="Product details"
+        >
+          {grouped && features.length > 0 && <FeaturesPanel features={features} columns />}
+          <Reveal className="pg-panel" delay={grouped ? 100 : 0}>
             <h2 className="pg-h3">Specifications</h2>
-            {specs.length > 0 ? (
-              <dl className="pg-specs">
-                {specs.map((spec) => (
-                  <div key={spec.label}><dt>{spec.label}</dt><dd>{spec.value}</dd></div>
+            {grouped ? (
+              <div className="pg-spec-groups">
+                {specGroups.map((group) => (
+                  <div className="pg-spec-group" key={group.name}>
+                    <h3 className="pg-spec-group-title">{group.name}</h3>
+                    <SpecList specs={group.specs} />
+                  </div>
                 ))}
-              </dl>
+              </div>
+            ) : specs.length > 0 ? (
+              <SpecList specs={specs} />
             ) : (
               <p className="pg-muted">
                 Full specifications are available on request. <Link className="hm-link" to={quoteLink}>Ask our team</Link>
               </p>
             )}
           </Reveal>
-          {features.length > 0 && (
-            <Reveal className="pg-panel" delay={100}>
-              <h2 className="pg-h3">Key features</h2>
-              <ul className="pg-features">
-                {features.map((feature) => <li key={feature}><Check aria-hidden="true" /> {feature}</li>)}
-              </ul>
-            </Reveal>
-          )}
+          {!grouped && features.length > 0 && <FeaturesPanel features={features} delay={100} />}
         </section>
 
         {related.length > 0 && (
@@ -150,5 +173,40 @@ function Detail({ equipment }: { equipment: iEquipment }) {
         text="Ask for a quote, delivery details or service options. Our team will get back to you quickly."
       />
     </main>
+  );
+}
+
+type Spec = NonNullable<iEquipment["specs"]>[number];
+
+// Keeps groups in the order they first appear; ungrouped specs go under "General".
+function groupSpecs(specs: Spec[]) {
+  const groups: { name: string; specs: Spec[] }[] = [];
+  for (const spec of specs) {
+    const name = spec.group?.trim() || "General";
+    const group = groups.find((item) => item.name === name);
+    if (group) group.specs.push(spec);
+    else groups.push({ name, specs: [spec] });
+  }
+  return groups;
+}
+
+function SpecList({ specs }: { specs: Spec[] }) {
+  return (
+    <dl className="pg-specs">
+      {specs.map((spec) => (
+        <div key={spec.label}><dt>{spec.label}</dt><dd>{spec.value}</dd></div>
+      ))}
+    </dl>
+  );
+}
+
+function FeaturesPanel({ features, columns = false, delay = 0 }: { features: string[]; columns?: boolean; delay?: number }) {
+  return (
+    <Reveal className="pg-panel" delay={delay}>
+      <h2 className="pg-h3">Key features</h2>
+      <ul className={`pg-features${columns ? " is-columns" : ""}`}>
+        {features.map((feature) => <li key={feature}><Check aria-hidden="true" /> {feature}</li>)}
+      </ul>
+    </Reveal>
   );
 }

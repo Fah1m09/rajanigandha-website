@@ -43,15 +43,26 @@ collections:
       - { name: image, label: Main image, widget: image }
       - { name: gallery, label: More images, widget: list, required: false, field: { name: image, label: Image, widget: image } }
       - { name: summary, label: Short description, widget: text, required: false }
+      - name: highlights
+        label: Highlights (up to 4 headline numbers)
+        widget: list
+        required: false
+        max: 4
+        summary: "{{value}} {{label}}"
+        fields:
+          - { name: value, label: "Number (e.g. 235)", widget: string }
+          - { name: label, label: "Label (e.g. Programmable tests)", widget: string }
       - name: specs
         label: Specifications
         widget: list
         required: false
-        summary: "{{label}}: {{value}}"
+        summary: "{{group}} · {{label}}: {{value}}"
         fields:
+          - { name: group, label: "Section (optional, e.g. Optics)", widget: string, required: false }
           - { name: label, label: "Spec (e.g. Throughput)", widget: string }
           - { name: value, label: "Value (e.g. 420 tests/hour)", widget: string }
       - { name: features, label: Key features, widget: list, required: false, field: { name: feature, label: Feature, widget: string } }
+      - { name: certifications, label: Certifications, widget: list, required: false, field: { name: certification, label: Certification, widget: string } }
       - { name: brochure, label: Brochure (PDF), widget: file, required: false }
       - { name: tradePrice, label: Trade price (BDT) — leave empty to show "Contact us", widget: number, value_type: float, required: false }
       - { name: featured, label: Show on home page, widget: boolean, default: false }
