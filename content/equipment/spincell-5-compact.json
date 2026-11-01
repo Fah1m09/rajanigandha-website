@@ -1,11 +1,62 @@
 {
-  "name": "Spincell 5 compact",
+  "name": "Spincell 5 Compact",
   "brand": "Spinreact",
   "category": "Auto Hematology Analyzer",
   "image": "/img/Equipments/spin5compact.png",
-  "summary": "",
-  "specs": [],
-  "features": [],
+  "summary": "Compact 5-part differential hematology analyzer using semiconductor-laser flow cytometry for multi-dimensional cell classification. Runs up to 60 samples per hour from whole blood or capillary samples, reports NRBC and reticulocytes, and has a built-in 10.4\" display with storage for more than 200,000 results.",
+  "highlights": [
+    { "value": "60", "label": "Samples per hour" },
+    { "value": "5-part", "label": "WBC differential" },
+    { "value": "20 µL", "label": "Sample volume" },
+    { "value": "35 kg", "label": "Compact benchtop unit" }
+  ],
+  "specs": [
+    { "group": "Parameters", "label": "WBC & differential", "value": "WBC, LYM%, MON%, NEU%, EOS%, BASO%, LYM#, MON#, NEU#, EOS#, BAS#" },
+    { "group": "Parameters", "label": "RBC", "value": "RBC, HGB, HCT, MCV, MCH, MCHC, RDW-CV, RDW-SD" },
+    { "group": "Parameters", "label": "Platelets", "value": "PLT, MPV, PDW, PCT, P-LCR, P-LCC" },
+    { "group": "Parameters", "label": "NRBC", "value": "NRBC#, NRBC%" },
+    { "group": "Parameters", "label": "Reticulocytes", "value": "RETIC%, RETIC#, IRF" },
+    { "group": "Parameters", "label": "Graphics", "value": "2 histograms (RBC, PLT), 2 scattergrams (5-part differential, eosinophils/neutrophils), 3-D stereograms" },
+
+    { "group": "Principles of operation", "label": "WBC/DIFF", "value": "Flow cytometry, semiconductor laser multi-dimensional cell classification" },
+    { "group": "Principles of operation", "label": "WBC analysis", "value": "Optical and impedance measurements" },
+    { "group": "Principles of operation", "label": "RBC/PLT analysis", "value": "Impedance method" },
+    { "group": "Principles of operation", "label": "HGB", "value": "Cyanide-free reagent colorimetry" },
+    { "group": "Principles of operation", "label": "Aperture diameter", "value": "WBC 100 µm, RBC/PLT 68 µm" },
+
+    { "group": "Sample & throughput", "label": "Throughput", "value": "Up to 60 samples/hour, whole blood or pre-diluted" },
+    { "group": "Sample & throughput", "label": "Sample types", "value": "Whole blood and capillary blood" },
+    { "group": "Sample & throughput", "label": "Aspiration volume", "value": "Whole blood 20 µL, pre-diluted 20 µL" },
+    { "group": "Sample & throughput", "label": "Reagents", "value": "4: diluent, sheath, detergent, lyse" },
+
+    { "group": "Data & display", "label": "Data storage", "value": "More than 200,000 results with scattergrams" },
+    { "group": "Data & display", "label": "Display", "value": "Built-in 10.4\" screen" },
+
+    { "group": "Power & physical", "label": "Power supply", "value": "100 – 240 V AC" },
+    { "group": "Power & physical", "label": "Power consumption", "value": "< 250 VA" },
+    { "group": "Power & physical", "label": "Dimensions", "value": "490 (L) × 332 (W) × 459 (H) mm" },
+    { "group": "Power & physical", "label": "Weight", "value": "35 kg" },
+
+    { "group": "Consumables", "label": "Diluent", "value": "1 × 20 L (ref. 1705600)" },
+    { "group": "Consumables", "label": "Detergent", "value": "1 × 20 L (ref. 1705680)" },
+    { "group": "Consumables", "label": "Lyse", "value": "1 × 1000 mL (ref. 1705610)" },
+    { "group": "Consumables", "label": "Sheath reagent", "value": "1 × 20 L (ref. 1705681)" },
+    { "group": "Consumables", "label": "Controls", "value": "CBC-3K normal (3 × 3 mL, 6 × 3 mL) or 3 levels (3 × 3 mL, 6 × 3 mL)" }
+  ],
+  "features": [
+    "Compact benchtop 5-part differential analyzer",
+    "Semiconductor laser flow cytometry measures cell size, granularity and complexity",
+    "Complete 5-part WBC differential in a single channel",
+    "Reticulocyte count with RETIC%, RETIC# and IRF",
+    "NRBC count",
+    "3-D stereograms show the WBC differential from different views",
+    "Up to 60 samples per hour",
+    "Supports whole blood and capillary blood samples",
+    "Only four reagents, all cyanide-free",
+    "Built-in 10.4\" display, no external PC needed",
+    "Stores more than 200,000 results with scattergrams"
+  ],
+  "brochure": "/img/products/spincell-5-compact-brochure.pdf",
   "featured": false,
   "published": true,
   "order": 4

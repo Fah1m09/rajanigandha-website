@@ -3,9 +3,74 @@
   "brand": "Spinreact",
   "category": "Full Auto BioChemistry",
   "image": "/img/Equipments/spinx5.png",
-  "summary": "",
-  "specs": [],
-  "features": [],
+  "summary": "Fully automatic, random-access clinical chemistry analyzer running 400 photometric tests per hour, up to 640 with the optional ISE module. 90 onboard samples, a refrigerated 80-position reagent tray, 12 wavelengths, automatic dilution, an optional internal barcode reader and a bi-directional LIS interface.",
+  "highlights": [
+    { "value": "640", "label": "Tests per hour with ISE" },
+    { "value": "90", "label": "Onboard samples" },
+    { "value": "80", "label": "Refrigerated reagent positions" },
+    { "value": "12", "label": "Wavelengths, 340–800 nm" }
+  ],
+  "specs": [
+    { "group": "System", "label": "Type", "value": "Fully automatic, random access, STAT sample priority" },
+    { "group": "System", "label": "Throughput", "value": "400 tests/hour, up to 640 tests/hour with ISE" },
+    { "group": "System", "label": "Measuring principles", "value": "Absorbance photometry, turbidimetry" },
+    { "group": "System", "label": "Methods", "value": "End point, fixed time, kinetic; optional ISE; single, dual, triple and quadruple reagent chemistries; monochromatic or bichromatic" },
+    { "group": "System", "label": "Programming", "value": "User-defined profiles and calculations" },
+
+    { "group": "Sample handling", "label": "Sample tray", "value": "90 positions for primary or secondary tubes and sample cups" },
+    { "group": "Sample handling", "label": "Sample volume", "value": "2 – 45 µL, in 0.1 µL steps" },
+    { "group": "Sample handling", "label": "Sample probe", "value": "Liquid level detection, clot detection, vertical and horizontal collision protection" },
+    { "group": "Sample handling", "label": "Probe cleaning", "value": "Automatic inside and outside washing, carryover ≤ 0.1%" },
+    { "group": "Sample handling", "label": "Automatic dilution", "value": "Pre- and post-dilution up to 1:150, in a cuvette" },
+
+    { "group": "Reagent handling", "label": "Reagent tray", "value": "80 positions refrigerated at 4 – 10 °C (77 reagents + 4 ISE electrodes)" },
+    { "group": "Reagent handling", "label": "R1 volume", "value": "150 – 350 µL, in 1 µL steps" },
+    { "group": "Reagent handling", "label": "R2/R3/R4 volume", "value": "20 – 350 µL, in 1 µL steps" },
+    { "group": "Reagent handling", "label": "Reagent probes", "value": "2 independent probes with liquid level detection, collision protection and inventory checking; automatic inside and outside washing" },
+
+    { "group": "Reaction system", "label": "Reaction rotor", "value": "90 cuvettes on a rotating tray, 8-step automatic washing" },
+    { "group": "Reaction system", "label": "Cuvette", "value": "5 mm optical path" },
+    { "group": "Reaction system", "label": "Reaction volume", "value": "150 – 360 µL" },
+    { "group": "Reaction system", "label": "Temperature", "value": "37 °C ± 0.1 °C" },
+    { "group": "Reaction system", "label": "Mixing", "value": "2 independent mixers" },
+
+    { "group": "Optics", "label": "Light source", "value": "Halogen-tungsten lamp" },
+    { "group": "Optics", "label": "Photometer", "value": "Reversed optics, grating photometry" },
+    { "group": "Optics", "label": "Wavelengths", "value": "340, 380, 412, 450, 505, 546, 570, 605, 660, 700, 740, 800 nm" },
+    { "group": "Optics", "label": "Absorbance range", "value": "0 – 3 Abs (10 mm conversion)" },
+    { "group": "Optics", "label": "Resolution", "value": "0.001 Abs" },
+
+    { "group": "Options", "label": "ISE module", "value": "Na⁺, K⁺, Cl⁻ or Na⁺, K⁺, Cl⁻, Li⁺; up to 320 tests/hour" },
+    { "group": "Options", "label": "Internal barcode reader", "value": "Sample and reagent ID; Codabar, ITF, Code 128, Code 39, Code 93, UPC/EAN" },
+
+    { "group": "Calibration & QC", "label": "Calibration modes", "value": "Linear (one-point, two-point, multipoint), Logit-Log 4P, Logit-Log 5P, spline, exponential, polynomial, parabola" },
+    { "group": "Calibration & QC", "label": "Control rules", "value": "Westgard multi-rule, cumulative sum check, twin plot" },
+
+    { "group": "Software & connectivity", "label": "Operating system", "value": "Windows XP Professional/Home SP2, Windows Vista Home/Business" },
+    { "group": "Software & connectivity", "label": "Interface", "value": "RS-232, bi-directional LIS" },
+
+    { "group": "Power & physical", "label": "Power supply", "value": "200 – 240 V 50 Hz, 220/230 V 60 Hz or 110/115 V 60 Hz; 1500 VA" },
+    { "group": "Power & physical", "label": "Operating environment", "value": "15 – 30 °C, 35 – 80% humidity" },
+    { "group": "Power & physical", "label": "Water consumption", "value": "20 L/hour" },
+    { "group": "Power & physical", "label": "Dimensions", "value": "1180 × 700 × 1145 mm (W × D × H)" },
+    { "group": "Power & physical", "label": "Weight", "value": "300 kg" }
+  ],
+  "features": [
+    "400 tests per hour, up to 640 with the optional ISE module",
+    "Fully automatic random access with STAT sample priority",
+    "Onboard capacity for 90 samples",
+    "Refrigerated reagent tray: 77 positions + 4 ISE electrodes",
+    "Single to quadruple reagent chemistries",
+    "Automatic probe cleaning with liquid level detection",
+    "Clot detection",
+    "Vertical and horizontal collision protection",
+    "8-step automatic cuvette washing",
+    "12 wavelengths from 340 to 800 nm",
+    "Automatic dilution of abnormal samples, up to 1:150",
+    "Optional internal barcode reader",
+    "Bi-directional LIS interface"
+  ],
+  "brochure": "/img/products/spin-640-brochure.pdf",
   "featured": false,
   "published": true,
   "order": 3
