@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { ArrowLeft, ArrowUpRight, BadgeCheck, Check, Download, Headphones, ShieldCheck, Wrench } from "lucide-react";
 import type { iEquipment } from "../../types/Equipment";
 import { equipmentList, formatPrice } from "../../data/catalog";
 import { Reveal } from "../components/home/motion";
 import { PageCta, ProductCard } from "../components/ui";
+import ProductGallery from "../components/ProductGallery";
 import { track } from "../../services/analytics";
 import "../../assets/scss/home.scss";
 import "../../assets/scss/pages.scss";
@@ -31,8 +32,7 @@ export default function EquipmentDetails() {
 }
 
 function Detail({ equipment }: { equipment: iEquipment }) {
-  const images = [equipment.image, ...(equipment.gallery ?? [])];
-  const [active, setActive] = useState(0);
+  const images = [equipment.image, ...(equipment.gallery ?? [])].filter(Boolean);
   const price = formatPrice(equipment.tradePrice);
   const specs = equipment.specs ?? [];
   const features = equipment.features ?? [];
@@ -62,27 +62,7 @@ function Detail({ equipment }: { equipment: iEquipment }) {
         <Link className="pg-back" to="/equipments"><ArrowLeft aria-hidden="true" /> All equipment</Link>
 
         <div className="pg-detail-grid">
-          <div className="pg-gallery pg-rise">
-            <div className="pg-gallery-main">
-              <img src={images[active]} alt={equipment.name} />
-              <span className="hm-sticker">{equipment.brand}</span>
-            </div>
-            {images.length > 1 && (
-              <div className="pg-thumbs">
-                {images.map((src, index) => (
-                  <button
-                    aria-label={`Show image ${index + 1}`}
-                    aria-pressed={index === active}
-                    key={src}
-                    onClick={() => setActive(index)}
-                    type="button"
-                  >
-                    <img src={src} alt="" />
-                  </button>
-                ))}
-              </div>
-            )}
-          </div>
+          <ProductGallery images={images} alt={equipment.name} badge={equipment.brand} />
 
           <div className="pg-info pg-rise">
             <p className="hm-eyebrow">{equipment.category}</p>
