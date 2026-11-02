@@ -12,6 +12,12 @@ dist
 dist-ssr
 *.local
 
+# Environment files hold keys: keep real values in Netlify's dashboard.
+# Only the template (.env.example) is committed.
+.env
+.env.*
+!.env.example
+
 # Next.js
 .next
 out

@@ -5,3 +5,37 @@
 
 [build.environment]
   NODE_VERSION = "22"
+
+# ——— Addresses from the old React site ———
+# 301 = permanent, so Google moves old search results to the new pages.
+
+[[redirects]]
+  from = "/home"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/equipment"
+  to = "/equipments"
+  status = 301
+
+[[redirects]]
+  from = "/equipment/*"
+  to = "/equipments/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/aboutus"
+  to = "/"
+  status = 301
+
+# The new site has no news section
+[[redirects]]
+  from = "/news"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/news/*"
+  to = "/"
+  status = 301
