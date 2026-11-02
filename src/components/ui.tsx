@@ -85,10 +85,18 @@ export function CategoryTabs({ options, value, onChange, label }: CategoryTabsPr
     const el = scroller.current;
     const tab = el?.querySelector<HTMLElement>('[aria-pressed="true"]');
     if (!el || !tab) return;
-    const pad = 48; // room for the arrow button
-    if (tab.offsetLeft < el.scrollLeft + pad) el.scrollTo({ left: tab.offsetLeft - pad, behavior: "smooth" });
-    else if (tab.offsetLeft + tab.offsetWidth > el.scrollLeft + el.clientWidth - pad) {
-      el.scrollTo({ left: tab.offsetLeft + tab.offsetWidth - el.clientWidth + pad, behavior: "smooth" });
+    // Sideways in the horizontal row (phones), up/down in the vertical sidebar list (desktop)
+    if (el.scrollWidth > el.clientWidth) {
+      const pad = 48; // room for the arrow button
+      if (tab.offsetLeft < el.scrollLeft + pad) el.scrollTo({ left: tab.offsetLeft - pad, behavior: "smooth" });
+      else if (tab.offsetLeft + tab.offsetWidth > el.scrollLeft + el.clientWidth - pad) {
+        el.scrollTo({ left: tab.offsetLeft + tab.offsetWidth - el.clientWidth + pad, behavior: "smooth" });
+      }
+    } else if (el.scrollHeight > el.clientHeight) {
+      if (tab.offsetTop < el.scrollTop) el.scrollTo({ top: tab.offsetTop - 8, behavior: "smooth" });
+      else if (tab.offsetTop + tab.offsetHeight > el.scrollTop + el.clientHeight) {
+        el.scrollTo({ top: tab.offsetTop + tab.offsetHeight - el.clientHeight + 8, behavior: "smooth" });
+      }
     }
   }, [value]);
 

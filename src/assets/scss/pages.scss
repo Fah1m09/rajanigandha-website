@@ -232,12 +232,35 @@
 
 // In the sidebar the tab bar becomes a vertical list
 @media (min-width: 961px) {
-  .pg-sidebar .pg-tabbar { border-bottom: 0; }
+  // Sidebar never grows past the screen; the category list scrolls inside it
+  .pg-sidebar {
+    display: flex;
+    flex-direction: column;
+    max-height: calc(100dvh - 8rem); // 6.5rem sticky offset + breathing room below
+    > * { flex: none; }
+  }
+  .pg-sidebar .pg-tabbar {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    min-height: 0;
+    border-bottom: 0;
+  }
   .pg-sidebar .pg-tabbar-track {
     flex-direction: column;
+    flex: 1 1 auto;
     gap: 0.2rem;
-    overflow: visible;
+    min-height: 0;
+    margin: -3px; // room for focus outlines, which would otherwise be clipped
+    padding: 3px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain; // scrolling the list doesn't scroll the page once it hits the end
     mask-image: none !important;
+    scrollbar-width: thin;
+    scrollbar-color: var(--muted) transparent;
+    &::-webkit-scrollbar { display: block; width: 6px; }
+    &::-webkit-scrollbar-thumb { border-radius: 6px; background: var(--muted); }
   }
   .pg-sidebar .pg-tabbar-arrow { display: none; }
   .pg-sidebar .pg-tab {
