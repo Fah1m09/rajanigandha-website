@@ -92,7 +92,7 @@
   white-space: nowrap;
   transition: background-color 200ms ease, color 200ms ease;
   &:hover { background: var(--surface); }
-  &[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+  &[aria-pressed="true"], &[aria-selected="true"] { background: var(--ink); color: var(--bg); }
   &:focus-visible { outline: 3px solid var(--accent-text); outline-offset: 2px; }
 }
 .pg-pill-count {
@@ -107,7 +107,7 @@
   font-size: 0.8rem;
   font-weight: 700;
 }
-.pg-pill[aria-pressed="true"] .pg-pill-count { background: var(--accent); color: var(--on-accent); }
+.pg-pill:is([aria-pressed="true"], [aria-selected="true"]) .pg-pill-count { background: var(--accent); color: var(--on-accent); }
 
 // ——— Results ———
 .pg-results { padding-bottom: clamp(2rem, 5vw, 4rem); }
@@ -429,13 +429,14 @@
   svg { width: 1.35rem; height: 1.35rem; color: var(--accent-text); }
 }
 
-.pg-spec-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
-  gap: 1rem;
-  margin-top: clamp(3rem, 7vw, 6rem);
-  &.is-single, &.is-stacked { grid-template-columns: minmax(0, 1fr); }
+.pg-details { margin-top: clamp(3rem, 7vw, 6rem); }
+.pg-tablist { margin-bottom: 1rem; }
+.pg-tabpanel {
+  &[hidden] { display: none; }
+  &:not([hidden]) { animation: pg-tab-in 240ms ease both; }
+  &:focus-visible { outline: 3px solid var(--accent-text); outline-offset: 2px; }
 }
+@keyframes pg-tab-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
 
 .pg-highlights {
   display: grid;
@@ -474,13 +475,22 @@
   svg { width: 1rem; height: 1rem; color: var(--accent-text); }
 }
 
-.pg-spec-groups {
+// One full-width row per group: title on the left, specs on the right.
+// Fixed column widths keep every label and value lined up across all groups.
+.pg-spec-group {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 22rem), 1fr));
-  gap: 2rem 2.5rem;
+  grid-template-columns: 12rem minmax(0, 1fr);
+  gap: 2rem;
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--line);
+  &:first-child { padding-top: 0; border-top: 0; }
+  &:last-child { padding-bottom: 0; }
+  // The group already has a divider above, so its first row doesn't need one
+  .pg-specs > div:first-child { padding-top: 0; border-top: 0; }
 }
 .pg-spec-group-title {
-  margin-bottom: 0.5rem;
+  margin: 0;
+  line-height: 1.5 !important;
   color: var(--accent-text);
   font-size: 0.8rem !important;
   font-weight: 700;
@@ -498,29 +508,46 @@
 .pg-specs {
   > div {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
-    gap: 1rem;
-    padding: 0.85rem 0;
+    grid-template-columns: 14rem minmax(0, 1fr);
+    gap: 1.5rem;
+    padding: 0.75rem 0;
     border-top: 1px solid var(--line);
+    line-height: 1.5;
   }
   dt { color: var(--muted); font-weight: 600; }
-  dd { margin: 0; font-weight: 600; }
+  dd { margin: 0; font-weight: 600; overflow-wrap: anywhere; }
 }
 
+// Even grid of tiles; tiles in a row stretch to the tallest one
 .pg-features {
   display: grid;
   gap: 0.75rem;
-  &.is-columns { grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr)); column-gap: 2rem; }
-  li { display: flex; gap: 0.7rem; font-weight: 600; }
+  &.is-columns { grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr)); }
+  li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+    padding: 1rem 1.15rem;
+    border: 1px solid var(--line);
+    border-radius: calc(var(--radius) * 0.6);
+    background: var(--bg);
+    font-weight: 600;
+    line-height: 1.45;
+    transition: border-color 200ms ease, transform 200ms ease;
+  }
   svg {
     flex: none;
-    width: 1.5rem;
-    height: 1.5rem;
-    padding: 0.25rem;
+    width: 1.6rem;
+    height: 1.6rem;
+    margin-top: -0.05rem; // centres the icon on the first line of text
+    padding: 0.3rem;
     border-radius: 50%;
     background: var(--accent);
     color: var(--on-accent);
   }
+}
+@media (hover: hover) {
+  .pg-features li:hover { border-color: var(--ink); transform: translateY(-2px); }
 }
 
 .pg-related { margin-top: clamp(4rem, 8vw, 7rem); .hm-h2 { margin-bottom: clamp(1.5rem, 3vw, 2.5rem); } }
@@ -723,15 +750,23 @@
 
 // ——— Responsive ———
 @media (max-width: 960px) {
-  .pg-detail-grid, .pg-spec-grid, .pg-contact-grid { grid-template-columns: minmax(0, 1fr); }
+  .pg-detail-grid, .pg-contact-grid { grid-template-columns: minmax(0, 1fr); }
   .pg-gallery { position: static; }
   .pg-contact-cards { grid-template-columns: minmax(0, 1fr); }
   .pg-contact-card { min-height: 0; }
   .pg-contact-label { margin-top: 1.25rem; }
 }
 
+@media (max-width: 960px) {
+  // Group title sits above its specs
+  .pg-spec-group { grid-template-columns: minmax(0, 1fr); gap: 0.75rem; }
+}
+
 @media (max-width: 720px) {
   .pg-search { width: 100%; }
+  // Label above value, so long values get the full width
+  .pg-specs > div { grid-template-columns: minmax(0, 1fr); gap: 0.2rem; }
+  .pg-specs dt { font-size: 0.85rem; }
   .pg-form-row { grid-template-columns: minmax(0, 1fr); }
 
   // Reagent table becomes a stack of cards

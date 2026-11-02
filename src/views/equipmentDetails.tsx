@@ -5,6 +5,7 @@ import { equipmentList, formatPrice } from "../data/catalog";
 import { Reveal } from "../components/home/motion";
 import { PageCta, ProductCard } from "../components/ui";
 import ProductGallery from "../components/ProductGallery";
+import ProductTabs from "../components/ProductTabs";
 import TrackView from "../components/TrackView";
 
 // Server component: the route (src/app/equipments/[equipmentId]/page.tsx) finds the product.
@@ -18,6 +19,23 @@ export default function EquipmentDetails({ equipment }: { equipment: iEquipment 
   const specGroups = groupSpecs(specs);
   const grouped = specGroups.length > 1;
   const quoteLink = `/contact?subject=${encodeURIComponent(`Quote request: ${equipment.name}`)}`;
+
+  const specContent = grouped ? (
+    <div className="pg-spec-groups">
+      {specGroups.map((group) => (
+        <div className="pg-spec-group" key={group.name}>
+          <h3 className="pg-spec-group-title">{group.name}</h3>
+          <SpecList specs={group.specs} />
+        </div>
+      ))}
+    </div>
+  ) : specs.length > 0 ? (
+    <SpecList specs={specs} />
+  ) : (
+    <p className="pg-muted">
+      Full specifications are available on request. <Link className="hm-link" href={quoteLink}>Ask our team</Link>
+    </p>
+  );
 
   const viewItem = {
     content_ids: [equipment.slug],
@@ -92,31 +110,22 @@ export default function EquipmentDetails({ equipment }: { equipment: iEquipment 
           </div>
         </div>
 
-        <section
-          className={`pg-spec-grid${grouped ? " is-stacked" : features.length ? "" : " is-single"}`}
-          aria-label="Product details"
-        >
-          {grouped && features.length > 0 && <FeaturesPanel features={features} columns />}
-          <Reveal className="pg-panel" delay={grouped ? 100 : 0}>
-            <h2 className="pg-h3">Specifications</h2>
-            {grouped ? (
-              <div className="pg-spec-groups">
-                {specGroups.map((group) => (
-                  <div className="pg-spec-group" key={group.name}>
-                    <h3 className="pg-spec-group-title">{group.name}</h3>
-                    <SpecList specs={group.specs} />
-                  </div>
-                ))}
-              </div>
-            ) : specs.length > 0 ? (
-              <SpecList specs={specs} />
+        <section className="pg-details" aria-labelledby="pg-details-title">
+          <Reveal>
+            <h2 className="pg-h3" id="pg-details-title">Product details</h2>
+            {/* Without features there is nothing to switch between, so specs show on their own */}
+            {features.length > 0 ? (
+              <ProductTabs
+                label={`${equipment.name} details`}
+                tabs={[
+                  { id: "features", label: "Key features", count: features.length, content: <FeatureList features={features} /> },
+                  { id: "specs", label: "Specifications", count: specs.length || undefined, content: specContent },
+                ]}
+              />
             ) : (
-              <p className="pg-muted">
-                Full specifications are available on request. <Link className="hm-link" href={quoteLink}>Ask our team</Link>
-              </p>
+              <div className="pg-panel">{specContent}</div>
             )}
           </Reveal>
-          {!grouped && features.length > 0 && <FeaturesPanel features={features} delay={100} />}
         </section>
 
         {related.length > 0 && (
@@ -168,13 +177,10 @@ function SpecList({ specs }: { specs: Spec[] }) {
   );
 }
 
-function FeaturesPanel({ features, columns = false, delay = 0 }: { features: string[]; columns?: boolean; delay?: number }) {
+function FeatureList({ features }: { features: string[] }) {
   return (
-    <Reveal className="pg-panel" delay={delay}>
-      <h2 className="pg-h3">Key features</h2>
-      <ul className={`pg-features${columns ? " is-columns" : ""}`}>
-        {features.map((feature) => <li key={feature}><Check aria-hidden="true" /> {feature}</li>)}
-      </ul>
-    </Reveal>
+    <ul className="pg-features is-columns">
+      {features.map((feature) => <li key={feature}><Check aria-hidden="true" /> {feature}</li>)}
+    </ul>
   );
 }
