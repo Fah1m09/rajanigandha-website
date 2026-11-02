@@ -34,6 +34,10 @@ function Catalog({ equipmentList, requested }: Props & { requested: string | nul
     })),
   ], [equipmentList]);
   const category = categoryOptions.some((option) => option.value === requested) ? requested : ALL;
+  const brands = useMemo(() => {
+    const names = [...new Set(equipmentList.map((item) => item.brand))];
+    return names.length < 2 ? names.join("") : `${names.slice(0, -1).join(", ")} and ${names[names.length - 1]}`;
+  }, [equipmentList]);
   const [query, setQuery] = useState("");
   const setCategoryParam = useSetCategoryParam();
 
@@ -54,7 +58,7 @@ function Catalog({ equipmentList, requested }: Props & { requested: string | nul
           <h1 className="pg-title pg-rise" id="pg-title">Diagnostic <em>equipment</em></h1>
           <div className="pg-hero-row pg-rise">
             <p className="pg-lead">
-              Analyzers and instruments from Spinreact and Microlab, supplied and serviced by our own
+              Analyzers and instruments from {brands}, supplied and serviced by our own
               engineers across Bangladesh.
             </p>
             <SearchBox value={query} onChange={setQuery} label="Search equipment" />

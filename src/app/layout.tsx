@@ -7,15 +7,19 @@ import "../assets/scss/home.scss";
 import "../assets/scss/pages.scss";
 import SiteShell from "../components/SiteShell";
 import RouteTracker from "../components/RouteTracker";
+import { siteUrl } from "../data/seo";
 
 export const metadata: Metadata = {
-  // Netlify sets URL to the site's main address during builds; used for absolute share-image links.
-  metadataBase: new URL(process.env.URL || "http://localhost:3000"),
+  // Makes canonical and share-image links absolute (see siteUrl in data/seo.ts)
+  metadataBase: new URL(siteUrl),
   title: {
     default: "Rajanigandha International",
     template: "%s | Rajanigandha International",
   },
   description: "Diagnostic equipment, reagents and technical service for laboratories across Bangladesh.",
+  applicationName: "Rajanigandha International",
+  openGraph: { type: "website", siteName: "Rajanigandha International", locale: "en_BD" },
+  robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

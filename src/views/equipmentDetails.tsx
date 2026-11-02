@@ -81,7 +81,7 @@ export default function EquipmentDetails({ equipment }: { equipment: iEquipment 
 
             <div className="pg-price-card">
               <div>
-                <p className="pg-price-label">Trade price</p>
+                <p className="pg-price-label">Trade Price</p>
                 <p className="pg-price">{price ?? "On request"}</p>
               </div>
               <div className="pg-price-actions">
@@ -97,7 +97,7 @@ export default function EquipmentDetails({ equipment }: { equipment: iEquipment 
             </div>
 
             <ul className="pg-assurances">
-              <li><ShieldCheck aria-hidden="true" /> Genuine {equipment.brand} product</li>
+              <li><ShieldCheck aria-hidden="true" /> Genuine {equipment.brand} Product</li>
               <li><Wrench aria-hidden="true" /> Maintenance by our engineers</li>
               <li><Headphones aria-hidden="true" /> 24/7 technical support</li>
             </ul>
@@ -112,7 +112,7 @@ export default function EquipmentDetails({ equipment }: { equipment: iEquipment 
 
         <section className="pg-details" aria-labelledby="pg-details-title">
           <Reveal>
-            <h2 className="pg-h3" id="pg-details-title">Product details</h2>
+            <h2 className="pg-h3" id="pg-details-title">Product Details</h2>
             {/* Without features there is nothing to switch between, so specs show on their own */}
             {features.length > 0 ? (
               <ProductTabs
@@ -131,8 +131,8 @@ export default function EquipmentDetails({ equipment }: { equipment: iEquipment 
         {related.length > 0 && (
           <section className="pg-related" aria-labelledby="pg-related-title">
             <Reveal>
-              <p className="hm-eyebrow">Keep exploring</p>
-              <h2 className="hm-h2" id="pg-related-title">Related equipment</h2>
+              <p className="hm-eyebrow">Keep Exploring</p>
+              <h2 className="hm-h2" id="pg-related-title">Related Equipments</h2>
             </Reveal>
             <ul className="pg-grid">
               {related.map((item, index) => (
