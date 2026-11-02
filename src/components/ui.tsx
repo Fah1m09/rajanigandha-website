@@ -1,8 +1,8 @@
 "use client";
 
-import { useId } from "react";
+import { useCallback, useEffect, useId, useRef, useState } from "react";
 import Link from "next/link";
-import { ArrowUpRight, Microscope, Phone, Search, X } from "lucide-react";
+import { ArrowUpRight, ChevronLeft, ChevronRight, Microscope, Phone, Search, X } from "lucide-react";
 import type { iEquipment } from "../types/Equipment";
 import { formatPrice } from "../data/format";
 import { company } from "../data/company";
@@ -54,23 +54,71 @@ export function SearchBox({ value, onChange, label }: SearchBoxProps) {
 }
 
 type FilterOption = { value: string; label: string; count: number };
-type FilterPillsProps = { options: FilterOption[]; value: string; onChange: (value: string) => void; label: string };
+type CategoryTabsProps = { options: FilterOption[]; value: string; onChange: (value: string) => void; label: string };
 
-export function FilterPills({ options, value, onChange, label }: FilterPillsProps) {
+/**
+ * Horizontal category tabs on one line. When they don't all fit, the row scrolls sideways,
+ * the edges fade, and arrow buttons appear on whichever side has more tabs.
+ */
+export function CategoryTabs({ options, value, onChange, label }: CategoryTabsProps) {
+  const scroller = useRef<HTMLDivElement>(null);
+  const [edges, setEdges] = useState({ start: false, end: false });
+
+  const measure = useCallback(() => {
+    const el = scroller.current;
+    if (!el) return;
+    setEdges({ start: el.scrollLeft > 4, end: el.scrollLeft + el.clientWidth < el.scrollWidth - 4 });
+  }, []);
+
+  useEffect(() => {
+    const el = scroller.current;
+    if (!el) return;
+    measure();
+    const observer = new ResizeObserver(measure);
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [measure]);
+
+  // Keep the selected tab in view, e.g. when the page opens on ?category=...
+  useEffect(() => {
+    // Scrolls only the tab row, never the page
+    const el = scroller.current;
+    const tab = el?.querySelector<HTMLElement>('[aria-pressed="true"]');
+    if (!el || !tab) return;
+    const pad = 48; // room for the arrow button
+    if (tab.offsetLeft < el.scrollLeft + pad) el.scrollTo({ left: tab.offsetLeft - pad, behavior: "smooth" });
+    else if (tab.offsetLeft + tab.offsetWidth > el.scrollLeft + el.clientWidth - pad) {
+      el.scrollTo({ left: tab.offsetLeft + tab.offsetWidth - el.clientWidth + pad, behavior: "smooth" });
+    }
+  }, [value]);
+
+  const scrollBy = (direction: 1 | -1) => {
+    const el = scroller.current;
+    if (el) el.scrollBy({ left: direction * el.clientWidth * 0.7, behavior: "smooth" });
+  };
+
   return (
-    <div className="pg-filters" role="group" aria-label={label}>
-      {options.map((option) => (
-        <button
-          aria-pressed={option.value === value}
-          className="pg-pill"
-          key={option.value}
-          onClick={() => onChange(option.value)}
-          type="button"
-        >
-          {option.label}
-          <span className="pg-pill-count">{option.count}</span>
-        </button>
-      ))}
+    <div className={`pg-tabbar${edges.start ? " has-start" : ""}${edges.end ? " has-end" : ""}`}>
+      <button aria-label="Show previous categories" className="pg-tabbar-arrow is-start" onClick={() => scrollBy(-1)} tabIndex={-1} type="button">
+        <ChevronLeft aria-hidden="true" />
+      </button>
+      <div className="pg-tabbar-track" onScroll={measure} ref={scroller} role="group" aria-label={label}>
+        {options.map((option) => (
+          <button
+            aria-pressed={option.value === value}
+            className="pg-tab"
+            key={option.value}
+            onClick={() => onChange(option.value)}
+            type="button"
+          >
+            {option.label}
+            <span className="pg-tab-count">{option.count}</span>
+          </button>
+        ))}
+      </div>
+      <button aria-label="Show more categories" className="pg-tabbar-arrow is-end" onClick={() => scrollBy(1)} tabIndex={-1} type="button">
+        <ChevronRight aria-hidden="true" />
+      </button>
     </div>
   );
 }

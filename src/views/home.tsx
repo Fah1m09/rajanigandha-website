@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight, FlaskConical, Mail, Microscope, Phone, Wrench } from "lucide-react";
+import { ArrowUpRight, Check, FlaskConical, Headphones, Mail, Microscope, Phone, Wrench } from "lucide-react";
 import { Counter, Marquee, Reveal } from "../components/home/motion";
 import FeaturedSlider from "../components/home/FeaturedSlider";
 import { company } from "../data/company";
@@ -68,7 +68,7 @@ export default function HomePage() {
 
 function Hero() {
   // The collage only shows products that have a photo.
-  const [first, second, third] = featured.filter((item) => item.image);
+  const [first, second] = featured.filter((item) => item.image);
   return (
     <section className="hm-hero" aria-labelledby="hm-hero-title">
       <div className="hm-wrap">
@@ -105,25 +105,33 @@ function Hero() {
             </div>
           </div>
 
-          <div className="hm-collage" aria-hidden="true">
-            {first && (
-              <figure className="hm-float hm-float-a">
-                <img src={first.image} alt="" />
-                <figcaption className="hm-sticker">{first.name}</figcaption>
-              </figure>
-            )}
-            {second && (
-              <figure className="hm-float hm-float-b">
-                <img src={second.image} alt="" />
-                <figcaption className="hm-sticker is-dark">{second.category}</figcaption>
-              </figure>
-            )}
-            {third && (
-              <figure className="hm-float hm-float-c">
-                <img src={third.image} alt="" />
-              </figure>
-            )}
-            <span className="hm-badge">24/7<small>support</small></span>
+          {/* Bento collage: wide photo + tall pill on top, tall pill + wide photo below. Decorative, so hidden from screen readers. */}
+          <div className="hm-bento" aria-hidden="true">
+            <figure className="hm-bento-photo is-a">
+              {first && <img src={first.image} alt="" />}
+              {first && <figcaption>{first.name}</figcaption>}
+            </figure>
+
+            <div className="hm-bento-pill is-light">
+              <span className="hm-bento-icon"><Check /></span>
+              <p>Installed by our engineers</p>
+            </div>
+
+            <div className="hm-bento-pill is-dark">
+              <span className="hm-bento-icon"><Headphones /></span>
+              <div>
+                <strong>24/7</strong>
+                <p>Technical support</p>
+              </div>
+              <span className="hm-bento-avatars">
+                {company.brands.map((brand) => <img key={brand.name} src={brand.logo} alt="" />)}
+              </span>
+            </div>
+
+            <figure className="hm-bento-photo is-b">
+              {second && <img src={second.image} alt="" />}
+              {second && <figcaption>{second.name}</figcaption>}
+            </figure>
           </div>
         </div>
       </div>

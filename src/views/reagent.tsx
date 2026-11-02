@@ -6,7 +6,7 @@ import { useSearchParams } from "next/navigation";
 import { ArrowDown, ArrowLeft, ArrowRight, ArrowUp, ArrowUpDown, ArrowUpRight } from "lucide-react";
 import type { iReagent } from "../types/Reagent";
 import { formatPrice } from "../data/format";
-import { FilterPills, PageCta, SearchBox } from "../components/ui";
+import { CategoryTabs, PageCta, SearchBox } from "../components/ui";
 import { useSetCategoryParam } from "../hooks/useCategoryParam";
 
 // One table row per pack size, so each size can carry its own trade price.
@@ -100,98 +100,100 @@ function Catalog({ reagentList, requested }: Props & { requested: string | null 
         <div className="hm-wrap">
           <p className="hm-eyebrow pg-rise">Reagent catalogue</p>
           <h1 className="pg-title pg-rise" id="pg-title">Diagnostic <em>reagents</em></h1>
-          <div className="pg-hero-row pg-rise">
-            <p className="pg-lead">
-              {reagentList.length} reagent lines in {allRows.length} pack sizes for clinical chemistry,
-              serology, immunochemistry and blood grouping.
-            </p>
-            <SearchBox value={query} onChange={(value) => { setQuery(value); setPage(0); }} label="Search reagents" />
-          </div>
-          <div className="pg-rise">
-            <FilterPills options={categoryOptions} value={category} onChange={setCategory} label="Filter by category" />
-          </div>
+          <p className="pg-lead pg-rise">
+            {reagentList.length} reagent lines in {allRows.length} pack sizes for clinical chemistry,
+            serology, immunochemistry and blood grouping.
+          </p>
         </div>
       </section>
 
       <section className="pg-results" aria-label="Reagents">
-        <div className="hm-wrap">
-          <p className="pg-count" aria-live="polite">
-            {rows.length} {rows.length === 1 ? "pack size" : "pack sizes"}
-            {category !== ALL && <> in <strong>{category}</strong></>}
-          </p>
+        <div className="hm-wrap pg-catalog">
+          <aside className="pg-sidebar pg-rise" aria-label="Search and filter">
+            <SearchBox value={query} onChange={(value) => { setQuery(value); setPage(0); }} label="Search reagents" />
+            <p className="pg-sidebar-title">Categories</p>
+            <CategoryTabs options={categoryOptions} value={category} onChange={setCategory} label="Filter by category" />
+          </aside>
 
-          {rows.length > 0 ? (
-            <div className="pg-table-card pg-rise">
-              <table className="pg-table">
-                <thead>
-                  <tr>
-                    {columns.map(({ key, label }) => {
-                      const active = sortBy === key;
-                      const Icon = !active ? ArrowUpDown : ascending ? ArrowUp : ArrowDown;
-                      return (
-                        <th
-                          aria-sort={active ? (ascending ? "ascending" : "descending") : "none"}
-                          key={key}
-                          scope="col"
-                        >
-                          <button className={active ? "is-active" : ""} onClick={() => sort(key)} type="button">
-                            {label} <Icon aria-hidden="true" />
-                          </button>
-                        </th>
-                      );
-                    })}
-                    <th scope="col"><span className="sr-only">Quote</span></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {visible.map((row) => (
-                    <tr key={row.key}>
-                      <th scope="row">{row.name}</th>
-                      <td data-label="Category"><span className="pg-tag">{row.category}</span></td>
-                      <td data-label="Pack size">{row.size}</td>
-                      <td data-label="Trade price">
-                        {formatPrice(row.price) ?? <span className="pg-muted">On request</span>}
-                      </td>
-                      <td className="pg-table-action">
-                        <Link href={quoteLink(row)} aria-label={`Request a quote for ${row.name}, ${row.size}`}>
-                          Quote <ArrowUpRight aria-hidden="true" />
-                        </Link>
-                      </td>
+          <div className="pg-catalog-main">
+            <p className="pg-count" aria-live="polite">
+              {rows.length} {rows.length === 1 ? "pack size" : "pack sizes"}
+              {category !== ALL && <> in <strong>{category}</strong></>}
+            </p>
+
+            {rows.length > 0 ? (
+              <div className="pg-table-card pg-rise">
+                <table className="pg-table">
+                  <thead>
+                    <tr>
+                      {columns.map(({ key, label }) => {
+                        const active = sortBy === key;
+                        const Icon = !active ? ArrowUpDown : ascending ? ArrowUp : ArrowDown;
+                        return (
+                          <th
+                            aria-sort={active ? (ascending ? "ascending" : "descending") : "none"}
+                            key={key}
+                            scope="col"
+                          >
+                            <button className={active ? "is-active" : ""} onClick={() => sort(key)} type="button">
+                              {label} <Icon aria-hidden="true" />
+                            </button>
+                          </th>
+                        );
+                      })}
+                      <th scope="col"><span className="sr-only">Quote</span></th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          ) : (
-            <div className="pg-empty">
-              <p>No reagents match your search.</p>
-              <button className="hm-btn hm-btn-ghost" type="button" onClick={() => { setQuery(""); setCategory(ALL); }}>
+                  </thead>
+                  <tbody>
+                    {visible.map((row) => (
+                      <tr key={row.key}>
+                        <th scope="row">{row.name}</th>
+                        <td data-label="Category"><span className="pg-tag">{row.category}</span></td>
+                        <td data-label="Pack size">{row.size}</td>
+                        <td data-label="Trade price">
+                          {formatPrice(row.price) ?? <span className="pg-muted">On request</span>}
+                        </td>
+                        <td className="pg-table-action">
+                          <Link href={quoteLink(row)} aria-label={`Request a quote for ${row.name}, ${row.size}`}>
+                          Quote <ArrowUpRight aria-hidden="true" />
+                          </Link>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            ) : (
+              <div className="pg-empty">
+                <p>No reagents match your search.</p>
+                <button className="hm-btn hm-btn-ghost" type="button" onClick={() => { setQuery(""); setCategory(ALL); }}>
                 Show all reagents
-              </button>
-            </div>
-          )}
-
-          {rows.length > 0 && (
-            <div className="pg-pager">
-              <label>
-                Rows per page
-                <select value={pageSize} onChange={(event) => { setPageSize(Number(event.target.value)); setPage(0); }}>
-                  {[10, 20, 50].map((size) => <option key={size} value={size}>{size}</option>)}
-                </select>
-              </label>
-              <span>
-                {current * pageSize + 1}–{Math.min((current + 1) * pageSize, rows.length)} of {rows.length}
-              </span>
-              <div className="pg-pager-buttons">
-                <button type="button" disabled={current === 0} onClick={() => setPage(current - 1)} aria-label="Previous page">
-                  <ArrowLeft aria-hidden="true" />
-                </button>
-                <button type="button" disabled={current + 1 >= pageCount} onClick={() => setPage(current + 1)} aria-label="Next page">
-                  <ArrowRight aria-hidden="true" />
                 </button>
               </div>
-            </div>
-          )}
+            )}
+
+            {rows.length > 0 && (
+              <div className="pg-pager">
+                <label>
+                Rows per page
+                  <select value={pageSize} onChange={(event) => { setPageSize(Number(event.target.value)); setPage(0); }}>
+                    {[10, 20, 50].map((size) => <option key={size} value={size}>{size}</option>)}
+                  </select>
+                </label>
+                <span>
+                  {current * pageSize + 1}–{Math.min((current + 1) * pageSize, rows.length)} of {rows.length}
+                </span>
+                <div className="pg-pager-buttons">
+                  <button type="button" disabled={current === 0} onClick={() => setPage(current - 1)} aria-label="Previous page">
+                    <ArrowLeft aria-hidden="true" />
+                  </button>
+                  <button type="button" disabled={current + 1 >= pageCount} onClick={() => setPage(current + 1)} aria-label="Next page">
+                    <ArrowRight aria-hidden="true" />
+                  </button>
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       </section>
 

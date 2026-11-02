@@ -6,8 +6,13 @@ import { ArrowUpRight, CheckCircle2, Mail, MapPin, Phone, Send } from "lucide-re
 import { company } from "../data/company";
 import { Reveal } from "../components/home/motion";
 import { trackLead } from "../services/analytics";
+import { sendContactEmail } from "../services/email";
 
 type Status = "idle" | "sending" | "sent" | "error";
+
+// Google My Maps map that marks the offices
+const MAP_URL = "https://www.google.com/maps/d/u/0";
+const MAP_ID = "1k3k6XWGeh56dGbTpKaH4BxWA82TUQA5B";
 
 // The pre-rendered HTML has an empty subject; links like /contact?subject=… fill it in the browser.
 export default function Contact() {
@@ -25,22 +30,30 @@ function ContactFromUrl() {
 function ContactPage({ subject }: { subject: string }) {
   const [status, setStatus] = useState<Status>("idle");
 
-  // Netlify Forms: the matching hidden form in public/__forms.html lets Netlify detect this form
-  // at deploy time, and submissions are posted to that static file.
+  // Messages are emailed through EmailJS (see services/email.ts).
   const submit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const form = event.currentTarget;
+    const data = new FormData(form);
+    const field = (name: string) => String(data.get(name) ?? "").trim() || undefined;
+
+    // Bots fill the hidden field; pretend it worked and send nothing
+    if (field("bot-field")) {
+      form.reset();
+      setStatus("sent");
+      return;
+    }
+
     setStatus("sending");
     try {
-      const body = new URLSearchParams(new FormData(form) as unknown as Record<string, string>).toString();
-      const response = await fetch("/__forms.html", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body,
+      await sendContactEmail({
+        name: field("name") ?? "",
+        email: field("email") ?? "",
+        phone: field("phone"),
+        organization: field("organization"),
+        subject: field("subject"),
+        message: field("message") ?? "",
       });
-      if (!response.ok) throw new Error(String(response.status));
-      const data = new FormData(form);
-      const field = (name: string) => String(data.get(name) ?? "").trim() || undefined;
       // Email/phone go only to our own server, which hashes them before sending to Meta.
       trackLead(
         { form_name: "contact", content_name: field("subject") ?? "General enquiry" },
@@ -48,7 +61,8 @@ function ContactPage({ subject }: { subject: string }) {
       );
       form.reset();
       setStatus("sent");
-    } catch {
+    } catch (error) {
+      console.error("Contact form failed to send", error);
       setStatus("error");
     }
   };
@@ -102,8 +116,7 @@ function ContactPage({ subject }: { subject: string }) {
                   </button>
                 </div>
               ) : (
-                <form className="pg-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" onSubmit={submit}>
-                  <input type="hidden" name="form-name" value="contact" />
+                <form className="pg-form" name="contact" onSubmit={submit}>
                   <p className="sr-only">
                     <label>Leave this field empty <input name="bot-field" tabIndex={-1} autoComplete="off" /></label>
                   </p>
@@ -148,12 +161,20 @@ function ContactPage({ subject }: { subject: string }) {
             </Reveal>
 
             <div className="pg-contact-side">
-              <Reveal className="pg-panel pg-map-panel" delay={100}>
-                <iframe
-                  title="Map of our offices"
-                  loading="lazy"
-                  src="https://www.google.com/maps/d/u/0/embed?mid=1k3k6XWGeh56dGbTpKaH4BxWA82TUQA5B&ehbc=2E312F"
-                />
+              {/* Framed like the product cards: map inside an inset frame, details row below */}
+              <Reveal className="pg-map-card" delay={100}>
+                <div className="pg-map-frame">
+                  {/* ehbc sets the map's header bar colour (theme black) */}
+                  <iframe title="Map of our offices" loading="lazy" src={`${MAP_URL}/embed?mid=${MAP_ID}&ehbc=0D0D0D`} />
+                </div>
+                <a className="pg-map-body" href={`${MAP_URL}/viewer?mid=${MAP_ID}`} target="_blank" rel="noreferrer">
+                  <div>
+                    <p className="hm-product-cat">Find us</p>
+                    <h3>Kakrail, {company.city}</h3>
+                    <p className="pg-muted">Open in Google Maps</p>
+                  </div>
+                  <span className="hm-round-arrow" aria-hidden="true"><ArrowUpRight /></span>
+                </a>
               </Reveal>
               <Reveal className="pg-panel" delay={180}>
                 <p className="hm-eyebrow">Across Bangladesh</p>

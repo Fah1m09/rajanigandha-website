@@ -4,7 +4,7 @@ import { Suspense, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import type { iEquipment } from "../types/Equipment";
 import { Reveal } from "../components/home/motion";
-import { FilterPills, PageCta, ProductCard, SearchBox } from "../components/ui";
+import { CategoryTabs, PageCta, ProductCard, SearchBox } from "../components/ui";
 import { useSetCategoryParam } from "../hooks/useCategoryParam";
 
 const ALL = "All";
@@ -56,41 +56,43 @@ function Catalog({ equipmentList, requested }: Props & { requested: string | nul
         <div className="hm-wrap">
           <p className="hm-eyebrow pg-rise">Product catalogue</p>
           <h1 className="pg-title pg-rise" id="pg-title">Diagnostic <em>equipment</em></h1>
-          <div className="pg-hero-row pg-rise">
-            <p className="pg-lead">
-              Analyzers and instruments from {brands}, supplied and serviced by our own
-              engineers across Bangladesh.
-            </p>
-            <SearchBox value={query} onChange={setQuery} label="Search equipment" />
-          </div>
-          <div className="pg-rise">
-            <FilterPills options={categoryOptions} value={category} onChange={setCategory} label="Filter by category" />
-          </div>
+          <p className="pg-lead pg-rise">
+            Analyzers and instruments from {brands}, supplied and serviced by our own
+            engineers across Bangladesh.
+          </p>
         </div>
       </section>
 
       <section className="pg-results" aria-label="Equipment">
-        <div className="hm-wrap">
-          <p className="pg-count" aria-live="polite">
-            {results.length} {results.length === 1 ? "product" : "products"}
-            {category !== ALL && <> in <strong>{category}</strong></>}
-          </p>
-          {results.length > 0 ? (
-            <ul className="pg-grid">
-              {results.map((item, index) => (
-                <Reveal as="li" className="hm-product" delay={(index % 3) * 80} key={item.slug}>
-                  <ProductCard item={item} showPrice />
-                </Reveal>
-              ))}
-            </ul>
-          ) : (
-            <div className="pg-empty">
-              <p>No equipment matches your search.</p>
-              <button className="hm-btn hm-btn-ghost" type="button" onClick={() => { setQuery(""); setCategory(ALL); }}>
-                Show all equipment
-              </button>
-            </div>
-          )}
+        <div className="hm-wrap pg-catalog">
+          <aside className="pg-sidebar pg-rise" aria-label="Search and filter">
+            <SearchBox value={query} onChange={setQuery} label="Search equipment" />
+            <p className="pg-sidebar-title">Categories</p>
+            <CategoryTabs options={categoryOptions} value={category} onChange={setCategory} label="Filter by category" />
+          </aside>
+
+          <div className="pg-catalog-main">
+            <p className="pg-count" aria-live="polite">
+              {results.length} {results.length === 1 ? "product" : "products"}
+              {category !== ALL && <> in <strong>{category}</strong></>}
+            </p>
+            {results.length > 0 ? (
+              <ul className="pg-grid">
+                {results.map((item, index) => (
+                  <Reveal as="li" className="hm-product" delay={(index % 3) * 80} key={item.slug}>
+                    <ProductCard item={item} showPrice />
+                  </Reveal>
+                ))}
+              </ul>
+            ) : (
+              <div className="pg-empty">
+                <p>No equipment matches your search.</p>
+                <button className="hm-btn hm-btn-ghost" type="button" onClick={() => { setQuery(""); setCategory(ALL); }}>
+                  Show all equipment
+                </button>
+              </div>
+            )}
+          </div>
         </div>
       </section>
 
