@@ -2,7 +2,12 @@
   "name": "Panthera C2 (Trinocular)",
   "brand": "Motic",
   "category": "Microscopy",
-  "image": "",
+  "image": "/img/Equipments/trinocular-img-1.jpg",
+  "gallery": [
+    "/img/Equipments/trinocular-img-2.jpg",
+    "/img/Equipments/trinocular-img-3.jpg",
+    "/img/Equipments/trinocular-img-4.jpg"
+  ],
   "summary": "Upright biological microscope with Motic's Colour Corrected Infinity Optical System (CCIS) and plan achromatic objectives from 4x to 100x. The trinocular head adds a camera port for digital imaging, with Köhler LED illumination and a USB port to power an external camera.",
   "highlights": [
     { "value": "4x–100x", "label": "Plan achromatic objectives" },

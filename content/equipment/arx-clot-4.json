@@ -2,7 +2,7 @@
   "name": "ARX-CLOT 4 Channel",
   "brand": "Microlab",
   "category": "Coagulation",
-  "image": "",
+  "image": "/img/Equipments/arx-clot-4.jpg",
   "summary": "Semi-automatic 4-channel coagulometer using a turbodensitometric principle with automatic start. Runs PT, APTT, fibrinogen, TT and single factors (FII–FXII) as an open system, with 15 incubation positions, a 7\" touch screen, built-in thermal printer and memory for 1,000 results.",
   "highlights": [
     { "value": "4", "label": "Measuring channels" },

@@ -2,7 +2,7 @@
   "name": "ESR Analyzer Sedimex",
   "brand": "Parsian Teb Zaman",
   "category": "ESR Analyzer",
-  "image": "",
+  "image": "/img/Equipments/esr-img-1.jpg",
   "summary": "Automatic random-access ESR analyzer using infrared LED detection and the Westergren method, with results corrected to 18 °C. The 30-channel model runs up to 60 tests per hour, with a touch screen, barcode input and LIS connection.",
   "highlights": [
     { "value": "30", "label": "Channels" },

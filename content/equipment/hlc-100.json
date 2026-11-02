@@ -2,7 +2,7 @@
   "name": "HLC-100",
   "brand": "Biotime",
   "category": "HPLC (HbA1c)",
-  "image": "",
+  "image": "/img/Equipments/hlc-100.jpg",
   "summary": "Fully automated HbA1c analyzer using high-performance liquid chromatography (HPLC), the reference method for HbA1c. Delivers a result every 2 minutes from 4 µL of whole blood, also separates HbF and other hemoglobin fractions, and is IFCC certified.",
   "highlights": [
     { "value": "2 min", "label": "Per test" },

@@ -2,7 +2,7 @@
   "name": "IoNEX",
   "brand": "Jokoh",
   "category": "Electrolyte",
-  "image": "",
+  "image": "/img/Equipments/ionex.jpg",
   "summary": "Japanese-made automatic electrolyte analyzer with Jokoh's own ion-selective electrodes, measuring up to 500 tests per hour with a CV of 0.5% or less. Choose from 8 electrode combinations of Na⁺, K⁺, Cl⁻, Ca²⁺ and pH, with a dedicated mode for dialysis fluid.",
   "highlights": [
     { "value": "500", "label": "Tests per hour" },

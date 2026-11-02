@@ -2,7 +2,10 @@
   "name": "CLi-1600",
   "brand": "Biotime",
   "category": "Immunology",
-  "image": "",
+  "image": "/img/Equipments/cli-1600-img-1.jpg",
+  "gallery": [
+    "/img/Equipments/cli-1600-img-2.jpg"
+  ],
   "summary": "Semi-automated chemiluminescence immunoassay (CLIA) analyzer with 16 channels and results in as little as 5 minutes. Quantifies thyroid, cardiac, inflammation, fertility, diabetes, bone metabolism and anemia markers from whole blood, serum, plasma or urine in 3 simple steps.",
   "highlights": [
     { "value": "16", "label": "Sample channels" },

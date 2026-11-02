@@ -2,7 +2,12 @@
   "name": "Panthera C2 (Binocular)",
   "brand": "Motic",
   "category": "Microscopy",
-  "image": "",
+  "image": "/img/Equipments/binocular-img-1.jpg",
+  "gallery": [
+    "/img/Equipments/binocular-img-2.jpg",
+    "/img/Equipments/binocular-img-3.jpg",
+    "/img/Equipments/binocular-img-4.jpg"
+  ],
   "summary": "Upright biological microscope with Motic's Colour Corrected Infinity Optical System (CCIS) and plan achromatic objectives from 4x to 100x. Binocular Siedentopf head, full Köhler LED illumination and a rackless stage make it a reliable everyday lab microscope.",
   "highlights": [
     { "value": "4x–100x", "label": "Plan achromatic objectives" },

@@ -2,7 +2,10 @@
   "name": "ESR Analyzer With CBC (Sediman)",
   "brand": "Parsian Teb Zaman",
   "category": "ESR Analyzer",
-  "image": "",
+  "image": "/img/Equipments/esr-cbc-img-1.jpg",
+  "gallery": [
+    "/img/Equipments/esr-cbc-img-2.jpg"
+  ],
   "summary": "Random-access ESR analyzer that reads directly from standard 3 mL CBC (EDTA K2/K3) tubes, so no separate ESR sample is needed. Uses the Westergren method with results corrected to 18 °C, available in 24 and 32-channel models with LIS and barcode connectivity.",
   "highlights": [
     { "value": "24 / 32", "label": "Channel models" },

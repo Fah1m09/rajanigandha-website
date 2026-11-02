@@ -2,7 +2,10 @@
   "name": "FLI-100",
   "brand": "Hemogen",
   "category": "Immunology",
-  "image": "",
+  "image": "/img/Equipments/fli-100-img-1.jpg",
+  "gallery": [
+    "/img/Equipments/fli-100-img-2.jpg"
+  ],
   "summary": "Portable fluorescence immunoassay (FIA) analyzer that reads a test in 20 seconds. Works with whole blood, serum, plasma and urine, with a 7\" touch screen, barcode input and storage for 20,000 results — suited to labs, emergency rooms, ICUs and clinics.",
   "highlights": [
     { "value": "20 s", "label": "Read time" },

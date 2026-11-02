@@ -2,7 +2,7 @@
   "name": "Spin 640 Plus",
   "brand": "Spinreact",
   "category": "Clinical Biochemistry Automated",
-  "image": "/img/Equipments/spinx5.png",
+  "image": "/img/Equipments/spin-640-plus.png",
   "summary": "Fully automatic, random-access clinical chemistry analyzer running 400 photometric tests per hour, up to 640 with the optional ISE module. 90 onboard samples, a refrigerated 80-position reagent tray, 12 wavelengths, automatic dilution, an optional internal barcode reader and a bi-directional LIS interface.",
   "highlights": [
     { "value": "640", "label": "Tests per hour with ISE" },

@@ -2,7 +2,11 @@
   "name": "Pulsar 250",
   "brand": "Edif",
   "category": "Clinical Biochemistry Automated",
-  "image": "",
+  "image": "/img/Equipments/pulsar-250-img-1.jpg",
+  "gallery": [
+    "/img/Equipments/pulsar-250-img-2.jpg",
+    "/img/Equipments/pulsar-250-img-3.jpg"
+  ],
   "summary": "Italian-made fully automatic clinical chemistry analyzer from Edif's PRO series, running up to 250 tests per hour. Refrigerated 36-bottle reagent rotor, 36 + 36 sample positions, barcode readers for samples and reagents as standard, 80 washable cuvettes and an optional ISE module.",
   "highlights": [
     { "value": "250", "label": "Tests per hour" },
