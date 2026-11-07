@@ -1,14 +1,14 @@
 {
-  "name": "ANTI KELL monoclonal",
+  "name": "ANTI-HUMAN GLOBULIN (COOMBS)",
   "category": "Blood Grouping",
-  "subcategory": "Blood Groups",
+  "subcategory": "Antibody Detection",
   "brand": "Spinreact",
   "packSizes": [
     {
       "size": "1x10 mL",
-      "code": "1700039"
+      "code": "1700051"
     }
   ],
   "published": true,
-  "order": 159
+  "order": 154
 }

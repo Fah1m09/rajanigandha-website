@@ -1,0 +1,14 @@
+{
+  "name": "BOVINE ALBUMIN 22%",
+  "category": "Blood Grouping",
+  "subcategory": "Antibody Detection",
+  "brand": "Spinreact",
+  "packSizes": [
+    {
+      "size": "1x10 mL",
+      "code": "1700072"
+    }
+  ],
+  "published": true,
+  "order": 156
+}
