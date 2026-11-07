@@ -1,5 +1,5 @@
 // Company facts used across the site. Keep these in one place so every section agrees.
-const SINCE = 1990; // Spinreact partnership began in 1990
+const SINCE = 1989; // Spinreact partnership began in 1989
 
 export const company = {
   name: "Rajanigandha International",
@@ -17,20 +17,20 @@ export const company = {
   ],
   sourcingCountries:["Spain", "Italy", "Japan", "China", "India"],
   stats: [
-    { value: new Date().getFullYear() - SINCE, suffix: "", label: "Years in diagnostics", note: "Serving laboratories since 1990." },
+    { value: new Date().getFullYear() - SINCE, suffix: "", label: "Years in diagnostics", note: "Serving laboratories since 1989." },
     // TODO confirm: older copy said both 400+ and 1300+ clients.
-    { value: 400, suffix: "+", label: "Healthcare providers", note: "Hospitals and diagnostic centres use our products." },
+    { value: 1300, suffix: "+", label: "Healthcare providers", note: "Hospitals and diagnostic centres use our products." },
     { value: 29, suffix: "", label: "Branches", note: "Support teams across the country." },
     { value: 24, suffix: "/7", label: "Technical support", note: "Engineers on call every day of the year." },
   ],
   brands: [
     {
       name: "Spinreact",
-      since: 1990,
+      since: 1989,
       origin: "Spain",
       logo: "/img/spinlogo.png",
       href: "https://www.spinreact.com/",
-      description: "In-vitro diagnostic reagents and electro-medical equipment. We have represented Spinreact in Bangladesh since 1990.",
+      description: "In-vitro diagnostic reagents and electro-medical equipment. We have represented Spinreact in Bangladesh since 1989.",
     },
     {
       name: "Microlab",

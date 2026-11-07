@@ -9,7 +9,7 @@ const brands = unique(equipmentList.map((item) => item.brand));
 export const metadata: Metadata = pageMeta({
   title: { absolute: "Rajanigandha International | Diagnostic Equipment & Reagents in Bangladesh" },
   description: clip(
-    `Diagnostic analyzers, reagents and 24/7 technical service for laboratories across Bangladesh since 1990. Brands include ${listText(brands.slice(0, 3))}.`,
+    `Diagnostic analyzers, reagents and 24/7 technical service for laboratories across Bangladesh since 1989. Brands include ${listText(brands.slice(0, 3))}.`,
   ),
   path: "/",
 });
