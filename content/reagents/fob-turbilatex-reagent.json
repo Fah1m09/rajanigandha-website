@@ -1,0 +1,19 @@
+{
+  "name": "FOB",
+  "category": "Immuno Chemistry",
+  "subcategory": "Fecal Occult Blood (FOB)",
+  "brand": "Spinreact",
+  "method": "Turbilatex reagent",
+  "packSizes": [
+    {
+      "size": "2x15 mL / 1x10 mL",
+      "code": "MI1107185"
+    },
+    {
+      "size": "4x30 mL / 2x20 mL",
+      "code": "MI1107186"
+    }
+  ],
+  "published": true,
+  "order": 144
+}

@@ -148,7 +148,7 @@ function Catalog({ reagentList, requested }: Props & { requested: Requested }) {
           <h1 className="pg-title pg-rise" id="pg-title">Diagnostic <em>reagents</em></h1>
           <p className="pg-lead pg-rise">
             {reagentList.length} reagent lines in {allRows.length} pack sizes for clinical chemistry,
-            serology, immunochemistry and blood grouping.
+            serology, immunochemistry, blood grouping and dedicated analyzer lines.
           </p>
         </div>
       </section>

@@ -1,13 +1,15 @@
 {
-  "name": "RF TURBILATEX (with Calibrator)",
+  "name": "β-2-MICROGLOBULIN",
   "category": "Immuno Chemistry",
   "subcategory": "Turbilatex Special Proteins",
   "brand": "Spinreact",
+  "method": "Turbilatex",
   "packSizes": [
     {
-      "size": "1x40 ml / 1x2ml"
+      "size": "1x40 mL / 1x10 mL",
+      "code": "1107130"
     }
   ],
   "published": true,
-  "order": 90
+  "order": 88
 }

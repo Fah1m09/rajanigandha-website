@@ -1,0 +1,15 @@
+{
+  "name": "CALPROTECTIN",
+  "category": "Immuno Chemistry",
+  "subcategory": "Calprotectin",
+  "brand": "Spinreact",
+  "method": "Turbilatex reagent",
+  "packSizes": [
+    {
+      "size": "2x15 mL / 1x10 mL (150 tests)",
+      "code": "MI1107090"
+    }
+  ],
+  "published": true,
+  "order": 140
+}

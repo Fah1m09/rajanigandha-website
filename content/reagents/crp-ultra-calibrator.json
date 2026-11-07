@@ -1,0 +1,14 @@
+{
+  "name": "CRP ULTRA CALIBRATOR",
+  "category": "Immuno Chemistry",
+  "subcategory": "Calibrators & Controls",
+  "brand": "Spinreact",
+  "packSizes": [
+    {
+      "size": "1x2 mL",
+      "code": "43035"
+    }
+  ],
+  "published": true,
+  "order": 124
+}

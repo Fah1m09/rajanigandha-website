@@ -1,0 +1,15 @@
+{
+  "name": "LIPASE-LQ DGGR",
+  "category": "Dedicated Lines",
+  "subcategory": "Spin 640 Plus",
+  "brand": "Spinreact",
+  "method": "Kinetic colorimetric. Liquid",
+  "packSizes": [
+    {
+      "size": "2x40 mL / 2x8 mL",
+      "code": "MD1001276"
+    }
+  ],
+  "published": true,
+  "order": 193
+}

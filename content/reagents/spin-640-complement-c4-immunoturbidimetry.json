@@ -1,0 +1,15 @@
+{
+  "name": "COMPLEMENT C4",
+  "category": "Dedicated Lines",
+  "subcategory": "Spin 640 Plus",
+  "brand": "Spinreact",
+  "method": "Immunoturbidimetry",
+  "packSizes": [
+    {
+      "size": "2x40 mL / 1x20 mL",
+      "code": "MD1102104"
+    }
+  ],
+  "published": true,
+  "order": 210
+}

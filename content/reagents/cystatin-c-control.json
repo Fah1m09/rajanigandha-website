@@ -1,0 +1,14 @@
+{
+  "name": "CYSTATIN C CONTROL",
+  "category": "Immuno Chemistry",
+  "subcategory": "Calibrators & Controls",
+  "brand": "Spinreact",
+  "packSizes": [
+    {
+      "size": "2x2 mL",
+      "code": "43076"
+    }
+  ],
+  "published": true,
+  "order": 127
+}

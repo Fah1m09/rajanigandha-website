@@ -1,0 +1,15 @@
+{
+  "name": "LDL DIRECT",
+  "category": "Dedicated Lines",
+  "subcategory": "Spin 640 Plus",
+  "brand": "Spinreact",
+  "method": "Enzymatic. Colorimetric",
+  "packSizes": [
+    {
+      "size": "4x30 mL / 2x20 mL",
+      "code": "MD41023"
+    }
+  ],
+  "published": true,
+  "order": 190
+}

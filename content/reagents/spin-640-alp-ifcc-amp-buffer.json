@@ -1,0 +1,15 @@
+{
+  "name": "ALP IFCC",
+  "category": "Dedicated Lines",
+  "subcategory": "Spin 640 Plus",
+  "brand": "Spinreact",
+  "method": "AMP Buffer",
+  "packSizes": [
+    {
+      "size": "4x40 mL / 2x20 mL",
+      "code": "MD41245"
+    }
+  ],
+  "published": true,
+  "order": 173
+}

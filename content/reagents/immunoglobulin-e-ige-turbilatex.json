@@ -1,13 +1,15 @@
 {
-  "name": "ASO TURBILATEX (included Calibrator)",
+  "name": "IMMUNOGLOBULIN E (IgE)",
   "category": "Immuno Chemistry",
   "subcategory": "Turbilatex Special Proteins",
   "brand": "Spinreact",
+  "method": "Turbilatex",
   "packSizes": [
     {
-      "size": "40 ml /10 ml"
+      "size": "1x20 mL / 1x10 mL",
+      "code": "1107050"
     }
   ],
   "published": true,
-  "order": 89
+  "order": 96
 }

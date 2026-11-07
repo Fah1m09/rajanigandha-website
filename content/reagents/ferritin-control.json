@@ -1,0 +1,14 @@
+{
+  "name": "FERRITIN CONTROL",
+  "category": "Immuno Chemistry",
+  "subcategory": "Calibrators & Controls",
+  "brand": "Spinreact",
+  "packSizes": [
+    {
+      "size": "1x2 mL",
+      "code": "1107044"
+    }
+  ],
+  "published": true,
+  "order": 131
+}

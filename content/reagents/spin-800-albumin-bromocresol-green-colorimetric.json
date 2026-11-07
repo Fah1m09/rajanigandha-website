@@ -1,0 +1,15 @@
+{
+  "name": "ALBUMIN",
+  "category": "Dedicated Lines",
+  "subcategory": "Spin 800",
+  "brand": "Spinreact",
+  "method": "Bromocresol green. Colorimetric",
+  "packSizes": [
+    {
+      "size": "6x60 mL",
+      "code": "MX1001020"
+    }
+  ],
+  "published": true,
+  "order": 233
+}

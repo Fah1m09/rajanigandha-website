@@ -1,0 +1,15 @@
+{
+  "name": "GLUCOSE",
+  "category": "Dedicated Lines",
+  "subcategory": "Spin 640 Plus",
+  "brand": "Spinreact",
+  "method": "GOD-PAP. Enzymatic - Colorimetric",
+  "packSizes": [
+    {
+      "size": "6x40 mL",
+      "code": "MD41011"
+    }
+  ],
+  "published": true,
+  "order": 185
+}

@@ -1,0 +1,15 @@
+{
+  "name": "URIC ACID",
+  "category": "Dedicated Lines",
+  "subcategory": "Spin 640 Plus",
+  "brand": "Spinreact",
+  "method": "Uricase - POD. Enzymatic - Colorimetric",
+  "packSizes": [
+    {
+      "size": "3x40 mL / 3x40 mL",
+      "code": "MD41001"
+    }
+  ],
+  "published": true,
+  "order": 199
+}

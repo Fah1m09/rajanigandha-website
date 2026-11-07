@@ -1,13 +1,14 @@
 {
-  "name": "COMPLEMENT C3",
+  "name": "SERUM PROTEIN CALIBRATOR",
   "category": "Immuno Chemistry",
   "subcategory": "Immunoturbidimetry Serum Proteins",
   "brand": "Spinreact",
   "packSizes": [
     {
-      "size": "1x40 ml / 1x2ml"
+      "size": "1x2 mL",
+      "code": "1102003"
     }
   ],
   "published": true,
-  "order": 87
+  "order": 112
 }

@@ -1,0 +1,14 @@
+{
+  "name": "APOLIPOPROTEIN A1",
+  "category": "Immuno Chemistry",
+  "subcategory": "Apolipoproteins",
+  "brand": "Spinreact",
+  "packSizes": [
+    {
+      "size": "1x40 mL / 1x10 mL",
+      "code": "1003012"
+    }
+  ],
+  "published": true,
+  "order": 114
+}

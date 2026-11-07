@@ -1,0 +1,15 @@
+{
+  "name": "APOLIPOPROTEIN CALIBRATOR",
+  "category": "Immuno Chemistry",
+  "subcategory": "Apolipoproteins",
+  "brand": "Spinreact",
+  "method": "Apo A1, Apo B",
+  "packSizes": [
+    {
+      "size": "1x1 mL",
+      "code": "93005"
+    }
+  ],
+  "published": true,
+  "order": 115
+}

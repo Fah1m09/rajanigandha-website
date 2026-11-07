@@ -1,0 +1,15 @@
+{
+  "name": "MICROALBUMIN",
+  "category": "Dedicated Lines",
+  "subcategory": "Spin 800",
+  "brand": "Spinreact",
+  "method": "Turbilatex",
+  "packSizes": [
+    {
+      "size": "2x40 mL / 1x20 mL",
+      "code": "MX1107170"
+    }
+  ],
+  "published": true,
+  "order": 280
+}

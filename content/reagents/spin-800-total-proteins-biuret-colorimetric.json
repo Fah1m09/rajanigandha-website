@@ -1,0 +1,15 @@
+{
+  "name": "TOTAL PROTEINS",
+  "category": "Dedicated Lines",
+  "subcategory": "Spin 800",
+  "brand": "Spinreact",
+  "method": "Biuret. Colorimetric",
+  "packSizes": [
+    {
+      "size": "6x60 mL",
+      "code": "MX1001291"
+    }
+  ],
+  "published": true,
+  "order": 258
+}

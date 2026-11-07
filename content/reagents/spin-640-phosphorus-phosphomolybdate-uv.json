@@ -1,0 +1,15 @@
+{
+  "name": "PHOSPHORUS",
+  "category": "Dedicated Lines",
+  "subcategory": "Spin 640 Plus",
+  "brand": "Spinreact",
+  "method": "Phosphomolybdate. UV",
+  "packSizes": [
+    {
+      "size": "6x40 mL",
+      "code": "MD1001155"
+    }
+  ],
+  "published": true,
+  "order": 195
+}

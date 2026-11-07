@@ -1,0 +1,15 @@
+{
+  "name": "ASO/CRP/RF CONTROL",
+  "category": "Immuno Chemistry",
+  "subcategory": "Calibrators & Controls",
+  "brand": "Spinreact",
+  "method": "Low Level",
+  "packSizes": [
+    {
+      "size": "4x1 mL",
+      "code": "1102114"
+    }
+  ],
+  "published": true,
+  "order": 119
+}

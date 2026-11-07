@@ -1,0 +1,15 @@
+{
+  "name": "MICROALBUMIN",
+  "category": "Immuno Chemistry",
+  "subcategory": "Turbilatex Special Proteins",
+  "brand": "Spinreact",
+  "method": "Turbilatex",
+  "packSizes": [
+    {
+      "size": "1x40 mL / 1x10 mL",
+      "code": "1107170"
+    }
+  ],
+  "published": true,
+  "order": 98
+}

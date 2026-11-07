@@ -1,0 +1,15 @@
+{
+  "name": "TOTAL BILIRUBIN DPD",
+  "category": "Dedicated Lines",
+  "subcategory": "Spin 640 Plus",
+  "brand": "Spinreact",
+  "method": "DPD. Colorimetric",
+  "packSizes": [
+    {
+      "size": "4x40 mL / 2x20 mL",
+      "code": "MD1001046"
+    }
+  ],
+  "published": true,
+  "order": 176
+}

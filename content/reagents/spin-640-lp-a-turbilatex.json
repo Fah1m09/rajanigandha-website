@@ -1,0 +1,15 @@
+{
+  "name": "Lp(a)",
+  "category": "Dedicated Lines",
+  "subcategory": "Spin 640 Plus",
+  "brand": "Spinreact",
+  "method": "Turbilatex",
+  "packSizes": [
+    {
+      "size": "2x10 mL / 1x4 mL",
+      "code": "MD1107020"
+    }
+  ],
+  "published": true,
+  "order": 220
+}

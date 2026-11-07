@@ -1,0 +1,14 @@
+{
+  "name": "FOB CALIBRATOR",
+  "category": "Immuno Chemistry",
+  "subcategory": "Fecal Occult Blood (FOB)",
+  "brand": "Spinreact",
+  "packSizes": [
+    {
+      "size": "6x1 mL",
+      "code": "1107082"
+    }
+  ],
+  "published": true,
+  "order": 145
+}

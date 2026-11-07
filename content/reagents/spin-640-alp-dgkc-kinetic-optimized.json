@@ -1,0 +1,15 @@
+{
+  "name": "ALP",
+  "category": "Dedicated Lines",
+  "subcategory": "Spin 640 Plus",
+  "brand": "Spinreact",
+  "method": "DGKC. Kinetic optimized",
+  "packSizes": [
+    {
+      "size": "4x40 mL / 2x20 mL",
+      "code": "MD41233"
+    }
+  ],
+  "published": true,
+  "order": 172
+}

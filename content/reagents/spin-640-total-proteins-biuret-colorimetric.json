@@ -1,0 +1,15 @@
+{
+  "name": "TOTAL PROTEINS",
+  "category": "Dedicated Lines",
+  "subcategory": "Spin 640 Plus",
+  "brand": "Spinreact",
+  "method": "Biuret. Colorimetric",
+  "packSizes": [
+    {
+      "size": "6x40 mL",
+      "code": "MD1001291"
+    }
+  ],
+  "published": true,
+  "order": 196
+}

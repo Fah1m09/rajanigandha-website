@@ -1,0 +1,15 @@
+{
+  "name": "α-1-ANTITRYPSIN",
+  "category": "Dedicated Lines",
+  "subcategory": "Spin 640 Plus",
+  "brand": "Spinreact",
+  "method": "Immunoturbidimetry",
+  "packSizes": [
+    {
+      "size": "2x40 mL / 1x20 mL",
+      "code": "MD1102054"
+    }
+  ],
+  "published": true,
+  "order": 202
+}

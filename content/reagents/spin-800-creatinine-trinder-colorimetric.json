@@ -1,0 +1,15 @@
+{
+  "name": "CREATININE",
+  "category": "Dedicated Lines",
+  "subcategory": "Spin 800",
+  "brand": "Spinreact",
+  "method": "Trinder. Colorimetric",
+  "packSizes": [
+    {
+      "size": "4x60 mL / 2x40 mL",
+      "code": "MX1001117"
+    }
+  ],
+  "published": true,
+  "order": 245
+}

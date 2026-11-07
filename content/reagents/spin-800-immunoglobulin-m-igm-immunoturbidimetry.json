@@ -1,0 +1,15 @@
+{
+  "name": "IMMUNOGLOBULIN M (IgM)",
+  "category": "Dedicated Lines",
+  "subcategory": "Spin 800",
+  "brand": "Spinreact",
+  "method": "Immunoturbidimetry",
+  "packSizes": [
+    {
+      "size": "2x40 mL / 1x20 mL",
+      "code": "MX1103024"
+    }
+  ],
+  "published": true,
+  "order": 279
+}

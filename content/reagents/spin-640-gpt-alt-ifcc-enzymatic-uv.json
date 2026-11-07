@@ -1,0 +1,15 @@
+{
+  "name": "GPT / ALT",
+  "category": "Dedicated Lines",
+  "subcategory": "Spin 640 Plus",
+  "brand": "Spinreact",
+  "method": "IFCC. Enzymatic - UV",
+  "packSizes": [
+    {
+      "size": "4x40 mL / 2x20 mL",
+      "code": "MD41274"
+    }
+  ],
+  "published": true,
+  "order": 187
+}

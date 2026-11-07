@@ -1,0 +1,19 @@
+{
+  "name": "ASO (ANTI-STREPTOLYSIN O)",
+  "category": "Immuno Chemistry",
+  "subcategory": "Turbilatex Special Proteins",
+  "brand": "Spinreact",
+  "method": "Turbilatex",
+  "packSizes": [
+    {
+      "size": "1x40 mL / 1x10 mL",
+      "code": "1107110"
+    },
+    {
+      "size": "1x200 mL / 1x50 mL",
+      "code": "1107110L"
+    }
+  ],
+  "published": true,
+  "order": 87
+}

@@ -1,0 +1,14 @@
+{
+  "name": "SERUM PROTEIN CONTROL",
+  "category": "Immuno Chemistry",
+  "subcategory": "Immunoturbidimetry Serum Proteins",
+  "brand": "Spinreact",
+  "packSizes": [
+    {
+      "size": "4x1 mL",
+      "code": "1102004"
+    }
+  ],
+  "published": true,
+  "order": 113
+}

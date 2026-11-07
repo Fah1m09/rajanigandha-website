@@ -1,0 +1,15 @@
+{
+  "name": "OPIATES EIA Urine",
+  "category": "Dedicated Lines",
+  "subcategory": "Spin 640 Plus",
+  "brand": "Spinreact",
+  "method": "Kinetic UV",
+  "packSizes": [
+    {
+      "size": "2x40 mL / 2x15 mL",
+      "code": "MD930088"
+    }
+  ],
+  "published": true,
+  "order": 232
+}

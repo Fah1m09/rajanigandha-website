@@ -1,0 +1,14 @@
+{
+  "name": "ASO TURBI CALIBRATOR",
+  "category": "Immuno Chemistry",
+  "subcategory": "Calibrators & Controls",
+  "brand": "Spinreact",
+  "packSizes": [
+    {
+      "size": "1x1 mL",
+      "code": "1107012"
+    }
+  ],
+  "published": true,
+  "order": 118
+}

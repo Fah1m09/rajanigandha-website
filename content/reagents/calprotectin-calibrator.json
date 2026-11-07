@@ -1,0 +1,14 @@
+{
+  "name": "CALPROTECTIN CALIBRATOR",
+  "category": "Immuno Chemistry",
+  "subcategory": "Calprotectin",
+  "brand": "Spinreact",
+  "packSizes": [
+    {
+      "size": "6x1 mL",
+      "code": "1107092"
+    }
+  ],
+  "published": true,
+  "order": 141
+}

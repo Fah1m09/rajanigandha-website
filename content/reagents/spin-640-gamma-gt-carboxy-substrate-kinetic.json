@@ -1,0 +1,15 @@
+{
+  "name": "γ-GT",
+  "category": "Dedicated Lines",
+  "subcategory": "Spin 640 Plus",
+  "brand": "Spinreact",
+  "method": "Carboxy substrate Kinetic",
+  "packSizes": [
+    {
+      "size": "4x40 mL / 2x20 mL",
+      "code": "MD41288"
+    }
+  ],
+  "published": true,
+  "order": 184
+}

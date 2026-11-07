@@ -1,0 +1,14 @@
+{
+  "name": "CYSTATIN C CALIBRATOR",
+  "category": "Immuno Chemistry",
+  "subcategory": "Calibrators & Controls",
+  "brand": "Spinreact",
+  "packSizes": [
+    {
+      "size": "5x2 (5 Levels)",
+      "code": "43075"
+    }
+  ],
+  "published": true,
+  "order": 126
+}

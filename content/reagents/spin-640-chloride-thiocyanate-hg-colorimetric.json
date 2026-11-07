@@ -1,0 +1,15 @@
+{
+  "name": "CHLORIDE",
+  "category": "Dedicated Lines",
+  "subcategory": "Spin 640 Plus",
+  "brand": "Spinreact",
+  "method": "Thiocyanate - Hg. Colorimetric",
+  "packSizes": [
+    {
+      "size": "6x40 mL",
+      "code": "MD1001360"
+    }
+  ],
+  "published": true,
+  "order": 179
+}

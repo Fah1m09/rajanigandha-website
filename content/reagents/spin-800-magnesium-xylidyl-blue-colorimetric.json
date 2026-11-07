@@ -1,0 +1,15 @@
+{
+  "name": "MAGNESIUM",
+  "category": "Dedicated Lines",
+  "subcategory": "Spin 800",
+  "brand": "Spinreact",
+  "method": "Xylidyl Blue. Colorimetric",
+  "packSizes": [
+    {
+      "size": "6x20 mL",
+      "code": "MX1001285"
+    }
+  ],
+  "published": true,
+  "order": 256
+}

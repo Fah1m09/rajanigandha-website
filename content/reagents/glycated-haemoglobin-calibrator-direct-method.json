@@ -1,0 +1,15 @@
+{
+  "name": "GLYCATED HAEMOGLOBIN CALIBRATOR",
+  "category": "Immuno Chemistry",
+  "subcategory": "Calibrators & Controls",
+  "brand": "Spinreact",
+  "method": "Direct method",
+  "packSizes": [
+    {
+      "size": "4x0.5 mL",
+      "code": "43105"
+    }
+  ],
+  "published": true,
+  "order": 132
+}

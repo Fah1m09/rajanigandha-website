@@ -1,11 +1,12 @@
 {
-  "name": "CRP TURBILATEX (with Calibrator)",
+  "name": "CRP-WR",
   "category": "Immuno Chemistry",
   "subcategory": "Turbilatex Special Proteins",
   "brand": "Spinreact",
   "packSizes": [
     {
-      "size": "1x40 ml / 1x2ml"
+      "size": "1x40 mL / 1x10 mL",
+      "code": "1107103"
     }
   ],
   "published": true,

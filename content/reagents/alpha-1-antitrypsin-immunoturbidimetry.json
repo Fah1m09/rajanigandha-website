@@ -1,0 +1,15 @@
+{
+  "name": "α-1-ANTITRYPSIN",
+  "category": "Immuno Chemistry",
+  "subcategory": "Immunoturbidimetry Serum Proteins",
+  "brand": "Spinreact",
+  "method": "Immunoturbidimetry",
+  "packSizes": [
+    {
+      "size": "1x40 mL / 1x10 mL",
+      "code": "1102054"
+    }
+  ],
+  "published": true,
+  "order": 101
+}

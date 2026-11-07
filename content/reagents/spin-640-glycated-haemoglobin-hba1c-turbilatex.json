@@ -1,0 +1,15 @@
+{
+  "name": "GLYCATED HAEMOGLOBIN (HbA1c)",
+  "category": "Dedicated Lines",
+  "subcategory": "Spin 640 Plus",
+  "brand": "Spinreact",
+  "method": "Turbilatex",
+  "packSizes": [
+    {
+      "size": "2x30 mL / 1x20 mL",
+      "code": "MD43100"
+    }
+  ],
+  "published": true,
+  "order": 214
+}

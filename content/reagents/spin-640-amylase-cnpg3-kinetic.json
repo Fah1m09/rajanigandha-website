@@ -1,0 +1,15 @@
+{
+  "name": "AMYLASE",
+  "category": "Dedicated Lines",
+  "subcategory": "Spin 640 Plus",
+  "brand": "Spinreact",
+  "method": "CNPG3. Kinetic",
+  "packSizes": [
+    {
+      "size": "6x40 mL",
+      "code": "MD41201"
+    }
+  ],
+  "published": true,
+  "order": 174
+}

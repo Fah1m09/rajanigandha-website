@@ -1,0 +1,15 @@
+{
+  "name": "FERRITIN",
+  "category": "Dedicated Lines",
+  "subcategory": "Spin 640 Plus",
+  "brand": "Spinreact",
+  "method": "Turbilatex",
+  "packSizes": [
+    {
+      "size": "2x40 mL / 1x20 mL",
+      "code": "MD1107140"
+    }
+  ],
+  "published": true,
+  "order": 213
+}

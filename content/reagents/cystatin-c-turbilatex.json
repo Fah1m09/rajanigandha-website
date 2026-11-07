@@ -1,0 +1,15 @@
+{
+  "name": "CYSTATIN C",
+  "category": "Immuno Chemistry",
+  "subcategory": "Turbilatex Special Proteins",
+  "brand": "Spinreact",
+  "method": "Turbilatex",
+  "packSizes": [
+    {
+      "size": "1x20 mL / 1x4 mL",
+      "code": "43070"
+    }
+  ],
+  "published": true,
+  "order": 92
+}

@@ -1,0 +1,23 @@
+{
+  "name": "GLYCATED HEMOGLOBIN",
+  "category": "Immuno Chemistry",
+  "subcategory": "Turbilatex Special Proteins",
+  "brand": "Spinreact",
+  "method": "Turbilatex",
+  "packSizes": [
+    {
+      "size": "1x15 mL / 1x5 mL / 1x60 mL",
+      "code": "43099"
+    },
+    {
+      "size": "1x30 mL / 1x10 mL / 1x125 mL",
+      "code": "43100"
+    },
+    {
+      "size": "1x90 mL / 1x30 mL / 3x125 mL",
+      "code": "43101"
+    }
+  ],
+  "published": true,
+  "order": 95
+}

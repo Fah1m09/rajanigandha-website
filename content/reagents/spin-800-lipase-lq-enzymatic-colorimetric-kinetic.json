@@ -1,0 +1,15 @@
+{
+  "name": "LIPASE-LQ",
+  "category": "Dedicated Lines",
+  "subcategory": "Spin 800",
+  "brand": "Spinreact",
+  "method": "Enzymatic. Colorimetric - Kinetic",
+  "packSizes": [
+    {
+      "size": "2x40 mL / 2x8 mL",
+      "code": "MX1001275"
+    }
+  ],
+  "published": true,
+  "order": 254
+}

@@ -1,0 +1,14 @@
+{
+  "name": "TRANSFERRIN",
+  "category": "Immuno Chemistry",
+  "subcategory": "Immunoturbidimetry Serum Proteins",
+  "brand": "Spinreact",
+  "packSizes": [
+    {
+      "size": "1x40 mL / 1x10 mL",
+      "code": "1102134"
+    }
+  ],
+  "published": true,
+  "order": 111
+}

@@ -1,0 +1,15 @@
+{
+  "name": "HDLc-D",
+  "category": "Dedicated Lines",
+  "subcategory": "Spin 640 Plus",
+  "brand": "Spinreact",
+  "method": "Direct. Enzymatic colorimetric",
+  "packSizes": [
+    {
+      "size": "4x30 mL / 2x20 mL",
+      "code": "MD1001096"
+    }
+  ],
+  "published": true,
+  "order": 188
+}

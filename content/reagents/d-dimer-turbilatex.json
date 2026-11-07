@@ -1,0 +1,15 @@
+{
+  "name": "D-DIMER",
+  "category": "Immuno Chemistry",
+  "subcategory": "Turbilatex Special Proteins",
+  "brand": "Spinreact",
+  "method": "Turbilatex",
+  "packSizes": [
+    {
+      "size": "2x10 mL / 2x10 mL",
+      "code": "1709231"
+    }
+  ],
+  "published": true,
+  "order": 93
+}

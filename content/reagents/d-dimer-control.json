@@ -1,0 +1,14 @@
+{
+  "name": "D-DIMER CONTROL",
+  "category": "Immuno Chemistry",
+  "subcategory": "Calibrators & Controls",
+  "brand": "Spinreact",
+  "packSizes": [
+    {
+      "size": "6x1 mL (3x2 levels)",
+      "code": "1709114"
+    }
+  ],
+  "published": true,
+  "order": 129
+}

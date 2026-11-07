@@ -1,0 +1,15 @@
+{
+  "name": "CHOLESTEROL",
+  "category": "Dedicated Lines",
+  "subcategory": "Spin 800",
+  "brand": "Spinreact",
+  "method": "CHOD / PAP. Enzymatic - Colorimetric",
+  "packSizes": [
+    {
+      "size": "6x60 mL",
+      "code": "MX41021"
+    }
+  ],
+  "published": true,
+  "order": 241
+}

@@ -1,0 +1,14 @@
+{
+  "name": "FOB CONTROL",
+  "category": "Immuno Chemistry",
+  "subcategory": "Fecal Occult Blood (FOB)",
+  "brand": "Spinreact",
+  "packSizes": [
+    {
+      "size": "4x1 mL (2 Levels)",
+      "code": "1107083"
+    }
+  ],
+  "published": true,
+  "order": 146
+}
