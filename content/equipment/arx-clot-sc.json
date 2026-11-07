@@ -47,7 +47,7 @@
     "Optional data transfer to SD card or external PC"
   ],
   "certifications": ["ISO 13485", "ISO 9001", "CE", "TÜV", "STQC", "Make in India"],
-  "featured": true,
+  "featured": false,
   "published": true,
   "order": 18
 }

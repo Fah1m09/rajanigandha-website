@@ -34,7 +34,7 @@
     "Stores the last 2,000 records",
     "Compact and lightweight"
   ],
-  "featured": true,
+  "featured": false,
   "published": true,
   "order": 19
 }

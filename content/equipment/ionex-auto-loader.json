@@ -42,7 +42,7 @@
     "Optional barcode reader and LIS connection",
     "Made in Japan"
   ],
-  "featured": false,
+  "featured": true,
   "published": true,
-  "order": 16
+  "order": 8
 }

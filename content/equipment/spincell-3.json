@@ -2,7 +2,7 @@
   "name": "SpinCell 3N",
   "brand": "Spinreact",
   "category": "Hematology",
-  "image": "/img/Equipments/spincell3.png",
+  "image": "/img/Equipments/spincell-3n.jpg",
   "summary": "Compact 3-part differential hematology analyzer running up to 72 samples per hour from just 8.5 µL of whole blood. Reports 22 parameters with 3 histograms using only two reagents, with a 10.4\" colour screen, built-in thermal printer and HL7 LIS/HIS connectivity.",
   "highlights": [
     { "value": "72", "label": "Samples per hour" },
@@ -53,7 +53,7 @@
     "LIS and HIS connection with HL7 protocol",
     "Openable side door for easy maintenance"
   ],
-  "featured": false,
+  "featured": true,
   "published": true,
   "order": 5
 }
