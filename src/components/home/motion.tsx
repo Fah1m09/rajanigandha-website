@@ -85,9 +85,11 @@ export function Counter({ value, suffix = "" }: { value: number; suffix?: string
 
 /** Infinite horizontal ticker. Content is duplicated so the loop is seamless. */
 export function Marquee({ items, reverse = false }: { items: string[]; reverse?: boolean }) {
+  // The same name can come from two lists (e.g. "Hematology" is both an equipment and a reagent category).
+  const unique = Array.from(new Set(items));
   const row = (hidden: boolean) => (
     <ul className="hm-marquee-row" aria-hidden={hidden || undefined}>
-      {items.map((item) => (
+      {unique.map((item) => (
         <li key={item}>
           {item}
           <span className="hm-marquee-star" aria-hidden="true">✱</span>
