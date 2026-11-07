@@ -2,7 +2,11 @@
   "name": "IoNEX Auto Loader",
   "brand": "Jokoh",
   "category": "Electrolyte",
-  "image": "",
+  "image": "/img/Equipments/jokoh-auto-img-1.jpg",
+    "gallery": [
+    "/img/Equipments/jokoh-auto-img-2.jpg",
+    "/img/Equipments/jokoh-auto-img-3.jpg"
+  ],
   "summary": "The IoNEX electrolyte analyzer with an integrated auto sampler for walk-away operation. Same Japanese-made ion-selective electrodes, up to 500 tests per hour and CV of 0.5% or less, with 8 electrode combinations of Na⁺, K⁺, Cl⁻, Ca²⁺ and pH.",
   "highlights": [
     { "value": "500", "label": "Tests per hour" },

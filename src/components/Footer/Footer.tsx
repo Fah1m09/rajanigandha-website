@@ -58,7 +58,10 @@ export default function Footer() {
           </div>
         </div>
 
-        <p className="sf-wordmark" aria-hidden="true">Rajanigandha</p>
+        <div className="sf-wordmark" aria-hidden="true">
+          <span className="sf-wordmark-main">Rajanigandha</span>
+          <span className="sf-wordmark-sub">International</span>
+        </div>
 
         <div className="sf-bottom">
           <p>© {new Date().getFullYear()} {company.name}</p>
