@@ -1,0 +1,19 @@
+{
+  "name": "SALMONELLA Paratyphi CH",
+  "category": "Serology",
+  "subcategory": "Febrile Serodiagnostic",
+  "brand": "Spinreact",
+  "method": "C Flagellar",
+  "packSizes": [
+    {
+      "size": "100 Tests (Slide)",
+      "code": "1205051"
+    },
+    {
+      "size": "1x50 mL (Tube)",
+      "code": "1205052"
+    }
+  ],
+  "published": true,
+  "order": 186
+}

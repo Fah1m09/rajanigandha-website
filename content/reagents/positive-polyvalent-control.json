@@ -5,9 +5,10 @@
   "brand": "Spinreact",
   "packSizes": [
     {
-      "size": "1x1 ml"
+      "size": "1x1 mL",
+      "code": "1205201"
     }
   ],
   "published": true,
-  "order": 179
+  "order": 188
 }

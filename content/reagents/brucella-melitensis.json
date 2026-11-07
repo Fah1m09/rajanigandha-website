@@ -1,0 +1,15 @@
+{
+  "name": "BRUCELLA MELITENSIS",
+  "category": "Serology",
+  "subcategory": "Febrile Serodiagnostic",
+  "brand": "Spinreact",
+  "method": "Somatic",
+  "packSizes": [
+    {
+      "size": "100 Tests (Slide)",
+      "code": "1205097"
+    }
+  ],
+  "published": true,
+  "order": 176
+}

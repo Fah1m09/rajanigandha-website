@@ -1,0 +1,19 @@
+{
+  "name": "SALMONELLA Paratyphi CO",
+  "category": "Serology",
+  "subcategory": "Febrile Serodiagnostic",
+  "brand": "Spinreact",
+  "method": "6, 7 Somatic",
+  "packSizes": [
+    {
+      "size": "100 Tests (Slide)",
+      "code": "1205061"
+    },
+    {
+      "size": "1x50 mL (Tube)",
+      "code": "1205062"
+    }
+  ],
+  "published": true,
+  "order": 187
+}

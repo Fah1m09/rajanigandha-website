@@ -1,11 +1,13 @@
 {
-  "name": "Typhi O",
+  "name": "ROSE BENGAL",
   "category": "Serology",
   "subcategory": "Febrile Serodiagnostic",
   "brand": "Spinreact",
+  "method": "Stained Brucella abortus",
   "packSizes": [
     {
-      "size": "100 test(5 ml)"
+      "size": "50 Tests (Slide)",
+      "code": "1200901"
     }
   ],
   "published": true,

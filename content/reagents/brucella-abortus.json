@@ -1,11 +1,17 @@
 {
-  "name": "Brucella Abortus",
+  "name": "BRUCELLA ABORTUS",
   "category": "Serology",
   "subcategory": "Febrile Serodiagnostic",
   "brand": "Spinreact",
+  "method": "Somatic",
   "packSizes": [
     {
-      "size": "100 test(5 ml)"
+      "size": "100 Tests (Slide)",
+      "code": "1205091"
+    },
+    {
+      "size": "1x50 mL (Tube)",
+      "code": "1205092"
     }
   ],
   "published": true,

@@ -1,13 +1,15 @@
 {
-  "name": "Proteus OX2",
+  "name": "PROTEUS OX2",
   "category": "Serology",
   "subcategory": "Febrile Serodiagnostic",
   "brand": "Spinreact",
+  "method": "Somatic",
   "packSizes": [
     {
-      "size": "100 test(5 ml)"
+      "size": "100 Tests (Slide)",
+      "code": "1205101"
     }
   ],
   "published": true,
-  "order": 176
+  "order": 177
 }

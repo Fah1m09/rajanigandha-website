@@ -1,0 +1,19 @@
+{
+  "name": "SALMONELLA Paratyphi BH",
+  "category": "Serology",
+  "subcategory": "Febrile Serodiagnostic",
+  "brand": "Spinreact",
+  "method": "B Flagellar",
+  "packSizes": [
+    {
+      "size": "100 Tests (Slide)",
+      "code": "1205031"
+    },
+    {
+      "size": "1x50 mL (Tube)",
+      "code": "1205032"
+    }
+  ],
+  "published": true,
+  "order": 184
+}

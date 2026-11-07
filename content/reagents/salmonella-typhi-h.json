@@ -1,0 +1,19 @@
+{
+  "name": "SALMONELLA Typhi H",
+  "category": "Serology",
+  "subcategory": "Febrile Serodiagnostic",
+  "brand": "Spinreact",
+  "method": "D Flagellar",
+  "packSizes": [
+    {
+      "size": "100 Tests (Slide)",
+      "code": "1205071"
+    },
+    {
+      "size": "1x50 mL (Tube)",
+      "code": "1205072"
+    }
+  ],
+  "published": true,
+  "order": 180
+}

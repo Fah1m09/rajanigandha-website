@@ -1,0 +1,23 @@
+{
+  "name": "FEBRILE BACTERIAL KIT",
+  "category": "Serology",
+  "subcategory": "Febrile Serodiagnostic",
+  "brand": "Spinreact",
+  "method": "Antigens chosen from this list",
+  "packSizes": [
+    {
+      "size": "4x100 Tests",
+      "code": "1205006"
+    },
+    {
+      "size": "6x100 Tests",
+      "code": "1205010"
+    },
+    {
+      "size": "8x100 Tests",
+      "code": "1205008"
+    }
+  ],
+  "published": true,
+  "order": 190
+}
