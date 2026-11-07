@@ -6,16 +6,8 @@
   "method": "Direct. Enzymatic",
   "packSizes": [
     {
-      "size": "1x60 mL / 1x20 mL",
-      "code": "1001096"
-    },
-    {
       "size": "1x30 mL / 1x10 mL",
       "code": "1001097"
-    },
-    {
-      "size": "1x240 mL / 1x80 mL",
-      "code": "1001098"
     }
   ],
   "published": true,

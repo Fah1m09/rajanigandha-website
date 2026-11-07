@@ -8,14 +8,6 @@
     {
       "size": "1x50 mL / 1x50 mL",
       "code": "41000"
-    },
-    {
-      "size": "2x100 mL / 2x100 mL",
-      "code": "41001"
-    },
-    {
-      "size": "1x250 mL / 1x250 mL",
-      "code": "41002"
     }
   ],
   "published": true,

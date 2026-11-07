@@ -6,16 +6,8 @@
   "method": "Jaffé. Colorimetric-Kinetic",
   "packSizes": [
     {
-      "size": "2x50 mL",
-      "code": "1001110"
-    },
-    {
       "size": "2x150 mL",
       "code": "1001111"
-    },
-    {
-      "size": "2x1000 mL",
-      "code": "1001112"
     },
     {
       "size": "4x250 mL",
