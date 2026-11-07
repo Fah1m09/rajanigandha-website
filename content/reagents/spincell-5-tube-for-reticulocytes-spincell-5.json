@@ -1,0 +1,15 @@
+{
+  "name": "TUBE FOR RETICULOCYTES",
+  "category": "Hematology",
+  "subcategory": "Spincell 5 Reagents",
+  "brand": "Spinreact",
+  "method": "Spincell 5",
+  "packSizes": [
+    {
+      "size": "50 Tests",
+      "code": "U7100210A"
+    }
+  ],
+  "published": true,
+  "order": 291
+}

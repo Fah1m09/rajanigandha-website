@@ -1,0 +1,15 @@
+{
+  "name": "DETERGENT",
+  "category": "Hematology",
+  "subcategory": "Spincell 3 Reagents",
+  "brand": "Spinreact",
+  "method": "Spincell 3",
+  "packSizes": [
+    {
+      "size": "1x20 L",
+      "code": "1705180"
+    }
+  ],
+  "published": true,
+  "order": 284
+}

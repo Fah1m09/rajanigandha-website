@@ -1,0 +1,19 @@
+{
+  "name": "LYSE",
+  "category": "Hematology",
+  "subcategory": "Spincell 3 Reagents",
+  "brand": "Spinreact",
+  "method": "Spincell 3",
+  "packSizes": [
+    {
+      "size": "1x1000 mL",
+      "code": "1705110"
+    },
+    {
+      "size": "1x500 mL",
+      "code": "1705111"
+    }
+  ],
+  "published": true,
+  "order": 285
+}

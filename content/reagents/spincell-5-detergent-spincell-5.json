@@ -1,0 +1,15 @@
+{
+  "name": "DETERGENT",
+  "category": "Hematology",
+  "subcategory": "Spincell 5 Reagents",
+  "brand": "Spinreact",
+  "method": "Spincell 5",
+  "packSizes": [
+    {
+      "size": "20 L",
+      "code": "1705680"
+    }
+  ],
+  "published": true,
+  "order": 288
+}
