@@ -1,0 +1,15 @@
+{
+  "name": "CALCIUM",
+  "category": "Dedicated Lines",
+  "subcategory": "Spin230/Spin 360e",
+  "brand": "Spinreact",
+  "method": "Arsenazo III. Colorimetric",
+  "packSizes": [
+    {
+      "size": "6x30 mL",
+      "code": "MI1001065"
+    }
+  ],
+  "published": true,
+  "order": 309
+}

@@ -1,0 +1,15 @@
+{
+  "name": "CHLORIDE",
+  "category": "Dedicated Lines",
+  "subcategory": "Spin230/Spin 360e",
+  "brand": "Spinreact",
+  "method": "Thiocyanate - Hg. Colorimetric",
+  "packSizes": [
+    {
+      "size": "6x30 mL",
+      "code": "MI1001360"
+    }
+  ],
+  "published": true,
+  "order": 310
+}

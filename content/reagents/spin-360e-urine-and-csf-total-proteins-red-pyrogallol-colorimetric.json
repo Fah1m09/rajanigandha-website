@@ -1,0 +1,15 @@
+{
+  "name": "URINE & CSF TOTAL PROTEINS",
+  "category": "Dedicated Lines",
+  "subcategory": "Spin230/Spin 360e",
+  "brand": "Spinreact",
+  "method": "Red Pyrogallol. Colorimetric",
+  "packSizes": [
+    {
+      "size": "6x30 mL",
+      "code": "MI1001025"
+    }
+  ],
+  "published": true,
+  "order": 332
+}

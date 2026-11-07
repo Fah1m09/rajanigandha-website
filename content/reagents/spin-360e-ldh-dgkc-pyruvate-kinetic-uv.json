@@ -1,0 +1,15 @@
+{
+  "name": "LDH",
+  "category": "Dedicated Lines",
+  "subcategory": "Spin230/Spin 360e",
+  "brand": "Spinreact",
+  "method": "DGKC. Pyruvate - Kinetic - UV",
+  "packSizes": [
+    {
+      "size": "5x25 mL / 1x32 mL",
+      "code": "MI41214"
+    }
+  ],
+  "published": true,
+  "order": 323
+}

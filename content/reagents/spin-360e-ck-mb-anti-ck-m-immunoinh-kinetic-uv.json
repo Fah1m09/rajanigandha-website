@@ -1,0 +1,15 @@
+{
+  "name": "CK-MB",
+  "category": "Dedicated Lines",
+  "subcategory": "Spin230/Spin 360e",
+  "brand": "Spinreact",
+  "method": "Anti CK - M Immunoinh. Kinetic - UV",
+  "packSizes": [
+    {
+      "size": "5x25 mL / 1x32 mL",
+      "code": "MI41254"
+    }
+  ],
+  "published": true,
+  "order": 313
+}

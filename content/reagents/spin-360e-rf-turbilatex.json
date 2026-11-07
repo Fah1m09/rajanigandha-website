@@ -1,0 +1,15 @@
+{
+  "name": "RF",
+  "category": "Dedicated Lines",
+  "subcategory": "Spin230/Spin 360e",
+  "brand": "Spinreact",
+  "method": "Turbilatex",
+  "packSizes": [
+    {
+      "size": "2x30 mL / 1x15 mL",
+      "code": "MI1107005"
+    }
+  ],
+  "published": true,
+  "order": 354
+}

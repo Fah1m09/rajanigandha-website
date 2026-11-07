@@ -1,0 +1,15 @@
+{
+  "name": "UREA",
+  "category": "Dedicated Lines",
+  "subcategory": "Spin230/Spin 360e",
+  "brand": "Spinreact",
+  "method": "Urease - GLDH. Kinetic",
+  "packSizes": [
+    {
+      "size": "5x25 mL / 1x32 mL",
+      "code": "MI41041"
+    }
+  ],
+  "published": true,
+  "order": 330
+}

@@ -1,0 +1,15 @@
+{
+  "name": "CREATININE",
+  "category": "Dedicated Lines",
+  "subcategory": "Spin230/Spin 360e",
+  "brand": "Spinreact",
+  "method": "Jaffé. Colorimetric - Kinetic",
+  "packSizes": [
+    {
+      "size": "3x30 mL / 3x30 mL",
+      "code": "MI1001111"
+    }
+  ],
+  "published": true,
+  "order": 315
+}

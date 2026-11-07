@@ -1,0 +1,15 @@
+{
+  "name": "ALP IFCC",
+  "category": "Dedicated Lines",
+  "subcategory": "Spin230/Spin 360e",
+  "brand": "Spinreact",
+  "method": "AMP Buffer",
+  "packSizes": [
+    {
+      "size": "5x25 mL / 2x16 mL",
+      "code": "MI41245"
+    }
+  ],
+  "published": true,
+  "order": 305
+}

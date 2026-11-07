@@ -1,0 +1,15 @@
+{
+  "name": "TOTAL BILIRUBIN DPD",
+  "category": "Dedicated Lines",
+  "subcategory": "Spin230/Spin 360e",
+  "brand": "Spinreact",
+  "method": "DPD. Colorimetric",
+  "packSizes": [
+    {
+      "size": "5x25 mL / 1x32 mL",
+      "code": "MI1001046"
+    }
+  ],
+  "published": true,
+  "order": 308
+}

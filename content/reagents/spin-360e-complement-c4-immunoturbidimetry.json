@@ -1,0 +1,15 @@
+{
+  "name": "COMPLEMENT C4",
+  "category": "Dedicated Lines",
+  "subcategory": "Spin230/Spin 360e",
+  "brand": "Spinreact",
+  "method": "Immunoturbidimetry",
+  "packSizes": [
+    {
+      "size": "2x30 mL / 1x15 mL",
+      "code": "MI1102104"
+    }
+  ],
+  "published": true,
+  "order": 342
+}

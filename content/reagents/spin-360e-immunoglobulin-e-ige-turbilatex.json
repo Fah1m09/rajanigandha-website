@@ -1,0 +1,15 @@
+{
+  "name": "IMMUNOGLOBULIN E (IgE)",
+  "category": "Dedicated Lines",
+  "subcategory": "Spin230/Spin 360e",
+  "brand": "Spinreact",
+  "method": "Turbilatex",
+  "packSizes": [
+    {
+      "size": "2x10 mL / 2x5 mL",
+      "code": "MI1107050"
+    }
+  ],
+  "published": true,
+  "order": 349
+}

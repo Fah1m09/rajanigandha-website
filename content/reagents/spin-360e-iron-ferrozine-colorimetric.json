@@ -1,0 +1,15 @@
+{
+  "name": "IRON",
+  "category": "Dedicated Lines",
+  "subcategory": "Spin230/Spin 360e",
+  "brand": "Spinreact",
+  "method": "Ferrozine. Colorimetric",
+  "packSizes": [
+    {
+      "size": "4x30 mL / 1x10 mL",
+      "code": "MI1001247"
+    }
+  ],
+  "published": true,
+  "order": 322
+}

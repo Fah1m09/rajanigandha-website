@@ -1,0 +1,15 @@
+{
+  "name": "GLYCATED HAEMOGLOBIN (HbA1c)",
+  "category": "Dedicated Lines",
+  "subcategory": "Spin230/Spin 360e",
+  "brand": "Spinreact",
+  "method": "Turbilatex",
+  "packSizes": [
+    {
+      "size": "2x30 mL / 1x20 mL",
+      "code": "MI43100"
+    }
+  ],
+  "published": true,
+  "order": 346
+}

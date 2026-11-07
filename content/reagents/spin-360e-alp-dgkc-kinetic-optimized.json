@@ -1,0 +1,15 @@
+{
+  "name": "ALP",
+  "category": "Dedicated Lines",
+  "subcategory": "Spin230/Spin 360e",
+  "brand": "Spinreact",
+  "method": "DGKC. Kinetic optimized",
+  "packSizes": [
+    {
+      "size": "5x25 mL / 1x32 mL",
+      "code": "MI41233"
+    }
+  ],
+  "published": true,
+  "order": 304
+}

@@ -1,0 +1,15 @@
+{
+  "name": "TOTAL PROTEINS",
+  "category": "Dedicated Lines",
+  "subcategory": "Spin230/Spin 360e",
+  "brand": "Spinreact",
+  "method": "Biuret. Colorimetric",
+  "packSizes": [
+    {
+      "size": "6x30 mL",
+      "code": "MI1001291"
+    }
+  ],
+  "published": true,
+  "order": 328
+}

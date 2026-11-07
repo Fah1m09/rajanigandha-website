@@ -1,0 +1,15 @@
+{
+  "name": "PHOSPHORUS",
+  "category": "Dedicated Lines",
+  "subcategory": "Spin230/Spin 360e",
+  "brand": "Spinreact",
+  "method": "Phosphomolybdate. UV",
+  "packSizes": [
+    {
+      "size": "6x30 mL",
+      "code": "MI1001155"
+    }
+  ],
+  "published": true,
+  "order": 327
+}

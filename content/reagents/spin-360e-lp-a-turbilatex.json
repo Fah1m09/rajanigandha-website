@@ -1,0 +1,15 @@
+{
+  "name": "Lp(a)",
+  "category": "Dedicated Lines",
+  "subcategory": "Spin230/Spin 360e",
+  "brand": "Spinreact",
+  "method": "Turbilatex",
+  "packSizes": [
+    {
+      "size": "1x20 mL / 1x4 mL",
+      "code": "MI1107020"
+    }
+  ],
+  "published": true,
+  "order": 352
+}

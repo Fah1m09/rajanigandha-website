@@ -1,0 +1,15 @@
+{
+  "name": "GOT / AST",
+  "category": "Dedicated Lines",
+  "subcategory": "Spin230/Spin 360e",
+  "brand": "Spinreact",
+  "method": "IFCC. Enzymatic - UV",
+  "packSizes": [
+    {
+      "size": "5x25 mL / 1x32 mL",
+      "code": "MI41264"
+    }
+  ],
+  "published": true,
+  "order": 319
+}

@@ -1,0 +1,15 @@
+{
+  "name": "TRIGLYCERIDES",
+  "category": "Dedicated Lines",
+  "subcategory": "Spin230/Spin 360e",
+  "brand": "Spinreact",
+  "method": "GPO - POD. Enzymatic - Colorimetric",
+  "packSizes": [
+    {
+      "size": "6x30 mL",
+      "code": "MI41031"
+    }
+  ],
+  "published": true,
+  "order": 329
+}

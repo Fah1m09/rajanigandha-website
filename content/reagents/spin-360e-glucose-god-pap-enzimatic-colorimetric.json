@@ -1,0 +1,15 @@
+{
+  "name": "GLUCOSE",
+  "category": "Dedicated Lines",
+  "subcategory": "Spin230/Spin 360e",
+  "brand": "Spinreact",
+  "method": "GOD - PAP. Enzymatic. Colorimetric",
+  "packSizes": [
+    {
+      "size": "6x30 mL",
+      "code": "MI41011"
+    }
+  ],
+  "published": true,
+  "order": 318
+}
