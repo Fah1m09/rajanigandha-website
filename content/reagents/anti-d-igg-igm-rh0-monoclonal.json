@@ -1,13 +1,14 @@
 {
-  "name": "ANTI-Am",
+  "name": "ANTI D IgG + IgM (RH0) monoclonal",
   "category": "Blood Grouping",
   "subcategory": "Blood Groups",
   "brand": "Spinreact",
   "packSizes": [
     {
-      "size": "10 ml"
+      "size": "1x10 mL",
+      "code": "1700021"
     }
   ],
   "published": true,
-  "order": 150
+  "order": 153
 }

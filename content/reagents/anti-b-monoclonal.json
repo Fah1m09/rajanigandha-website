@@ -1,0 +1,14 @@
+{
+  "name": "ANTI B monoclonal",
+  "category": "Blood Grouping",
+  "subcategory": "Blood Groups",
+  "brand": "Spinreact",
+  "packSizes": [
+    {
+      "size": "1x10 mL",
+      "code": "1700004"
+    }
+  ],
+  "published": true,
+  "order": 151
+}
