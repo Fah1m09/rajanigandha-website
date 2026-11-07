@@ -1,12 +1,15 @@
 {
-  "name": "IRON FERROZINE",
+  "name": "IRON",
   "category": "Clinical Chemistry",
+  "subcategory": "Electrolytes",
   "brand": "Spinreact",
+  "method": "Ferrozine",
   "packSizes": [
     {
-      "size": "2x150 ml"
+      "size": "4x50 mL / 2x10 mL",
+      "code": "1001247"
     }
   ],
   "published": true,
-  "order": 16
+  "order": 57
 }

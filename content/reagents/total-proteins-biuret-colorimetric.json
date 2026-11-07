@@ -1,0 +1,19 @@
+{
+  "name": "TOTAL PROTEINS",
+  "category": "Clinical Chemistry",
+  "subcategory": "Substrates",
+  "brand": "Spinreact",
+  "method": "Biuret. Colorimetric",
+  "packSizes": [
+    {
+      "size": "2x50 mL",
+      "code": "1001290"
+    },
+    {
+      "size": "2x250 mL",
+      "code": "1001291"
+    }
+  ],
+  "published": true,
+  "order": 13
+}

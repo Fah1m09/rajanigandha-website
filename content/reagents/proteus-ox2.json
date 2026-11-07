@@ -1,6 +1,7 @@
 {
   "name": "Proteus OX2",
   "category": "Serology",
+  "subcategory": "Febrile Serodiagnostic",
   "brand": "Spinreact",
   "packSizes": [
     {
@@ -8,5 +9,5 @@
     }
   ],
   "published": true,
-  "order": 50
+  "order": 110
 }

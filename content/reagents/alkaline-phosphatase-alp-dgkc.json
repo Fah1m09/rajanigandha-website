@@ -1,0 +1,15 @@
+{
+  "name": "ALKALINE PHOSPHATASE (ALP)",
+  "category": "Clinical Chemistry",
+  "subcategory": "Enzymes",
+  "brand": "Spinreact",
+  "method": "DGKC",
+  "packSizes": [
+    {
+      "size": "20x3 mL",
+      "code": "1001130"
+    }
+  ],
+  "published": true,
+  "order": 21
+}

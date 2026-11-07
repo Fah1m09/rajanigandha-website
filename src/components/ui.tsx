@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useId, useRef, useState } from "react";
 import Link from "next/link";
-import { ArrowUpRight, ChevronLeft, ChevronRight, Microscope, Phone, Search, X } from "lucide-react";
+import { ArrowUpRight, ChevronDown, ChevronLeft, ChevronRight, Microscope, Phone, Search, X } from "lucide-react";
 import type { iEquipment } from "../types/Equipment";
 import { formatPrice } from "../data/format";
 import { company } from "../data/company";
@@ -53,14 +53,25 @@ export function SearchBox({ value, onChange, label }: SearchBoxProps) {
   );
 }
 
-type FilterOption = { value: string; label: string; count: number };
-type CategoryTabsProps = { options: FilterOption[]; value: string; onChange: (value: string) => void; label: string };
+/**
+ * `sub` marks a subgroup, shown indented under its category.
+ * `expanded` (true/false) gives a category a chevron that shows or hides its subgroups.
+ * `current` marks a category whose selected subgroup is hidden, so the selection stays visible.
+ */
+type FilterOption = { value: string; label: string; count: number; sub?: boolean; expanded?: boolean; current?: boolean };
+type CategoryTabsProps = {
+  options: FilterOption[];
+  value: string;
+  onChange: (value: string) => void;
+  onToggle?: (value: string) => void;
+  label: string;
+};
 
 /**
  * Horizontal category tabs on one line. When they don't all fit, the row scrolls sideways,
  * the edges fade, and arrow buttons appear on whichever side has more tabs.
  */
-export function CategoryTabs({ options, value, onChange, label }: CategoryTabsProps) {
+export function CategoryTabs({ options, value, onChange, onToggle, label }: CategoryTabsProps) {
   const scroller = useRef<HTMLDivElement>(null);
   const [edges, setEdges] = useState({ start: false, end: false });
 
@@ -111,18 +122,35 @@ export function CategoryTabs({ options, value, onChange, label }: CategoryTabsPr
         <ChevronLeft aria-hidden="true" />
       </button>
       <div className="pg-tabbar-track" onScroll={measure} ref={scroller} role="group" aria-label={label}>
-        {options.map((option) => (
-          <button
-            aria-pressed={option.value === value}
-            className="pg-tab"
-            key={option.value}
-            onClick={() => onChange(option.value)}
-            type="button"
-          >
-            {option.label}
-            <span className="pg-tab-count">{option.count}</span>
-          </button>
-        ))}
+        {options.map((option) => {
+          const tab = (
+            <button
+              aria-pressed={option.value === value}
+              className={`pg-tab${option.sub ? " is-sub" : ""}${option.current ? " is-current" : ""}`}
+              key={option.value}
+              onClick={() => onChange(option.value)}
+              type="button"
+            >
+              {option.label}
+              <span className="pg-tab-count">{option.count}</span>
+            </button>
+          );
+          if (option.expanded === undefined || !onToggle) return tab;
+          return (
+            <div className={`pg-tab-group${option.expanded ? " is-open" : ""}`} key={option.value}>
+              {tab}
+              <button
+                aria-expanded={option.expanded}
+                aria-label={`${option.expanded ? "Hide" : "Show"} ${option.label} subcategories`}
+                className="pg-tab-toggle"
+                onClick={() => onToggle(option.value)}
+                type="button"
+              >
+                <ChevronDown aria-hidden="true" />
+              </button>
+            </div>
+          );
+        })}
       </div>
       <button aria-label="Show more categories" className="pg-tabbar-arrow is-end" onClick={() => scrollBy(1)} tabIndex={-1} type="button">
         <ChevronRight aria-hidden="true" />

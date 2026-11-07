@@ -1,0 +1,15 @@
+{
+  "name": "ACID PHOSPHATASE",
+  "category": "Clinical Chemistry",
+  "subcategory": "Enzymes",
+  "brand": "Spinreact",
+  "method": "Hillmann",
+  "packSizes": [
+    {
+      "size": "18x2 mL",
+      "code": "1001121"
+    }
+  ],
+  "published": true,
+  "order": 19
+}

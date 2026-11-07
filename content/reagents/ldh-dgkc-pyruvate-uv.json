@@ -1,0 +1,15 @@
+{
+  "name": "LDH",
+  "category": "Clinical Chemistry",
+  "subcategory": "Enzymes",
+  "brand": "Spinreact",
+  "method": "DGKC. Pyruvate - UV",
+  "packSizes": [
+    {
+      "size": "20x3 mL",
+      "code": "1001260"
+    }
+  ],
+  "published": true,
+  "order": 40
+}

@@ -1,0 +1,15 @@
+{
+  "name": "CK-NAC",
+  "category": "Clinical Chemistry",
+  "subcategory": "Enzymes",
+  "brand": "Spinreact",
+  "method": "NAC - UV",
+  "packSizes": [
+    {
+      "size": "20x2.5 mL",
+      "code": "1001050"
+    }
+  ],
+  "published": true,
+  "order": 31
+}

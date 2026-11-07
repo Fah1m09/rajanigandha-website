@@ -1,6 +1,7 @@
 {
   "name": "Brucella Abortus",
   "category": "Serology",
+  "subcategory": "Febrile Serodiagnostic",
   "brand": "Spinreact",
   "packSizes": [
     {
@@ -8,5 +9,5 @@
     }
   ],
   "published": true,
-  "order": 49
+  "order": 109
 }

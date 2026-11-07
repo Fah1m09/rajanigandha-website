@@ -1,0 +1,15 @@
+{
+  "name": "CHLORIDE",
+  "category": "Clinical Chemistry",
+  "subcategory": "Electrolytes",
+  "brand": "Spinreact",
+  "method": "Thiocyanate-Hg",
+  "packSizes": [
+    {
+      "size": "2x150 mL",
+      "code": "1001360"
+    }
+  ],
+  "published": true,
+  "order": 55
+}

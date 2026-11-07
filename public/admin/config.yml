@@ -84,16 +84,22 @@ collections:
     delete: true
     identifier_field: name
     slug: "{{slug}}"
-    summary: "{{name}} · {{category}}"
-    sortable_fields: [order, name, category]
+    summary: "{{name}} · {{category}} · {{subcategory}}"
+    sortable_fields: [order, name, category, subcategory]
     view_groups:
       - { label: Category, field: category }
+      - { label: Subgroup, field: subcategory }
     fields:
       - { name: name, label: Name, widget: string }
       - name: category
         label: Category
         widget: select
         options: [Clinical Chemistry, Serology, Immuno Chemistry, Blood Grouping]
+      - name: subcategory
+        label: Subgroup
+        widget: string
+        required: false
+        hint: "Group inside the category, spelled exactly like the other reagents in it (e.g. Substrates, Enzymes, Lipids, Electrolytes, Controls & Calibrators)"
       - { name: brand, label: Brand, widget: select, options: [Spinreact, Microlab], default: Spinreact }
       - { name: method, label: Method, widget: string, required: false }
       - name: packSizes

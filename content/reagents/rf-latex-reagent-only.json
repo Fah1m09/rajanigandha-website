@@ -1,6 +1,7 @@
 {
   "name": "RF LATEX REAGENT ONLY",
   "category": "Serology",
+  "subcategory": "Reagent Only",
   "brand": "Spinreact",
   "packSizes": [
     {
@@ -8,5 +9,5 @@
     }
   ],
   "published": true,
-  "order": 40
+  "order": 100
 }

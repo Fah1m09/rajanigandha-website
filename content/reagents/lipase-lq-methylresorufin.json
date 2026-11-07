@@ -1,0 +1,19 @@
+{
+  "name": "LIPASE LQ",
+  "category": "Clinical Chemistry",
+  "subcategory": "Enzymes",
+  "brand": "Spinreact",
+  "method": "Methylresorufin",
+  "packSizes": [
+    {
+      "size": "2x10 mL / 1x4 mL",
+      "code": "1001274"
+    },
+    {
+      "size": "4x10 mL / 1x8 mL",
+      "code": "1001275"
+    }
+  ],
+  "published": true,
+  "order": 43
+}

@@ -1,6 +1,7 @@
 {
   "name": "ANTI-Bm",
   "category": "Blood Grouping",
+  "subcategory": "Blood Groups",
   "brand": "Spinreact",
   "packSizes": [
     {
@@ -8,5 +9,5 @@
     }
   ],
   "published": true,
-  "order": 35
+  "order": 95
 }

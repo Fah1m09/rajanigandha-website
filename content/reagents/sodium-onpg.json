@@ -1,0 +1,15 @@
+{
+  "name": "SODIUM",
+  "category": "Clinical Chemistry",
+  "subcategory": "Electrolytes",
+  "brand": "Spinreact",
+  "method": "ONPG",
+  "packSizes": [
+    {
+      "size": "1x60 mL / 1x30 mL",
+      "code": "1001387"
+    }
+  ],
+  "published": true,
+  "order": 62
+}

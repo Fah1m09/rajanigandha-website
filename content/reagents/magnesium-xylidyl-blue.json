@@ -1,0 +1,19 @@
+{
+  "name": "MAGNESIUM",
+  "category": "Clinical Chemistry",
+  "subcategory": "Electrolytes",
+  "brand": "Spinreact",
+  "method": "Xylidyl Blue",
+  "packSizes": [
+    {
+      "size": "2x50 mL",
+      "code": "1001286"
+    },
+    {
+      "size": "2x150 mL",
+      "code": "1001285"
+    }
+  ],
+  "published": true,
+  "order": 59
+}

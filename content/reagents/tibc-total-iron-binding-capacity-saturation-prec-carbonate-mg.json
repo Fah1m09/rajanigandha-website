@@ -1,0 +1,15 @@
+{
+  "name": "TIBC (Total Iron Binding Capacity)",
+  "category": "Clinical Chemistry",
+  "subcategory": "Electrolytes",
+  "brand": "Spinreact",
+  "method": "Saturation-prec. Carbonate-Mg",
+  "packSizes": [
+    {
+      "size": "100 Tests",
+      "code": "1001241"
+    }
+  ],
+  "published": true,
+  "order": 58
+}

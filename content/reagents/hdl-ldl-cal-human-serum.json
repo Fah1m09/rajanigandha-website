@@ -1,0 +1,15 @@
+{
+  "name": "HDL/LDL CAL",
+  "category": "Clinical Chemistry",
+  "subcategory": "Controls & Calibrators",
+  "brand": "Spinreact",
+  "method": "Human Serum",
+  "packSizes": [
+    {
+      "size": "4x1 mL",
+      "code": "33903"
+    }
+  ],
+  "published": true,
+  "order": 72
+}

@@ -1,0 +1,19 @@
+{
+  "name": "γ-GT",
+  "category": "Clinical Chemistry",
+  "subcategory": "Enzymes",
+  "brand": "Spinreact",
+  "method": "Carboxy-4-nitroanilide",
+  "packSizes": [
+    {
+      "size": "1x60 mL / 1x15 mL",
+      "code": "41290"
+    },
+    {
+      "size": "1x240 mL / 1x60 mL",
+      "code": "41292"
+    }
+  ],
+  "published": true,
+  "order": 39
+}

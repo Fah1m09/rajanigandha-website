@@ -1,0 +1,15 @@
+{
+  "name": "HOMOCYSTEIN CAL",
+  "category": "Clinical Chemistry",
+  "subcategory": "Controls & Calibrators",
+  "brand": "Spinreact",
+  "method": "Human Serum",
+  "packSizes": [
+    {
+      "size": "2x3 mL",
+      "code": "1002276"
+    }
+  ],
+  "published": true,
+  "order": 84
+}

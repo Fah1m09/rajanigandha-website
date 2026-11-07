@@ -1,0 +1,15 @@
+{
+  "name": "ADA (Adenosine Deaminase) CAL",
+  "category": "Clinical Chemistry",
+  "subcategory": "Controls & Calibrators",
+  "brand": "Spinreact",
+  "method": "Bovine Serum",
+  "packSizes": [
+    {
+      "size": "1x1 mL",
+      "code": "1002230"
+    }
+  ],
+  "published": true,
+  "order": 69
+}

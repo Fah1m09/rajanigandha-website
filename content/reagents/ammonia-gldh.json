@@ -1,0 +1,15 @@
+{
+  "name": "AMMONIA",
+  "category": "Clinical Chemistry",
+  "subcategory": "Electrolytes",
+  "brand": "Spinreact",
+  "method": "GLDH",
+  "packSizes": [
+    {
+      "size": "8x5 mL",
+      "code": "1001410"
+    }
+  ],
+  "published": true,
+  "order": 52
+}

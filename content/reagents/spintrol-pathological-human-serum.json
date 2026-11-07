@@ -1,0 +1,19 @@
+{
+  "name": "SPINTROL PATHOLOGICAL",
+  "category": "Clinical Chemistry",
+  "subcategory": "Controls & Calibrators",
+  "brand": "Spinreact",
+  "method": "Human serum",
+  "packSizes": [
+    {
+      "size": "4x5 mL",
+      "code": "1002210"
+    },
+    {
+      "size": "1x5 mL",
+      "code": "1002211"
+    }
+  ],
+  "published": true,
+  "order": 67
+}

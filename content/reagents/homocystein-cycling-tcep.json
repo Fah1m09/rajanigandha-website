@@ -1,0 +1,15 @@
+{
+  "name": "HOMOCYSTEIN",
+  "category": "Clinical Chemistry",
+  "subcategory": "Substrates",
+  "brand": "Spinreact",
+  "method": "Cycling - TCEP",
+  "packSizes": [
+    {
+      "size": "1x30 mL / 1x5 mL",
+      "code": "41057"
+    }
+  ],
+  "published": true,
+  "order": 11
+}

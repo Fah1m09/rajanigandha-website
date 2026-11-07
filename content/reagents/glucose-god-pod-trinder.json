@@ -1,0 +1,19 @@
+{
+  "name": "GLUCOSE",
+  "category": "Clinical Chemistry",
+  "subcategory": "Substrates",
+  "brand": "Spinreact",
+  "method": "GOD-POD. Trinder",
+  "packSizes": [
+    {
+      "size": "4x125 mL",
+      "code": "1001190"
+    },
+    {
+      "size": "4x250 mL",
+      "code": "1001191"
+    }
+  ],
+  "published": true,
+  "order": 9
+}

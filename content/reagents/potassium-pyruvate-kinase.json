@@ -1,0 +1,15 @@
+{
+  "name": "POTASSIUM",
+  "category": "Clinical Chemistry",
+  "subcategory": "Electrolytes",
+  "brand": "Spinreact",
+  "method": "Pyruvate Kinase",
+  "packSizes": [
+    {
+      "size": "1x60 mL / 1x15 mL",
+      "code": "1001397"
+    }
+  ],
+  "published": true,
+  "order": 61
+}

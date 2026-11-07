@@ -1,0 +1,15 @@
+{
+  "name": "CALCIUM",
+  "category": "Clinical Chemistry",
+  "subcategory": "Electrolytes",
+  "brand": "Spinreact",
+  "method": "Arsenazo III. Color",
+  "packSizes": [
+    {
+      "size": "3x50 mL",
+      "code": "1001065"
+    }
+  ],
+  "published": true,
+  "order": 54
+}

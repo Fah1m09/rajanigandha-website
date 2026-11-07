@@ -1,0 +1,15 @@
+{
+  "name": "CHOLINESTERASE",
+  "category": "Clinical Chemistry",
+  "subcategory": "Enzymes",
+  "brand": "Spinreact",
+  "method": "Butyrylthiocholine",
+  "packSizes": [
+    {
+      "size": "1x100 mL / 1x20 mL",
+      "code": "41210"
+    }
+  ],
+  "published": true,
+  "order": 26
+}

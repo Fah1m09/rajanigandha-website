@@ -1,0 +1,15 @@
+{
+  "name": "ADA (Adenosine Deaminase)",
+  "category": "Clinical Chemistry",
+  "subcategory": "Enzymes",
+  "brand": "Spinreact",
+  "method": "Enzymatic PNP",
+  "packSizes": [
+    {
+      "size": "1x40 mL / 1x20 mL",
+      "code": "1001070"
+    }
+  ],
+  "published": true,
+  "order": 20
+}

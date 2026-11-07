@@ -1,0 +1,19 @@
+{
+  "name": "URIC ACID",
+  "category": "Clinical Chemistry",
+  "subcategory": "Substrates",
+  "brand": "Spinreact",
+  "method": "Uricase-POD. Enzymatic",
+  "packSizes": [
+    {
+      "size": "10x20 mL",
+      "code": "1001010"
+    },
+    {
+      "size": "10x50 mL",
+      "code": "1001011"
+    }
+  ],
+  "published": true,
+  "order": 17
+}

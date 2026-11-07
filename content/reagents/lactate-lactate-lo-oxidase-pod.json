@@ -1,0 +1,15 @@
+{
+  "name": "LACTATE",
+  "category": "Clinical Chemistry",
+  "subcategory": "Substrates",
+  "brand": "Spinreact",
+  "method": "Lactate LO Oxidase POD",
+  "packSizes": [
+    {
+      "size": "5x10 mL",
+      "code": "1001330"
+    }
+  ],
+  "published": true,
+  "order": 12
+}

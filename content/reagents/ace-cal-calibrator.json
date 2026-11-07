@@ -1,0 +1,15 @@
+{
+  "name": "ACE CAL",
+  "category": "Clinical Chemistry",
+  "subcategory": "Controls & Calibrators",
+  "brand": "Spinreact",
+  "method": "Calibrator",
+  "packSizes": [
+    {
+      "size": "1x1 mL",
+      "code": "1002225"
+    }
+  ],
+  "published": true,
+  "order": 70
+}

@@ -1,0 +1,27 @@
+{
+  "name": "CHOLESTEROL",
+  "category": "Clinical Chemistry",
+  "subcategory": "Lipids",
+  "brand": "Spinreact",
+  "method": "CHOD-POD",
+  "packSizes": [
+    {
+      "size": "1x1000 mL",
+      "code": "41019"
+    },
+    {
+      "size": "2x50 mL",
+      "code": "41020"
+    },
+    {
+      "size": "2x250 mL",
+      "code": "41021"
+    },
+    {
+      "size": "2x100 mL",
+      "code": "41022"
+    }
+  ],
+  "published": true,
+  "order": 45
+}

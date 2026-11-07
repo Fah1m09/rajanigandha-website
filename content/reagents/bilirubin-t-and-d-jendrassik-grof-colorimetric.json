@@ -1,0 +1,15 @@
+{
+  "name": "BILIRUBIN T&D",
+  "category": "Clinical Chemistry",
+  "subcategory": "Substrates",
+  "brand": "Spinreact",
+  "method": "Jendrassik - Gröf. Colorimetric",
+  "packSizes": [
+    {
+      "size": "1x60 / 1x10 / 1x150 mL",
+      "code": "1001041"
+    }
+  ],
+  "published": true,
+  "order": 4
+}

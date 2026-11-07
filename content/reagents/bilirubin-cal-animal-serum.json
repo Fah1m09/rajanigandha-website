@@ -1,0 +1,15 @@
+{
+  "name": "BILIRUBIN CAL",
+  "category": "Clinical Chemistry",
+  "subcategory": "Controls & Calibrators",
+  "brand": "Spinreact",
+  "method": "Animal Serum",
+  "packSizes": [
+    {
+      "size": "4x1 mL",
+      "code": "1002250"
+    }
+  ],
+  "published": true,
+  "order": 71
+}

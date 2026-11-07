@@ -1,0 +1,19 @@
+{
+  "name": "ALBUMIN",
+  "category": "Clinical Chemistry",
+  "subcategory": "Substrates",
+  "brand": "Spinreact",
+  "method": "Bromocresol green colorimetric",
+  "packSizes": [
+    {
+      "size": "2x250 mL",
+      "code": "1001020"
+    },
+    {
+      "size": "2x50 mL",
+      "code": "1001023"
+    }
+  ],
+  "published": true,
+  "order": 1
+}

@@ -1,0 +1,15 @@
+{
+  "name": "LIPIDIC CONTROL",
+  "category": "Clinical Chemistry",
+  "subcategory": "Controls & Calibrators",
+  "brand": "Spinreact",
+  "method": "Human source",
+  "packSizes": [
+    {
+      "size": "4x1 mL",
+      "code": "1002480"
+    }
+  ],
+  "published": true,
+  "order": 85
+}

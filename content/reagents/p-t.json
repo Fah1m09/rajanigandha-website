@@ -1,6 +1,7 @@
 {
   "name": "P.T.",
   "category": "Blood Grouping",
+  "subcategory": "Coagulation",
   "brand": "Spinreact",
   "packSizes": [
     {
@@ -8,5 +9,5 @@
     }
   ],
   "published": true,
-  "order": 33
+  "order": 93
 }

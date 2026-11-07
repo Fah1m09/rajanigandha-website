@@ -1,6 +1,7 @@
 {
   "name": "ANTI-D IgG/IgM (Rho) Monoclonal",
   "category": "Blood Grouping",
+  "subcategory": "Blood Groups",
   "brand": "Spinreact",
   "packSizes": [
     {
@@ -8,5 +9,5 @@
     }
   ],
   "published": true,
-  "order": 36
+  "order": 96
 }

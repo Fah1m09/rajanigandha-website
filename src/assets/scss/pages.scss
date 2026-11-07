@@ -174,6 +174,35 @@
   transition: background-color 200ms ease, color 200ms ease;
 }
 .pg-tab[aria-pressed="true"] .pg-tab-count { background: var(--accent); color: var(--on-accent); }
+// Subgroups of an open category: smaller, with a leading arrow in the horizontal (phone) row
+.pg-tab.is-sub {
+  font-size: 0.9rem;
+  &::before { content: "›"; margin-right: -0.2rem; color: var(--muted); }
+}
+// A category whose selected subgroup is hidden
+.pg-tab.is-current { color: var(--ink); }
+
+// Category + chevron that shows or hides its subgroups
+.pg-tab-group {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: 0.25rem;
+}
+.pg-tab-toggle {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  color: var(--muted);
+  transition: background-color 200ms ease, color 200ms ease;
+  svg { width: 1.1rem; height: 1.1rem; transition: transform 250ms cubic-bezier(0.2, 0.8, 0.2, 1); }
+  &[aria-expanded="true"] svg { transform: rotate(180deg); }
+  &:hover { background: var(--surface); color: var(--ink); }
+  &:focus-visible { outline: 3px solid var(--accent-text); outline-offset: 1px; }
+}
 
 .pg-tabbar-arrow {
   position: absolute;
@@ -275,6 +304,18 @@
     &:hover { background: var(--surface); }
     &[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
     &:focus-visible { outline-offset: 2px; }
+  }
+  .pg-sidebar .pg-tab-group .pg-tab { flex: 1 1 auto; min-width: 0; }
+  .pg-sidebar .pg-tab.is-current { background: var(--surface); }
+  // Subgroups hang off a thin line under their category, like a tree
+  .pg-sidebar .pg-tab.is-sub {
+    margin-left: 1rem;
+    padding: 0.5rem 0.75rem 0.5rem 1rem;
+    border-radius: 0 0.75rem 0.75rem 0;
+    box-shadow: inset 2px 0 0 var(--line);
+    &::before { content: none; }
+    &[aria-pressed="true"] { box-shadow: inset 3px 0 0 var(--accent-text); background: var(--surface); color: var(--ink); }
+    .pg-tab-count { min-width: 1.4rem; height: 1.4rem; font-size: 0.7rem; }
   }
 }
 .pg-count { margin-bottom: 1.25rem; color: var(--muted); font-weight: 600; strong { color: var(--ink); } }
@@ -754,6 +795,14 @@
   tbody tr:first-child { border-top: 0; }
   tbody tr:hover { background: color-mix(in srgb, var(--accent) 16%, transparent); }
   tbody th { font-weight: 700; }
+}
+// Second line under a cell's main value (reagent method, product code)
+.pg-table-sub {
+  display: block;
+  margin-top: 0.2rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 500;
 }
 .pg-tag {
   display: inline-block;

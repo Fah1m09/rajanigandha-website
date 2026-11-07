@@ -1,0 +1,15 @@
+{
+  "name": "PHOSPHOLIPIDS",
+  "category": "Clinical Chemistry",
+  "subcategory": "Lipids",
+  "brand": "Spinreact",
+  "method": "Trinder. Enzymatic",
+  "packSizes": [
+    {
+      "size": "5x10 mL",
+      "code": "1001140"
+    }
+  ],
+  "published": true,
+  "order": 49
+}

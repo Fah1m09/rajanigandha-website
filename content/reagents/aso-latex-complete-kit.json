@@ -1,6 +1,7 @@
 {
   "name": "ASO LATEX (complete kit)",
   "category": "Serology",
+  "subcategory": "Rheumatoid Serodiagnostic",
   "brand": "Spinreact",
   "packSizes": [
     {
@@ -8,5 +9,5 @@
     }
   ],
   "published": true,
-  "order": 38
+  "order": 98
 }

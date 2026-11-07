@@ -1,0 +1,23 @@
+{
+  "name": "SPINTROL CALIBRATOR",
+  "category": "Clinical Chemistry",
+  "subcategory": "Controls & Calibrators",
+  "brand": "Spinreact",
+  "method": "Human serum",
+  "packSizes": [
+    {
+      "size": "10x3 mL",
+      "code": "1002011"
+    },
+    {
+      "size": "4x3 mL",
+      "code": "1002012"
+    },
+    {
+      "size": "1x3 mL",
+      "code": "1002013"
+    }
+  ],
+  "published": true,
+  "order": 65
+}

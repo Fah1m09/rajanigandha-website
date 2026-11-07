@@ -1,0 +1,15 @@
+{
+  "name": "ACE (Angiotensin Converting Enzyme)",
+  "category": "Clinical Chemistry",
+  "subcategory": "Enzymes",
+  "brand": "Spinreact",
+  "method": "FAP",
+  "packSizes": [
+    {
+      "size": "2x50 mL",
+      "code": "41205"
+    }
+  ],
+  "published": true,
+  "order": 25
+}

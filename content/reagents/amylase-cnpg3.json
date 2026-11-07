@@ -1,0 +1,19 @@
+{
+  "name": "AMYLASE",
+  "category": "Clinical Chemistry",
+  "subcategory": "Enzymes",
+  "brand": "Spinreact",
+  "method": "CNPG3",
+  "packSizes": [
+    {
+      "size": "20x2 mL",
+      "code": "41201"
+    },
+    {
+      "size": "2x60 mL",
+      "code": "41202"
+    }
+  ],
+  "published": true,
+  "order": 24
+}

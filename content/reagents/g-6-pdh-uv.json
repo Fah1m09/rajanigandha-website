@@ -1,0 +1,15 @@
+{
+  "name": "G-6-PDH",
+  "category": "Clinical Chemistry",
+  "subcategory": "Enzymes",
+  "brand": "Spinreact",
+  "method": "UV",
+  "packSizes": [
+    {
+      "size": "1x100 mL / 1x2 mL / 1x2 mL / 1x20 mL",
+      "code": "1001420"
+    }
+  ],
+  "published": true,
+  "order": 33
+}

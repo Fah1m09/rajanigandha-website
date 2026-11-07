@@ -1,6 +1,7 @@
 {
   "name": "Typhi O",
   "category": "Serology",
+  "subcategory": "Febrile Serodiagnostic",
   "brand": "Spinreact",
   "packSizes": [
     {
@@ -11,5 +12,5 @@
     }
   ],
   "published": true,
-  "order": 48
+  "order": 108
 }

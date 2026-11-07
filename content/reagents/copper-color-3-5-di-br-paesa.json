@@ -1,0 +1,15 @@
+{
+  "name": "COPPER",
+  "category": "Clinical Chemistry",
+  "subcategory": "Electrolytes",
+  "brand": "Spinreact",
+  "method": "Color 3-5 Di Br-PAESA",
+  "packSizes": [
+    {
+      "size": "5x10 mL / 1x3 mL",
+      "code": "1001080"
+    }
+  ],
+  "published": true,
+  "order": 56
+}

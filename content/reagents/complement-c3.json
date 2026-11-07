@@ -1,6 +1,7 @@
 {
   "name": "COMPLEMENT C3",
   "category": "Immuno Chemistry",
+  "subcategory": "Immunoturbidimetry Serum Proteins",
   "brand": "Spinreact",
   "packSizes": [
     {
@@ -8,5 +9,5 @@
     }
   ],
   "published": true,
-  "order": 27
+  "order": 87
 }

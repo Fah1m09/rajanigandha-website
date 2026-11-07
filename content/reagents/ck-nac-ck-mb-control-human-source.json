@@ -1,0 +1,15 @@
+{
+  "name": "CK-NAC / CK-MB",
+  "category": "Clinical Chemistry",
+  "subcategory": "Controls & Calibrators",
+  "brand": "Spinreact",
+  "method": "Control. Human source",
+  "packSizes": [
+    {
+      "size": "4x2 mL (4 x High L)",
+      "code": "1002260"
+    }
+  ],
+  "published": true,
+  "order": 81
+}

@@ -1,0 +1,15 @@
+{
+  "name": "ZINC",
+  "category": "Clinical Chemistry",
+  "subcategory": "Electrolytes",
+  "brand": "Spinreact",
+  "method": "5 Br-PAPS",
+  "packSizes": [
+    {
+      "size": "5x10 mL / 1x5 mL",
+      "code": "1001350"
+    }
+  ],
+  "published": true,
+  "order": 63
+}

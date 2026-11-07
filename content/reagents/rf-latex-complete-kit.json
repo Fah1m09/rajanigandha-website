@@ -1,6 +1,7 @@
 {
   "name": "RF LATEX (complete kit)",
   "category": "Serology",
+  "subcategory": "Rheumatoid Serodiagnostic",
   "brand": "Spinreact",
   "packSizes": [
     {
@@ -8,5 +9,5 @@
     }
   ],
   "published": true,
-  "order": 39
+  "order": 99
 }

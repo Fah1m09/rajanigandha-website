@@ -1,6 +1,7 @@
 {
   "name": "RF TURBILATEX (with Calibrator)",
   "category": "Immuno Chemistry",
+  "subcategory": "Turbilatex Special Proteins",
   "brand": "Spinreact",
   "packSizes": [
     {
@@ -8,5 +9,5 @@
     }
   ],
   "published": true,
-  "order": 30
+  "order": 90
 }

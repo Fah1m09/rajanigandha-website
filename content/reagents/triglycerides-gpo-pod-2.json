@@ -1,0 +1,30 @@
+{
+  "name": "TRIGLYCERIDES",
+  "category": "Clinical Chemistry",
+  "subcategory": "Lipids",
+  "brand": "Spinreact",
+  "method": "GPO-POD",
+  "packSizes": [
+    {
+      "size": "1x50 mL",
+      "code": "41030"
+    },
+    {
+      "size": "2x150 mL",
+      "code": "41031"
+    },
+    {
+      "size": "1x100 mL",
+      "code": "41032"
+    },
+    {
+      "size": "1x500 mL",
+      "code": "41034"
+    },
+    {
+      "size": "1x1000 mL"
+    }
+  ],
+  "published": true,
+  "order": 51
+}

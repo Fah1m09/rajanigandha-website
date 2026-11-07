@@ -1,6 +1,7 @@
 {
   "name": "HCG LATEX (complete kit)",
   "category": "Serology",
+  "subcategory": "Pregnancy",
   "brand": "Spinreact",
   "packSizes": [
     {
@@ -8,5 +9,5 @@
     }
   ],
   "published": true,
-  "order": 47
+  "order": 107
 }

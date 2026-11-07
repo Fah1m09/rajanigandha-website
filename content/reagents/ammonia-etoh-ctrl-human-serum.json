@@ -1,0 +1,15 @@
+{
+  "name": "AMMONIA / EtOH CTRL",
+  "category": "Clinical Chemistry",
+  "subcategory": "Controls & Calibrators",
+  "brand": "Spinreact",
+  "method": "Human serum",
+  "packSizes": [
+    {
+      "size": "4x2 mL",
+      "code": "1002240"
+    }
+  ],
+  "published": true,
+  "order": 79
+}

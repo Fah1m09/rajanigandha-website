@@ -10,10 +10,14 @@ import { CategoryTabs, PageCta, SearchBox } from "../components/ui";
 import { useSetCategoryParam } from "../hooks/useCategoryParam";
 
 // One table row per pack size, so each size can carry its own trade price.
-type Row = { key: string; name: string; category: string; size: string; price: number };
+type Row = {
+  key: string; name: string; method: string; category: string; subcategory: string; size: string; code: string; price: number;
+};
 type SortKey = "name" | "category" | "size" | "price";
 
 const ALL = "All";
+// Sidebar values for subgroups are "Category::Subgroup"; plain categories are just "Category".
+const SEP = "::";
 
 const columns: { key: SortKey; label: string }[] = [
   { key: "name", label: "Reagent" },
@@ -22,43 +26,81 @@ const columns: { key: SortKey; label: string }[] = [
   { key: "price", label: "Trade price" },
 ];
 
-const quoteLink = (row: Row) =>
-  `/contact?subject=${encodeURIComponent(`Quote request: ${row.name} (${row.size})`)}`;
+const quoteLink = (row: Row) => {
+  const details = [row.method, row.size, row.code && `Ref. ${row.code}`].filter(Boolean).join(", ");
+  return `/contact?subject=${encodeURIComponent(`Quote request: ${row.name} (${details})`)}`;
+};
 
 type Props = { reagentList: iReagent[] };
 
-// The pre-rendered HTML shows every reagent; the ?category= filter is applied in the browser.
+type Requested = { category: string | null; group: string | null };
+
+// The pre-rendered HTML shows every reagent; the ?category=&group= filter is applied in the browser.
 export default function Reagent(props: Props) {
   return (
-    <Suspense fallback={<Catalog {...props} requested={null} />}>
+    <Suspense fallback={<Catalog {...props} requested={{ category: null, group: null }} />}>
       <CatalogFromUrl {...props} />
     </Suspense>
   );
 }
 
 function CatalogFromUrl(props: Props) {
-  return <Catalog {...props} requested={useSearchParams().get("category")} />;
+  const params = useSearchParams();
+  return <Catalog {...props} requested={{ category: params.get("category"), group: params.get("group") }} />;
 }
 
-function Catalog({ reagentList, requested }: Props & { requested: string | null }) {
+function Catalog({ reagentList, requested }: Props & { requested: Requested }) {
   const allRows: Row[] = useMemo(() => reagentList.flatMap((reagent) =>
     reagent.packSizes.map((pack, index) => ({
       key: `${reagent.slug}-${index}`,
       name: reagent.name,
+      method: reagent.method ?? "",
       category: reagent.category,
+      subcategory: reagent.subcategory ?? "",
       size: pack.size,
+      code: pack.code ?? "",
       price: pack.tradePrice ?? 0,
     })),
   ), [reagentList]);
-  const categoryOptions = useMemo(() => [
+  // Each category with its subgroups, in catalogue order.
+  const tree = useMemo(() => {
+    const map = new Map<string, Map<string, number>>();
+    for (const item of reagentList) {
+      const subs = map.get(item.category) ?? new Map<string, number>();
+      if (item.subcategory) subs.set(item.subcategory, (subs.get(item.subcategory) ?? 0) + 1);
+      map.set(item.category, subs);
+    }
+    return map;
+  }, [reagentList]);
+
+  const category = requested.category && tree.has(requested.category) ? requested.category : ALL;
+  const group = category !== ALL && requested.group && tree.get(category)?.has(requested.group) ? requested.group : null;
+
+  // Each category's chevron shows or hides its subgroups. Until the visitor toggles one,
+  // only the selected category is open.
+  const [toggled, setToggled] = useState<Record<string, boolean>>({});
+  const isOpen = (name: string) => toggled[name] ?? name === category;
+  const toggle = (name: string) => setToggled((prev) => ({ ...prev, [name]: !isOpen(name) }));
+
+  const categoryOptions = [
     { value: ALL, label: "All reagents", count: reagentList.length },
-    ...Array.from(new Set(reagentList.map((item) => item.category))).map((category) => ({
-      value: category,
-      label: category,
-      count: reagentList.filter((item) => item.category === category).length,
-    })),
-  ], [reagentList]);
-  const category = categoryOptions.some((option) => option.value === requested) ? requested : ALL;
+    ...Array.from(tree, ([name, subs]) => {
+      const open = isOpen(name);
+      return [
+        {
+          value: name,
+          label: name,
+          count: reagentList.filter((item) => item.category === name).length,
+          ...(subs.size > 0 && { expanded: open }),
+          current: !open && name === category && group !== null,
+        },
+        ...(open
+          ? Array.from(subs, ([sub, count]) => ({ value: `${name}${SEP}${sub}`, label: sub, count, sub: true }))
+          : []),
+      ];
+    }).flat(),
+  ];
+  const selected = group ? `${category}${SEP}${group}` : category;
   const setCategoryParam = useSetCategoryParam();
   const [query, setQuery] = useState("");
   const [sortBy, setSortBy] = useState<SortKey | null>(null);
@@ -70,7 +112,8 @@ function Catalog({ reagentList, requested }: Props & { requested: string | null 
     const needle = query.trim().toLowerCase();
     const filtered = allRows.filter((row) =>
       (category === ALL || row.category === category)
-      && (!needle || `${row.name} ${row.size}`.toLowerCase().includes(needle)));
+      && (!group || row.subcategory === group)
+      && (!needle || `${row.name} ${row.method} ${row.size} ${row.code}`.toLowerCase().includes(needle)));
     if (!sortBy) return filtered;
     return [...filtered].sort((a, b) => {
       const left = a[sortBy]; const right = b[sortBy];
@@ -79,14 +122,17 @@ function Catalog({ reagentList, requested }: Props & { requested: string | null 
         : String(left).localeCompare(String(right));
       return ascending ? result : -result;
     });
-  }, [allRows, category, query, sortBy, ascending]);
+  }, [allRows, category, group, query, sortBy, ascending]);
 
   const pageCount = Math.max(1, Math.ceil(rows.length / pageSize));
   const current = Math.min(page, pageCount - 1);
   const visible = rows.slice(current * pageSize, (current + 1) * pageSize);
 
   const setCategory = (value: string) => {
-    setCategoryParam(value === ALL ? null : value);
+    const [name, sub] = value.split(SEP);
+    setCategoryParam(name === ALL ? null : name, sub ?? null);
+    // Picking a category opens its subgroups
+    if (name !== ALL) setToggled((prev) => ({ ...prev, [name]: true }));
     setPage(0);
   };
   const sort = (key: SortKey) => {
@@ -112,13 +158,19 @@ function Catalog({ reagentList, requested }: Props & { requested: string | null 
           <aside className="pg-sidebar pg-rise" aria-label="Search and filter">
             <SearchBox value={query} onChange={(value) => { setQuery(value); setPage(0); }} label="Search reagents" />
             <p className="pg-sidebar-title">Categories</p>
-            <CategoryTabs options={categoryOptions} value={category} onChange={setCategory} label="Filter by category" />
+            <CategoryTabs
+              options={categoryOptions}
+              value={selected}
+              onChange={setCategory}
+              onToggle={toggle}
+              label="Filter by category"
+            />
           </aside>
 
           <div className="pg-catalog-main">
             <p className="pg-count" aria-live="polite">
               {rows.length} {rows.length === 1 ? "pack size" : "pack sizes"}
-              {category !== ALL && <> in <strong>{category}</strong></>}
+              {category !== ALL && <> in <strong>{category}{group && ` › ${group}`}</strong></>}
             </p>
 
             {rows.length > 0 ? (
@@ -147,9 +199,18 @@ function Catalog({ reagentList, requested }: Props & { requested: string | null 
                   <tbody>
                     {visible.map((row) => (
                       <tr key={row.key}>
-                        <th scope="row">{row.name}</th>
-                        <td data-label="Category"><span className="pg-tag">{row.category}</span></td>
-                        <td data-label="Pack size">{row.size}</td>
+                        <th scope="row">
+                          {row.name}
+                          {row.method && <span className="pg-table-sub">{row.method}</span>}
+                        </th>
+                        <td data-label="Category">
+                          <span className="pg-tag">{row.category}</span>
+                          {row.subcategory && <span className="pg-table-sub">{row.subcategory}</span>}
+                        </td>
+                        <td data-label="Pack size">
+                          {row.size}
+                          {row.code && <span className="pg-table-sub">Ref. {row.code}</span>}
+                        </td>
                         <td data-label="Trade price">
                           {formatPrice(row.price) ?? <span className="pg-muted">On request</span>}
                         </td>

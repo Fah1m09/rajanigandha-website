@@ -135,9 +135,13 @@
 .hm-hero-meta .hm-pills { color: var(--ink); }
 
 .hm-hero-title {
-  font-size: clamp(3rem, 9.5vw, 8.5rem);
+  // Sized so the longest line ("Providing Diagnostic Solutions", ~15.2em wide) fits on one row.
+  font-size: clamp(2.25rem, 5.8vw, 5rem);
   line-height: 0.88;
   em { font-style: normal; color: var(--accent-text); }
+
+  // On phones the lines wrap, so give wrapped rows room for descenders.
+  @media (max-width: 640px) { line-height: 1; }
 }
 .hm-line {
   display: block;
@@ -150,12 +154,13 @@
   &:nth-child(3) > span { animation-delay: 240ms; }
 }
 
+// Phones: copy, then a 2×2 bento. Desktop (min-width 821px, below): copy sits under the title
+// with the trust counter beside it, and the bento runs as one full-width row of square photos.
 .hm-hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
-  align-items: center;
-  gap: clamp(2rem, 5vw, 4rem);
-  margin-top: clamp(2rem, 4vw, 3rem);
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(2rem, 4vw, 3rem);
+  margin-top: clamp(1.5rem, 3vw, 2.5rem);
 }
 
 .hm-hero-copy {
@@ -187,6 +192,34 @@
   > :nth-child(2) { grid-column: 6 / 9; animation-delay: 420ms; }
   > :nth-child(3) { grid-column: 1 / 4; animation-delay: 540ms; }
   > :nth-child(4) { grid-column: 4 / 9; animation-delay: 660ms; }
+}
+
+@media (min-width: 821px) {
+  .hm-hero-copy {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+    column-gap: 3rem;
+    > p, .hm-actions { grid-column: 1; }
+  }
+  .hm-trust {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    align-self: end;
+    margin: 0;
+    padding: 0 0 0 2rem;
+    border-top: 0;
+    border-left: 1px solid var(--line);
+  }
+
+  // One row: square photo, two capsules, square photo. Photos stay square so nothing is cropped.
+  .hm-bento {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.62fr) minmax(0, 0.62fr) minmax(0, 1fr);
+    grid-template-rows: auto;
+    aspect-ratio: auto;
+    > :nth-child(n) { grid-column: auto; }
+  }
+  .hm-bento-photo { aspect-ratio: 1 / 1; }
 }
 
 .hm-bento-photo {

@@ -1,6 +1,7 @@
 {
   "name": "ASO LATEX REAGENT ONLY",
   "category": "Serology",
+  "subcategory": "Reagent Only",
   "brand": "Spinreact",
   "packSizes": [
     {
@@ -8,5 +9,5 @@
     }
   ],
   "published": true,
-  "order": 37
+  "order": 97
 }

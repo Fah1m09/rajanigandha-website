@@ -1,0 +1,15 @@
+{
+  "name": "HOMOCYSTEIN CTRL",
+  "category": "Clinical Chemistry",
+  "subcategory": "Controls & Calibrators",
+  "brand": "Spinreact",
+  "method": "Human Serum",
+  "packSizes": [
+    {
+      "size": "3x1.5 mL",
+      "code": "1002281"
+    }
+  ],
+  "published": true,
+  "order": 86
+}

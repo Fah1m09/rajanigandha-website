@@ -1,6 +1,7 @@
 {
   "name": "ANTI-Am",
   "category": "Blood Grouping",
+  "subcategory": "Blood Groups",
   "brand": "Spinreact",
   "packSizes": [
     {
@@ -8,5 +9,5 @@
     }
   ],
   "published": true,
-  "order": 34
+  "order": 94
 }

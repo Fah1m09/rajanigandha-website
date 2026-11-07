@@ -1,0 +1,15 @@
+{
+  "name": "HAEMOGLOBIN CAL",
+  "category": "Clinical Chemistry",
+  "subcategory": "Controls & Calibrators",
+  "brand": "Spinreact",
+  "method": "Animal Standard",
+  "packSizes": [
+    {
+      "size": "1x1 mL",
+      "code": "1001232"
+    }
+  ],
+  "published": true,
+  "order": 73
+}

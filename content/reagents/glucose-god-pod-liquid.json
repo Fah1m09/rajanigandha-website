@@ -1,0 +1,27 @@
+{
+  "name": "GLUCOSE",
+  "category": "Clinical Chemistry",
+  "subcategory": "Substrates",
+  "brand": "Spinreact",
+  "method": "GOD-POD. Liquid",
+  "packSizes": [
+    {
+      "size": "2x50 mL",
+      "code": "41010"
+    },
+    {
+      "size": "2x250 mL",
+      "code": "41011"
+    },
+    {
+      "size": "2x100 mL",
+      "code": "41012"
+    },
+    {
+      "size": "1x1000 mL",
+      "code": "41013"
+    }
+  ],
+  "published": true,
+  "order": 8
+}

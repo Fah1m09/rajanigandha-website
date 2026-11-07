@@ -1,0 +1,19 @@
+{
+  "name": "PHOSPHORUS",
+  "category": "Clinical Chemistry",
+  "subcategory": "Electrolytes",
+  "brand": "Spinreact",
+  "method": "Phosphomolybdate. UV",
+  "packSizes": [
+    {
+      "size": "2x50 mL",
+      "code": "1001154"
+    },
+    {
+      "size": "2x150 mL",
+      "code": "1001155"
+    }
+  ],
+  "published": true,
+  "order": 60
+}

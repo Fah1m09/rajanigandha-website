@@ -1,0 +1,19 @@
+{
+  "name": "LIPASE",
+  "category": "Clinical Chemistry",
+  "subcategory": "Enzymes",
+  "brand": "Spinreact",
+  "method": "DGGR",
+  "packSizes": [
+    {
+      "size": "2x10 mL / 1x4 mL",
+      "code": "1001277"
+    },
+    {
+      "size": "4x10 mL / 1x8 mL",
+      "code": "1001276"
+    }
+  ],
+  "published": true,
+  "order": 42
+}

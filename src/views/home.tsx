@@ -82,7 +82,7 @@ function Hero() {
         </div>
 
         <h1 className="hm-hero-title" id="hm-hero-title">
-          <span className="hm-line"><span>Equipping labs</span></span>
+          <span className="hm-line"><span>Providing Diagnostic Solutions</span></span>
           <span className="hm-line"><span>across Bangladesh</span></span>
           <span className="hm-line"><span>since <em>{company.since}.</em></span></span>
         </h1>

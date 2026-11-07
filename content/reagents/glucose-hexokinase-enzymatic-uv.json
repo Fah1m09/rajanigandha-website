@@ -1,0 +1,19 @@
+{
+  "name": "GLUCOSE",
+  "category": "Clinical Chemistry",
+  "subcategory": "Substrates",
+  "brand": "Spinreact",
+  "method": "Hexokinase. Enzymatic - UV",
+  "packSizes": [
+    {
+      "size": "10x20 mL",
+      "code": "1001200"
+    },
+    {
+      "size": "10x50 mL",
+      "code": "1001201"
+    }
+  ],
+  "published": true,
+  "order": 7
+}

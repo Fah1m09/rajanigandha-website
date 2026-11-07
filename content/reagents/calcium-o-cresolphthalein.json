@@ -1,0 +1,19 @@
+{
+  "name": "CALCIUM",
+  "category": "Clinical Chemistry",
+  "subcategory": "Electrolytes",
+  "brand": "Spinreact",
+  "method": "o-Cresolphthalein",
+  "packSizes": [
+    {
+      "size": "1x50 mL / 1x50 mL",
+      "code": "1001062"
+    },
+    {
+      "size": "1x150 mL / 1x150 mL",
+      "code": "1001061"
+    }
+  ],
+  "published": true,
+  "order": 53
+}

@@ -1,0 +1,15 @@
+{
+  "name": "ACE CTRL",
+  "category": "Clinical Chemistry",
+  "subcategory": "Controls & Calibrators",
+  "brand": "Spinreact",
+  "method": "Human Serum",
+  "packSizes": [
+    {
+      "size": "2x1 mL",
+      "code": "1002227"
+    }
+  ],
+  "published": true,
+  "order": 80
+}

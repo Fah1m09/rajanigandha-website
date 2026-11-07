@@ -1,6 +1,7 @@
 {
   "name": "CRP LATEX",
   "category": "Serology",
+  "subcategory": "Rheumatoid Serodiagnostic",
   "brand": "Spinreact",
   "packSizes": [
     {
@@ -8,5 +9,5 @@
     }
   ],
   "published": true,
-  "order": 41
+  "order": 101
 }

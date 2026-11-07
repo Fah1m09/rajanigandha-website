@@ -1,0 +1,15 @@
+{
+  "name": "SPINCHEM 1",
+  "category": "Clinical Chemistry",
+  "subcategory": "Controls & Calibrators",
+  "brand": "Spinreact",
+  "method": "Human serum",
+  "packSizes": [
+    {
+      "size": "4x5 mL",
+      "code": "1002015"
+    }
+  ],
+  "published": true,
+  "order": 76
+}

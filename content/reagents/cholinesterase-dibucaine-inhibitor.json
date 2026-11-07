@@ -1,0 +1,15 @@
+{
+  "name": "CHOLINESTERASE DIBUCAINE",
+  "category": "Clinical Chemistry",
+  "subcategory": "Enzymes",
+  "brand": "Spinreact",
+  "method": "Inhibitor",
+  "packSizes": [
+    {
+      "size": "1x5 mL",
+      "code": "1001101"
+    }
+  ],
+  "published": true,
+  "order": 28
+}

@@ -1,0 +1,19 @@
+{
+  "name": "SPINTROL NORMAL",
+  "category": "Clinical Chemistry",
+  "subcategory": "Controls & Calibrators",
+  "brand": "Spinreact",
+  "method": "Human serum",
+  "packSizes": [
+    {
+      "size": "4x5 mL",
+      "code": "1002120"
+    },
+    {
+      "size": "1x5 mL",
+      "code": "1002121"
+    }
+  ],
+  "published": true,
+  "order": 66
+}

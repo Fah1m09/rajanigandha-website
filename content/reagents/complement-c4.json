@@ -1,6 +1,7 @@
 {
   "name": "COMPLEMENT C4",
   "category": "Immuno Chemistry",
+  "subcategory": "Immunoturbidimetry Serum Proteins",
   "brand": "Spinreact",
   "packSizes": [
     {
@@ -8,5 +9,5 @@
     }
   ],
   "published": true,
-  "order": 28
+  "order": 88
 }

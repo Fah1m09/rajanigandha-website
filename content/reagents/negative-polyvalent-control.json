@@ -1,6 +1,7 @@
 {
   "name": "NEGATIVE POLYVALENT CONTROL",
   "category": "Serology",
+  "subcategory": "Febrile Serodiagnostic",
   "brand": "Spinreact",
   "packSizes": [
     {
@@ -8,5 +9,5 @@
     }
   ],
   "published": true,
-  "order": 54
+  "order": 114
 }
