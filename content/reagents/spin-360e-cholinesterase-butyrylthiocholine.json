@@ -1,7 +1,7 @@
 {
   "name": "CHOLINESTERASE",
   "category": "Dedicated Lines",
-  "subcategory": "Spin230/Spin 360e",
+  "subcategory": "Spin230 /Spin 360E",
   "brand": "Spinreact",
   "method": "Butyrylthiocholine",
   "packSizes": [
@@ -11,5 +11,5 @@
     }
   ],
   "published": true,
-  "order": 312
+  "order": 200
 }

@@ -1,7 +1,7 @@
 {
   "name": "α-1-GLYCOPROTEIN ACID",
   "category": "Dedicated Lines",
-  "subcategory": "Spin230/Spin 360e",
+  "subcategory": "Spin230 /Spin 360E",
   "brand": "Spinreact",
   "method": "Immunoturbidimetry",
   "packSizes": [
@@ -11,5 +11,5 @@
     }
   ],
   "published": true,
-  "order": 338
+  "order": 226
 }

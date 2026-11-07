@@ -1,7 +1,7 @@
 {
   "name": "CK-NAC",
   "category": "Dedicated Lines",
-  "subcategory": "Spin230/Spin 360e",
+  "subcategory": "Spin230 /Spin 360E",
   "brand": "Spinreact",
   "method": "NAC Immunoinh. Kinetic - UV",
   "packSizes": [
@@ -11,5 +11,5 @@
     }
   ],
   "published": true,
-  "order": 314
+  "order": 202
 }

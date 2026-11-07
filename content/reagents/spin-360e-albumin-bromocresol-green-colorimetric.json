@@ -1,7 +1,7 @@
 {
   "name": "ALBUMIN",
   "category": "Dedicated Lines",
-  "subcategory": "Spin230/Spin 360e",
+  "subcategory": "Spin230 /Spin 360E",
   "brand": "Spinreact",
   "method": "Bromocresol green. Colorimetric",
   "packSizes": [
@@ -11,5 +11,5 @@
     }
   ],
   "published": true,
-  "order": 303
+  "order": 191
 }

@@ -1,7 +1,7 @@
 {
   "name": "IMMUNOGLOBULIN M (IgM)",
   "category": "Dedicated Lines",
-  "subcategory": "Spin230/Spin 360e",
+  "subcategory": "Spin230 /Spin 360E",
   "brand": "Spinreact",
   "method": "Immunoturbidimetry",
   "packSizes": [
@@ -11,5 +11,5 @@
     }
   ],
   "published": true,
-  "order": 351
+  "order": 239
 }

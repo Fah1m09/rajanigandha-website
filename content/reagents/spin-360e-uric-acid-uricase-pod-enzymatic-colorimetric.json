@@ -1,7 +1,7 @@
 {
   "name": "URIC ACID",
   "category": "Dedicated Lines",
-  "subcategory": "Spin230/Spin 360e",
+  "subcategory": "Spin230 /Spin 360E",
   "brand": "Spinreact",
   "method": "Uricase - POD. Enzymatic - Colorimetric",
   "packSizes": [
@@ -11,5 +11,5 @@
     }
   ],
   "published": true,
-  "order": 331
+  "order": 219
 }

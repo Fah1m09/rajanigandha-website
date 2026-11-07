@@ -1,7 +1,7 @@
 {
   "name": "CHOLESTEROL",
   "category": "Dedicated Lines",
-  "subcategory": "Spin230/Spin 360e",
+  "subcategory": "Spin230 /Spin 360E",
   "brand": "Spinreact",
   "method": "CHOD / PAP. Enzymatic. Colorimetric",
   "packSizes": [
@@ -11,5 +11,5 @@
     }
   ],
   "published": true,
-  "order": 311
+  "order": 199
 }

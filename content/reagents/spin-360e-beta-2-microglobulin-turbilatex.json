@@ -1,7 +1,7 @@
 {
   "name": "β-2-MICROGLOBULIN",
   "category": "Dedicated Lines",
-  "subcategory": "Spin230/Spin 360e",
+  "subcategory": "Spin230 /Spin 360E",
   "brand": "Spinreact",
   "method": "Turbilatex",
   "packSizes": [
@@ -11,5 +11,5 @@
     }
   ],
   "published": true,
-  "order": 339
+  "order": 227
 }
