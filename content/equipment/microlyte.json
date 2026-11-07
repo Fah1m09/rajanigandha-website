@@ -55,7 +55,7 @@
   ],
   "certifications": ["ISO 13485", "ISO 9001", "CE", "TÜV", "STQC", "Make in India"],
   "brochure": "/img/products/microlyte-brochure.pdf",
-  "featured": true,
+  "featured": false,
   "published": true,
   "order": 14
 }

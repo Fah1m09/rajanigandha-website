@@ -69,7 +69,7 @@
     "Made in Italy"
   ],
   "certifications": ["CE IVD"],
-  "featured": false,
+  "featured": true,
   "published": true,
   "order": 4
 }
