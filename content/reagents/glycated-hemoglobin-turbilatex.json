@@ -6,10 +6,6 @@
   "method": "Turbilatex",
   "packSizes": [
     {
-      "size": "1x15 mL / 1x5 mL / 1x60 mL",
-      "code": "43099"
-    },
-    {
       "size": "1x30 mL / 1x10 mL / 1x125 mL",
       "code": "43100"
     },
