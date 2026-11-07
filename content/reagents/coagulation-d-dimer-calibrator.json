@@ -1,0 +1,14 @@
+{
+  "name": "D-DIMER CALIBRATOR",
+  "category": "Coagulation",
+  "subcategory": "Reagents, Controls & Calibrators",
+  "brand": "Spinreact",
+  "packSizes": [
+    {
+      "size": "6x0.5 mL (6 levels)",
+      "code": "1709111"
+    }
+  ],
+  "published": true,
+  "order": 298
+}

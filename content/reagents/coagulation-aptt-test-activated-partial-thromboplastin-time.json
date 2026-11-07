@@ -1,0 +1,15 @@
+{
+  "name": "APTT",
+  "category": "Coagulation",
+  "subcategory": "Reagents, Controls & Calibrators",
+  "brand": "Spinreact",
+  "method": "Activated partial thromboplastin time",
+  "packSizes": [
+    {
+      "size": "5x4 mL",
+      "code": "1709201"
+    }
+  ],
+  "published": true,
+  "order": 293
+}

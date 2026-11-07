@@ -1,0 +1,14 @@
+{
+  "name": "COAGULATION NORMAL CONTROL",
+  "category": "Coagulation",
+  "subcategory": "Reagents, Controls & Calibrators",
+  "brand": "Spinreact",
+  "packSizes": [
+    {
+      "size": "4x1 mL",
+      "code": "1709104"
+    }
+  ],
+  "published": true,
+  "order": 296
+}

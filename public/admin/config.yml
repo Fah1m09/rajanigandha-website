@@ -94,7 +94,7 @@ collections:
       - name: category
         label: Category
         widget: select
-        options: [Clinical Chemistry, Serology, Immuno Chemistry, Blood Grouping, Dedicated Lines, Hematology]
+        options: [Clinical Chemistry, Serology, Immuno Chemistry, Blood Grouping, Dedicated Lines, Hematology, Coagulation]
       - name: subcategory
         label: Subgroup
         widget: string

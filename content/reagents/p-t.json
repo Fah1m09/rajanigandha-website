@@ -1,7 +1,7 @@
 {
   "name": "P.T.",
-  "category": "Blood Grouping",
-  "subcategory": "Coagulation",
+  "category": "Coagulation",
+  "subcategory": "Reagents, Controls & Calibrators",
   "brand": "Spinreact",
   "packSizes": [
     {
@@ -9,5 +9,5 @@
     }
   ],
   "published": true,
-  "order": 149
+  "order": 293
 }
