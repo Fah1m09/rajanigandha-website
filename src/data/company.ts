@@ -71,14 +71,6 @@ export const company = {
       logo: "/img/motic.png",
       href: "https://www.motic.com/",
       description: "Began with compound microscopes and grew into digital microscopy, imaging software and research tools, adding brands like National and Swift.",
-    },
-    {
-      name: "Hemogen",
-      since: 2025,
-      origin: "Bangladesh",
-      logo: "/img/hemogen.png",
-      href: "https://www.hemogen.com/",
-      description: "Biochemistry analyzers, blood cell counters and clinical diagnostic products, supplied and serviced by our own team across Bangladesh.",
-    },
+    }
   ],
 };

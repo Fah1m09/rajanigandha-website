@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight, Check, FlaskConical, Headphones, Mail, Microscope, Phone, Wrench } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Asterisk, FlaskConical, Mail, Microscope, Phone, Sparkle, Wrench } from "lucide-react";
 import { Counter, Marquee, Reveal } from "../components/home/motion";
 import FeaturedSlider from "../components/home/FeaturedSlider";
 import { company } from "../data/company";
@@ -66,72 +66,82 @@ export default function HomePage() {
   );
 }
 
+// Hero banner photo. Placeholder for now: swap the file path when the final photo is ready.
+const heroVideo = "/img/broll.mp4";
+// Still image shown while the video loads (or if it can't play).
+const heroPoster = "/img/sp-low-web.jpg";
+
 function Hero() {
-  // The collage only shows products that have a photo.
-  const [first, second] = featured.filter((item) => item.image);
+  // The wide card shows the first featured product that has a photo.
+  const product = featured.find((item) => item.image);
+  const [years, providers] = company.stats;
   return (
     <section className="hm-hero" aria-labelledby="hm-hero-title">
       <div className="hm-wrap">
-        <div className="hm-hero-meta">
-          <ul className="hm-pills" aria-label="What we supply">
-            <li>Equipment</li>
-            <li>Reagents</li>
-            <li>Service</li>
-          </ul>
-          <p>® Since {company.since} — Based in {company.city}</p>
-        </div>
-
-        <h1 className="hm-hero-title" id="hm-hero-title">
-          <span className="hm-line"><span>Providing Diagnostic Solutions</span></span>
-          <span className="hm-line"><span>across Bangladesh</span></span>
-          <span className="hm-line"><span>since <em>{company.since}.</em></span></span>
-        </h1>
-
-        <div className="hm-hero-grid">
+        <div className="hm-hero-main">
           <div className="hm-hero-copy">
-            <p>
-              We supply diagnostic analyzers and reagents from trusted manufacturers, and keep them
-              running with our own technical team.
+            <ul className="hm-hero-tags" aria-label="What we supply">
+              <li><Sparkle aria-hidden="true" />Equipment</li>
+              <li><Sparkle aria-hidden="true" />Reagents</li>
+              <li><Sparkle aria-hidden="true" />Service</li>
+            </ul>
+
+            <h1 className="hm-hero-title" id="hm-hero-title">
+              <span className="hm-line"><span>Diagnostic</span></span>
+              <span className="hm-line"><span>solutions for</span></span>
+              <span className="hm-line">
+                <span><Asterisk className="hm-hero-star" aria-hidden="true" />every lab</span>
+              </span>
+            </h1>
+
+            <hr className="hm-hero-rule" />
+
+            <p className="hm-hero-lead">
+              Since {company.since}, we have supplied diagnostic analyzers and reagents from trusted
+              manufacturers, and kept them running with our own technical team.
             </p>
+
             <div className="hm-actions">
-              <Link className="hm-btn hm-btn-primary" href="/equipments">
-                Browse equipment <ArrowUpRight aria-hidden="true" />
+              <Link className="hm-btn hm-btn-primary" href="/equipments">Browse equipment</Link>
+              <Link className="hm-btn hm-btn-soft" href="/contact">
+                Request a quote <ArrowRight aria-hidden="true" />
               </Link>
-              <Link className="hm-btn hm-btn-ghost" href="/contact">Request a quote</Link>
-            </div>
-            <div className="hm-trust">
-              <strong><Counter value={company.stats[1].value} suffix={company.stats[1].suffix} /></strong>
-              <span>{company.stats[1].label.toLowerCase()} trust our products</span>
             </div>
           </div>
 
-          {/* Bento collage: wide photo + tall pill on top, tall pill + wide photo below. Decorative, so hidden from screen readers. */}
-          <div className="hm-bento" aria-hidden="true">
-            <figure className="hm-bento-photo is-a">
-              {first && <img src={first.image} alt="" />}
-              {first && <figcaption>{first.name}</figcaption>}
-            </figure>
+          {/* Banner photo with a notch cut into its left edge. */}
+          <div className="hm-hero-media">
+            {/* Browsers only autoplay video that is muted; playsInline stops iPhones opening it full screen. */}
+            <video
+              src={heroVideo}
+              poster={heroPoster}
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="auto"
+              aria-hidden="true"
+            />
+            <span className="hm-hero-notch" aria-hidden="true" />
+          </div>
+        </div>
 
-            <div className="hm-bento-pill is-light">
-              <span className="hm-bento-icon"><Check /></span>
-              <p>Installed by our engineers</p>
-            </div>
+        <div className="hm-hero-cards">
+          <Link className="hm-hero-card is-wide" href="/equipments">
+            <p className="hm-hero-card-text">
+              <span>Genuine products from {company.brands.length} trusted brands</span>
+            </p>
+            {product?.image && <img src={product.image} alt="" />}
+          </Link>
 
-            <div className="hm-bento-pill is-dark">
-              <span className="hm-bento-icon"><Headphones /></span>
-              <div>
-                <strong>24/7</strong>
-                <p>Technical support</p>
-              </div>
-              <span className="hm-bento-avatars">
-                {company.brands.map((brand) => <img key={brand.name} src={brand.logo} alt="" />)}
-              </span>
-            </div>
+          <div className="hm-hero-card">
+            <strong><Counter value={providers.value} suffix={providers.suffix} /></strong>
+            <p className="hm-hero-card-text"><span>{providers.label} trust our products</span></p>
+          </div>
 
-            <figure className="hm-bento-photo is-b">
-              {second && <img src={second.image} alt="" />}
-              {second && <figcaption>{second.name}</figcaption>}
-            </figure>
+          <div className="hm-hero-card is-alt">
+            <strong><Counter value={years.value} suffix="+" /></strong>
+            <p className="hm-hero-card-text"><span>Years serving labs across Bangladesh</span></p>
           </div>
         </div>
       </div>

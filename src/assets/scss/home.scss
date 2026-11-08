@@ -118,30 +118,54 @@
   padding-bottom: 0.15rem;
 }
 
-// ——— Hero ———
-.hm-hero { padding: clamp(2rem, 5vw, 4rem) 0 clamp(3rem, 6vw, 5rem); }
+// ——— Hero: copy beside a notched banner photo, three cards below ———
+.hm-hero { padding: clamp(1.5rem, 4vw, 3rem) 0 clamp(3rem, 6vw, 5rem); }
 
-.hm-hero-meta {
+.hm-hero-main {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.hm-hero-copy { animation: hm-fade 900ms ease both; }
+
+.hm-hero-tags {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  margin-bottom: clamp(1.5rem, 4vw, 3rem);
-  color: var(--muted);
-  font-weight: 600;
-  animation: hm-fade 700ms ease both;
+  gap: 0.5rem;
+  margin-bottom: clamp(1.25rem, 2.5vw, 1.75rem);
+  li {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.9rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--surface);
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+  svg { width: 0.9em; height: 0.9em; color: var(--accent-text); fill: currentColor; }
 }
-.hm-hero-meta .hm-pills { color: var(--ink); }
 
 .hm-hero-title {
-  // Sized so the longest line ("Providing Diagnostic Solutions", ~15.2em wide) fits on one row.
-  font-size: clamp(2.25rem, 5.8vw, 5rem);
-  line-height: 0.88;
-  em { font-style: normal; color: var(--accent-text); }
-
-  // On phones the lines wrap, so give wrapped rows room for descenders.
-  @media (max-width: 640px) { line-height: 1; }
+  font-size: clamp(2.3rem, 4.4vw, 4rem);
+  line-height: 1;
+  text-transform: uppercase;
+  .hm-line > span { white-space: nowrap; }
+  // On phones the lines wrap, so give wrapped rows a little more room.
+  @media (max-width: 640px) { line-height: 1.05; }
+}
+.hm-hero-title .hm-hero-star {
+  display: inline-block;
+  width: 0.7em;
+  height: 0.7em;
+  margin-right: 0.2em;
+  vertical-align: -0.02em;
+  color: var(--accent-text);
+  stroke-width: 3;
+  animation: hm-spin 14s linear infinite;
 }
 .hm-line {
   display: block;
@@ -154,157 +178,122 @@
   &:nth-child(3) > span { animation-delay: 240ms; }
 }
 
-// Phones: copy, then a 2×2 bento. Desktop (min-width 821px, below): copy sits under the title
-// with the trust counter beside it, and the bento runs as one full-width row of square photos.
-.hm-hero-grid {
+.hm-hero-rule {
+  max-width: 22rem;
+  margin: clamp(1.5rem, 3vw, 2rem) 0;
+  border: 0;
+  border-top: 1px solid var(--line);
+}
+.hm-hero-lead { max-width: 40ch; color: var(--muted); line-height: 1.6; }
+.hm-hero .hm-actions { margin-top: 1.75rem; }
+
+.hm-btn-soft { background: var(--surface); }
+.hm-btn-soft:hover { background: var(--ink); color: var(--bg); }
+
+// Banner photo. The notch is a block of page colour on the left edge;
+// its ::before/::after round off the photo's corners above and below it.
+.hm-hero-media {
+  --notch-w: clamp(2.5rem, 6vw, 5.5rem);
+  --notch-r: 1.25rem;
+  position: relative;
+  aspect-ratio: 5 / 4;
+  overflow: hidden;
+  border-radius: calc(var(--radius) * 1.2);
+  background: var(--surface);
+  animation: hm-fade 900ms 200ms ease both;
+  img, video { display: block; width: 100%; height: 100%; object-fit: cover; }
+}
+.hm-hero-notch {
+  position: absolute;
+  left: -1px; // hides a hairline of photo at the edge
+  top: 16%;
+  width: var(--notch-w);
+  height: 42%;
+  border-radius: 0 var(--notch-r) var(--notch-r) 0;
+  background: var(--bg);
+  &::before, &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: var(--notch-r);
+    height: var(--notch-r);
+  }
+  &::before {
+    bottom: 100%;
+    background: radial-gradient(circle at 100% 0, transparent calc(var(--notch-r) - 0.5px), var(--bg) var(--notch-r));
+  }
+  &::after {
+    top: 100%;
+    background: radial-gradient(circle at 100% 100%, transparent calc(var(--notch-r) - 0.5px), var(--bg) var(--notch-r));
+  }
+}
+
+// ——— Hero cards: wide product card + two stat cards ———
+.hm-hero-cards {
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: clamp(2rem, 4vw, 3rem);
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1rem;
   margin-top: clamp(1.5rem, 3vw, 2.5rem);
 }
-
-.hm-hero-copy {
-  animation: hm-fade 900ms 450ms ease both;
-  > p { max-width: 34ch; font-size: clamp(1.1rem, 1.6vw, 1.35rem); line-height: 1.45; color: var(--muted); }
-}
-.hm-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2rem; }
-
-.hm-trust {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 2.5rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--line);
-  strong { font-family: var(--font-head); font-size: 3rem; line-height: 1; }
-  span { max-width: 16ch; color: var(--muted); font-weight: 600; }
-}
-
-// ——— Hero bento: wide photo + tall pill on top, tall pill + wide photo below ———
-.hm-bento {
-  display: grid;
-  grid-template-columns: repeat(8, minmax(0, 1fr));
-  grid-template-rows: repeat(2, minmax(0, 1fr));
-  gap: clamp(0.6rem, 1.4vw, 1rem);
-  aspect-ratio: 1 / 1.12;
-  > * { animation: hm-fade 900ms ease both; }
-  > :nth-child(1) { grid-column: 1 / 6; animation-delay: 300ms; }
-  > :nth-child(2) { grid-column: 6 / 9; animation-delay: 420ms; }
-  > :nth-child(3) { grid-column: 1 / 4; animation-delay: 540ms; }
-  > :nth-child(4) { grid-column: 4 / 9; animation-delay: 660ms; }
-}
-
-@media (min-width: 821px) {
-  .hm-hero-copy {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    align-items: end;
-    column-gap: 3rem;
-    > p, .hm-actions { grid-column: 1; }
-  }
-  .hm-trust {
-    grid-column: 2;
-    grid-row: 1 / span 2;
-    align-self: end;
-    margin: 0;
-    padding: 0 0 0 2rem;
-    border-top: 0;
-    border-left: 1px solid var(--line);
-  }
-
-  // One row: square photo, two capsules, square photo. Photos stay square so nothing is cropped.
-  .hm-bento {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 0.62fr) minmax(0, 0.62fr) minmax(0, 1fr);
-    grid-template-rows: auto;
-    aspect-ratio: auto;
-    > :nth-child(n) { grid-column: auto; }
-  }
-  .hm-bento-photo { aspect-ratio: 1 / 1; }
-}
-
-.hm-bento-photo {
+.hm-hero-card {
   position: relative;
-  margin: 0;
-  overflow: hidden;
-  border-radius: calc(var(--radius) * 1.3);
-  background: var(--surface);
-  &.is-b { background: var(--surface-2); }
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; // product photos are square with their own background, so they fill the tile
-    transition: transform 600ms cubic-bezier(0.2, 0.8, 0.2, 1);
-  }
-  &:hover img { transform: scale(1.05); }
-  figcaption {
-    position: absolute;
-    left: 50%;
-    bottom: clamp(0.6rem, 1.5vw, 1rem);
-    transform: translateX(-50%);
-    max-width: calc(100% - 1.5rem);
-    overflow: hidden;
-    padding: 0.3rem 0.8rem;
-    border-radius: 999px;
-    background: var(--ink);
-    color: var(--bg);
-    font-size: clamp(0.7rem, 1.1vw, 0.8rem);
-    font-weight: 700;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-}
-
-// Tall stadium cards; the full radius turns them into capsules at any size
-.hm-bento-pill {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: clamp(0.6rem, 1.5vw, 1rem);
-  padding: 1.25rem 0.75rem;
-  border-radius: 999px;
-  text-align: center;
-  p { margin: 0; font-weight: 600; line-height: 1.3; }
-  &.is-light {
-    background: var(--accent);
-    color: var(--on-accent);
-    p { max-width: 12ch; font-size: clamp(0.95rem, 1.6vw, 1.2rem); }
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: clamp(13rem, 20vw, 16.5rem);
+  padding: clamp(1.1rem, 2vw, 1.5rem);
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: linear-gradient(155deg, var(--surface) 10%, color-mix(in srgb, var(--accent) 45%, var(--surface)) 100%);
+  animation: hm-fade 900ms ease both;
+  &:nth-child(1) { animation-delay: 400ms; }
+  &:nth-child(2) { animation-delay: 500ms; }
+  &:nth-child(3) { animation-delay: 600ms; }
+  strong {
+    font-family: var(--font-head);
+    font-size: clamp(3rem, 6vw, 5rem);
+    line-height: 1;
+    letter-spacing: -0.04em;
   }
-  &.is-dark {
-    justify-content: space-between;
-    padding-block: clamp(1.25rem, 3vw, 2rem);
-    background: var(--ink);
-    color: var(--bg);
-    strong { display: block; font-family: var(--font-head); font-size: clamp(2rem, 4.2vw, 3rem); line-height: 1; }
-    p { margin-top: 0.35rem; font-size: clamp(0.75rem, 1.2vw, 0.9rem); opacity: 0.75; }
-    .hm-bento-icon { background: var(--bg); color: var(--ink); }
+  &.is-alt {
+    background: linear-gradient(200deg, color-mix(in srgb, var(--accent) 65%, var(--surface)) 0%, var(--surface) 100%);
+  }
+  &.is-wide {
+    justify-content: flex-start;
+    background: linear-gradient(135deg, var(--surface-2), color-mix(in srgb, var(--accent) 25%, var(--surface)));
+    // Photo fills the right side and fades into the card on its left edge
+    img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 60%;
+      height: 100%;
+      object-fit: cover;
+      -webkit-mask-image: linear-gradient(to right, transparent, #000 40%);
+      mask-image: linear-gradient(to right, transparent, #000 40%);
+      transition: transform 600ms cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+    &:hover img { transform: scale(1.05); }
+    &:focus-visible { outline: 3px solid var(--accent-text); outline-offset: 3px; }
   }
 }
-
-.hm-bento-icon {
-  display: grid;
-  place-items: center;
-  width: clamp(2.25rem, 4vw, 2.9rem);
-  height: clamp(2.25rem, 4vw, 2.9rem);
-  border-radius: 50%;
-  background: var(--surface);
-  color: var(--ink);
-  svg { width: 50%; height: 50%; stroke-width: 2.5; }
-}
-
-// Overlapping round brand logos, like an avatar stack
-.hm-bento-avatars {
-  display: flex;
-  img {
-    width: clamp(2.1rem, 3.8vw, 2.75rem);
-    height: clamp(2.1rem, 3.8vw, 2.75rem);
-    padding: 0.3rem;
-    border: 2px solid var(--ink);
-    border-radius: 50%;
-    background: #fff; // logos are made for a white background, in both themes
-    object-fit: contain;
-    & + img { margin-left: -0.6rem; }
+// Each line of card text gets its own soft highlight
+.hm-hero-card-text {
+  position: relative;
+  z-index: 1;
+  max-width: 15ch;
+  font-size: clamp(1.05rem, 1.6vw, 1.35rem);
+  font-weight: 600;
+  line-height: 1.6;
+  span {
+    padding: 0.2em 0.55em;
+    border-radius: 0.6rem;
+    background: color-mix(in srgb, var(--surface) 70%, transparent);
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
   }
+  .is-wide & { max-width: 11ch; font-family: var(--font-head); font-size: clamp(1.4rem, 2.4vw, 2rem); line-height: 1.5; }
 }
 
 // ——— Ticker bands ———
@@ -641,18 +630,21 @@
 
 @keyframes hm-rise { from { transform: translateY(105%); } to { transform: none; } }
 @keyframes hm-fade { from { opacity: 0; transform: translateY(1.5rem); } to { opacity: 1; transform: none; } }
+@keyframes hm-spin { to { transform: rotate(360deg); } }
 @keyframes hm-marquee { to { transform: translateX(-50%); } }
 
 // ——— Responsive ———
 @media (max-width: 1024px) {
-  .hm-stats, .hm-tiles, .hm-brands { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .hm-stats, .hm-tiles, .hm-brands, .hm-hero-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .hm-hero-card.is-wide { grid-column: span 2; }
   .hm-service { grid-template-columns: 3rem minmax(0, 1fr) auto; }
   .hm-service-icon { display: none; }
 }
 
 @media (max-width: 820px) {
-  .hm-hero-grid, .hm-process { grid-template-columns: minmax(0, 1fr); }
-  .hm-bento { max-width: 34rem; width: 100%; margin: 0 auto; }
+  .hm-hero-main, .hm-process { grid-template-columns: minmax(0, 1fr); }
+  .hm-hero-media { aspect-ratio: 16 / 10; }
+  .hm-hero-notch { display: none; }
   .hm-process-intro { position: static; }
   .hm-step { top: 5rem !important; }
   .hm-service { grid-template-columns: minmax(0, 1fr); gap: 0.75rem; }
@@ -660,8 +652,8 @@
 }
 
 @media (max-width: 520px) {
-  .hm-stats, .hm-tiles, .hm-brands { grid-template-columns: minmax(0, 1fr); }
-  .hm-brand:first-child { grid-column: auto; }
+  .hm-stats, .hm-tiles, .hm-brands, .hm-hero-cards { grid-template-columns: minmax(0, 1fr); }
+  .hm-brand:first-child, .hm-hero-card.is-wide { grid-column: auto; }
   .hm-stat, .hm-tile { min-height: 11rem; }
   .hm-actions .hm-btn { flex: 1 1 auto; justify-content: center; }
 }
