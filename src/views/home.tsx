@@ -229,10 +229,13 @@ function Brands() {
           {company.brands.map((brand, index) => (
             <Reveal as="article" className="hm-brand" delay={index * 100} key={brand.name}>
               <div className="hm-brand-top">
-                <img src={brand.logo} alt={`${brand.name} logo`} />
+                <span className="hm-brand-logo">
+                  <img src={brand.logo} alt={`${brand.name} logo`} />
+                </span>
                 <span className="hm-sticker">Since {brand.since}</span>
               </div>
               <h3>{brand.name}</h3>
+              <div className="hm-brand-origin">{brand.origin}</div>
               <p>{brand.description}</p>
               <a className="hm-link" href={brand.href} target="_blank" rel="noreferrer">
                 Visit {brand.name} <ArrowUpRight aria-hidden="true" />
