@@ -1,0 +1,14 @@
+{
+  "name": "Anti-TP",
+  "category": "Infectious Disease",
+  "subcategory": "CLi-1600 CLIA",
+  "brand": "Biotime",
+  "method": "Chemiluminescence immunoassay (CLIA)",
+  "packSizes": [
+    {
+      "size": "25 test per box"
+    }
+  ],
+  "published": false,
+  "order": 1700
+}

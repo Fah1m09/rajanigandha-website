@@ -1,12 +1,12 @@
 {
   "name": "TT4",
-  "category": "Thyroid Gland",
+  "category": "Thyroid",
   "subcategory": "FLI-100 FIA",
   "brand": "Biotime",
   "method": "FIA · Plasma/Serum · 15 min · 10–320 nmol/L",
   "packSizes": [
     {
-      "size": "Test cartridge kit"
+      "size": "25 test per box"
     }
   ],
   "published": true,

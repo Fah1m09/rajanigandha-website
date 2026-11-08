@@ -1,0 +1,14 @@
+{
+  "name": "CA15-3",
+  "category": "Tumor",
+  "subcategory": "CLi-1600 CLIA",
+  "brand": "Biotime",
+  "method": "Chemiluminescence immunoassay (CLIA)",
+  "packSizes": [
+    {
+      "size": "25 test per box"
+    }
+  ],
+  "published": false,
+  "order": 1510
+}

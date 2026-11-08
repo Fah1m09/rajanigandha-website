@@ -1,0 +1,14 @@
+{
+  "name": "AMH",
+  "category": "Fertility/Infertility",
+  "subcategory": "CLi-1600 CLIA",
+  "brand": "Biotime",
+  "method": "Chemiluminescence immunoassay (CLIA)",
+  "packSizes": [
+    {
+      "size": "25 test per box"
+    }
+  ],
+  "published": true,
+  "order": 1310
+}
