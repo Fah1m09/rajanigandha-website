@@ -1,0 +1,14 @@
+{
+  "name": "MAU",
+  "category": "Diabetes and Renal Injury",
+  "subcategory": "FLI-100 FIA",
+  "brand": "Biotime",
+  "method": "FIA · Urine · 10 min · 2–300 mg/L",
+  "packSizes": [
+    {
+      "size": "Test cartridge kit"
+    }
+  ],
+  "published": true,
+  "order": 720
+}

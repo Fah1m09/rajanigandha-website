@@ -1,0 +1,14 @@
+{
+  "name": "3 in 1 (FSH/LH/PRL)",
+  "category": "Hormone",
+  "subcategory": "FLI-100 FIA",
+  "brand": "Biotime",
+  "method": "FIA · Serum · 20 min",
+  "packSizes": [
+    {
+      "size": "Test cartridge kit"
+    }
+  ],
+  "published": true,
+  "order": 670
+}

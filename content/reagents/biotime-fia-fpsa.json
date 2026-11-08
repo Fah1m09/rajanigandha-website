@@ -1,0 +1,14 @@
+{
+  "name": "fPSA",
+  "category": "Tumor",
+  "subcategory": "FLI-100 FIA",
+  "brand": "Biotime",
+  "method": "FIA · Serum · 15 min · 0.2–30 ng/mL",
+  "packSizes": [
+    {
+      "size": "Test cartridge kit"
+    }
+  ],
+  "published": true,
+  "order": 560
+}

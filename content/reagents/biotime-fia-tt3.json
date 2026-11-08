@@ -1,0 +1,14 @@
+{
+  "name": "TT3",
+  "category": "Thyroid Gland",
+  "subcategory": "FLI-100 FIA",
+  "brand": "Biotime",
+  "method": "FIA · Serum · 15 min · 0.5–10 nmol/L",
+  "packSizes": [
+    {
+      "size": "Test cartridge kit"
+    }
+  ],
+  "published": true,
+  "order": 770
+}

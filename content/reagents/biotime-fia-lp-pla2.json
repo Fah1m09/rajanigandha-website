@@ -1,0 +1,14 @@
+{
+  "name": "LP-PLA2",
+  "category": "Cardiac",
+  "subcategory": "FLI-100 FIA",
+  "brand": "Biotime",
+  "method": "FIA · WB/Serum/Plasma · 10 min · 5–800 ng/mL",
+  "packSizes": [
+    {
+      "size": "Test cartridge kit"
+    }
+  ],
+  "published": true,
+  "order": 490
+}

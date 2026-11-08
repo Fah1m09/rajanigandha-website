@@ -1,0 +1,14 @@
+{
+  "name": "25(OH)-D",
+  "category": "Others",
+  "subcategory": "FLI-100 FIA",
+  "brand": "Biotime",
+  "method": "FIA · Plasma · 20 min",
+  "packSizes": [
+    {
+      "size": "Test cartridge kit"
+    }
+  ],
+  "published": true,
+  "order": 860
+}

@@ -27,7 +27,7 @@ const services = [
   {
     icon: FlaskConical,
     title: "Reagents",
-    copy: `${reagentList.length} reagent lines for clinical chemistry, serology, immunochemistry, blood grouping and dedicated analyzer lines, in the pack sizes your lab runs.`,
+    copy: `${reagentList.length} reagent lines for clinical chemistry, serology, immunochemistry, blood grouping, dedicated analyzer lines and rapid FIA tests, in the pack sizes your lab runs.`,
     to: "/reagent",
     action: "Browse reagents",
   },

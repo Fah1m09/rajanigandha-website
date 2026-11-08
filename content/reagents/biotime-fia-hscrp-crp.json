@@ -1,0 +1,14 @@
+{
+  "name": "hsCRP/CRP",
+  "category": "Infection",
+  "subcategory": "FLI-100 FIA",
+  "brand": "Biotime",
+  "method": "FIA · WB/Serum/Plasma · 3 min · 0.5–200 mg/L",
+  "packSizes": [
+    {
+      "size": "Test cartridge kit"
+    }
+  ],
+  "published": true,
+  "order": 570
+}

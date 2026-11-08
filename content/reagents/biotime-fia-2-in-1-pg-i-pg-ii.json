@@ -1,0 +1,14 @@
+{
+  "name": "2 in 1 (PG I/PG II)",
+  "category": "Gastrointestinal",
+  "subcategory": "FLI-100 FIA",
+  "brand": "Biotime",
+  "method": "FIA · Serum · 15 min",
+  "packSizes": [
+    {
+      "size": "Test cartridge kit"
+    }
+  ],
+  "published": true,
+  "order": 820
+}

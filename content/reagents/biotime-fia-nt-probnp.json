@@ -1,0 +1,14 @@
+{
+  "name": "NT-proBNP",
+  "category": "Cardiac",
+  "subcategory": "FLI-100 FIA",
+  "brand": "Biotime",
+  "method": "FIA · WB/Serum/Plasma · 15 min · 15–35000 pg/mL",
+  "packSizes": [
+    {
+      "size": "Test cartridge kit"
+    }
+  ],
+  "published": true,
+  "order": 450
+}

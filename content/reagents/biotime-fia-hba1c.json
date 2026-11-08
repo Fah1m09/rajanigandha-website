@@ -1,0 +1,14 @@
+{
+  "name": "HbA1c",
+  "category": "Diabetes and Renal Injury",
+  "subcategory": "FLI-100 FIA",
+  "brand": "Biotime",
+  "method": "FIA · WB · 5 min · 4–15%",
+  "packSizes": [
+    {
+      "size": "Test cartridge kit"
+    }
+  ],
+  "published": true,
+  "order": 710
+}

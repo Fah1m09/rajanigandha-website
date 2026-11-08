@@ -1,0 +1,14 @@
+{
+  "name": "Cys-C",
+  "category": "Diabetes and Renal Injury",
+  "subcategory": "FLI-100 FIA",
+  "brand": "Biotime",
+  "method": "FIA · WB/Plasma · 5 min · 0.2–8 mg/L",
+  "packSizes": [
+    {
+      "size": "Test cartridge kit"
+    }
+  ],
+  "published": true,
+  "order": 740
+}

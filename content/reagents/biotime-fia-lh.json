@@ -1,0 +1,14 @@
+{
+  "name": "LH",
+  "category": "Hormone",
+  "subcategory": "FLI-100 FIA",
+  "brand": "Biotime",
+  "method": "FIA · Serum · 20 min · 1–200 mIU/mL",
+  "packSizes": [
+    {
+      "size": "Test cartridge kit"
+    }
+  ],
+  "published": true,
+  "order": 650
+}

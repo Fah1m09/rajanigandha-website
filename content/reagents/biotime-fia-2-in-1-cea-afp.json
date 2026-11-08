@@ -1,0 +1,14 @@
+{
+  "name": "2 in 1 (CEA/AFP)",
+  "category": "Tumor",
+  "subcategory": "FLI-100 FIA",
+  "brand": "Biotime",
+  "method": "FIA · Serum/Plasma · 10 min",
+  "packSizes": [
+    {
+      "size": "Test cartridge kit"
+    }
+  ],
+  "published": true,
+  "order": 540
+}

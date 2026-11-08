@@ -1,0 +1,14 @@
+{
+  "name": "2 in 1 (CRP/SAA)",
+  "category": "Infection",
+  "subcategory": "FLI-100 FIA",
+  "brand": "Biotime",
+  "method": "FIA · WB/Serum/Plasma · 3 min",
+  "packSizes": [
+    {
+      "size": "Test cartridge kit"
+    }
+  ],
+  "published": true,
+  "order": 600
+}

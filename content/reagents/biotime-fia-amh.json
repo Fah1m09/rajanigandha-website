@@ -1,0 +1,14 @@
+{
+  "name": "AMH",
+  "category": "Hormone",
+  "subcategory": "FLI-100 FIA",
+  "brand": "Biotime",
+  "method": "FIA · Serum · 10 min · 0.1–25 ng/mL",
+  "packSizes": [
+    {
+      "size": "Test cartridge kit"
+    }
+  ],
+  "published": true,
+  "order": 700
+}

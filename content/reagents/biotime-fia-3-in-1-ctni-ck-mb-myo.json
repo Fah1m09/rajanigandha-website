@@ -1,0 +1,14 @@
+{
+  "name": "3 in 1 (cTnI/CK-MB/Myo)",
+  "category": "Cardiac",
+  "subcategory": "FLI-100 FIA",
+  "brand": "Biotime",
+  "method": "FIA · WB/Plasma · 15 min",
+  "packSizes": [
+    {
+      "size": "Test cartridge kit"
+    }
+  ],
+  "published": true,
+  "order": 430
+}

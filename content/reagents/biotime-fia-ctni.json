@@ -1,0 +1,14 @@
+{
+  "name": "cTnI",
+  "category": "Cardiac",
+  "subcategory": "FLI-100 FIA",
+  "brand": "Biotime",
+  "method": "FIA · WB/Plasma · 15 min · 0.05–50 ng/mL",
+  "packSizes": [
+    {
+      "size": "Test cartridge kit"
+    }
+  ],
+  "published": true,
+  "order": 400
+}

@@ -1,0 +1,14 @@
+{
+  "name": "fT4",
+  "category": "Thyroid Gland",
+  "subcategory": "FLI-100 FIA",
+  "brand": "Biotime",
+  "method": "FIA · Serum · 15 min · 0.3–100 pmol/L",
+  "packSizes": [
+    {
+      "size": "Test cartridge kit"
+    }
+  ],
+  "published": true,
+  "order": 790
+}

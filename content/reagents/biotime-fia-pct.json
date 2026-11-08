@@ -1,0 +1,14 @@
+{
+  "name": "PCT",
+  "category": "Infection",
+  "subcategory": "FLI-100 FIA",
+  "brand": "Biotime",
+  "method": "FIA · WB/Serum/Plasma · 15 min · 0.1–100 ng/mL",
+  "packSizes": [
+    {
+      "size": "Test cartridge kit"
+    }
+  ],
+  "published": true,
+  "order": 580
+}

@@ -1,0 +1,14 @@
+{
+  "name": "β-HCG",
+  "category": "Hormone",
+  "subcategory": "FLI-100 FIA",
+  "brand": "Biotime",
+  "method": "FIA · Serum/Plasma · 10 min · 5–200000 mIU/mL",
+  "packSizes": [
+    {
+      "size": "Test cartridge kit"
+    }
+  ],
+  "published": true,
+  "order": 620
+}

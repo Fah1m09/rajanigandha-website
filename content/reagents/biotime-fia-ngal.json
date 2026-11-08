@@ -1,0 +1,14 @@
+{
+  "name": "NGAL",
+  "category": "Diabetes and Renal Injury",
+  "subcategory": "FLI-100 FIA",
+  "brand": "Biotime",
+  "method": "FIA · Urine · 10 min · 20–5000 ng/mL",
+  "packSizes": [
+    {
+      "size": "Test cartridge kit"
+    }
+  ],
+  "published": true,
+  "order": 730
+}

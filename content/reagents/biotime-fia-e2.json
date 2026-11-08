@@ -1,0 +1,14 @@
+{
+  "name": "E2",
+  "category": "Hormone",
+  "subcategory": "FLI-100 FIA",
+  "brand": "Biotime",
+  "method": "FIA · Serum · 10 min · 10–3000 pg/mL",
+  "packSizes": [
+    {
+      "size": "Test cartridge kit"
+    }
+  ],
+  "published": true,
+  "order": 690
+}

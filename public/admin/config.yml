@@ -94,13 +94,13 @@ collections:
       - name: category
         label: Category
         widget: select
-        options: [Clinical Chemistry, Serology, Immuno Chemistry, Blood Grouping, Dedicated Lines, Hematology, Coagulation]
+        options: [Clinical Chemistry, Serology, Immuno Chemistry, Blood Grouping, Dedicated Lines, Hematology, Coagulation, Cardiac, Tumor, Infection, Hormone, Diabetes and Renal Injury, Thyroid Gland, Gastrointestinal, Infectious Disease, Others]
       - name: subcategory
         label: Subgroup
         widget: string
         required: false
         hint: "Group inside the category, spelled exactly like the other reagents in it (e.g. Substrates, Enzymes, Lipids, Electrolytes, Controls & Calibrators)"
-      - { name: brand, label: Brand, widget: select, options: [Spinreact, Microlab], default: Spinreact }
+      - { name: brand, label: Brand, widget: select, options: [Spinreact, Microlab, Biotime], default: Spinreact }
       - { name: method, label: Method, widget: string, required: false }
       - name: packSizes
         label: Pack sizes

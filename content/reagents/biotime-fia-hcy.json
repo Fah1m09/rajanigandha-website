@@ -1,0 +1,14 @@
+{
+  "name": "HCY",
+  "category": "Cardiac",
+  "subcategory": "FLI-100 FIA",
+  "brand": "Biotime",
+  "method": "FIA · Plasma · 15 min · 2–50 µmol/L",
+  "packSizes": [
+    {
+      "size": "Test cartridge kit"
+    }
+  ],
+  "published": true,
+  "order": 500
+}
