@@ -1,7 +1,7 @@
 {
   "name": "HCV",
-  "category": "Infectious Disease",
-  "subcategory": "FLI-100 FIA",
+  "category": "Fli-100",
+  "subcategory": "Infectious Disease",
   "brand": "Biotime",
   "method": "FIA · Serum/Plasma · 10 min · Result as COI",
   "packSizes": [

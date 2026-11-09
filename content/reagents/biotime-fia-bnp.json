@@ -1,7 +1,7 @@
 {
   "name": "BNP",
-  "category": "Cardiac",
-  "subcategory": "FLI-100 FIA",
+  "category": "Fli-100",
+  "subcategory": "Cardiac",
   "brand": "Biotime",
   "method": "FIA · WB/Plasma · 10 min · 10–5000 pg/mL",
   "packSizes": [

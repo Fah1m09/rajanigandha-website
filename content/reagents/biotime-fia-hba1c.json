@@ -1,7 +1,7 @@
 {
   "name": "HbA1c",
-  "category": "Diabetes and Renal Injury",
-  "subcategory": "FLI-100 FIA",
+  "category": "Fli-100",
+  "subcategory": "Diabetes and Renal Injury",
   "brand": "Biotime",
   "method": "FIA · WB · 5 min · 4–15%",
   "packSizes": [

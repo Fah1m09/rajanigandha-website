@@ -1,7 +1,7 @@
 {
   "name": "D-Dimer",
-  "category": "Cardiac",
-  "subcategory": "FLI-100 FIA",
+  "category": "Fli-100",
+  "subcategory": "Cardiac",
   "brand": "Biotime",
   "method": "FIA · WB/Plasma · 3 min · 0.1–10 mg/L",
   "packSizes": [

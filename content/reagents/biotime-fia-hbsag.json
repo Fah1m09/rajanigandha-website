@@ -1,7 +1,7 @@
 {
   "name": "HBsAg",
-  "category": "Infectious Disease",
-  "subcategory": "FLI-100 FIA",
+  "category": "Fli-100",
+  "subcategory": "Infectious Disease",
   "brand": "Biotime",
   "method": "FIA · Serum/Plasma · 10 min · 0.5–250 IU/mL",
   "packSizes": [

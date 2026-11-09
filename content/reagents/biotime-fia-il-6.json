@@ -1,7 +1,7 @@
 {
   "name": "IL-6",
-  "category": "Infection",
-  "subcategory": "FLI-100 FIA",
+  "category": "Fli-100",
+  "subcategory": "Infection",
   "brand": "Biotime",
   "method": "FIA · Serum/Plasma · 15 min · 5–1000 pg/mL",
   "packSizes": [

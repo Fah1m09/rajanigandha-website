@@ -1,7 +1,7 @@
 {
   "name": "TT3",
-  "category": "Thyroid",
-  "subcategory": "FLI-100 FIA",
+  "category": "Fli-100",
+  "subcategory": "Thyroid",
   "brand": "Biotime",
   "method": "FIA · Serum · 15 min · 0.5–10 nmol/L",
   "packSizes": [

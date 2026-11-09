@@ -1,7 +1,7 @@
 {
   "name": "cTnI",
-  "category": "Cardiac",
-  "subcategory": "FLI-100 FIA",
+  "category": "Fli-100",
+  "subcategory": "Cardiac",
   "brand": "Biotime",
   "method": "FIA · WB/Plasma · 15 min · 0.05–50 ng/mL",
   "packSizes": [

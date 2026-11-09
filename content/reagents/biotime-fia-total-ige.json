@@ -1,7 +1,7 @@
 {
   "name": "Total IgE",
-  "category": "Others",
-  "subcategory": "FLI-100 FIA",
+  "category": "Fli-100",
+  "subcategory": "Others",
   "brand": "Biotime",
   "method": "FIA · WB/Serum/Plasma · 12 min · 1–1000 IU/mL",
   "packSizes": [

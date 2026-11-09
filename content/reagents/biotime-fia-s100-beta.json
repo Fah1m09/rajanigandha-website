@@ -1,7 +1,7 @@
 {
   "name": "S100-β",
-  "category": "Cardiac",
-  "subcategory": "FLI-100 FIA",
+  "category": "Fli-100",
+  "subcategory": "Cardiac",
   "brand": "Biotime",
   "method": "FIA · WB/Serum/Plasma · 10 min · 0.05–10.0 µg/L",
   "packSizes": [

@@ -1,7 +1,7 @@
 {
   "name": "Myo",
-  "category": "Cardiac",
-  "subcategory": "FLI-100 FIA",
+  "category": "Fli-100",
+  "subcategory": "Cardiac",
   "brand": "Biotime",
   "method": "FIA · Serum/Plasma · 15 min · 2.5–400 ng/mL",
   "packSizes": [

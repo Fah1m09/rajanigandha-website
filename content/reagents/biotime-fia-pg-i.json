@@ -1,7 +1,7 @@
 {
   "name": "PG I",
-  "category": "Gastrointestinal",
-  "subcategory": "FLI-100 FIA",
+  "category": "Fli-100",
+  "subcategory": "Gastrointestinal",
   "brand": "Biotime",
   "method": "FIA · Serum · 15 min · 1–200 ng/mL",
   "packSizes": [

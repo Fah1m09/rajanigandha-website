@@ -1,7 +1,7 @@
 {
   "name": "hsCRP/CRP",
-  "category": "Infection",
-  "subcategory": "FLI-100 FIA",
+  "category": "Fli-100",
+  "subcategory": "Infection",
   "brand": "Biotime",
   "method": "FIA · WB/Serum/Plasma · 3 min · 0.5–200 mg/L",
   "packSizes": [
