@@ -1,0 +1,14 @@
+{
+  "name": "Hemoglobin A1C Calibrator",
+  "category": "Hlc-100",
+  "subcategory": "Calibrators & Controls",
+  "brand": "Biotime",
+  "method": "HPLC (HbA1c)",
+  "packSizes": [
+    {
+      "size": "2 mL x 2 vials"
+    }
+  ],
+  "published": true,
+  "order": 1725
+}

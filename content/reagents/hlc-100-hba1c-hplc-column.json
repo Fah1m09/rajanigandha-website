@@ -1,0 +1,14 @@
+{
+  "name": "HbA1c HPLC Chromatographic Column",
+  "category": "Hlc-100",
+  "subcategory": "Columns",
+  "brand": "Biotime",
+  "method": "HPLC (HbA1c)",
+  "packSizes": [
+    {
+      "size": "1 unit"
+    }
+  ],
+  "published": true,
+  "order": 1726
+}

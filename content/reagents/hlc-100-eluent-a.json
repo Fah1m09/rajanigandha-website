@@ -1,0 +1,14 @@
+{
+  "name": "Eluent A",
+  "category": "Hlc-100",
+  "subcategory": "Reagents",
+  "brand": "Biotime",
+  "method": "HPLC (HbA1c)",
+  "packSizes": [
+    {
+      "size": "900 mL"
+    }
+  ],
+  "published": true,
+  "order": 1721
+}
