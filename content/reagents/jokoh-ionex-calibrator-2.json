@@ -1,0 +1,13 @@
+{
+  "name": "Calibrator 2",
+  "category": "Jokoh IoNEX",
+  "subcategory": "Calibrators & Controls",
+  "brand": "Jokoh",
+  "packSizes": [
+    {
+      "size": "140 mL"
+    }
+  ],
+  "published": true,
+  "order": 1728
+}

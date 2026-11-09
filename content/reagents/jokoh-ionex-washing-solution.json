@@ -1,0 +1,13 @@
+{
+  "name": "Washing Solution",
+  "category": "Jokoh IoNEX",
+  "subcategory": "Reagents",
+  "brand": "Jokoh",
+  "packSizes": [
+    {
+      "size": "25 mL"
+    }
+  ],
+  "published": true,
+  "order": 1729
+}

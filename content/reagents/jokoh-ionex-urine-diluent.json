@@ -1,0 +1,13 @@
+{
+  "name": "Diluent for Urine",
+  "category": "Jokoh IoNEX",
+  "subcategory": "Reagents",
+  "brand": "Jokoh",
+  "packSizes": [
+    {
+      "size": "500 mL"
+    }
+  ],
+  "published": true,
+  "order": 1730
+}
