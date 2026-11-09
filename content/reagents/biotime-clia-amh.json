@@ -1,7 +1,7 @@
 {
   "name": "AMH",
-  "category": "Fertility/Infertility",
-  "subcategory": "CLi-1600 CLIA",
+  "category": "Cli-1600",
+  "subcategory": "Fertility/Infertility",
   "brand": "Biotime",
   "method": "Chemiluminescence immunoassay (CLIA)",
   "packSizes": [

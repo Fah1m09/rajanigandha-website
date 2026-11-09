@@ -1,7 +1,7 @@
 {
   "name": "HBsAg",
-  "category": "Infectious Disease",
-  "subcategory": "CLi-1600 CLIA",
+  "category": "Cli-1600",
+  "subcategory": "Infectious Disease",
   "brand": "Biotime",
   "method": "Chemiluminescence immunoassay (CLIA)",
   "packSizes": [

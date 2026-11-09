@@ -1,7 +1,7 @@
 {
   "name": "T-PAIC",
-  "category": "Thrombotic",
-  "subcategory": "CLi-1600 CLIA",
+  "category": "Cli-1600",
+  "subcategory": "Thrombotic",
   "brand": "Biotime",
   "method": "Chemiluminescence immunoassay (CLIA)",
   "packSizes": [

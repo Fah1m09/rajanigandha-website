@@ -1,7 +1,7 @@
 {
   "name": "Insulin",
-  "category": "Diabetes",
-  "subcategory": "CLi-1600 CLIA",
+  "category": "Cli-1600",
+  "subcategory": "Diabetes",
   "brand": "Biotime",
   "method": "Chemiluminescence immunoassay (CLIA)",
   "packSizes": [

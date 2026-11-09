@@ -1,7 +1,7 @@
 {
   "name": "Lp-PLA2",
-  "category": "Cardiac",
-  "subcategory": "CLi-1600 CLIA",
+  "category": "Cli-1600",
+  "subcategory": "Cardiac",
   "brand": "Biotime",
   "method": "Chemiluminescence immunoassay (CLIA)",
   "packSizes": [

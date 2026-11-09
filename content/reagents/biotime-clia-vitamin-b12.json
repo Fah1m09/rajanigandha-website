@@ -1,7 +1,7 @@
 {
   "name": "Vitamin B12",
-  "category": "Health Check",
-  "subcategory": "CLi-1600 CLIA",
+  "category": "Cli-1600",
+  "subcategory": "Health Check",
   "brand": "Biotime",
   "method": "Chemiluminescence immunoassay (CLIA)",
   "packSizes": [
@@ -9,6 +9,6 @@
       "size": "25 test per box"
     }
   ],
-  "published": false,
+  "published": true,
   "order": 1600
 }

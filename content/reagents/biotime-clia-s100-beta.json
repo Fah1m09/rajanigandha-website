@@ -1,7 +1,7 @@
 {
   "name": "S100-β",
-  "category": "Brain Injury",
-  "subcategory": "CLi-1600 CLIA",
+  "category": "Cli-1600",
+  "subcategory": "Brain Injury",
   "brand": "Biotime",
   "method": "Chemiluminescence immunoassay (CLIA)",
   "packSizes": [

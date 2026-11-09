@@ -1,7 +1,7 @@
 {
   "name": "FT4",
-  "category": "Thyroid",
-  "subcategory": "CLi-1600 CLIA",
+  "category": "Cli-1600",
+  "subcategory": "Thyroid",
   "brand": "Biotime",
   "method": "Chemiluminescence immunoassay (CLIA)",
   "packSizes": [
