@@ -44,6 +44,7 @@
     "IFCC certified"
   ],
   "certifications": ["IFCC"],
+  "brochure": "/img/products/hlc-100.pdf",
   "featured": false,
   "published": true,
   "order": 20

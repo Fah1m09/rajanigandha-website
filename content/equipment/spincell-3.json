@@ -53,6 +53,7 @@
     "LIS and HIS connection with HL7 protocol",
     "Openable side door for easy maintenance"
   ],
+  "brochure": "/img/products/spincell-3n.pdf",
   "featured": true,
   "published": true,
   "order": 5

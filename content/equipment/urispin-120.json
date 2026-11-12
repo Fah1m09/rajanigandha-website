@@ -34,6 +34,7 @@
     "Stores the last 2,000 records",
     "Compact and lightweight"
   ],
+  "brochure": "/img/products/urispin-120.pdf",
   "featured": false,
   "published": true,
   "order": 19

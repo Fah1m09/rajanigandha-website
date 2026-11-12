@@ -41,6 +41,7 @@
     "LIS and barcode connectivity",
     "Works with thermal and dot-matrix printers"
   ],
+  "brochure": "/img/products/esr-analyzer.pdf",
   "featured": false,
   "published": true,
   "order": 24

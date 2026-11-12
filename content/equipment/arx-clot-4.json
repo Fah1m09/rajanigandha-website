@@ -48,6 +48,7 @@
     "Optional data transfer to SD card or external PC"
   ],
   "certifications": ["ISO 13485", "ISO 9001", "CE", "TÜV", "STQC", "Make in India"],
+  "brochure": "/img/products/arx-clot-4-channel.pdf",
   "featured": false,
   "published": true,
   "order": 17
