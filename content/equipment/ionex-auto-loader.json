@@ -42,6 +42,7 @@
     "Optional barcode reader and LIS connection",
     "Made in Japan"
   ],
+  "brochure": "/img/products/ionex.pdf",
   "featured": true,
   "published": true,
   "order": 8
